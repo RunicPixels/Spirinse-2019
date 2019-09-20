@@ -2,24 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce2e14ff-e13a-4da1-95b5-be1e6d97996a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ClusterInputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ClusterInputManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PresetManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PresetManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +17,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/PlayerMover.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="45">
               <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
               <folding>
                 <marker date="1568798144557" expanded="true" signature="6:78" ph="..." />
@@ -47,7 +32,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/CorgiEngine/Common/Scripts/Camera/Cinemachine/CinemachineCameraController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
+            <state relative-caret-position="45">
               <caret line="3" selection-start-line="3" selection-end-line="3" />
               <folding>
                 <marker date="1566770587000" expanded="true" signature="6:90" ph="..." />
@@ -126,56 +111,117 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@2.1.7/PostProcessing/Runtime/Effects/AmbientOcclusion.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
+            <state relative-caret-position="2685">
               <caret line="179" column="79" selection-start-line="179" selection-start-column="79" selection-end-line="179" selection-end-column="79" />
               <folding>
-                <marker date="1568806297493" expanded="true" signature="61:10268" ph="{...}" />
-                <marker date="1568806297493" expanded="true" signature="68:133" ph="/// Ambient occlusion modes. ... " />
-                <marker date="1568806297493" expanded="true" signature="170:704" ph="{...}" />
-                <marker date="1568806297493" expanded="true" signature="185:462" ph="/// A standard implementation of ambient obscurance that works on non modern platforms. If ... " />
-                <marker date="1568806297493" expanded="true" signature="507:659" ph="/// A modern version of ambient occlusion heavily optimized for consoles and desktop ... " />
-                <marker date="1568806297493" expanded="true" signature="710:833" ph="/// Quality settings for &lt;see cref=&quot;AmbientOcclusionMode.ScalableAmbientObscurance&quot;/&gt;. ... " />
-                <marker date="1568806297493" expanded="true" signature="873:1349" ph="{...}" />
-                <marker date="1568806297493" expanded="true" signature="888:962" ph="/// 4 samples + downsampling. ... " />
-                <marker date="1568806297493" expanded="true" signature="988:1062" ph="/// 6 samples + downsampling. ... " />
-                <marker date="1568806297493" expanded="true" signature="1085:1160" ph="/// 10 samples + downsampling. ... " />
-                <marker date="1568806297493" expanded="true" signature="1186:1245" ph="/// 8 samples. ... " />
-                <marker date="1568806297493" expanded="true" signature="1269:1329" ph="/// 12 samples. ... " />
-                <marker date="1568806297493" expanded="true" signature="1355:1466" ph="/// A volume parameter holding a &lt;see cref=&quot;AmbientOcclusionMode&quot;/&gt; value. ... " />
-                <marker date="1568806297493" expanded="true" signature="1590:1704" ph="/// A volume parameter holding a &lt;see cref=&quot;AmbientOcclusionQuality&quot;/&gt; value. ... " />
-                <marker date="1568806297493" expanded="true" signature="1834:1934" ph="/// This class holds settings for the Ambient Occlusion effect. ... " />
-                <marker date="1568806297493" expanded="true" signature="2101:8303" ph="{...}" />
-                <marker date="1568806297493" expanded="true" signature="2146:2231" ph="/// The ambient occlusion method to use. ... " />
-                <marker date="1568806297493" expanded="true" signature="2594:2693" ph="/// The degree of darkness added by ambient occlusion. ... " />
-                <marker date="1568806297493" expanded="true" signature="2903:3000" ph="/// A custom color to use for the ambient occlusion. ... " />
-                <marker date="1568806297493" expanded="true" signature="3214:3479" ph="/// Only affects ambient lighting. This mode is only available with the Deferred rendering ... " />
-                <marker date="1568806297493" expanded="true" signature="3855:3970" ph="/// The tolerance of the noise filter to changes in the depth pyramid. ... " />
-                <marker date="1568806297493" expanded="true" signature="4103:4212" ph="/// The tolerance of the bilateral blur filter to depth changes. ... " />
-                <marker date="1568806297493" expanded="true" signature="4342:4445" ph="/// The tolerance of the upsampling pass to depth changes. ... " />
-                <marker date="1568806297493" expanded="true" signature="4579:4748" ph="/// Modifies the thickness of occluders. This increases dark areas but also introduces dark ... " />
-                <marker date="1568806297493" expanded="true" signature="5039:5217" ph="/// Modifies he influence of direct lighting on ambient occlusion. This is only used in the ... " />
-                <marker date="1568806297493" expanded="true" signature="5448:5561" ph="/// Radius of sample points, which affects extent of darkened areas. ... " />
-                <marker date="1568806297493" expanded="true" signature="5739:5993" ph="/// The number of sample points, which affects quality and performance. Lowest, Low &amp; Medium ... " />
-                <marker date="1568806297493" expanded="true" signature="6416:6600" ph="/* SRPs can call this method without a context set (see HDRP). ... */" />
-                <marker date="1568806297493" expanded="true" signature="6712:8297" ph="{...}" />
-                <marker date="1568806297493" expanded="true" signature="6881:7203" ph="{...}" />
-                <marker date="1568806297493" expanded="true" signature="7008:7189" ph="{...}" />
-                <marker date="1568806297493" expanded="true" signature="7291:8260" ph="{...}" />
-                <marker date="1568806297493" expanded="true" signature="8351:8631" ph="{...}" />
-                <marker date="1568806297493" expanded="true" signature="8799:10266" ph="{...}" />
-                <marker date="1568806297493" expanded="true" signature="8887:9159" ph="{...}" />
-                <marker date="1568806297493" expanded="true" signature="8932:9149" ph="{...}" />
-                <marker date="1568806297493" expanded="true" signature="9021:9134" ph="{...}" />
-                <marker date="1568806297493" expanded="true" signature="9228:9450" ph="{...}" />
-                <marker date="1568806297493" expanded="true" signature="9496:9572" ph="{...}" />
-                <marker date="1568806297493" expanded="true" signature="9631:9694" ph="{...}" />
-                <marker date="1568806297493" expanded="true" signature="9734:9824" ph="{...}" />
-                <marker date="1568806297493" expanded="true" signature="9867:9982" ph="{...}" />
-                <marker date="1568806297493" expanded="true" signature="10029:10151" ph="{...}" />
-                <marker date="1568806297493" expanded="true" signature="10240:10260" ph="{...}" />
+                <marker date="1560362527000" expanded="true" signature="61:10268" ph="{...}" />
+                <marker date="1560362527000" expanded="true" signature="68:133" ph="/// Ambient occlusion modes. ... " />
+                <marker date="1560362527000" expanded="true" signature="170:704" ph="{...}" />
+                <marker date="1560362527000" expanded="true" signature="185:462" ph="/// A standard implementation of ambient obscurance that works on non modern platforms. If ... " />
+                <marker date="1560362527000" expanded="true" signature="507:659" ph="/// A modern version of ambient occlusion heavily optimized for consoles and desktop ... " />
+                <marker date="1560362527000" expanded="true" signature="710:833" ph="/// Quality settings for &lt;see cref=&quot;AmbientOcclusionMode.ScalableAmbientObscurance&quot;/&gt;. ... " />
+                <marker date="1560362527000" expanded="true" signature="873:1349" ph="{...}" />
+                <marker date="1560362527000" expanded="true" signature="888:962" ph="/// 4 samples + downsampling. ... " />
+                <marker date="1560362527000" expanded="true" signature="988:1062" ph="/// 6 samples + downsampling. ... " />
+                <marker date="1560362527000" expanded="true" signature="1085:1160" ph="/// 10 samples + downsampling. ... " />
+                <marker date="1560362527000" expanded="true" signature="1186:1245" ph="/// 8 samples. ... " />
+                <marker date="1560362527000" expanded="true" signature="1269:1329" ph="/// 12 samples. ... " />
+                <marker date="1560362527000" expanded="true" signature="1355:1466" ph="/// A volume parameter holding a &lt;see cref=&quot;AmbientOcclusionMode&quot;/&gt; value. ... " />
+                <marker date="1560362527000" expanded="true" signature="1590:1704" ph="/// A volume parameter holding a &lt;see cref=&quot;AmbientOcclusionQuality&quot;/&gt; value. ... " />
+                <marker date="1560362527000" expanded="true" signature="1834:1934" ph="/// This class holds settings for the Ambient Occlusion effect. ... " />
+                <marker date="1560362527000" expanded="true" signature="2101:8303" ph="{...}" />
+                <marker date="1560362527000" expanded="true" signature="2146:2231" ph="/// The ambient occlusion method to use. ... " />
+                <marker date="1560362527000" expanded="true" signature="2594:2693" ph="/// The degree of darkness added by ambient occlusion. ... " />
+                <marker date="1560362527000" expanded="true" signature="2903:3000" ph="/// A custom color to use for the ambient occlusion. ... " />
+                <marker date="1560362527000" expanded="true" signature="3214:3479" ph="/// Only affects ambient lighting. This mode is only available with the Deferred rendering ... " />
+                <marker date="1560362527000" expanded="true" signature="3855:3970" ph="/// The tolerance of the noise filter to changes in the depth pyramid. ... " />
+                <marker date="1560362527000" expanded="true" signature="4103:4212" ph="/// The tolerance of the bilateral blur filter to depth changes. ... " />
+                <marker date="1560362527000" expanded="true" signature="4342:4445" ph="/// The tolerance of the upsampling pass to depth changes. ... " />
+                <marker date="1560362527000" expanded="true" signature="4579:4748" ph="/// Modifies the thickness of occluders. This increases dark areas but also introduces dark ... " />
+                <marker date="1560362527000" expanded="true" signature="5039:5217" ph="/// Modifies he influence of direct lighting on ambient occlusion. This is only used in the ... " />
+                <marker date="1560362527000" expanded="true" signature="5448:5561" ph="/// Radius of sample points, which affects extent of darkened areas. ... " />
+                <marker date="1560362527000" expanded="true" signature="5739:5993" ph="/// The number of sample points, which affects quality and performance. Lowest, Low &amp; Medium ... " />
+                <marker date="1560362527000" expanded="true" signature="6416:6600" ph="/* SRPs can call this method without a context set (see HDRP). ... */" />
+                <marker date="1560362527000" expanded="true" signature="6712:8297" ph="{...}" />
+                <marker date="1560362527000" expanded="true" signature="6881:7203" ph="{...}" />
+                <marker date="1560362527000" expanded="true" signature="7008:7189" ph="{...}" />
+                <marker date="1560362527000" expanded="true" signature="7291:8260" ph="{...}" />
+                <marker date="1560362527000" expanded="true" signature="8351:8631" ph="{...}" />
+                <marker date="1560362527000" expanded="true" signature="8799:10266" ph="{...}" />
+                <marker date="1560362527000" expanded="true" signature="8887:9159" ph="{...}" />
+                <marker date="1560362527000" expanded="true" signature="8932:9149" ph="{...}" />
+                <marker date="1560362527000" expanded="true" signature="9021:9134" ph="{...}" />
+                <marker date="1560362527000" expanded="true" signature="9228:9450" ph="{...}" />
+                <marker date="1560362527000" expanded="true" signature="9496:9572" ph="{...}" />
+                <marker date="1560362527000" expanded="true" signature="9631:9694" ph="{...}" />
+                <marker date="1560362527000" expanded="true" signature="9734:9824" ph="{...}" />
+                <marker date="1560362527000" expanded="true" signature="9867:9982" ph="{...}" />
+                <marker date="1560362527000" expanded="true" signature="10029:10151" ph="{...}" />
+                <marker date="1560362527000" expanded="true" signature="10240:10260" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/SetPolygon2DProbuilderCollider.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <marker date="1568884082659" expanded="true" signature="6:78" ph="..." />
+                <marker date="1568884082659" expanded="true" signature="139:313" ph="{...}" />
+                <marker date="1568884082659" expanded="true" signature="211:232" ph="{...}" />
+                <marker date="1568884082659" expanded="true" signature="290:311" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/SetPolygonCollider3D.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <marker date="1568884249554" expanded="true" signature="6:165" ph="..." />
+                <marker date="1568884249554" expanded="true" signature="207:2198" ph="{...}" />
+                <marker date="1568884249554" expanded="true" signature="313:900" ph="{...}" />
+                <marker date="1568884249554" expanded="true" signature="407:510" ph="{...}" />
+                <marker date="1568884249554" expanded="true" signature="723:894" ph="{...}" />
+                <marker date="1568884249554" expanded="true" signature="803:884" ph="{...}" />
+                <marker date="1568884249554" expanded="true" signature="964:2196" ph="{...}" />
+                <marker date="1568884249554" expanded="true" signature="1013:1161" ph="{...}" />
+                <marker date="1568884249554" expanded="true" signature="1632:1711" ph="{...}" />
+                <marker date="1568884249554" expanded="true" signature="1830:1936" ph="{...}" />
+                <marker date="1568884249554" expanded="true" signature="2231:4354" ph="{...}" />
+                <marker date="1568884249554" expanded="true" signature="2256:2498" ph="{...}" />
+                <marker date="1568884249554" expanded="true" signature="2392:2492" ph="{...}" />
+                <marker date="1568884249554" expanded="true" signature="2553:2952" ph="{...}" />
+                <marker date="1568884249554" expanded="true" signature="2658:2923" ph="{...}" />
+                <marker date="1568884249554" expanded="true" signature="3019:3550" ph="{...}" />
+                <marker date="1568884249554" expanded="true" signature="3128:3521" ph="{...}" />
+                <marker date="1568884249554" expanded="true" signature="3183:3511" ph="{...}" />
+                <marker date="1568884249554" expanded="true" signature="3279:3497" ph="{...}" />
+                <marker date="1568884249554" expanded="true" signature="3613:4352" ph="{...}" />
+                <marker date="1568884249554" expanded="true" signature="3722:4323" ph="{...}" />
+                <marker date="1568884249554" expanded="true" signature="3819:4313" ph="{...}" />
+                <marker date="1568884249554" expanded="true" signature="3903:4299" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/LevelSpawn.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <marker date="1568884963620" expanded="true" signature="6:78" ph="..." />
+                <marker date="1568884963620" expanded="true" signature="119:293" ph="{...}" />
+                <marker date="1568884963620" expanded="true" signature="191:212" ph="{...}" />
+                <marker date="1568884963620" expanded="true" signature="270:291" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -190,7 +236,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/PlayerMover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@2.1.7/PostProcessing/Runtime/Effects/AmbientOcclusion.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CorgiEngine/Common/Scripts/Camera/Cinemachine/CinemachineCameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LevelSpawn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SetPolygonCollider3D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMFeedbacks/MMFeedbacksForThirdParty/Cinemachine/Feedbacks/MMFeedbackCinemachineImpulse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SetPolygon2DProbuilderCollider.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -202,8 +251,8 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="115" />
-    <option name="width" value="1737" />
-    <option name="height" value="1045" />
+    <option name="width" value="1739" />
+    <option name="height" value="1046" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -270,11 +319,12 @@
       <updated>1568796968886</updated>
       <workItem from="1568796980533" duration="373000" />
       <workItem from="1568798113672" duration="1419000" />
+      <workItem from="1568884173637" duration="607000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1792000" />
+    <option name="totallyTimeSpent" value="2399000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -287,12 +337,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1618" height="877" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25288832" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25609756" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Unity" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -308,6 +356,7 @@
       <window_info anchor="bottom" id="Unit Tests" order="12" />
       <window_info anchor="bottom" id="Terminal" order="13" />
       <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
+      <window_info anchor="bottom" id="Unity" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -334,7 +383,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Assets/PlayerMover.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="45">
           <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
           <folding>
             <marker date="1568798144557" expanded="true" signature="6:78" ph="..." />
@@ -347,7 +396,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/CorgiEngine/Common/Scripts/Camera/Cinemachine/CinemachineCameraController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
+        <state relative-caret-position="45">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
           <folding>
             <marker date="1566770587000" expanded="true" signature="6:90" ph="..." />
@@ -425,53 +474,108 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@2.1.7/PostProcessing/Runtime/Effects/AmbientOcclusion.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
+        <state relative-caret-position="2685">
           <caret line="179" column="79" selection-start-line="179" selection-start-column="79" selection-end-line="179" selection-end-column="79" />
           <folding>
-            <marker date="1568806297493" expanded="true" signature="61:10268" ph="{...}" />
-            <marker date="1568806297493" expanded="true" signature="68:133" ph="/// Ambient occlusion modes. ... " />
-            <marker date="1568806297493" expanded="true" signature="170:704" ph="{...}" />
-            <marker date="1568806297493" expanded="true" signature="185:462" ph="/// A standard implementation of ambient obscurance that works on non modern platforms. If ... " />
-            <marker date="1568806297493" expanded="true" signature="507:659" ph="/// A modern version of ambient occlusion heavily optimized for consoles and desktop ... " />
-            <marker date="1568806297493" expanded="true" signature="710:833" ph="/// Quality settings for &lt;see cref=&quot;AmbientOcclusionMode.ScalableAmbientObscurance&quot;/&gt;. ... " />
-            <marker date="1568806297493" expanded="true" signature="873:1349" ph="{...}" />
-            <marker date="1568806297493" expanded="true" signature="888:962" ph="/// 4 samples + downsampling. ... " />
-            <marker date="1568806297493" expanded="true" signature="988:1062" ph="/// 6 samples + downsampling. ... " />
-            <marker date="1568806297493" expanded="true" signature="1085:1160" ph="/// 10 samples + downsampling. ... " />
-            <marker date="1568806297493" expanded="true" signature="1186:1245" ph="/// 8 samples. ... " />
-            <marker date="1568806297493" expanded="true" signature="1269:1329" ph="/// 12 samples. ... " />
-            <marker date="1568806297493" expanded="true" signature="1355:1466" ph="/// A volume parameter holding a &lt;see cref=&quot;AmbientOcclusionMode&quot;/&gt; value. ... " />
-            <marker date="1568806297493" expanded="true" signature="1590:1704" ph="/// A volume parameter holding a &lt;see cref=&quot;AmbientOcclusionQuality&quot;/&gt; value. ... " />
-            <marker date="1568806297493" expanded="true" signature="1834:1934" ph="/// This class holds settings for the Ambient Occlusion effect. ... " />
-            <marker date="1568806297493" expanded="true" signature="2101:8303" ph="{...}" />
-            <marker date="1568806297493" expanded="true" signature="2146:2231" ph="/// The ambient occlusion method to use. ... " />
-            <marker date="1568806297493" expanded="true" signature="2594:2693" ph="/// The degree of darkness added by ambient occlusion. ... " />
-            <marker date="1568806297493" expanded="true" signature="2903:3000" ph="/// A custom color to use for the ambient occlusion. ... " />
-            <marker date="1568806297493" expanded="true" signature="3214:3479" ph="/// Only affects ambient lighting. This mode is only available with the Deferred rendering ... " />
-            <marker date="1568806297493" expanded="true" signature="3855:3970" ph="/// The tolerance of the noise filter to changes in the depth pyramid. ... " />
-            <marker date="1568806297493" expanded="true" signature="4103:4212" ph="/// The tolerance of the bilateral blur filter to depth changes. ... " />
-            <marker date="1568806297493" expanded="true" signature="4342:4445" ph="/// The tolerance of the upsampling pass to depth changes. ... " />
-            <marker date="1568806297493" expanded="true" signature="4579:4748" ph="/// Modifies the thickness of occluders. This increases dark areas but also introduces dark ... " />
-            <marker date="1568806297493" expanded="true" signature="5039:5217" ph="/// Modifies he influence of direct lighting on ambient occlusion. This is only used in the ... " />
-            <marker date="1568806297493" expanded="true" signature="5448:5561" ph="/// Radius of sample points, which affects extent of darkened areas. ... " />
-            <marker date="1568806297493" expanded="true" signature="5739:5993" ph="/// The number of sample points, which affects quality and performance. Lowest, Low &amp; Medium ... " />
-            <marker date="1568806297493" expanded="true" signature="6416:6600" ph="/* SRPs can call this method without a context set (see HDRP). ... */" />
-            <marker date="1568806297493" expanded="true" signature="6712:8297" ph="{...}" />
-            <marker date="1568806297493" expanded="true" signature="6881:7203" ph="{...}" />
-            <marker date="1568806297493" expanded="true" signature="7008:7189" ph="{...}" />
-            <marker date="1568806297493" expanded="true" signature="7291:8260" ph="{...}" />
-            <marker date="1568806297493" expanded="true" signature="8351:8631" ph="{...}" />
-            <marker date="1568806297493" expanded="true" signature="8799:10266" ph="{...}" />
-            <marker date="1568806297493" expanded="true" signature="8887:9159" ph="{...}" />
-            <marker date="1568806297493" expanded="true" signature="8932:9149" ph="{...}" />
-            <marker date="1568806297493" expanded="true" signature="9021:9134" ph="{...}" />
-            <marker date="1568806297493" expanded="true" signature="9228:9450" ph="{...}" />
-            <marker date="1568806297493" expanded="true" signature="9496:9572" ph="{...}" />
-            <marker date="1568806297493" expanded="true" signature="9631:9694" ph="{...}" />
-            <marker date="1568806297493" expanded="true" signature="9734:9824" ph="{...}" />
-            <marker date="1568806297493" expanded="true" signature="9867:9982" ph="{...}" />
-            <marker date="1568806297493" expanded="true" signature="10029:10151" ph="{...}" />
-            <marker date="1568806297493" expanded="true" signature="10240:10260" ph="{...}" />
+            <marker date="1560362527000" expanded="true" signature="61:10268" ph="{...}" />
+            <marker date="1560362527000" expanded="true" signature="68:133" ph="/// Ambient occlusion modes. ... " />
+            <marker date="1560362527000" expanded="true" signature="170:704" ph="{...}" />
+            <marker date="1560362527000" expanded="true" signature="185:462" ph="/// A standard implementation of ambient obscurance that works on non modern platforms. If ... " />
+            <marker date="1560362527000" expanded="true" signature="507:659" ph="/// A modern version of ambient occlusion heavily optimized for consoles and desktop ... " />
+            <marker date="1560362527000" expanded="true" signature="710:833" ph="/// Quality settings for &lt;see cref=&quot;AmbientOcclusionMode.ScalableAmbientObscurance&quot;/&gt;. ... " />
+            <marker date="1560362527000" expanded="true" signature="873:1349" ph="{...}" />
+            <marker date="1560362527000" expanded="true" signature="888:962" ph="/// 4 samples + downsampling. ... " />
+            <marker date="1560362527000" expanded="true" signature="988:1062" ph="/// 6 samples + downsampling. ... " />
+            <marker date="1560362527000" expanded="true" signature="1085:1160" ph="/// 10 samples + downsampling. ... " />
+            <marker date="1560362527000" expanded="true" signature="1186:1245" ph="/// 8 samples. ... " />
+            <marker date="1560362527000" expanded="true" signature="1269:1329" ph="/// 12 samples. ... " />
+            <marker date="1560362527000" expanded="true" signature="1355:1466" ph="/// A volume parameter holding a &lt;see cref=&quot;AmbientOcclusionMode&quot;/&gt; value. ... " />
+            <marker date="1560362527000" expanded="true" signature="1590:1704" ph="/// A volume parameter holding a &lt;see cref=&quot;AmbientOcclusionQuality&quot;/&gt; value. ... " />
+            <marker date="1560362527000" expanded="true" signature="1834:1934" ph="/// This class holds settings for the Ambient Occlusion effect. ... " />
+            <marker date="1560362527000" expanded="true" signature="2101:8303" ph="{...}" />
+            <marker date="1560362527000" expanded="true" signature="2146:2231" ph="/// The ambient occlusion method to use. ... " />
+            <marker date="1560362527000" expanded="true" signature="2594:2693" ph="/// The degree of darkness added by ambient occlusion. ... " />
+            <marker date="1560362527000" expanded="true" signature="2903:3000" ph="/// A custom color to use for the ambient occlusion. ... " />
+            <marker date="1560362527000" expanded="true" signature="3214:3479" ph="/// Only affects ambient lighting. This mode is only available with the Deferred rendering ... " />
+            <marker date="1560362527000" expanded="true" signature="3855:3970" ph="/// The tolerance of the noise filter to changes in the depth pyramid. ... " />
+            <marker date="1560362527000" expanded="true" signature="4103:4212" ph="/// The tolerance of the bilateral blur filter to depth changes. ... " />
+            <marker date="1560362527000" expanded="true" signature="4342:4445" ph="/// The tolerance of the upsampling pass to depth changes. ... " />
+            <marker date="1560362527000" expanded="true" signature="4579:4748" ph="/// Modifies the thickness of occluders. This increases dark areas but also introduces dark ... " />
+            <marker date="1560362527000" expanded="true" signature="5039:5217" ph="/// Modifies he influence of direct lighting on ambient occlusion. This is only used in the ... " />
+            <marker date="1560362527000" expanded="true" signature="5448:5561" ph="/// Radius of sample points, which affects extent of darkened areas. ... " />
+            <marker date="1560362527000" expanded="true" signature="5739:5993" ph="/// The number of sample points, which affects quality and performance. Lowest, Low &amp; Medium ... " />
+            <marker date="1560362527000" expanded="true" signature="6416:6600" ph="/* SRPs can call this method without a context set (see HDRP). ... */" />
+            <marker date="1560362527000" expanded="true" signature="6712:8297" ph="{...}" />
+            <marker date="1560362527000" expanded="true" signature="6881:7203" ph="{...}" />
+            <marker date="1560362527000" expanded="true" signature="7008:7189" ph="{...}" />
+            <marker date="1560362527000" expanded="true" signature="7291:8260" ph="{...}" />
+            <marker date="1560362527000" expanded="true" signature="8351:8631" ph="{...}" />
+            <marker date="1560362527000" expanded="true" signature="8799:10266" ph="{...}" />
+            <marker date="1560362527000" expanded="true" signature="8887:9159" ph="{...}" />
+            <marker date="1560362527000" expanded="true" signature="8932:9149" ph="{...}" />
+            <marker date="1560362527000" expanded="true" signature="9021:9134" ph="{...}" />
+            <marker date="1560362527000" expanded="true" signature="9228:9450" ph="{...}" />
+            <marker date="1560362527000" expanded="true" signature="9496:9572" ph="{...}" />
+            <marker date="1560362527000" expanded="true" signature="9631:9694" ph="{...}" />
+            <marker date="1560362527000" expanded="true" signature="9734:9824" ph="{...}" />
+            <marker date="1560362527000" expanded="true" signature="9867:9982" ph="{...}" />
+            <marker date="1560362527000" expanded="true" signature="10029:10151" ph="{...}" />
+            <marker date="1560362527000" expanded="true" signature="10240:10260" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/SetPolygon2DProbuilderCollider.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1568884082659" expanded="true" signature="6:78" ph="..." />
+            <marker date="1568884082659" expanded="true" signature="139:313" ph="{...}" />
+            <marker date="1568884082659" expanded="true" signature="211:232" ph="{...}" />
+            <marker date="1568884082659" expanded="true" signature="290:311" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/SetPolygonCollider3D.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1568884249554" expanded="true" signature="6:165" ph="..." />
+            <marker date="1568884249554" expanded="true" signature="207:2198" ph="{...}" />
+            <marker date="1568884249554" expanded="true" signature="313:900" ph="{...}" />
+            <marker date="1568884249554" expanded="true" signature="407:510" ph="{...}" />
+            <marker date="1568884249554" expanded="true" signature="723:894" ph="{...}" />
+            <marker date="1568884249554" expanded="true" signature="803:884" ph="{...}" />
+            <marker date="1568884249554" expanded="true" signature="964:2196" ph="{...}" />
+            <marker date="1568884249554" expanded="true" signature="1013:1161" ph="{...}" />
+            <marker date="1568884249554" expanded="true" signature="1632:1711" ph="{...}" />
+            <marker date="1568884249554" expanded="true" signature="1830:1936" ph="{...}" />
+            <marker date="1568884249554" expanded="true" signature="2231:4354" ph="{...}" />
+            <marker date="1568884249554" expanded="true" signature="2256:2498" ph="{...}" />
+            <marker date="1568884249554" expanded="true" signature="2392:2492" ph="{...}" />
+            <marker date="1568884249554" expanded="true" signature="2553:2952" ph="{...}" />
+            <marker date="1568884249554" expanded="true" signature="2658:2923" ph="{...}" />
+            <marker date="1568884249554" expanded="true" signature="3019:3550" ph="{...}" />
+            <marker date="1568884249554" expanded="true" signature="3128:3521" ph="{...}" />
+            <marker date="1568884249554" expanded="true" signature="3183:3511" ph="{...}" />
+            <marker date="1568884249554" expanded="true" signature="3279:3497" ph="{...}" />
+            <marker date="1568884249554" expanded="true" signature="3613:4352" ph="{...}" />
+            <marker date="1568884249554" expanded="true" signature="3722:4323" ph="{...}" />
+            <marker date="1568884249554" expanded="true" signature="3819:4313" ph="{...}" />
+            <marker date="1568884249554" expanded="true" signature="3903:4299" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/LevelSpawn.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1568884963620" expanded="true" signature="6:78" ph="..." />
+            <marker date="1568884963620" expanded="true" signature="119:293" ph="{...}" />
+            <marker date="1568884963620" expanded="true" signature="191:212" ph="{...}" />
+            <marker date="1568884963620" expanded="true" signature="270:291" ph="{...}" />
           </folding>
         </state>
       </provider>
