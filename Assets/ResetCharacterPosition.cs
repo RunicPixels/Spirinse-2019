@@ -6,17 +6,15 @@ using MEC;
 
 public class ResetCharacterPosition : MonoBehaviour
 {
-    Character character;
+    public Character character;
 
     private Character.CharacterTypes type;
 
-    private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
-        character = GetComponent<Character>();
+        if(character == null)character = GetComponent<Character>();
         type = character.CharacterType;
-        rb = GetComponent<Rigidbody2D>();
 
         Timing.RunCoroutine(_UpdateCharacterState());
     }
@@ -25,22 +23,23 @@ public class ResetCharacterPosition : MonoBehaviour
     {
         while (gameObject.activeSelf)
         {
-/*            while (character.CharacterType == type)
+            while (character.CharacterType == type)
             {
                 yield return 0f;
-            }*/
-
+            }
+            
             type = character.CharacterType;
 
             switch (type)
             {
                 case Character.CharacterTypes.AI:
-                    rb.Sleep();
-                    transform.localPosition = Vector3.zero;
+                    character.gameObject.SetActive(false);
+                    character.transform.localPosition = Vector3.zero;
                     break;
 
                 case Character.CharacterTypes.Player:
-                    rb.WakeUp();
+                    character.gameObject.SetActive(true);
+                    character.transform.localPosition = Vector3.zero;
                     break;
 
                 default:
