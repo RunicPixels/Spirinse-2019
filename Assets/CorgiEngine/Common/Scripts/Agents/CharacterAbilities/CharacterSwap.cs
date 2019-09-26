@@ -55,7 +55,7 @@ namespace MoreMountains.CorgiEngine
             _character.CharacterType = Character.CharacterTypes.AI;
             _character.PlayerID = _savedPlayerID;
             _character.SetInputManager(null);
-            _characterHorizontalMovement.SetHorizontalMove(0f);
+            if(_characterHorizontalMovement)_characterHorizontalMovement.SetHorizontalMove(0f);
             _character.ResetInput();
             if (_aiBrain != null)
             {

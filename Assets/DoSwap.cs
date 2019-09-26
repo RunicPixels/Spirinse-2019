@@ -8,7 +8,7 @@ public class DoSwap : MonoBehaviour
 {
     private Character.CharacterTypes type;
     private int layerMask;
-    private LineRenderer renderer;
+    private LineRenderer lRenderer;
 
     public CharacterSwapManager charSwapManager;
     Character character;
@@ -20,8 +20,8 @@ public class DoSwap : MonoBehaviour
         character = GetComponent<Character>();
         type = character.CharacterType;
         rb = GetComponent<Rigidbody2D>();
-        renderer = GetComponent<LineRenderer>();
-        renderer.enabled = false;
+        lRenderer = GetComponent<LineRenderer>();
+        lRenderer.enabled = false;
         charSwapManager = FindObjectOfType<CharacterSwapManager>();
         layerMask = LayerMask.GetMask("Interactable");
         Timing.RunCoroutine(_UpdateCharacterState());
@@ -41,11 +41,11 @@ public class DoSwap : MonoBehaviour
             switch (type)
             {
                 case Character.CharacterTypes.AI:
-                    renderer.enabled = true;
+                    lRenderer.enabled = true;
                     break;
 
                 case Character.CharacterTypes.Player:
-                    renderer.enabled = false;
+                    lRenderer.enabled = false;
                     break;
 
                 default:
@@ -67,7 +67,7 @@ public class DoSwap : MonoBehaviour
                 if (hit.transform.CompareTag("Meditation"))
                 {
                     charSwapManager.SwapCharacter();
-                    renderer.enabled = true;
+                    lRenderer.enabled = true;
                     transform.position = hit.transform.position + Vector3.up;
                 }
             }

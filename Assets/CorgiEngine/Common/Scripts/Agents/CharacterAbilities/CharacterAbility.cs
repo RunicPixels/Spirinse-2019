@@ -9,7 +9,7 @@ namespace MoreMountains.CorgiEngine
 	/// A class meant to be overridden that handles a character's ability. 
 	/// </summary>
     /// 
-	//[RequireComponent(typeof(Character))]
+	[RequireComponent(typeof(Character))]
 	public class CharacterAbility : MonoBehaviour 
 	{
 		/// the feedbacks to play when the ability starts
@@ -22,7 +22,7 @@ namespace MoreMountains.CorgiEngine
         /// true if the ability has already been initialized
 		public bool AbilityInitialized { get { return _abilityInitialized; } }
 
-		public Character _character;
+		protected Character _character;
 		protected Health _health;
 		protected CharacterHorizontalMovement _characterHorizontalMovement;
 		protected CorgiController _controller;
@@ -55,12 +55,12 @@ namespace MoreMountains.CorgiEngine
 		/// </summary>
 		protected virtual void Initialization()
 		{
-			if(_character == null) _character = GetComponent<Character>();
-			_controller = _character.transform.GetComponent<CorgiController>();
-			_characterHorizontalMovement = _character.transform.GetComponent<CharacterHorizontalMovement>();
-			_characterGravity = _character.transform.GetComponent<CharacterGravity> ();
-			_spriteRenderer = _character.transform.GetComponent<SpriteRenderer>();
-			_health = _character.transform.GetComponent<Health> ();
+			_character = GetComponent<Character>();
+			_controller = GetComponent<CorgiController>();
+			_characterHorizontalMovement = GetComponent<CharacterHorizontalMovement>();
+			_characterGravity = GetComponent<CharacterGravity> ();
+			_spriteRenderer = GetComponent<SpriteRenderer>();
+			_health = GetComponent<Health> ();
             BindAnimator();
 			_sceneCamera = _character.SceneCamera;
 			_inputManager = _character.LinkedInputManager;
