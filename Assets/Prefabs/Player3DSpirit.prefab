@@ -113,8 +113,6 @@ GameObject:
   - component: {fileID: 11437206}
   - component: {fileID: 11407780}
   - component: {fileID: 114000013042182620}
-  - component: {fileID: 1965433896}
-  - component: {fileID: 1965433897}
   - component: {fileID: 990510262175723673}
   - component: {fileID: 1965433904}
   - component: {fileID: 661880449461922681}
@@ -350,37 +348,6 @@ MonoBehaviour:
   RespawnAtInitialLocation: 0
   DeathForce: {x: 0, y: 10}
   ResetForcesOnDeath: 0
---- !u!114 &1965433896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 127094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46406e788b52547b6b352456466eb58b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AbilityStartFeedbacks: {fileID: 0}
-  AbilityStopFeedbacks: {fileID: 0}
-  AbilityPermitted: 1
-  PreventJumpWhenInZone: 1
---- !u!114 &1965433897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 127094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f59e06702d6be45948936bd909420d61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AbilityStartFeedbacks: {fileID: 0}
-  AbilityStopFeedbacks: {fileID: 0}
-  AbilityPermitted: 1
 --- !u!114 &990510262175723673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -415,10 +382,10 @@ MonoBehaviour:
   AbilityPermitted: 1
   DashDistance: 15
   DashForce: 30
-  ResetForcesOnExit: 1
+  ResetForcesOnExit: 0
   Aim:
     AimControl: 3
-    RotationMode: 0
+    RotationMode: 1
     MinimumAngle: -180
     MaximumAngle: 180
   MinimumInputThreshold: 0.1
