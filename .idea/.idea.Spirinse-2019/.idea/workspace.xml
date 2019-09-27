@@ -3,8 +3,287 @@
   <component name="ChangeListManager">
     <list default="true" id="ce2e14ff-e13a-4da1-95b5-be1e6d97996a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Controls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Controls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/AchievementIcons.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/AchievementIcons.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/InventoryEngineLogo.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/InventoryEngineLogo.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/NiceTouchLogo.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/NiceTouchLogo.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/arrow.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/arrow.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/avatar.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/avatar.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/button-a.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/button-a.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/buttons.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/buttons.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/healthBar.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/healthBar.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/hearts.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/hearts.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/icon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/icon.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/rounded-corners-white.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/rounded-corners-white.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/splash-more-mountains.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/splash-more-mountains.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/startScreen.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/startScreen.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/startScreenShadow.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/startScreenShadow.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/stick.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/stick.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/white-1x1.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Common/Sprites/GUI/white-1x1.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Brobro/Sprites/brobro-background-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Brobro/Sprites/brobro-background-2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Brobro/Sprites/brobro-background.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Brobro/Sprites/brobro-background.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Brobro/Sprites/ladder.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Brobro/Sprites/ladder.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Brobro/Sprites/mountains.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Brobro/Sprites/mountains.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Brobro/Sprites/tiles-brobro.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Brobro/Sprites/tiles-brobro.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Brobro/Sprites/title.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Brobro/Sprites/title.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/blobParticle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/blobParticle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/bubble.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/bubble.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/coinParticle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/coinParticle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/gunFireParticle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/gunFireParticle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/heartParticle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/heartParticle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/jetpackParticle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/jetpackParticle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/laserBulletParticle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/laserBulletParticle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/laserFireParticle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/laserFireParticle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/leaf.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/leaf.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/lightRayParticle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/lightRayParticle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/mistParticle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/mistParticle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/movingPlatformParticle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/movingPlatformParticle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/playerBulletParticle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/playerBulletParticle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/playerShell.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/playerShell.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/robotExplosionParticle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/robotExplosionParticle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/rocketTrailParticle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/rocketTrailParticle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/touchTheGroundParticle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/touchTheGroundParticle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/urchinParticle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/urchinParticle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/whiteDust.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Materials/Sprites/whiteDust.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Enemies/blob-idle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Enemies/blob-idle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Enemies/blob-walk.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Enemies/blob-walk.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Enemies/buzzsaw.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Enemies/buzzsaw.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Enemies/cactus.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Enemies/cactus.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Enemies/dude.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Enemies/dude.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Enemies/robot.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Enemies/robot.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Enemies/rocketCannon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Enemies/rocketCannon.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Enemies/urchin.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Enemies/urchin.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Blocks/bonus-block.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Blocks/bonus-block.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Blocks/ice.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Blocks/ice.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Blocks/pushable-block.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Blocks/pushable-block.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Blocks/rock-shake.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Blocks/rock-shake.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Blocks/rock.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Blocks/rock.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Lava/lava-background.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Lava/lava-background.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Lava/lava-background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Lava/lava-background.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Lava/lava-bridge.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Lava/lava-bridge.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Lava/lava-platforms.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Lava/lava-platforms.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mesa/bg-background-mountain-1-green.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mesa/bg-background-mountain-1-green.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mesa/bg-background-mountain-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mesa/bg-background-mountain-1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mesa/bg-background-mountain-2-green.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mesa/bg-background-mountain-2-green.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mesa/bg-background-mountain-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mesa/bg-background-mountain-2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mesa/bg-background-mountain-3-green.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mesa/bg-background-mountain-3-green.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mesa/bg-background-mountain-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mesa/bg-background-mountain-3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mesa/ground.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mesa/ground.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mesa/ladder.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mesa/ladder.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mesa/mesa-background-2.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mesa/mesa-background-2.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mesa/mesa-background-3.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mesa/mesa-background-3.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mesa/mesa-background-4.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mesa/mesa-background-4.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mesa/mesa-background.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mesa/mesa-background.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mesa/platforms.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mesa/platforms.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mountains/mountains-background.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mountains/mountains-background.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mountains/mountains-bg-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mountains/mountains-bg-1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mountains/mountains-bg-2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mountains/mountains-bg-2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mountains/mountains-bg-3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mountains/mountains-bg-3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mountains/mountains-bg-4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mountains/mountains-bg-4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mountains/mountains-bricks.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mountains/mountains-bricks.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mountains/mountains-foreground.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mountains/mountains-foreground.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mountains/mountains-platforms.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Mountains/mountains-platforms.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Props/background-assets.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Props/background-assets.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Props/control-board.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Props/control-board.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Props/destructibleBlock.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Props/destructibleBlock.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Props/finalFlag.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Props/finalFlag.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Props/jumper.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Props/jumper.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Props/one-way-platform.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Props/one-way-platform.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Props/rocket-platform.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Props/rocket-platform.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Props/water-top.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Props/water-top.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Props/water.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Environment/Props/water.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Items/coin.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Items/coin.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Items/stimpack.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Items/stimpack.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Items/timeSlower.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Items/timeSlower.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Items/weapon-upgrade.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/Items/weapon-upgrade.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi-melee.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi-melee.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi-shootDiagonalDown.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi-shootDiagonalDown.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi-shootDiagonalUp.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi-shootDiagonalUp.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi-shootDown.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi-shootDown.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi-shootUp.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi-shootUp.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi_climb-climb.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi_climb-climb.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi_flat-crouch.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi_flat-crouch.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi_flat-dash.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi_flat-dash.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi_flat-dive.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi_flat-dive.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi_flat-idle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi_flat-idle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi_flat-jetpack.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi_flat-jetpack.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi_flat-jump.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi_flat-jump.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi_flat-lookUp.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi_flat-lookUp.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi_flat-run.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi_flat-run.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi_flat-shoot.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi_flat-shoot.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi_flat-walk.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi_flat-walk.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi_flat-wallClinging.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi2D/Sprites/SpaceCorgi/spacecorgi_flat-wallClinging.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi3D/Materials/barbarian.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi3D/Materials/barbarian.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi3D/Materials/bear.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi3D/Materials/bear.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi3D/Materials/blob.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi3D/Materials/blob.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi3D/Materials/squid.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi3D/Materials/squid.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi3D/Models/corgi.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi3D/Models/corgi.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi3D/Models/wolf.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi3D/Models/wolf.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi3D/Textures/falling-yellow.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi3D/Textures/falling-yellow.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi3D/Textures/moving-yellow.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Corgi3D/Textures/moving-yellow.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-brobro.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-brobro.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-corgi3d-x-the-hunt.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-corgi3d-x-the-hunt.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-corgi3d.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-corgi3d.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-hipster-bros.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-hipster-bros.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-lava.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-lava.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-mesa1.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-mesa1.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-mesa2.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-mesa2.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-minimal-1way-horizontal.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-minimal-1way-horizontal.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-minimal-1way-vertical.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-minimal-1way-vertical.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-minimal-4players.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-minimal-4players.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-minimal-gravity.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-minimal-gravity.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-minimal-inventory.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-minimal-inventory.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-minimal-keys.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-minimal-keys.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-minimal-platforms-gravity-flipped.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-minimal-platforms-gravity-flipped.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-minimal-platforms.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-minimal-platforms.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-minimal-rooms.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-minimal-rooms.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-minimal-slopes.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-minimal-slopes.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-minimal-spawners.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-minimal-spawners.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-minimal-weapons.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-minimal-weapons.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-mountains.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-mountains.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-path-element.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-path-element.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-pixel.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-pixel.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-retro1.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-retro1.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-retro2.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-retro2.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-retro3.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-retro3.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-the-hunt.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map-the-hunt.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/LevelSelection/Sprites/level-map.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Blocks/blocks.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Blocks/blocks.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Props/MinimalItems.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Props/MinimalItems.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Props/MinimalItems2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Props/MinimalItems2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Props/MinimalItemsIcons.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Props/MinimalItemsIcons.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Props/MinimalShootingRangeTarget.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Props/MinimalShootingRangeTarget.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Props/PixelGrids/Grid-1-128x128.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Props/PixelGrids/Grid-1-128x128.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Props/PixelGrids/Grid-2-128x128.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Props/PixelGrids/Grid-2-128x128.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Props/PixelGrids/Grid-3-128x128.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Props/PixelGrids/Grid-3-128x128.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Props/RopeSpritesheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Props/RopeSpritesheet.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleClimbIdle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleClimbIdle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleClimbMove.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleClimbMove.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleCrouchIdle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleCrouchIdle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleCrouchWalk.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleCrouchWalk.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleDangling.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleDangling.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleDash.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleDash.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleDive.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleDive.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleIdle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleIdle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleJetpack.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleJetpack.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleJump.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleJump.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleLookUp.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleLookUp.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleMeleeAttack.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleMeleeAttack.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleRun.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleRun.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleWalk.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleWalk.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleWallCling.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Minimal/Sprites/Rectangle/RectangleWallCling.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Pixel/Sprites/pixel-corgi.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Pixel/Sprites/pixel-corgi.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Pixel/Sprites/pixels-background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Pixel/Sprites/pixels-background.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Materials/RetroBulletMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Materials/RetroBulletMaterial.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/RetroCorgiClimbing.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/RetroCorgiClimbing.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/RetroCorgiCrawl.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/RetroCorgiCrawl.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/RetroCorgiCrouch.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/RetroCorgiCrouch.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/RetroCorgiDash.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/RetroCorgiDash.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/RetroCorgiDead.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/RetroCorgiDead.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/RetroCorgiDiving.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/RetroCorgiDiving.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/RetroCorgiIdle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/RetroCorgiIdle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/RetroCorgiJetpack.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/RetroCorgiJetpack.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/RetroCorgiJump.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/RetroCorgiJump.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/RetroCorgiLookup.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/RetroCorgiLookup.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/RetroCorgiRun.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/RetroCorgiRun.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/RetroCorgiWalk.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/RetroCorgiWalk.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/RetroSwordSlash.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/RetroSwordSlash.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/retroCorgiWallclinging.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroCorgi/retroCorgiWallclinging.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroEnemies/RetroBlobWalk.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroEnemies/RetroBlobWalk.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroEnemies/RetroSpacemanIdle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroEnemies/RetroSpacemanIdle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroEnemies/RetroSpacemanWalk.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroEnemies/RetroSpacemanWalk.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroPlatforms/RetroBluePlatform.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroPlatforms/RetroBluePlatform.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroPlatforms/RetroGreenPlatform.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroPlatforms/RetroGreenPlatform.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroPlatforms/RetroGround.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroPlatforms/RetroGround.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroPlatforms/RetroGroundDark.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroPlatforms/RetroGroundDark.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroPlatforms/RetroRedPlatform.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroPlatforms/RetroRedPlatform.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroPlatforms/RetroYellowPlatform.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroPlatforms/RetroYellowPlatform.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroProps/RetroLadder.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroProps/RetroLadder.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroProps/RetroProps1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroProps/RetroProps1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroVFX/RetroDust.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroVFX/RetroDust.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroVFX/RetroFlames.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroVFX/RetroFlames.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroVFX/RetroLeaves.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/Retro/Sprites/RetroVFX/RetroLeaves.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/RetroAdventure/Sprites/CharacterSelection.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/RetroAdventure/Sprites/CharacterSelection.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/RetroAdventure/Sprites/RetroLevelSelectionBackground1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/RetroAdventure/Sprites/RetroLevelSelectionBackground1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/RetroAdventure/Sprites/RetroLevelSelectionBackground2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/RetroAdventure/Sprites/RetroLevelSelectionBackground2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/RetroAdventure/Sprites/RetroLevelSelectionBackground3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/RetroAdventure/Sprites/RetroLevelSelectionBackground3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/RetroAdventure/Sprites/RetroLevelSelectionBackground4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/RetroAdventure/Sprites/RetroLevelSelectionBackground4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/RetroAdventure/Sprites/RetroLevelSelectionBackground5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/RetroAdventure/Sprites/RetroLevelSelectionBackground5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/SuperHipsterBros/Sprites/background-items.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/SuperHipsterBros/Sprites/background-items.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/SuperHipsterBros/Sprites/background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/SuperHipsterBros/Sprites/background.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/SuperHipsterBros/Sprites/badass-dude.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/SuperHipsterBros/Sprites/badass-dude.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/SuperHipsterBros/Sprites/blocks.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/SuperHipsterBros/Sprites/blocks.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/SuperHipsterBros/Sprites/bulky-dude.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/SuperHipsterBros/Sprites/bulky-dude.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/SuperHipsterBros/Sprites/ground-deco.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/SuperHipsterBros/Sprites/ground-deco.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/SuperHipsterBros/Sprites/ground.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/SuperHipsterBros/Sprites/ground.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/SuperHipsterBros/Sprites/hipster-title.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/SuperHipsterBros/Sprites/hipster-title.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/SuperHipsterBros/Sprites/mushroom.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/SuperHipsterBros/Sprites/mushroom.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/SuperHipsterBros/Sprites/pipe.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/SuperHipsterBros/Sprites/pipe.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/SuperHipsterBros/Sprites/pipe2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/SuperHipsterBros/Sprites/pipe2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/SuperHipsterBros/Sprites/super-hipster-bros.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/SuperHipsterBros/Sprites/super-hipster-bros.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/TheHunt/Models/Soldier/Materials/ExplosionPolygon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/TheHunt/Models/Soldier/Materials/ExplosionPolygon.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/TheHunt/Models/Soldier/Red.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/TheHunt/Models/Soldier/Red.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/TheHunt/Models/Temple/temple.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/TheHunt/Models/Temple/temple.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/TheHunt/Models/Temple/templeWheel.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/TheHunt/Models/Temple/templeWheel.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/TheHunt/Sprites/PolygonParticle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/TheHunt/Sprites/PolygonParticle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/TheHunt/Sprites/TheHuntReticle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/Demos/TheHunt/Sprites/TheHuntReticle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/InventoryEngine/Demos/PixelRogue/Sprites/Adventurer.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/InventoryEngine/Demos/PixelRogue/Sprites/Adventurer.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/InventoryEngine/Demos/PixelRogue/Sprites/AdventurerItems.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/InventoryEngine/Demos/PixelRogue/Sprites/AdventurerItems.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/InventoryEngine/Demos/PixelRogue/Sprites/Icons.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/InventoryEngine/Demos/PixelRogue/Sprites/Icons.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/InventoryEngine/Demos/PixelRogue/Sprites/Map.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/InventoryEngine/Demos/PixelRogue/Sprites/Map.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/InventoryEngine/Demos/PixelRogue/Sprites/Map2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/InventoryEngine/Demos/PixelRogue/Sprites/Map2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/InventoryEngine/Demos/PixelRogue/Sprites/PixelInventoryBg.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/InventoryEngine/Demos/PixelRogue/Sprites/PixelInventoryBg.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/InventoryEngine/Demos/PixelRogue/Sprites/PixelInventoryButtons.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/InventoryEngine/Demos/PixelRogue/Sprites/PixelInventoryButtons.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/InventoryEngine/Demos/PixelRogue/Sprites/PixelInventoryDetailsBg.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/InventoryEngine/Demos/PixelRogue/Sprites/PixelInventoryDetailsBg.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/InventoryEngine/Demos/PixelRogue/Sprites/PixelInventorySlots.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/InventoryEngine/Demos/PixelRogue/Sprites/PixelInventorySlots.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMFeedbacks/Demos/Models/Dude/Dude.obj.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMFeedbacks/Demos/Models/Dude/Dude.obj.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Avatars.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Avatars.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/CheckboxesRadio.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/CheckboxesRadio.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Circle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Circle.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/DemoBackground.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/DemoBackground.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Empty.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Empty.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMIconArrow.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMIconArrow.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMIconCheck.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMIconCheck.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMIconChevron.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMIconChevron.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMIconCoin.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMIconCoin.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMIconCross.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMIconCross.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMIconDoubleChevron.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMIconDoubleChevron.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMIconGear.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMIconGear.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMIconHeart.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMIconHeart.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMIconHouse.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMIconHouse.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMIconLock.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMIconLock.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMIconMusic.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMIconMusic.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMIconSoundOn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMIconSoundOn.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMIconStar.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMIconStar.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMiconSoundOff.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/Icons/MMiconSoundOff.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/OnOff.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/OnOff.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/ProgressBar.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/ProgressBar.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/RoundCornersFilled.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/RoundCornersFilled.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/RoundedCorners10Filled.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/RoundedCorners10Filled.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/RoundedCorners10Stroke2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/RoundedCorners10Stroke2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/RoundedCorners10Stroke5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/RoundedCorners10Stroke5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/RoundedCorners20Filled.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/RoundedCorners20Filled.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/SwitchBackground.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/SwitchBackground.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/UIElements1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMInterface/Styles/Mini/Sprites/UIElements1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMTools/Achievements/Sprites/AchievementBackground.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMTools/Achievements/Sprites/AchievementBackground.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMTools/Achievements/Sprites/AchievementBackgroundUnlocked.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMTools/Achievements/Sprites/AchievementBackgroundUnlocked.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMTools/Achievements/Sprites/AchievementIcon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMTools/Achievements/Sprites/AchievementIcon.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMTools/MMControls/Sprites/mobile-controls-spritesheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMTools/MMControls/Sprites/mobile-controls-spritesheet.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMTools/SceneLoading/Sprites/LoadingAnimation.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMTools/SceneLoading/Sprites/LoadingAnimation.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMTools/SceneLoading/Sprites/LoadingCompleteAnimation.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMTools/SceneLoading/Sprites/LoadingCompleteAnimation.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMTools/SceneLoading/Sprites/LoadingProgressBar.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMTools/SceneLoading/Sprites/LoadingProgressBar.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMTools/SceneLoading/Sprites/MoreMountainsLogo.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMTools/SceneLoading/Sprites/MoreMountainsLogo.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CombatDemo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CombatDemo.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UpdateLinePosition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UpdateLinePosition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,81 +294,134 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/PlayerMover.cs">
+        <entry file="file://$PROJECT_DIR$/Assets/CorgiEngine/Common/Scripts/Camera/Cinemachine/CinemachineCameraController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+            <state relative-caret-position="48">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
               <folding>
-                <marker date="1568798144557" expanded="true" signature="6:78" ph="..." />
-                <marker date="1568798144557" expanded="true" signature="120:299" ph="{...}" />
-                <marker date="1568798144557" expanded="true" signature="197:218" ph="{...}" />
-                <marker date="1568798144557" expanded="true" signature="276:297" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="6:90" ph="..." />
+                <marker date="1569614818171" expanded="true" signature="127:12771" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="264:981" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="507:638" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="794:975" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="987:1094" ph="/// A class that handles camera follow for Cinemachine powered cameras ... " />
+                <marker date="1569614818171" expanded="true" signature="1222:12769" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="4846:4926" ph="/// On Awake we grab our components ... " />
+                <marker date="1569614818171" expanded="true" signature="4965:5337" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="5347:5434" ph="/// On Start we assign our bounding volume ... " />
+                <marker date="1569614818171" expanded="true" signature="5473:5942" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="5550:5661" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="5698:5808" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="5844:5932" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="5952:6088" ph="/// Sets a new target for this camera to track ... " />
+                <marker date="1569614818171" expanded="true" signature="6147:6302" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="6312:6408" ph="/// Starts following the LevelManager's main player ... " />
+                <marker date="1569614818171" expanded="true" signature="6453:6628" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="6638:6713" ph="/// Stops following any target ... " />
+                <marker date="1569614818171" expanded="true" signature="6757:6899" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="6909:6998" ph="/// On late update, we handle our zoom level ... " />
+                <marker date="1569614818171" expanded="true" signature="7042:7096" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="7106:7220" ph="/// Makes the camera zoom in or out based on the current target speed ... " />
+                <marker date="1569614818171" expanded="true" signature="7264:7494" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="7326:7397" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="7414:7484" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="7504:7583" ph="/// Modifies the orthographic zoom ... " />
+                <marker date="1569614818171" expanded="true" signature="7640:8245" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="7718:7770" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="8255:8358" ph="/// Modifies the zoom if the camera is in perspective mode ... " />
+                <marker date="1569614818171" expanded="true" signature="8414:9006" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="8491:8543" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="9072:9578" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="9125:9568" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="9412:9527" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="9596:9726" ph="/// Acts on MMCameraEvents when caught ... " />
+                <marker date="1569614818171" expanded="true" signature="9791:11048" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="9844:11038" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="10101:10218" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="10362:10570" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="10460:10548" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="10752:10960" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="10850:10938" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="11058:11164" ph="/// Teleports the camera's transform to the target's position ... " />
+                <marker date="1569614818171" expanded="true" signature="11217:11311" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="11321:11460" ph="/// When getting game events, acts on them ... " />
+                <marker date="1569614818171" expanded="true" signature="11533:12210" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="11620:11784" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="11688:11770" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="11870:11993" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="12077:12200" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="12220:12308" ph="/// On enable we start listening for events ... " />
+                <marker date="1569614818171" expanded="true" signature="12350:12487" ph="{...}" />
+                <marker date="1569614818171" expanded="true" signature="12497:12585" ph="/// On disable we stop listening for events ... " />
+                <marker date="1569614818171" expanded="true" signature="12628:12763" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/CorgiEngine/Common/Scripts/Camera/Cinemachine/CinemachineCameraController.cs">
+        <entry file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@1.1.0/Rider/Editor/RiderInitializer.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="160">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Controls.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="78" column="38" selection-start-line="78" selection-start-column="38" selection-end-line="78" selection-end-column="38" />
               <folding>
-                <marker date="1566770587000" expanded="true" signature="6:90" ph="..." />
-                <marker date="1566770587000" expanded="true" signature="127:12771" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="264:981" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="507:638" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="794:975" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="987:1094" ph="/// A class that handles camera follow for Cinemachine powered cameras ... " />
-                <marker date="1566770587000" expanded="true" signature="1222:12769" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="4846:4926" ph="/// On Awake we grab our components ... " />
-                <marker date="1566770587000" expanded="true" signature="4965:5337" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="5347:5434" ph="/// On Start we assign our bounding volume ... " />
-                <marker date="1566770587000" expanded="true" signature="5473:5942" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="5550:5661" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="5698:5808" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="5844:5932" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="5952:6088" ph="/// Sets a new target for this camera to track ... " />
-                <marker date="1566770587000" expanded="true" signature="6147:6302" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="6312:6408" ph="/// Starts following the LevelManager's main player ... " />
-                <marker date="1566770587000" expanded="true" signature="6453:6628" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="6638:6713" ph="/// Stops following any target ... " />
-                <marker date="1566770587000" expanded="true" signature="6757:6899" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="6909:6998" ph="/// On late update, we handle our zoom level ... " />
-                <marker date="1566770587000" expanded="true" signature="7042:7096" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="7106:7220" ph="/// Makes the camera zoom in or out based on the current target speed ... " />
-                <marker date="1566770587000" expanded="true" signature="7264:7494" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="7326:7397" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="7414:7484" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="7504:7583" ph="/// Modifies the orthographic zoom ... " />
-                <marker date="1566770587000" expanded="true" signature="7640:8245" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="7718:7770" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="8255:8358" ph="/// Modifies the zoom if the camera is in perspective mode ... " />
-                <marker date="1566770587000" expanded="true" signature="8414:9006" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="8491:8543" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="9072:9578" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="9125:9568" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="9412:9527" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="9596:9726" ph="/// Acts on MMCameraEvents when caught ... " />
-                <marker date="1566770587000" expanded="true" signature="9791:11048" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="9844:11038" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="10101:10218" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="10362:10570" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="10460:10548" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="10752:10960" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="10850:10938" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="11058:11164" ph="/// Teleports the camera's transform to the target's position ... " />
-                <marker date="1566770587000" expanded="true" signature="11217:11311" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="11321:11460" ph="/// When getting game events, acts on them ... " />
-                <marker date="1566770587000" expanded="true" signature="11533:12210" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="11620:11784" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="11688:11770" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="11870:11993" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="12077:12200" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="12220:12308" ph="/// On enable we start listening for events ... " />
-                <marker date="1566770587000" expanded="true" signature="12350:12487" ph="{...}" />
-                <marker date="1566770587000" expanded="true" signature="12497:12585" ph="/// On disable we stop listening for events ... " />
-                <marker date="1566770587000" expanded="true" signature="12628:12763" ph="{...}" />
+                <marker date="1569625999693" expanded="false" signature="6:129" ph="..." />
+                <marker date="1569625999693" expanded="true" signature="168:3365" ph="{...}" />
+                <marker date="1569625999693" expanded="true" signature="728:782" ph="{...}" />
+                <marker date="1569625999693" expanded="true" signature="848:1350" ph="{...}" />
+                <marker date="1569625999693" expanded="true" signature="1065:1144" ph="{...}" />
+                <marker date="1569625999693" expanded="true" signature="1167:1240" ph="{...}" />
+                <marker date="1569625999693" expanded="true" signature="1283:1344" ph="{...}" />
+                <marker date="1569625999693" expanded="true" signature="1382:1857" ph="{...}" />
+                <marker date="1569625999693" expanded="true" signature="1534:1655" ph="{...}" />
+                <marker date="1569625999693" expanded="true" signature="1726:1842" ph="{...}" />
+                <marker date="1569625999693" expanded="true" signature="1917:2780" ph="{...}" />
+                <marker date="1569625999693" expanded="true" signature="2191:2561" ph="{...}" />
+                <marker date="1569625999693" expanded="true" signature="2605:2683" ph="{...}" />
+                <marker date="1569625999693" expanded="true" signature="2824:3279" ph="{...}" />
+                <marker date="1569625999693" expanded="true" signature="2961:3179" ph="{...}" />
+                <marker date="1569625999693" expanded="true" signature="3322:3363" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/UpdateLinePosition.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+              <folding>
+                <marker date="1569626644986" expanded="false" signature="6:152" ph="..." />
+                <marker date="1569626644986" expanded="true" signature="201:2536" ph="{...}" />
+                <marker date="1569626644986" expanded="true" signature="652:752" ph="{...}" />
+                <marker date="1569626644986" expanded="true" signature="810:2534" ph="{...}" />
+                <marker date="1569626644986" expanded="true" signature="1373:1698" ph="{...}" />
+                <marker date="1569626644986" expanded="true" signature="2181:2329" ph="/* var vIndex = index / uvAnimationTileX; ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/TrackingBall.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="21" column="207" selection-start-line="21" selection-start-column="207" selection-end-line="21" selection-end-column="207" />
+              <folding>
+                <marker date="1569616770326" expanded="false" signature="6:78" ph="..." />
+                <marker date="1569616770326" expanded="true" signature="121:657" ph="{...}" />
+                <marker date="1569616770326" expanded="true" signature="355:376" ph="{...}" />
+                <marker date="1569616770326" expanded="true" signature="434:655" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -98,14 +430,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMFeedbacks/MMFeedbacksForThirdParty/Cinemachine/Feedbacks/MMFeedbackCinemachineImpulse.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state relative-caret-position="64">
               <caret line="4" selection-start-line="4" selection-end-line="4" />
               <folding>
-                <marker date="1566770789000" expanded="true" signature="6:128" ph="..." />
-                <marker date="1566770789000" expanded="true" signature="176:900" ph="{...}" />
-                <marker date="1566770789000" expanded="true" signature="464:898" ph="{...}" />
-                <marker date="1566770789000" expanded="true" signature="751:892" ph="{...}" />
-                <marker date="1566770789000" expanded="true" signature="785:882" ph="{...}" />
+                <marker date="1569614824172" expanded="true" signature="6:128" ph="..." />
+                <marker date="1569614824172" expanded="true" signature="176:900" ph="{...}" />
+                <marker date="1569614824172" expanded="true" signature="464:898" ph="{...}" />
+                <marker date="1569614824172" expanded="true" signature="751:892" ph="{...}" />
+                <marker date="1569614824172" expanded="true" signature="785:882" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -114,7 +446,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@2.1.7/PostProcessing/Runtime/Effects/AmbientOcclusion.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2685">
+            <state relative-caret-position="2864">
               <caret line="179" column="79" selection-start-line="179" selection-start-column="79" selection-end-line="179" selection-end-column="79" />
               <folding>
                 <marker date="1560362527000" expanded="true" signature="61:10268" ph="{...}" />
@@ -166,86 +498,35 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/SetPolygon2DProbuilderCollider.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <marker date="1568884082659" expanded="true" signature="6:78" ph="..." />
-                <marker date="1568884082659" expanded="true" signature="139:313" ph="{...}" />
-                <marker date="1568884082659" expanded="true" signature="211:232" ph="{...}" />
-                <marker date="1568884082659" expanded="true" signature="290:311" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/SetPolygonCollider3D.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <marker date="1568884249554" expanded="true" signature="6:165" ph="..." />
-                <marker date="1568884249554" expanded="true" signature="207:2198" ph="{...}" />
-                <marker date="1568884249554" expanded="true" signature="313:900" ph="{...}" />
-                <marker date="1568884249554" expanded="true" signature="407:510" ph="{...}" />
-                <marker date="1568884249554" expanded="true" signature="723:894" ph="{...}" />
-                <marker date="1568884249554" expanded="true" signature="803:884" ph="{...}" />
-                <marker date="1568884249554" expanded="true" signature="964:2196" ph="{...}" />
-                <marker date="1568884249554" expanded="true" signature="1013:1161" ph="{...}" />
-                <marker date="1568884249554" expanded="true" signature="1632:1711" ph="{...}" />
-                <marker date="1568884249554" expanded="true" signature="1830:1936" ph="{...}" />
-                <marker date="1568884249554" expanded="true" signature="2231:4354" ph="{...}" />
-                <marker date="1568884249554" expanded="true" signature="2256:2498" ph="{...}" />
-                <marker date="1568884249554" expanded="true" signature="2392:2492" ph="{...}" />
-                <marker date="1568884249554" expanded="true" signature="2553:2952" ph="{...}" />
-                <marker date="1568884249554" expanded="true" signature="2658:2923" ph="{...}" />
-                <marker date="1568884249554" expanded="true" signature="3019:3550" ph="{...}" />
-                <marker date="1568884249554" expanded="true" signature="3128:3521" ph="{...}" />
-                <marker date="1568884249554" expanded="true" signature="3183:3511" ph="{...}" />
-                <marker date="1568884249554" expanded="true" signature="3279:3497" ph="{...}" />
-                <marker date="1568884249554" expanded="true" signature="3613:4352" ph="{...}" />
-                <marker date="1568884249554" expanded="true" signature="3722:4323" ph="{...}" />
-                <marker date="1568884249554" expanded="true" signature="3819:4313" ph="{...}" />
-                <marker date="1568884249554" expanded="true" signature="3903:4299" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/LevelSpawn.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <marker date="1568884963620" expanded="true" signature="6:78" ph="..." />
-                <marker date="1568884963620" expanded="true" signature="119:293" ph="{...}" />
-                <marker date="1568884963620" expanded="true" signature="191:212" ph="{...}" />
-                <marker date="1568884963620" expanded="true" signature="270:291" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/PlayerMover.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@2.1.7/PostProcessing/Runtime/Effects/AmbientOcclusion.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CorgiEngine/Common/Scripts/Camera/Cinemachine/CinemachineCameraController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/LevelSpawn.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/SetPolygonCollider3D.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@1.1.0/Rider/Editor/RiderInitializer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@2.1.7/PostProcessing/Runtime/Effects/AmbientOcclusion.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Controls.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UpdateLinePosition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMFeedbacks/MMFeedbacksForThirdParty/Cinemachine/Feedbacks/MMFeedbackCinemachineImpulse.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/SetPolygon2DProbuilderCollider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TrackingBall.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/PlayerMover.cs" />
         <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@2.1.7/PostProcessing/Runtime/Effects/AmbientOcclusion.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TrackingBall.cs" />
+        <option value="$PROJECT_DIR$/Assets/Controls.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UpdateLinePosition.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/misc.xml" />
       </list>
     </option>
   </component>
@@ -260,22 +541,30 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="FileSystemExplorer" />
       <pane id="AssemblyExplorer" />
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
         <option name="show-project-names" value="true" />
       </pane>
+      <pane id="FileSystemExplorer" />
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="editor.config.ad.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -320,11 +609,12 @@
       <workItem from="1568796980533" duration="373000" />
       <workItem from="1568798113672" duration="1419000" />
       <workItem from="1568884173637" duration="607000" />
+      <workItem from="1569615944558" duration="5504000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2399000" />
+    <option name="totallyTimeSpent" value="7903000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -336,9 +626,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1618" height="877" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25609756" />
+      <window_info id="Image Layers" />
+      <window_info id="Capture Tool" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25892383" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -357,6 +650,7 @@
       <window_info anchor="bottom" id="Terminal" order="13" />
       <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
       <window_info anchor="bottom" id="Unity" order="15" />
+      <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -381,100 +675,91 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/PlayerMover.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding>
-            <marker date="1568798144557" expanded="true" signature="6:78" ph="..." />
-            <marker date="1568798144557" expanded="true" signature="120:299" ph="{...}" />
-            <marker date="1568798144557" expanded="true" signature="197:218" ph="{...}" />
-            <marker date="1568798144557" expanded="true" signature="276:297" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/PlayerMover.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/SetPolygon2DProbuilderCollider.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/SetPolygonCollider3D.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/LevelSpawn.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/CorgiEngine/Common/Scripts/Camera/Cinemachine/CinemachineCameraController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
+        <state relative-caret-position="48">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
           <folding>
-            <marker date="1566770587000" expanded="true" signature="6:90" ph="..." />
-            <marker date="1566770587000" expanded="true" signature="127:12771" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="264:981" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="507:638" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="794:975" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="987:1094" ph="/// A class that handles camera follow for Cinemachine powered cameras ... " />
-            <marker date="1566770587000" expanded="true" signature="1222:12769" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="4846:4926" ph="/// On Awake we grab our components ... " />
-            <marker date="1566770587000" expanded="true" signature="4965:5337" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="5347:5434" ph="/// On Start we assign our bounding volume ... " />
-            <marker date="1566770587000" expanded="true" signature="5473:5942" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="5550:5661" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="5698:5808" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="5844:5932" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="5952:6088" ph="/// Sets a new target for this camera to track ... " />
-            <marker date="1566770587000" expanded="true" signature="6147:6302" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="6312:6408" ph="/// Starts following the LevelManager's main player ... " />
-            <marker date="1566770587000" expanded="true" signature="6453:6628" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="6638:6713" ph="/// Stops following any target ... " />
-            <marker date="1566770587000" expanded="true" signature="6757:6899" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="6909:6998" ph="/// On late update, we handle our zoom level ... " />
-            <marker date="1566770587000" expanded="true" signature="7042:7096" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="7106:7220" ph="/// Makes the camera zoom in or out based on the current target speed ... " />
-            <marker date="1566770587000" expanded="true" signature="7264:7494" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="7326:7397" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="7414:7484" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="7504:7583" ph="/// Modifies the orthographic zoom ... " />
-            <marker date="1566770587000" expanded="true" signature="7640:8245" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="7718:7770" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="8255:8358" ph="/// Modifies the zoom if the camera is in perspective mode ... " />
-            <marker date="1566770587000" expanded="true" signature="8414:9006" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="8491:8543" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="9072:9578" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="9125:9568" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="9412:9527" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="9596:9726" ph="/// Acts on MMCameraEvents when caught ... " />
-            <marker date="1566770587000" expanded="true" signature="9791:11048" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="9844:11038" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="10101:10218" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="10362:10570" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="10460:10548" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="10752:10960" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="10850:10938" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="11058:11164" ph="/// Teleports the camera's transform to the target's position ... " />
-            <marker date="1566770587000" expanded="true" signature="11217:11311" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="11321:11460" ph="/// When getting game events, acts on them ... " />
-            <marker date="1566770587000" expanded="true" signature="11533:12210" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="11620:11784" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="11688:11770" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="11870:11993" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="12077:12200" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="12220:12308" ph="/// On enable we start listening for events ... " />
-            <marker date="1566770587000" expanded="true" signature="12350:12487" ph="{...}" />
-            <marker date="1566770587000" expanded="true" signature="12497:12585" ph="/// On disable we stop listening for events ... " />
-            <marker date="1566770587000" expanded="true" signature="12628:12763" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="6:90" ph="..." />
+            <marker date="1569614818171" expanded="true" signature="127:12771" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="264:981" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="507:638" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="794:975" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="987:1094" ph="/// A class that handles camera follow for Cinemachine powered cameras ... " />
+            <marker date="1569614818171" expanded="true" signature="1222:12769" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="4846:4926" ph="/// On Awake we grab our components ... " />
+            <marker date="1569614818171" expanded="true" signature="4965:5337" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="5347:5434" ph="/// On Start we assign our bounding volume ... " />
+            <marker date="1569614818171" expanded="true" signature="5473:5942" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="5550:5661" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="5698:5808" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="5844:5932" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="5952:6088" ph="/// Sets a new target for this camera to track ... " />
+            <marker date="1569614818171" expanded="true" signature="6147:6302" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="6312:6408" ph="/// Starts following the LevelManager's main player ... " />
+            <marker date="1569614818171" expanded="true" signature="6453:6628" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="6638:6713" ph="/// Stops following any target ... " />
+            <marker date="1569614818171" expanded="true" signature="6757:6899" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="6909:6998" ph="/// On late update, we handle our zoom level ... " />
+            <marker date="1569614818171" expanded="true" signature="7042:7096" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="7106:7220" ph="/// Makes the camera zoom in or out based on the current target speed ... " />
+            <marker date="1569614818171" expanded="true" signature="7264:7494" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="7326:7397" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="7414:7484" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="7504:7583" ph="/// Modifies the orthographic zoom ... " />
+            <marker date="1569614818171" expanded="true" signature="7640:8245" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="7718:7770" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="8255:8358" ph="/// Modifies the zoom if the camera is in perspective mode ... " />
+            <marker date="1569614818171" expanded="true" signature="8414:9006" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="8491:8543" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="9072:9578" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="9125:9568" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="9412:9527" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="9596:9726" ph="/// Acts on MMCameraEvents when caught ... " />
+            <marker date="1569614818171" expanded="true" signature="9791:11048" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="9844:11038" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="10101:10218" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="10362:10570" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="10460:10548" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="10752:10960" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="10850:10938" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="11058:11164" ph="/// Teleports the camera's transform to the target's position ... " />
+            <marker date="1569614818171" expanded="true" signature="11217:11311" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="11321:11460" ph="/// When getting game events, acts on them ... " />
+            <marker date="1569614818171" expanded="true" signature="11533:12210" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="11620:11784" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="11688:11770" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="11870:11993" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="12077:12200" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="12220:12308" ph="/// On enable we start listening for events ... " />
+            <marker date="1569614818171" expanded="true" signature="12350:12487" ph="{...}" />
+            <marker date="1569614818171" expanded="true" signature="12497:12585" ph="/// On disable we stop listening for events ... " />
+            <marker date="1569614818171" expanded="true" signature="12628:12763" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/CorgiEngine/ThirdParty/MoreMountains/MMFeedbacks/MMFeedbacksForThirdParty/Cinemachine/Feedbacks/MMFeedbackCinemachineImpulse.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
+        <state relative-caret-position="64">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
           <folding>
-            <marker date="1566770789000" expanded="true" signature="6:128" ph="..." />
-            <marker date="1566770789000" expanded="true" signature="176:900" ph="{...}" />
-            <marker date="1566770789000" expanded="true" signature="464:898" ph="{...}" />
-            <marker date="1566770789000" expanded="true" signature="751:892" ph="{...}" />
-            <marker date="1566770789000" expanded="true" signature="785:882" ph="{...}" />
+            <marker date="1569614824172" expanded="true" signature="6:128" ph="..." />
+            <marker date="1569614824172" expanded="true" signature="176:900" ph="{...}" />
+            <marker date="1569614824172" expanded="true" signature="464:898" ph="{...}" />
+            <marker date="1569614824172" expanded="true" signature="751:892" ph="{...}" />
+            <marker date="1569614824172" expanded="true" signature="785:882" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@2.1.7/PostProcessing/Runtime/Effects/AmbientOcclusion.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2685">
+        <state relative-caret-position="2864">
           <caret line="179" column="79" selection-start-line="179" selection-start-column="79" selection-end-line="179" selection-end-column="79" />
           <folding>
             <marker date="1560362527000" expanded="true" signature="61:10268" ph="{...}" />
@@ -525,57 +810,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/SetPolygon2DProbuilderCollider.cs">
+    <entry file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@1.1.0/Rider/Editor/RiderInitializer.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="160">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/TrackingBall.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="21" column="207" selection-start-line="21" selection-start-column="207" selection-end-line="21" selection-end-column="207" />
           <folding>
-            <marker date="1568884082659" expanded="true" signature="6:78" ph="..." />
-            <marker date="1568884082659" expanded="true" signature="139:313" ph="{...}" />
-            <marker date="1568884082659" expanded="true" signature="211:232" ph="{...}" />
-            <marker date="1568884082659" expanded="true" signature="290:311" ph="{...}" />
+            <marker date="1569616770326" expanded="false" signature="6:78" ph="..." />
+            <marker date="1569616770326" expanded="true" signature="121:657" ph="{...}" />
+            <marker date="1569616770326" expanded="true" signature="355:376" ph="{...}" />
+            <marker date="1569616770326" expanded="true" signature="434:655" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/SetPolygonCollider3D.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Controls.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="544">
+          <caret line="78" column="38" selection-start-line="78" selection-start-column="38" selection-end-line="78" selection-end-column="38" />
           <folding>
-            <marker date="1568884249554" expanded="true" signature="6:165" ph="..." />
-            <marker date="1568884249554" expanded="true" signature="207:2198" ph="{...}" />
-            <marker date="1568884249554" expanded="true" signature="313:900" ph="{...}" />
-            <marker date="1568884249554" expanded="true" signature="407:510" ph="{...}" />
-            <marker date="1568884249554" expanded="true" signature="723:894" ph="{...}" />
-            <marker date="1568884249554" expanded="true" signature="803:884" ph="{...}" />
-            <marker date="1568884249554" expanded="true" signature="964:2196" ph="{...}" />
-            <marker date="1568884249554" expanded="true" signature="1013:1161" ph="{...}" />
-            <marker date="1568884249554" expanded="true" signature="1632:1711" ph="{...}" />
-            <marker date="1568884249554" expanded="true" signature="1830:1936" ph="{...}" />
-            <marker date="1568884249554" expanded="true" signature="2231:4354" ph="{...}" />
-            <marker date="1568884249554" expanded="true" signature="2256:2498" ph="{...}" />
-            <marker date="1568884249554" expanded="true" signature="2392:2492" ph="{...}" />
-            <marker date="1568884249554" expanded="true" signature="2553:2952" ph="{...}" />
-            <marker date="1568884249554" expanded="true" signature="2658:2923" ph="{...}" />
-            <marker date="1568884249554" expanded="true" signature="3019:3550" ph="{...}" />
-            <marker date="1568884249554" expanded="true" signature="3128:3521" ph="{...}" />
-            <marker date="1568884249554" expanded="true" signature="3183:3511" ph="{...}" />
-            <marker date="1568884249554" expanded="true" signature="3279:3497" ph="{...}" />
-            <marker date="1568884249554" expanded="true" signature="3613:4352" ph="{...}" />
-            <marker date="1568884249554" expanded="true" signature="3722:4323" ph="{...}" />
-            <marker date="1568884249554" expanded="true" signature="3819:4313" ph="{...}" />
-            <marker date="1568884249554" expanded="true" signature="3903:4299" ph="{...}" />
+            <marker date="1569625999693" expanded="false" signature="6:129" ph="..." />
+            <marker date="1569625999693" expanded="true" signature="168:3365" ph="{...}" />
+            <marker date="1569625999693" expanded="true" signature="728:782" ph="{...}" />
+            <marker date="1569625999693" expanded="true" signature="848:1350" ph="{...}" />
+            <marker date="1569625999693" expanded="true" signature="1065:1144" ph="{...}" />
+            <marker date="1569625999693" expanded="true" signature="1167:1240" ph="{...}" />
+            <marker date="1569625999693" expanded="true" signature="1283:1344" ph="{...}" />
+            <marker date="1569625999693" expanded="true" signature="1382:1857" ph="{...}" />
+            <marker date="1569625999693" expanded="true" signature="1534:1655" ph="{...}" />
+            <marker date="1569625999693" expanded="true" signature="1726:1842" ph="{...}" />
+            <marker date="1569625999693" expanded="true" signature="1917:2780" ph="{...}" />
+            <marker date="1569625999693" expanded="true" signature="2191:2561" ph="{...}" />
+            <marker date="1569625999693" expanded="true" signature="2605:2683" ph="{...}" />
+            <marker date="1569625999693" expanded="true" signature="2824:3279" ph="{...}" />
+            <marker date="1569625999693" expanded="true" signature="2961:3179" ph="{...}" />
+            <marker date="1569625999693" expanded="true" signature="3322:3363" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/LevelSpawn.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/UpdateLinePosition.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="64">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
           <folding>
-            <marker date="1568884963620" expanded="true" signature="6:78" ph="..." />
-            <marker date="1568884963620" expanded="true" signature="119:293" ph="{...}" />
-            <marker date="1568884963620" expanded="true" signature="191:212" ph="{...}" />
-            <marker date="1568884963620" expanded="true" signature="270:291" ph="{...}" />
+            <marker date="1569626644986" expanded="false" signature="6:152" ph="..." />
+            <marker date="1569626644986" expanded="true" signature="201:2536" ph="{...}" />
+            <marker date="1569626644986" expanded="true" signature="652:752" ph="{...}" />
+            <marker date="1569626644986" expanded="true" signature="810:2534" ph="{...}" />
+            <marker date="1569626644986" expanded="true" signature="1373:1698" ph="{...}" />
+            <marker date="1569626644986" expanded="true" signature="2181:2329" ph="/* var vIndex = index / uvAnimationTileX; ... */" />
           </folding>
         </state>
       </provider>

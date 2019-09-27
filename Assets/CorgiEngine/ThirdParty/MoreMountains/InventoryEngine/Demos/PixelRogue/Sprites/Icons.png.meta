@@ -1,26 +1,45 @@
 fileFormatVersion: 2
 guid: a1fbd1aaf76d0b94e88551b7c406ee2c
-timeCreated: 1463397813
-licenseType: Store
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: IconApple
-    21300002: IconBomb
-    21300004: IconCoin
-    21300006: IconSword
-    21300008: IconBlueArmor
-    21300010: IconShield
-    21300012: IconGreenArmor
-    21300014: IconQuestionMark
-    21300016: IconAxe
-  serializedVersion: 2
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: IconApple
+  - first:
+      213: 21300002
+    second: IconBomb
+  - first:
+      213: 21300004
+    second: IconCoin
+  - first:
+      213: 21300006
+    second: IconSword
+  - first:
+      213: 21300008
+    second: IconBlueArmor
+  - first:
+      213: 21300010
+    second: IconShield
+  - first:
+      213: 21300012
+    second: IconGreenArmor
+  - first:
+      213: 21300014
+    second: IconQuestionMark
+  - first:
+      213: 21300016
+    second: IconAxe
+  externalObjects: {}
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
+    sRGBTexture: 1
     linearTexture: 0
-    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -29,37 +48,60 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 7
-  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 512
   textureSettings:
+    serializedVersion: 2
     filterMode: -1
     aniso: 16
-    mipBias: -1
-    wrapMode: 1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
-  rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings: []
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: IconApple
+    - serializedVersion: 2
+      name: IconApple
       rect:
         serializedVersion: 2
         x: 0
@@ -69,19 +111,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 32, y: 56}
-        - {x: -6, y: 56}
-        - {x: -46, y: 22}
-        - {x: -57, y: 2}
-        - {x: -57, y: -33}
-        - {x: -45, y: -54}
-        - {x: -32, y: -56}
-        - {x: 37, y: -56}
-        - {x: 55, y: -40}
-        - {x: 58, y: -28}
-        - {x: 58, y: 8}
-    - name: IconBomb
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IconBomb
       rect:
         serializedVersion: 2
         x: 128
@@ -91,17 +132,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -21, y: 56}
-        - {x: -24, y: 54}
-        - {x: -45, y: 2}
-        - {x: -45, y: -39}
-        - {x: -28, y: -56}
-        - {x: 21, y: -56}
-        - {x: 45, y: -47}
-        - {x: 45, y: 49}
-        - {x: 26, y: 56}
-    - name: IconCoin
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IconCoin
       rect:
         serializedVersion: 2
         x: 256
@@ -111,19 +153,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 25, y: 48}
-        - {x: -35, y: 48}
-        - {x: -49, y: 30}
-        - {x: -51, y: 18}
-        - {x: -51, y: -19}
-        - {x: -36, y: -48}
-        - {x: 33, y: -48}
-        - {x: 43, y: -47}
-        - {x: 51, y: -27}
-        - {x: 51, y: 13}
-        - {x: 45, y: 43}
-    - name: IconSword
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IconSword
       rect:
         serializedVersion: 2
         x: 384
@@ -133,17 +174,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 55, y: 59}
-        - {x: 28, y: 59}
-        - {x: -55, y: 9}
-        - {x: -55, y: -56}
-        - {x: -46, y: -60}
-        - {x: -6, y: -60}
-        - {x: 14, y: -53}
-        - {x: 56, y: 9}
-        - {x: 56, y: 51}
-    - name: IconBlueArmor
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IconBlueArmor
       rect:
         serializedVersion: 2
         x: 0
@@ -153,15 +195,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -62, y: 53}
-        - {x: -62, y: -54}
-        - {x: 45, y: -54}
-        - {x: 62, y: -50}
-        - {x: 63, y: -44}
-        - {x: 63, y: 20}
-        - {x: 55, y: 53}
-    - name: IconShield
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IconShield
       rect:
         serializedVersion: 2
         x: 128
@@ -171,19 +216,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 50, y: 32}
-        - {x: 28, y: 55}
-        - {x: -44, y: 55}
-        - {x: -50, y: 30}
-        - {x: -50, y: -36}
-        - {x: -17, y: -56}
-        - {x: 12, y: -56}
-        - {x: 16, y: -55}
-        - {x: 38, y: -32}
-        - {x: 41, y: -26}
-        - {x: 50, y: -12}
-    - name: IconGreenArmor
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IconGreenArmor
       rect:
         serializedVersion: 2
         x: 256
@@ -193,17 +237,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -47, y: 52}
-        - {x: -60, y: 30}
-        - {x: -60, y: -18}
-        - {x: -42, y: -51}
-        - {x: -35, y: -53}
-        - {x: 35, y: -53}
-        - {x: 61, y: -22}
-        - {x: 61, y: 38}
-        - {x: 51, y: 52}
-    - name: IconQuestionMark
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IconQuestionMark
       rect:
         serializedVersion: 2
         x: 384
@@ -213,17 +258,18 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -46, y: 64}
-        - {x: -50, y: 50}
-        - {x: -50, y: -7}
-        - {x: -35, y: -54}
-        - {x: -16, y: -64}
-        - {x: 20, y: -64}
-        - {x: 50, y: -23}
-        - {x: 50, y: 51}
-        - {x: 46, y: 64}
-    - name: IconAxe
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IconAxe
       rect:
         serializedVersion: 2
         x: 0
@@ -233,17 +279,29 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -13, y: 63}
-        - {x: -18, y: 61}
-        - {x: -64, y: 1}
-        - {x: -64, y: -59}
-        - {x: 58, y: -59}
-        - {x: 64, y: -27}
-        - {x: 64, y: 37}
-        - {x: 16, y: 63}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

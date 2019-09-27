@@ -1,107 +1,297 @@
 fileFormatVersion: 2
 guid: c896ec8f9ab9e458284e703b0e96c024
-timeCreated: 1509049655
-licenseType: Store
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: RetroProps_0
-    21300002: RetroProps_1
-    21300004: RetroProps_2
-    21300006: RetroProps_3
-    21300008: RetroProps_4
-    21300010: RetroProps_5
-    21300012: RetroProps_6
-    21300014: RetroProps_7
-    21300016: RetroProps_8
-    21300018: RetroProps_9
-    21300020: RetroProps_10
-    21300022: RetroProps_11
-    21300024: RetroProps_12
-    21300026: RetroProps_13
-    21300028: RetroProps_14
-    21300030: RetroProps_15
-    21300032: RetroProps_16
-    21300034: RetroProps_17
-    21300036: RetroProps_18
-    21300038: RetroProps_19
-    21300040: RetroProps_20
-    21300042: RetroProps_21
-    21300044: RetroProps_22
-    21300046: RetroProps_23
-    21300048: RetroProps_24
-    21300050: RetroProps_25
-    21300052: RetroProps_26
-    21300054: RetroProps_27
-    21300056: RetroProps_28
-    21300058: RetroProps_29
-    21300060: RetroProps_30
-    21300062: RetroProps_31
-    21300064: RetroProps_32
-    21300066: RetroProps_33
-    21300068: RetroProps_34
-    21300070: RetroProps_35
-    21300072: RetroProps_36
-    21300074: RetroProps_37
-    21300076: RetroProps_38
-    21300078: RetroProps_39
-    21300080: RetroProps_40
-    21300082: RetroProps_41
-    21300084: RetroProps_42
-    21300086: RetroProps_43
-    21300088: RetroProps_44
-    21300090: RetroProps_45
-    21300092: RetroProps_46
-    21300094: RetroProps1_0
-    21300096: RetroProps1_1
-    21300098: RetroProps1_2
-    21300100: RetroProps1_3
-    21300102: RetroProps1_4
-    21300104: RetroProps1_5
-    21300106: RetroProps1_6
-    21300108: RetroProps1_7
-    21300110: RetroProps1_8
-    21300112: RetroProps1_9
-    21300114: RetroProps1_10
-    21300116: RetroProps1_11
-    21300118: RetroProps1_12
-    21300120: RetroProps1_13
-    21300122: RetroProps1_14
-    21300124: RetroProps1_15
-    21300126: RetroProps1_16
-    21300128: RetroProps1_17
-    21300130: RetroProps1_18
-    21300132: RetroProps1_19
-    21300134: RetroProps1_20
-    21300136: RetroProps1_21
-    21300138: RetroProps1_22
-    21300140: RetroProps1_23
-    21300142: RetroProps1_24
-    21300144: RetroProps1_25
-    21300146: RetroProps1_26
-    21300148: RetroProps1_27
-    21300150: RetroProps1_28
-    21300152: RetroProps1_29
-    21300154: RetroProps1_30
-    21300156: RetroProps1_31
-    21300158: RetroProps1_32
-    21300160: RetroProps1_33
-    21300162: RetroProps1_34
-    21300164: RetroProps1_35
-    21300166: RetroProps1_36
-    21300168: RetroProps1_37
-    21300170: RetroProps1_38
-    21300172: RetroProps1_39
-    21300174: RetroProps1_40
-    21300176: RetroProps1_41
-    21300178: RetroProps1_42
-    21300180: RetroProps1_43
-    21300182: RetroProps1_44
-    21300184: RetroProps1_45
-    21300186: RetroProps1_46
-    21300188: RetroProps1_47
-    21300190: RetroProps1_48
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: RetroProps_0
+  - first:
+      213: 21300002
+    second: RetroProps_1
+  - first:
+      213: 21300004
+    second: RetroProps_2
+  - first:
+      213: 21300006
+    second: RetroProps_3
+  - first:
+      213: 21300008
+    second: RetroProps_4
+  - first:
+      213: 21300010
+    second: RetroProps_5
+  - first:
+      213: 21300012
+    second: RetroProps_6
+  - first:
+      213: 21300014
+    second: RetroProps_7
+  - first:
+      213: 21300016
+    second: RetroProps_8
+  - first:
+      213: 21300018
+    second: RetroProps_9
+  - first:
+      213: 21300020
+    second: RetroProps_10
+  - first:
+      213: 21300022
+    second: RetroProps_11
+  - first:
+      213: 21300024
+    second: RetroProps_12
+  - first:
+      213: 21300026
+    second: RetroProps_13
+  - first:
+      213: 21300028
+    second: RetroProps_14
+  - first:
+      213: 21300030
+    second: RetroProps_15
+  - first:
+      213: 21300032
+    second: RetroProps_16
+  - first:
+      213: 21300034
+    second: RetroProps_17
+  - first:
+      213: 21300036
+    second: RetroProps_18
+  - first:
+      213: 21300038
+    second: RetroProps_19
+  - first:
+      213: 21300040
+    second: RetroProps_20
+  - first:
+      213: 21300042
+    second: RetroProps_21
+  - first:
+      213: 21300044
+    second: RetroProps_22
+  - first:
+      213: 21300046
+    second: RetroProps_23
+  - first:
+      213: 21300048
+    second: RetroProps_24
+  - first:
+      213: 21300050
+    second: RetroProps_25
+  - first:
+      213: 21300052
+    second: RetroProps_26
+  - first:
+      213: 21300054
+    second: RetroProps_27
+  - first:
+      213: 21300056
+    second: RetroProps_28
+  - first:
+      213: 21300058
+    second: RetroProps_29
+  - first:
+      213: 21300060
+    second: RetroProps_30
+  - first:
+      213: 21300062
+    second: RetroProps_31
+  - first:
+      213: 21300064
+    second: RetroProps_32
+  - first:
+      213: 21300066
+    second: RetroProps_33
+  - first:
+      213: 21300068
+    second: RetroProps_34
+  - first:
+      213: 21300070
+    second: RetroProps_35
+  - first:
+      213: 21300072
+    second: RetroProps_36
+  - first:
+      213: 21300074
+    second: RetroProps_37
+  - first:
+      213: 21300076
+    second: RetroProps_38
+  - first:
+      213: 21300078
+    second: RetroProps_39
+  - first:
+      213: 21300080
+    second: RetroProps_40
+  - first:
+      213: 21300082
+    second: RetroProps_41
+  - first:
+      213: 21300084
+    second: RetroProps_42
+  - first:
+      213: 21300086
+    second: RetroProps_43
+  - first:
+      213: 21300088
+    second: RetroProps_44
+  - first:
+      213: 21300090
+    second: RetroProps_45
+  - first:
+      213: 21300092
+    second: RetroProps_46
+  - first:
+      213: 21300094
+    second: RetroProps1_0
+  - first:
+      213: 21300096
+    second: RetroProps1_1
+  - first:
+      213: 21300098
+    second: RetroProps1_2
+  - first:
+      213: 21300100
+    second: RetroProps1_3
+  - first:
+      213: 21300102
+    second: RetroProps1_4
+  - first:
+      213: 21300104
+    second: RetroProps1_5
+  - first:
+      213: 21300106
+    second: RetroProps1_6
+  - first:
+      213: 21300108
+    second: RetroProps1_7
+  - first:
+      213: 21300110
+    second: RetroProps1_8
+  - first:
+      213: 21300112
+    second: RetroProps1_9
+  - first:
+      213: 21300114
+    second: RetroProps1_10
+  - first:
+      213: 21300116
+    second: RetroProps1_11
+  - first:
+      213: 21300118
+    second: RetroProps1_12
+  - first:
+      213: 21300120
+    second: RetroProps1_13
+  - first:
+      213: 21300122
+    second: RetroProps1_14
+  - first:
+      213: 21300124
+    second: RetroProps1_15
+  - first:
+      213: 21300126
+    second: RetroProps1_16
+  - first:
+      213: 21300128
+    second: RetroProps1_17
+  - first:
+      213: 21300130
+    second: RetroProps1_18
+  - first:
+      213: 21300132
+    second: RetroProps1_19
+  - first:
+      213: 21300134
+    second: RetroProps1_20
+  - first:
+      213: 21300136
+    second: RetroProps1_21
+  - first:
+      213: 21300138
+    second: RetroProps1_22
+  - first:
+      213: 21300140
+    second: RetroProps1_23
+  - first:
+      213: 21300142
+    second: RetroProps1_24
+  - first:
+      213: 21300144
+    second: RetroProps1_25
+  - first:
+      213: 21300146
+    second: RetroProps1_26
+  - first:
+      213: 21300148
+    second: RetroProps1_27
+  - first:
+      213: 21300150
+    second: RetroProps1_28
+  - first:
+      213: 21300152
+    second: RetroProps1_29
+  - first:
+      213: 21300154
+    second: RetroProps1_30
+  - first:
+      213: 21300156
+    second: RetroProps1_31
+  - first:
+      213: 21300158
+    second: RetroProps1_32
+  - first:
+      213: 21300160
+    second: RetroProps1_33
+  - first:
+      213: 21300162
+    second: RetroProps1_34
+  - first:
+      213: 21300164
+    second: RetroProps1_35
+  - first:
+      213: 21300166
+    second: RetroProps1_36
+  - first:
+      213: 21300168
+    second: RetroProps1_37
+  - first:
+      213: 21300170
+    second: RetroProps1_38
+  - first:
+      213: 21300172
+    second: RetroProps1_39
+  - first:
+      213: 21300174
+    second: RetroProps1_40
+  - first:
+      213: 21300176
+    second: RetroProps1_41
+  - first:
+      213: 21300178
+    second: RetroProps1_42
+  - first:
+      213: 21300180
+    second: RetroProps1_43
+  - first:
+      213: 21300182
+    second: RetroProps1_44
+  - first:
+      213: 21300184
+    second: RetroProps1_45
+  - first:
+      213: 21300186
+    second: RetroProps1_46
+  - first:
+      213: 21300188
+    second: RetroProps1_47
+  - first:
+      213: 21300190
+    second: RetroProps1_48
   externalObjects: {}
-  serializedVersion: 4
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -119,6 +309,8 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -129,7 +321,7 @@ TextureImporter:
     serializedVersion: 2
     filterMode: 0
     aniso: -1
-    mipBias: -1
+    mipBias: -100
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -141,18 +333,21 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
+  singleChannelComponent: 0
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - buildTarget: DefaultTexturePlatform
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
     maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
@@ -161,7 +356,10 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: Standalone
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
     maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
@@ -170,16 +368,10 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: iPhone
-    maxTextureSize: 128
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-  - buildTarget: Android
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
@@ -188,7 +380,10 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: WebGL
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
     maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
@@ -197,6 +392,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 128
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -214,6 +423,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e7305410000000000800000000000000
+      internalID: 21300094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_1
       rect:
@@ -228,6 +444,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 08305410000000000800000000000000
+      internalID: 21300096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_2
       rect:
@@ -242,6 +465,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 28305410000000000800000000000000
+      internalID: 21300098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_3
       rect:
@@ -256,6 +486,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 48305410000000000800000000000000
+      internalID: 21300100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_4
       rect:
@@ -270,6 +507,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 68305410000000000800000000000000
+      internalID: 21300102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_5
       rect:
@@ -284,6 +528,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 88305410000000000800000000000000
+      internalID: 21300104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_6
       rect:
@@ -298,6 +549,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a8305410000000000800000000000000
+      internalID: 21300106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_7
       rect:
@@ -312,6 +570,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c8305410000000000800000000000000
+      internalID: 21300108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_8
       rect:
@@ -326,6 +591,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e8305410000000000800000000000000
+      internalID: 21300110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_9
       rect:
@@ -340,6 +612,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 09305410000000000800000000000000
+      internalID: 21300112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_10
       rect:
@@ -354,6 +633,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 29305410000000000800000000000000
+      internalID: 21300114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_11
       rect:
@@ -368,6 +654,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 49305410000000000800000000000000
+      internalID: 21300116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_12
       rect:
@@ -382,6 +675,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 69305410000000000800000000000000
+      internalID: 21300118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_13
       rect:
@@ -396,6 +696,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 89305410000000000800000000000000
+      internalID: 21300120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_14
       rect:
@@ -410,6 +717,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a9305410000000000800000000000000
+      internalID: 21300122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_15
       rect:
@@ -424,6 +738,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c9305410000000000800000000000000
+      internalID: 21300124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_16
       rect:
@@ -438,6 +759,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e9305410000000000800000000000000
+      internalID: 21300126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_17
       rect:
@@ -452,6 +780,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0a305410000000000800000000000000
+      internalID: 21300128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_18
       rect:
@@ -466,6 +801,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2a305410000000000800000000000000
+      internalID: 21300130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_19
       rect:
@@ -480,6 +822,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4a305410000000000800000000000000
+      internalID: 21300132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_20
       rect:
@@ -494,6 +843,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6a305410000000000800000000000000
+      internalID: 21300134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_21
       rect:
@@ -508,6 +864,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8a305410000000000800000000000000
+      internalID: 21300136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_22
       rect:
@@ -522,6 +885,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: aa305410000000000800000000000000
+      internalID: 21300138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_23
       rect:
@@ -536,6 +906,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ca305410000000000800000000000000
+      internalID: 21300140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_24
       rect:
@@ -550,6 +927,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ea305410000000000800000000000000
+      internalID: 21300142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_25
       rect:
@@ -564,6 +948,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0b305410000000000800000000000000
+      internalID: 21300144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_26
       rect:
@@ -578,6 +969,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2b305410000000000800000000000000
+      internalID: 21300146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_27
       rect:
@@ -592,6 +990,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4b305410000000000800000000000000
+      internalID: 21300148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_28
       rect:
@@ -606,6 +1011,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6b305410000000000800000000000000
+      internalID: 21300150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_29
       rect:
@@ -620,6 +1032,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8b305410000000000800000000000000
+      internalID: 21300152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_30
       rect:
@@ -634,6 +1053,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ab305410000000000800000000000000
+      internalID: 21300154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_31
       rect:
@@ -648,6 +1074,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cb305410000000000800000000000000
+      internalID: 21300156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_32
       rect:
@@ -662,6 +1095,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: eb305410000000000800000000000000
+      internalID: 21300158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_33
       rect:
@@ -676,6 +1116,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0c305410000000000800000000000000
+      internalID: 21300160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_34
       rect:
@@ -690,6 +1137,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2c305410000000000800000000000000
+      internalID: 21300162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_35
       rect:
@@ -704,6 +1158,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4c305410000000000800000000000000
+      internalID: 21300164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_36
       rect:
@@ -718,6 +1179,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6c305410000000000800000000000000
+      internalID: 21300166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_37
       rect:
@@ -732,6 +1200,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8c305410000000000800000000000000
+      internalID: 21300168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_38
       rect:
@@ -746,6 +1221,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ac305410000000000800000000000000
+      internalID: 21300170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_39
       rect:
@@ -760,6 +1242,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cc305410000000000800000000000000
+      internalID: 21300172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_40
       rect:
@@ -774,6 +1263,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ec305410000000000800000000000000
+      internalID: 21300174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_41
       rect:
@@ -788,6 +1284,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0d305410000000000800000000000000
+      internalID: 21300176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_42
       rect:
@@ -802,6 +1305,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2d305410000000000800000000000000
+      internalID: 21300178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_43
       rect:
@@ -816,6 +1326,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4d305410000000000800000000000000
+      internalID: 21300180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_44
       rect:
@@ -830,6 +1347,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6d305410000000000800000000000000
+      internalID: 21300182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_45
       rect:
@@ -844,6 +1368,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8d305410000000000800000000000000
+      internalID: 21300184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_46
       rect:
@@ -858,6 +1389,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ad305410000000000800000000000000
+      internalID: 21300186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_47
       rect:
@@ -872,6 +1410,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cd305410000000000800000000000000
+      internalID: 21300188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: RetroProps1_48
       rect:
@@ -886,9 +1431,26 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ed305410000000000800000000000000
+      internalID: 21300190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

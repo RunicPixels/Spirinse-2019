@@ -17,12 +17,13 @@ public class Controls : MonoBehaviour
     public float vAcceleration, speed;
 
     [Header("Dash")] public float stopBeforeDash;
-    public float dashAcceleration, dashSpeed, dashDuration;
+    public float dashSpeed, dashDuration;
     public AnimationCurve dashCurve, dashCameraCurve;
 
     private Rigidbody2D rb;
     private bool dashing = false;
 
+    private float currentDashcooldown = 0f;
     // Start is called before the first frame update
     private void Start()
     {
@@ -35,7 +36,6 @@ public class Controls : MonoBehaviour
         velocity = new Vector2(Input.GetAxis("Horizontal") * hAcceleration, Input.GetAxis("Vertical") * vAcceleration) * 60 * Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.LeftShift) && dashing == false)
         {
-            rb.velocity *= stopBeforeDash;
             StartCoroutine(_Dashing(velocity.normalized));
         }
 
@@ -57,11 +57,11 @@ public class Controls : MonoBehaviour
 
         if (rb.velocity.magnitude > speed && dashing == false)
         {
-            rb.velocity = rb.velocity.normalized * speed;
+            rb.velocity = rb.velocity.normalized * Mathf.Lerp( rb.velocity.magnitude, speed, 0.98f);
         }
         else if (rb.velocity.magnitude > dashSpeed && dashing == true)
         {
-            rb.velocity = rb.velocity.normalized * speed;
+            rb.velocity = rb.velocity.normalized * dashSpeed;
             rb.gravityScale = 0f;
         }
         
@@ -75,6 +75,9 @@ public class Controls : MonoBehaviour
         float currentDash = dashDuration;
         chi -= 0.25f;
         dashing = true;
+        
+        rb.velocity *= stopBeforeDash;
+        
         while (currentDash > 0f)
         {
             Time.timeScale = 0.8f;
@@ -82,7 +85,7 @@ public class Controls : MonoBehaviour
             velocity = direction * dashSpeed * dashCurve.Evaluate(progression);
             camera.fieldOfView = fov + (30 * dashCameraCurve.Evaluate(progression));
             currentDash -= Time.deltaTime;
-            yield return Timing.WaitForOneFrame;
+            yield return Time.deltaTime;
         }
 
         if (rb.velocity.magnitude > speed)
@@ -107,7 +110,7 @@ public class Controls : MonoBehaviour
             Time.timeScale = 0.25f;
             camera.fieldOfView += Time.unscaledDeltaTime * 5f;
             chi -= 0.5f * Time.unscaledDeltaTime;
-            yield return Timing.WaitForOneFrame;
+            yield return Time.unscaledDeltaTime;
         }
 
         Shoot(Vector2.right);

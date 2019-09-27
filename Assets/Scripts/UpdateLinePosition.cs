@@ -13,9 +13,15 @@ public class UpdateLinePosition : MonoBehaviour
 
     public Transform otherTransform;
 
+    public float curvePosition, curveIntensity;
+    
     float uvAnimationTileX = 4;
     int uvAnimationTileY = 1;
+    [SerializeField]
+    private float maxRBVelocity = 50;
 
+    public int vertexCount = 12;
+    
     public float speed = 1f;
     // Start is called before the first frame update
     void Start()
@@ -27,8 +33,30 @@ public class UpdateLinePosition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        lineRenderer.SetPosition(0,transform.position);
-        lineRenderer.SetPosition(1,otherTransform.position);
+        Rigidbody2D rb = otherTransform.GetComponent<Rigidbody2D>();
+
+        Vector3 velocityMax = maxRBVelocity < rb.velocity.magnitude ? rb.velocity.normalized * maxRBVelocity : rb.velocity;
+        
+        Vector3 point1 = transform.position;
+        Vector3 point2 = Vector3.Lerp(otherTransform.position, transform.position, curvePosition) - velocityMax * curveIntensity;
+        Vector3 point3 = otherTransform.position;
+
+        var pointList = new List<Vector3>();
+        
+        for (float ratio = 0; ratio <= 1.0f; ratio += 1.0f / vertexCount)
+        {
+            var tangentLineVertex1 = Vector3.Lerp(point1, point2, ratio);
+            var tangentLineVertex2 = Vector3.Lerp(point2, point3, ratio);
+            var bezierPoint = Vector3.Lerp(tangentLineVertex1, tangentLineVertex2, ratio);
+            
+            pointList.Add(bezierPoint);
+            
+        }
+
+        lineRenderer.positionCount = pointList.Count;
+        lineRenderer.SetPositions(pointList.ToArray());
+        
+        
         uvAnimationTileX = Vector3.Distance(transform.position, otherTransform.transform.position);
 
         // Calculate index

@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Unity\Projects\Spirinse-2019" t="IncludeRecursive">
+    <e p="C:\Users\Ronald\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Ronald\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_Spirinse-2019.1434079632.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Ronald\Documents\GitHub\Spirinse-2019" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Controls.cs" t="Include" />
         <e p="CorgiEngine" t="Include">
           <e p="Common" t="Include">
             <e p="Scripts" t="Include">
@@ -826,17 +830,29 @@
             </e>
           </e>
         </e>
-        <e p="LevelSpawn.cs" t="Include" />
-        <e p="PlayerMover.cs" t="Include" />
-        <e p="SetPolygon2DProbuilderCollider.cs" t="Include" />
-        <e p="SetPolygonCollider3D.cs" t="Include" />
+        <e p="Materials" t="Include">
+          <e p="UVScroller.shader" t="Include" />
+        </e>
+        <e p="Plugins" t="Include">
+          <e p="Trinary Software" t="Include">
+            <e p="Timing.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="DoSwap.cs" t="Include" />
+          <e p="FollowPlayer.cs" t="Include" />
+          <e p="ResetCharacterPosition.cs" t="Include" />
+          <e p="RotateZ.cs" t="Include" />
+          <e p="SetPolygonCollider3D.cs" t="Include" />
+          <e p="SpawnEnemy.cs" t="Include" />
+          <e p="TrackingBall.cs" t="Include" />
+          <e p="UpdateLinePosition.cs" t="Include" />
+        </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Spirinse-2019.sln" t="IncludeFlat" />
       <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
-    <e p="C:\Users\Ronald\.Rider2019.1\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Ronald\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_Spirinse-2019.-1291200754.00" t="ExcludeRecursive" />
   </component>
 </project>
