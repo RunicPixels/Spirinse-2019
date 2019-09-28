@@ -841,6 +841,7 @@
         <e p="Scripts" t="Include">
           <e p="DoSwap.cs" t="Include" />
           <e p="FollowPlayer.cs" t="Include" />
+          <e p="LineSmoother.cs" t="Include" />
           <e p="ResetCharacterPosition.cs" t="Include" />
           <e p="RotateZ.cs" t="Include" />
           <e p="SetPolygonCollider3D.cs" t="Include" />
@@ -848,6 +849,7 @@
           <e p="TrackingBall.cs" t="Include" />
           <e p="UpdateLinePosition.cs" t="Include" />
         </e>
+        <e p="SetTrailPosition.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />

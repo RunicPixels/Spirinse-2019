@@ -13,12 +13,12 @@ public class UpdateLinePosition : MonoBehaviour
 
     public Transform otherTransform;
 
-    public float curvePosition, curveIntensity;
+    public Transform midPosition;
+    
+    public float curvePosition;
     
     float uvAnimationTileX = 4;
     int uvAnimationTileY = 1;
-    [SerializeField]
-    private float maxRBVelocity = 50;
 
     public int vertexCount = 12;
     
@@ -31,23 +31,35 @@ public class UpdateLinePosition : MonoBehaviour
     }
 
     // Update is called once per frame
+
+
+    public Vector3 QuadraticCurve(Vector3 a, Vector3 b, Vector3 c, float t)
+    {
+        var tangentLineVertex1 = Vector3.Lerp(a, b, t);
+        var tangentLineVertex2 = Vector3.Lerp(b, c, t);
+        return Vector3.Lerp(tangentLineVertex1, tangentLineVertex2, t);
+    }
+
+    public Vector3 CubicCurve(Vector3 a, Vector3 b, Vector3 c, Vector3 d, float t)
+    {
+        var tangentLineVertex1 = QuadraticCurve(a, b, c, t);
+        var tangentLineVertex2 = QuadraticCurve(b, c, d, t);
+        return Vector3.Lerp(tangentLineVertex1, tangentLineVertex2, t);
+    }
+    
     void Update()
     {
-        Rigidbody2D rb = otherTransform.GetComponent<Rigidbody2D>();
 
-        Vector3 velocityMax = maxRBVelocity < rb.velocity.magnitude ? rb.velocity.normalized * maxRBVelocity : rb.velocity;
-        
         Vector3 point1 = transform.position;
-        Vector3 point2 = Vector3.Lerp(otherTransform.position, transform.position, curvePosition) - velocityMax * curveIntensity;
-        Vector3 point3 = otherTransform.position;
+        Vector3 point2 = Vector3.Lerp(midPosition.position, transform.position, curvePosition);
+        Vector3 point3 = (otherTransform.position + point2) * 0.5f + ((otherTransform.position - transform.position).normalized * (Vector3.Distance(point2, otherTransform.position)) * 0.25f);
+        Vector3 point4 = otherTransform.position;
 
         var pointList = new List<Vector3>();
         
         for (float ratio = 0; ratio <= 1.0f; ratio += 1.0f / vertexCount)
         {
-            var tangentLineVertex1 = Vector3.Lerp(point1, point2, ratio);
-            var tangentLineVertex2 = Vector3.Lerp(point2, point3, ratio);
-            var bezierPoint = Vector3.Lerp(tangentLineVertex1, tangentLineVertex2, ratio);
+            var bezierPoint = CubicCurve(point1, point2, point3, point4, ratio);
             
             pointList.Add(bezierPoint);
             
@@ -74,4 +86,5 @@ public class UpdateLinePosition : MonoBehaviour
         lineRenderer.material.SetTextureOffset("_MainTex", offset);
         //lineRenderer.material.SetTextureScale("_MainTex", size);
     }
+
 }
