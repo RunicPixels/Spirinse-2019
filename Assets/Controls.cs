@@ -6,13 +6,21 @@ using UnityEngine.Assertions.Comparers;
 
 public class Controls : MonoBehaviour
 {
-    [Header("Chi")]
-    [Range(0f, 1f)] public float chi =1f;
-
-    public float chiRechargeRate = 0.5f;
-
     public Vector2 velocity;
+    [Header("Visuals")] 
+    public ParticleSystem trailSystem;
 
+    [Range(0f, 1f)] public static float chi =1f;
+    [Header("Chi")]
+    public float chiRechargeRate = 0.5f;
+    public float chiAttackCost = 0.1f;
+    public float chiDrainAttackMode = 0.5f;
+    public float chiDashConsumption = 0.2f;
+
+
+    [Header("TimeScale")] private float attackTimeScale = 0.8f;
+    float dashTimeScale = 0.8f;
+    
     [Header("Moving")] public float hAcceleration;
     public float vAcceleration, speed;
 
@@ -20,13 +28,46 @@ public class Controls : MonoBehaviour
     public float dashSpeed, dashDuration;
     public AnimationCurve dashCurve, dashCameraCurve;
 
+
+    [Header("Attacks")] 
+    // Laser
+    public bool laser;
+    public float laserLength = 15f;
+    public LayerMask laserMask;
+    public ParticleSystem laserSystem;
+
+    // Bullet
+    [Space(10)]
+    public bool bullets;
+    public Bullet bulletPrefab;
+    public float fireRate = 0.12f;
+
+    // Charged Bullet
+    [Space(10)] public bool chargedBullet;
+
+    // Melee
+    [Space(10)] public bool meleeAttack;
+    public GameObject meleeAttackPrefab;
+    
+    // Privates 
+    private LineRenderer lineRenderer;
     private Rigidbody2D rb;
     private bool dashing = false;
 
     private float currentDashcooldown = 0f;
+
+    private Animator _animator;
+
     // Start is called before the first frame update
     private void Start()
     {
+        if (meleeAttack)
+        {
+            _animator = meleeAttackPrefab.GetComponentInChildren<Animator>();
+            meleeAttackPrefab.SetActive(false);
+        }
+        
+        lineRenderer = GetComponent<LineRenderer>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -34,7 +75,7 @@ public class Controls : MonoBehaviour
     private void Update()
     {
         velocity = new Vector2(Input.GetAxis("Horizontal") * hAcceleration, Input.GetAxis("Vertical") * vAcceleration) * 60 * Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.LeftShift) && dashing == false)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && dashing == false && chiDashConsumption < chi)
         {
             StartCoroutine(_Dashing(velocity.normalized));
         }
@@ -69,24 +110,31 @@ public class Controls : MonoBehaviour
 
     private IEnumerator<float> _Dashing(Vector2 direction)
     {
+        var trailSystemMain = trailSystem.main;
+        var tLife = trailSystem.main.startLifetime;
         float fov;
         Camera camera = Camera.main;
         fov = camera.fieldOfView;
         float currentDash = dashDuration;
-        chi -= 0.25f;
+        chi -= chiDashConsumption;
         dashing = true;
         
         rb.velocity *= stopBeforeDash;
-        
+        var trailSystemRibbon = trailSystem.trails;
+
         while (currentDash > 0f)
         {
-            Time.timeScale = 0.8f;
+            trailSystemMain.startLifetime = new ParticleSystem.MinMaxCurve(tLife.Evaluate(0)+currentDash + currentDash * dashDuration,tLife.Evaluate(1f)+currentDash +currentDash * dashDuration + 2f);
+            Time.timeScale = dashTimeScale;
             float progression = 1f - (currentDash/ dashDuration);
             velocity = direction * dashSpeed * dashCurve.Evaluate(progression);
             camera.fieldOfView = fov + (30 * dashCameraCurve.Evaluate(progression));
             currentDash -= Time.deltaTime;
             yield return Time.deltaTime;
         }
+        
+        trailSystemMain.startLifetime = tLife;
+        
 
         if (rb.velocity.magnitude > speed)
         {
@@ -105,21 +153,117 @@ public class Controls : MonoBehaviour
         float fov;
         Camera camera = Camera.main;
         fov = camera.fieldOfView;
+
+        var bulletCD = 0.1f;
+        
+        var charge = 0.5f;
+
+        chi -= chiAttackCost;
+
+        if (meleeAttack)
+        {
+            meleeAttackPrefab.SetActive(true);
+            _animator.Play(0);
+        }
+        
         while (Input.GetButton("Fire1"))
         {
-            Time.timeScale = 0.25f;
+            var direction = rb.velocity.normalized;
+            Time.timeScale = attackTimeScale;
             camera.fieldOfView += Time.unscaledDeltaTime * 5f;
-            chi -= 0.5f * Time.unscaledDeltaTime;
+            chi -= chiDrainAttackMode * Time.unscaledDeltaTime;
+            
+            var position = transform.position;
+            
+            
+            // Laser Code
+            if (laser)
+            {
+                lineRenderer.SetPosition(0, position);
+
+                RaycastHit2D hit = Physics2D.Raycast(position, direction, laserLength, laserMask);
+                
+                if (hit.collider != null)
+                {
+                    lineRenderer.SetPosition(1, hit.point);
+                    if (!laserSystem.isPlaying) laserSystem.Play();
+
+
+                }
+                else
+                {
+                    lineRenderer.SetPosition(1, position + (Vector3) rb.velocity.normalized * laserLength);
+                    laserSystem.Stop();
+                    
+                }
+                
+                laserSystem.transform.position = lineRenderer.GetPosition(1);
+                
+
+            }
+            else
+            {
+                laserSystem.Stop();
+            }
+            // Bullets Code
+            
+            if (bullets && bulletCD < 0f)
+            {
+                Bullet bullet = Instantiate(bulletPrefab, transform);
+                bullet.Init(direction);
+                bullet.transform.SetParent(null);
+                bulletCD = fireRate;
+
+            }
+            else
+            {
+                bulletCD -= Time.unscaledDeltaTime;
+            }
+
+            
+            // Charge Bullet Code
+
+            charge += Time.unscaledDeltaTime;
+
+            if (chi < 0f) break;
+            
             yield return Time.unscaledDeltaTime;
+            
+            // Melee Attack
+
+            if (meleeAttackPrefab.activeSelf)
+            {
+                Vector2 v = rb.velocity;
+                var angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;
+                meleeAttackPrefab.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            }
+
         }
 
-        Shoot(Vector2.right);
+        if (chargedBullet)
+        {
+            Bullet bullet = Instantiate(bulletPrefab, transform);
+            bullet.Init(rb.velocity.normalized);
+            bullet.transform.localScale = bullet.transform.localScale * charge;
+            bullet.transform.SetParent(null);
+        }
+
+        if (meleeAttackPrefab)
+        {
+            meleeAttackPrefab.SetActive(false);
+        }
+        
+        lineRenderer.SetPosition(0, Vector3.zero);
+        lineRenderer.SetPosition(1, Vector3.zero);
+        //Shoot(direction);
         Time.timeScale = 1f;
         camera.fieldOfView = fov;
+        laserSystem.Stop();
     }
 
-    public void Shoot(Vector2 direction) 
-    {
-        Debug.Log("Kaboom");
-    }
+//    public void Shoot(Vector2 direction) 
+//    {
+//        
+//        Debug.Log("Kaboom");
+//    }
 }
