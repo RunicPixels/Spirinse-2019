@@ -10,6 +10,8 @@ public class Controls : MonoBehaviour
     [Header("Visuals")] 
     public ParticleSystem trailSystem;
 
+    public enum DirectionMode { Velocity, Mouse, Arrows};
+
     [Range(0f, 1f)] public static float chi =1f;
     [Header("Chi")]
     public float chiRechargeRate = 0.5f;
@@ -47,7 +49,7 @@ public class Controls : MonoBehaviour
 
     // Melee
     [Space(10)] public bool meleeAttack;
-    public GameObject meleeAttackPrefab;
+    public GameObject[] meleeAttackPrefab;
     
     // Privates 
     private LineRenderer lineRenderer;
@@ -56,15 +58,17 @@ public class Controls : MonoBehaviour
 
     private float currentDashcooldown = 0f;
 
-    private Animator _animator;
 
     // Start is called before the first frame update
     private void Start()
     {
         if (meleeAttack)
         {
-            _animator = meleeAttackPrefab.GetComponentInChildren<Animator>();
-            meleeAttackPrefab.SetActive(false);
+            foreach (var melee in meleeAttackPrefab)
+            {
+                melee.SetActive(false);
+            }
+            
         }
         
         lineRenderer = GetComponent<LineRenderer>();
@@ -94,7 +98,7 @@ public class Controls : MonoBehaviour
     private void FixedUpdate()
     {
         rb.AddForce(velocity);
-        rb.gravityScale = Mathf.Max(0f, 1f - chi);
+        rb.gravityScale = Mathf.Max(0f, (1f - chi) * 3.5f);
 
         if (rb.velocity.magnitude > speed && dashing == false)
         {
@@ -162,27 +166,34 @@ public class Controls : MonoBehaviour
 
         if (meleeAttack)
         {
-            meleeAttackPrefab.SetActive(true);
-            _animator.Play(0);
+            foreach (var melee in meleeAttackPrefab)
+            {
+                if (melee.CompareTag("Selected"))
+                {
+                    melee.SetActive(true);
+                    melee.GetComponentInChildren<Animator>().Play(0);
+                }
+                
+            }
         }
-        
+
         while (Input.GetButton("Fire1"))
         {
             var direction = rb.velocity.normalized;
             Time.timeScale = attackTimeScale;
             camera.fieldOfView += Time.unscaledDeltaTime * 5f;
             chi -= chiDrainAttackMode * Time.unscaledDeltaTime;
-            
+
             var position = transform.position;
-            
-            
+
+
             // Laser Code
             if (laser)
             {
                 lineRenderer.SetPosition(0, position);
 
                 RaycastHit2D hit = Physics2D.Raycast(position, direction, laserLength, laserMask);
-                
+
                 if (hit.collider != null)
                 {
                     lineRenderer.SetPosition(1, hit.point);
@@ -194,11 +205,11 @@ public class Controls : MonoBehaviour
                 {
                     lineRenderer.SetPosition(1, position + (Vector3) rb.velocity.normalized * laserLength);
                     laserSystem.Stop();
-                    
+
                 }
-                
+
                 laserSystem.transform.position = lineRenderer.GetPosition(1);
-                
+
 
             }
             else
@@ -206,7 +217,7 @@ public class Controls : MonoBehaviour
                 laserSystem.Stop();
             }
             // Bullets Code
-            
+
             if (bullets && bulletCD < 0f)
             {
                 Bullet bullet = Instantiate(bulletPrefab, transform);
@@ -220,22 +231,29 @@ public class Controls : MonoBehaviour
                 bulletCD -= Time.unscaledDeltaTime;
             }
 
-            
+
             // Charge Bullet Code
 
             charge += Time.unscaledDeltaTime;
 
             if (chi < 0f) break;
-            
+
             yield return Time.unscaledDeltaTime;
-            
+
             // Melee Attack
 
-            if (meleeAttackPrefab.activeSelf)
+            if (meleeAttack)
             {
-                Vector2 v = rb.velocity;
-                var angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;
-                meleeAttackPrefab.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                foreach (var melee in meleeAttackPrefab)
+                {
+                    if (melee.CompareTag("Selected") && melee.activeSelf)
+                    {
+                        Vector2 v = rb.velocity;
+                        var angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;
+                        melee.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                    }
+
+                }
             }
 
         }
@@ -248,11 +266,14 @@ public class Controls : MonoBehaviour
             bullet.transform.SetParent(null);
         }
 
-        if (meleeAttackPrefab)
+        foreach (var melee in meleeAttackPrefab)
         {
-            meleeAttackPrefab.SetActive(false);
+            if (melee.activeSelf)
+            {
+                melee.SetActive(false);
+            }
         }
-        
+
         lineRenderer.SetPosition(0, Vector3.zero);
         lineRenderer.SetPosition(1, Vector3.zero);
         //Shoot(direction);

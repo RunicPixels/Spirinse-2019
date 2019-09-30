@@ -2843,12 +2843,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 911669789}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a2486cbf1e6bc9488ed2425863c2352, type: 3}
+  m_Script: {fileID: 11500000, guid: 77dfc46961477f6419525a4d05d6181a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 1000012959019094, guid: 0e980ce1123d769408304635117efe43,
-    type: 3}
-  delay: 5
+  enemyPrefab: {fileID: 0}
+  delay: 2
 --- !u!1001 &920433731
 PrefabInstance:
   m_ObjectHideFlags: 0
