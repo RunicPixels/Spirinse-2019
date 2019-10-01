@@ -2789,7 +2789,7 @@ GameObject:
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &911669790
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3599,10 +3599,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1344678282}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3d300d972b04d34b8aefc1c2ca4fa7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5080575347de62c4f83e3e822dc69e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotation: -25
+  rotation: 45
 --- !u!33 &1344678285
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8665,10 +8665,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1466684669}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3d300d972b04d34b8aefc1c2ca4fa7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5080575347de62c4f83e3e822dc69e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotation: -60
+  rotation: -70
 --- !u!4 &1488232238 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 428950, guid: 8c390f83daff19e43a04e12b26f30f87,
@@ -9046,10 +9046,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1740022903}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3d300d972b04d34b8aefc1c2ca4fa7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5080575347de62c4f83e3e822dc69e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotation: 55
+  rotation: -45
 --- !u!33 &1740022906
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13995,10 +13995,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1810906597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3d300d972b04d34b8aefc1c2ca4fa7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5080575347de62c4f83e3e822dc69e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotation: 60
+  rotation: 70
 --- !u!1 &1862398308
 GameObject:
   m_ObjectHideFlags: 0

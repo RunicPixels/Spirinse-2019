@@ -18,7 +18,7 @@ public class Controls : MonoBehaviour
     public float chiAttackCost = 0.1f;
     public float chiDrainAttackMode = 0.5f;
     public float chiDashConsumption = 0.2f;
-
+    public float chiGravity = 5f;
 
     [Header("TimeScale")] private float attackTimeScale = 0.8f;
     float dashTimeScale = 0.8f;
@@ -57,6 +57,7 @@ public class Controls : MonoBehaviour
     private bool dashing = false;
 
     private float currentDashcooldown = 0f;
+    
 
 
     // Start is called before the first frame update
@@ -79,7 +80,7 @@ public class Controls : MonoBehaviour
     private void Update()
     {
         velocity = new Vector2(Input.GetAxis("Horizontal") * hAcceleration, Input.GetAxis("Vertical") * vAcceleration) * 60 * Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.LeftShift) && dashing == false && chiDashConsumption < chi)
+        if (Input.GetButtonDown("Fire3") && dashing == false && chiDashConsumption < chi)
         {
             StartCoroutine(_Dashing(velocity.normalized));
         }
@@ -98,7 +99,7 @@ public class Controls : MonoBehaviour
     private void FixedUpdate()
     {
         rb.AddForce(velocity);
-        rb.gravityScale = Mathf.Max(0f, (1f - chi) * 3.5f);
+        rb.gravityScale = Mathf.Max(0f, (1f - chi) * chiGravity);
 
         if (rb.velocity.magnitude > speed && dashing == false)
         {
