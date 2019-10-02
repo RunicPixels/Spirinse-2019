@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3435031173331127592}
-  m_Layer: 9
+  m_Layer: 16
   m_Name: SpearContainer
   m_TagString: Selected
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 3435031173378236189}
   - component: {fileID: 3435031173378236188}
   - component: {fileID: 3435031173378236191}
-  m_Layer: 9
+  m_Layer: 16
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -147,8 +147,7 @@ GameObject:
   - component: {fileID: 3435031173382394654}
   - component: {fileID: 3435031173382394653}
   - component: {fileID: 3435031173382394652}
-  - component: {fileID: 3435031173382394655}
-  m_Layer: 9
+  m_Layer: 16
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,9 +162,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3435031173382394649}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.4, y: 0, z: 0}
+  m_LocalPosition: {x: 0.3, y: -0, z: 0}
   m_LocalScale: {x: 16, y: 0.25, z: 1}
   m_Children:
+  - {fileID: 3435031174412096613}
   - {fileID: 3435031173704056692}
   m_Father: {fileID: 3435031174692722561}
   m_RootOrder: 0
@@ -216,32 +216,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3435031173382394649}
   m_Mesh: {fileID: 4300000, guid: 71c1a7d31ae1f5148bd68555e9baee05, type: 3}
---- !u!61 &3435031173382394655
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3435031173382394649}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.02}
-  m_EdgeRadius: 0
 --- !u!1 &3435031173704056695
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,7 +227,7 @@ GameObject:
   - component: {fileID: 3435031173704056692}
   - component: {fileID: 3435031173704056698}
   - component: {fileID: 3435031173704056693}
-  m_Layer: 9
+  m_Layer: 16
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -272,7 +246,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3435031173382394654}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3435031173704056698
 MeshFilter:
@@ -396,13 +370,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3435031173714807823}
-  m_Layer: 9
+  m_Layer: 16
   m_Name: SwordContainer
   m_TagString: Selected
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3435031173714807823
 Transform:
   m_ObjectHideFlags: 0
@@ -429,7 +403,7 @@ GameObject:
   - component: {fileID: 3435031173939777328}
   - component: {fileID: 3435031173939777334}
   - component: {fileID: 3435031173939777329}
-  m_Layer: 9
+  m_Layer: 16
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5435,7 +5409,7 @@ GameObject:
   - component: {fileID: 3435031174412096616}
   - component: {fileID: 3435031174412096619}
   - component: {fileID: 3435031174412096618}
-  m_Layer: 9
+  m_Layer: 16
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5450,11 +5424,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3435031174412096612}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.006249996, y: 0, z: 0}
+  m_LocalScale: {x: 0.062500015, y: 4, z: 1}
   m_Children: []
-  m_Father: {fileID: 3435031174692722561}
-  m_RootOrder: 1
+  m_Father: {fileID: 3435031173382394654}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &3435031174412096616
 MeshRenderer:
@@ -5512,7 +5486,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -5537,7 +5511,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3435031174539851051}
-  m_Layer: 9
+  m_Layer: 16
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5553,7 +5527,7 @@ Transform:
   m_GameObject: {fileID: 3435031174539851050}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.2, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.025, z: 0.040000003}
+  m_LocalScale: {x: 0.4, y: 0.025, z: 0.05}
   m_Children:
   - {fileID: 3435031174846836935}
   m_Father: {fileID: 3435031175160281117}
@@ -5669,7 +5643,7 @@ GameObject:
   - component: {fileID: 3435031174677400421}
   - component: {fileID: 3435031174677400420}
   - component: {fileID: 3435031174677400426}
-  m_Layer: 9
+  m_Layer: 16
   m_Name: LaserHit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10490,7 +10464,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3435031174692722561}
   - component: {fileID: 3435031174692722566}
-  m_Layer: 9
+  - component: {fileID: 1437806054}
+  - component: {fileID: 1437806053}
+  m_Layer: 16
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10506,10 +10482,9 @@ Transform:
   m_GameObject: {fileID: 3435031174692722560}
   m_LocalRotation: {x: 0, y: 0, z: 0.5446414, w: 0.83866906}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 20, z: 5}
+  m_LocalScale: {x: 10, y: 40, z: 5}
   m_Children:
   - {fileID: 3435031173382394654}
-  - {fileID: 3435031174412096613}
   m_Father: {fileID: 3435031173714807823}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10532,6 +10507,45 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &1437806054
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3435031174692722560}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.3, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.4, y: 0.05}
+  m_EdgeRadius: 0
+--- !u!114 &1437806053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3435031174692722560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae66232dd4bfc5c49af6d4902cd64b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1 &3435031174695839501
 GameObject:
   m_ObjectHideFlags: 0
@@ -10544,7 +10558,7 @@ GameObject:
   - component: {fileID: 3435031174695839537}
   - component: {fileID: 3435031174695839536}
   - component: {fileID: 3435031174695839539}
-  m_Layer: 9
+  m_Layer: 16
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10622,7 +10636,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -10649,8 +10663,7 @@ GameObject:
   - component: {fileID: 3435031174846836935}
   - component: {fileID: 3435031174846836938}
   - component: {fileID: 3435031174846836933}
-  - component: {fileID: 3435031174846836932}
-  m_Layer: 9
+  m_Layer: 16
   m_Name: Sword (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10717,32 +10730,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3435031174846836934}
   m_Mesh: {fileID: 4300000, guid: 71c1a7d31ae1f5148bd68555e9baee05, type: 3}
---- !u!61 &3435031174846836932
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3435031174846836934}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.02}
-  m_EdgeRadius: 0
 --- !u!1 &3435031174896469561
 GameObject:
   m_ObjectHideFlags: 0
@@ -10781,6 +10768,7 @@ Transform:
   - {fileID: 3435031173714807823}
   - {fileID: 3435031174677400423}
   - {fileID: 3435031173331127592}
+  - {fileID: 5629127605462369135}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10822,36 +10810,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea05ea2f5fd1b674283bea932c5c2359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0}
   trailSystem: {fileID: 3435031175023981244}
   chiRechargeRate: 0.25
   chiAttackCost: 0.1
   chiDrainAttackMode: 0.6
   chiDashConsumption: 0.3
-  chiGravity: 11
-  hAcceleration: 26
-  vAcceleration: 26
+  chiDashDrain: 0.5
+  chiGravity: 3
+  hAcceleration: 32
+  vAcceleration: 32
   speed: 16
+  velocity: {x: 0, y: 0}
   stopBeforeDash: 0.3
-  dashSpeed: 180
-  dashDuration: 0.4
+  dashSpeed: 150
+  dashSpeedMultiplier: 2
+  dashDuration: 0.3
   dashCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: -4.4985385
-      outSlope: -4.4985385
+      inSlope: 2.5043268
+      outSlope: 2.5043268
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.08852295
-      value: -0.39822388
-      inSlope: 2.5490115
-      outSlope: 2.5490115
+      time: 0.055190124
+      value: 0.13821411
+      inSlope: 3.6477025
+      outSlope: 3.6477025
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -10891,67 +10881,41 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
-      inSlope: -0.41012678
-      outSlope: -0.41012678
-      tangentMode: 0
+      value: 0.19999695
+      inSlope: -0.19966571
+      outSlope: -0.19966571
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.36468554
-    - serializedVersion: 3
-      time: 0.11644977
-      value: -0.015190102
-      inSlope: 0.39720878
-      outSlope: 0.39720878
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.39782494
-      value: 0.117650285
-      inSlope: -0.017992897
-      outSlope: -0.017992897
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.40684155
-    - serializedVersion: 3
-      time: 0.67402446
-      value: 0.10048944
-      inSlope: -0.22869837
-      outSlope: -0.22869837
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+      value: 0.00033123372
+      inSlope: -0.19966571
+      outSlope: -0.19966571
+      tangentMode: 34
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33333334
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  laser: 1
+  dashSphere: {fileID: 3688590840828404065}
+  canChargeDash: 0
+  laser: 0
   laserLength: 12
   laserMask:
     serializedVersion: 2
     m_Bits: 8449
   laserSystem: {fileID: 3435031174677400421}
-  bullets: 1
+  bullets: 0
   bulletPrefab: {fileID: 3949143558080159800, guid: fb7b461df97c80c41b0875c40c7c6de8,
     type: 3}
   fireRate: 0.25
-  chargedBullet: 1
-  meleeAttack: 0
+  chargedBullet: 0
+  meleeAttack: 1
   meleeAttackPrefab:
   - {fileID: 3435031173714807822}
-  - {fileID: 3435031173331127595}
 --- !u!50 &3435031174896469564
 Rigidbody2D:
   serializedVersion: 4
@@ -15972,7 +15936,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3435031175160281117}
   - component: {fileID: 3435031175160281090}
-  m_Layer: 9
+  - component: {fileID: 1477953362}
+  - component: {fileID: 1477953363}
+  m_Layer: 16
   m_Name: Spear
   m_TagString: Selected
   m_Icon: {fileID: 0}
@@ -16015,3 +15981,151 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &1477953362
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3435031175160281116}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.06}
+  m_EdgeRadius: 0
+--- !u!114 &1477953363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3435031175160281116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae66232dd4bfc5c49af6d4902cd64b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 6
+--- !u!1 &3688590840828404065
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5629127605462369135}
+  - component: {fileID: 2406952415769019932}
+  - component: {fileID: 1073623039850437055}
+  - component: {fileID: 2974170344513195432}
+  - component: {fileID: 288591505803422339}
+  m_Layer: 16
+  m_Name: DashSphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5629127605462369135
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3688590840828404065}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_Children: []
+  m_Father: {fileID: 3435031174896469566}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &2406952415769019932
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3688590840828404065}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1073623039850437055
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3688590840828404065}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 91acc16fa0c8d254f888626e61f6e5d2, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!58 &2974170344513195432
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3688590840828404065}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!114 &288591505803422339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3688590840828404065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae66232dd4bfc5c49af6d4902cd64b20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 6

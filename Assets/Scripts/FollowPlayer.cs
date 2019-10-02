@@ -12,19 +12,19 @@ public class FollowPlayer : MonoBehaviour {
     private Vector3 velocity = Vector3.zero;
     public float speedDelay = 0.4f;
     public bool followPlayer = true;
-    public delegate void SetCameraPlayerFollow(bool setFollow);
-    public event SetCameraPlayerFollow OnCameraFollowPlayer;
-
-
+    private GameObject _gameObject;
+    
+    
 	// Use this for initialization
-	void Start () {
-        OnCameraFollowPlayer += DefaultMethod;
-	}
+	private void Start ()
+    {
+        _gameObject = GameObject.FindGameObjectWithTag("Player");
+    }
 	
 	// Update is called once per frame
 	private void Update () {
         if (!player) {
-            player = GameObject.FindGameObjectWithTag("Player");
+            player = _gameObject;
         }
         if (followPlayer) {
             transform.localPosition = Vector3.SmoothDamp(transform.localPosition, Vector3.Lerp(player.transform.position,meditator.transform.position,lerpPosition), ref velocity, speedDelay);
@@ -32,8 +32,5 @@ public class FollowPlayer : MonoBehaviour {
 	}
     public void SetCameraTrue(bool doFollow) {
         followPlayer = doFollow;
-    }
-    public void DefaultMethod(bool isItTrue) {
-
     }
 }

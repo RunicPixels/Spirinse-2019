@@ -8,318 +8,7 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="Bullet.cs" t="Include" />
-        <e p="Controls.cs" t="Include" />
         <e p="CorgiEngine" t="Include">
-          <e p="Common" t="Include">
-            <e p="Scripts" t="Include">
-              <e p="Achievements" t="Include">
-                <e p="AchievementRules.cs" t="Include" />
-              </e>
-              <e p="Agents" t="Include">
-                <e p="AI" t="Include">
-                  <e p="Advanced" t="Include">
-                    <e p="AIActionChangeWeapon.cs" t="Include" />
-                    <e p="AIActionDoNothing.cs" t="Include" />
-                    <e p="AIActionFlyPatrol.cs" t="Include" />
-                    <e p="AIActionFlyTowardsTarget.cs" t="Include" />
-                    <e p="AIActionJump.cs" t="Include" />
-                    <e p="AIActionMoveTowardsTarget.cs" t="Include" />
-                    <e p="AIActionPatrol.cs" t="Include" />
-                    <e p="AIActionPatrolWithinBounds.cs" t="Include" />
-                    <e p="AIActionShoot.cs" t="Include" />
-                    <e p="AIDecisionDetectTargetLine.cs" t="Include" />
-                    <e p="AIDecisionDetectTargetRadius.cs" t="Include" />
-                    <e p="AIDecisionDistanceToTarget.cs" t="Include" />
-                    <e p="AIDecisionGrounded.cs" t="Include" />
-                    <e p="AIDecisionHealth.cs" t="Include" />
-                    <e p="AIDecisionHit.cs" t="Include" />
-                    <e p="AIDecisionLineOfSightToTarget.cs" t="Include" />
-                    <e p="AIDecisionNextFrame.cs" t="Include" />
-                    <e p="AIDecisionRandom.cs" t="Include" />
-                    <e p="AIDecisionTargetFacingAI.cs" t="Include" />
-                    <e p="AIDecisionTargetIsAlive.cs" t="Include" />
-                    <e p="AIDecisionTargetIsNull.cs" t="Include" />
-                    <e p="AIDecisionTimeInState.cs" t="Include" />
-                    <e p="AIDecisionTimeSinceStart.cs" t="Include" />
-                  </e>
-                  <e p="Automation" t="Include">
-                    <e p="PathedProjectile.cs" t="Include" />
-                    <e p="PathedProjectileSpawner.cs" t="Include" />
-                    <e p="TimedSpawner.cs" t="Include" />
-                  </e>
-                  <e p="Legacy" t="Include">
-                    <e p="AIFollow.cs" t="Include" />
-                    <e p="AIShootOnSight.cs" t="Include" />
-                    <e p="AIWalk.cs" t="Include" />
-                  </e>
-                </e>
-                <e p="CharacterAbilities" t="Include">
-                  <e p="CharacterAbility.cs" t="Include" />
-                  <e p="CharacterButtonActivation.cs" t="Include" />
-                  <e p="CharacterCrouch.cs" t="Include" />
-                  <e p="CharacterDangling.cs" t="Include" />
-                  <e p="CharacterDash.cs" t="Include" />
-                  <e p="CharacterDive.cs" t="Include" />
-                  <e p="CharacterFly.cs" t="Include" />
-                  <e p="CharacterFollowPath.cs" t="Include" />
-                  <e p="CharacterGlide.cs" t="Include" />
-                  <e p="CharacterGravity.cs" t="Include" />
-                  <e p="CharacterGrip.cs" t="Include" />
-                  <e p="CharacterHandleSecondaryWeapon.cs" t="Include" />
-                  <e p="CharacterHandleWeapon.cs" t="Include" />
-                  <e p="CharacterHorizontalMovement.cs" t="Include" />
-                  <e p="CharacterInventory.cs" t="Include" />
-                  <e p="CharacterJetpack.cs" t="Include" />
-                  <e p="CharacterJump.cs" t="Include" />
-                  <e p="CharacterLadder.cs" t="Include" />
-                  <e p="CharacterLedgeHang.cs" t="Include" />
-                  <e p="CharacterLookUp.cs" t="Include" />
-                  <e p="CharacterParticles.cs" t="Include" />
-                  <e p="CharacterPause.cs" t="Include" />
-                  <e p="CharacterPush.cs" t="Include" />
-                  <e p="CharacterPushCorgiController.cs" t="Include" />
-                  <e p="CharacterRun.cs" t="Include" />
-                  <e p="CharacterSimpleDive.cs" t="Include" />
-                  <e p="CharacterSlopeOrientation.cs" t="Include" />
-                  <e p="CharacterSwap.cs" t="Include" />
-                  <e p="CharacterSwim.cs" t="Include" />
-                  <e p="CharacterSwitchModel.cs" t="Include" />
-                  <e p="CharacterTimeControl.cs" t="Include" />
-                  <e p="CharacterWallClinging.cs" t="Include" />
-                  <e p="CharacterWalljump.cs" t="Include" />
-                  <e p="Editor" t="Include">
-                    <e p="CharacterAbilityInspector.cs" t="Include" />
-                  </e>
-                </e>
-                <e p="Core" t="Include">
-                  <e p="Character.cs" t="Include" />
-                  <e p="CharacterEvents.cs" t="Include" />
-                  <e p="CharacterLevelBounds.cs" t="Include" />
-                  <e p="CharacterStates.cs" t="Include" />
-                  <e p="Editor" t="Include">
-                    <e p="CharacterInspector.cs" t="Include" />
-                  </e>
-                  <e p="Health.cs" t="Include" />
-                </e>
-                <e p="CorgiController" t="Include">
-                  <e p="CorgiController.cs" t="Include" />
-                  <e p="CorgiControllerParameters.cs" t="Include" />
-                  <e p="CorgiControllerState.cs" t="Include" />
-                  <e p="Editor" t="Include">
-                    <e p="CorgiControllerInspector.cs" t="Include" />
-                  </e>
-                </e>
-                <e p="Damage" t="Include">
-                  <e p="DamageOnTouch.cs" t="Include" />
-                  <e p="KillPlayerOnTouch.cs" t="Include" />
-                  <e p="Stompable.cs" t="Include" />
-                </e>
-                <e p="Weapons" t="Include">
-                  <e p="Bomb.cs" t="Include" />
-                  <e p="ComboWeapon.cs" t="Include" />
-                  <e p="Editor" t="Include">
-                    <e p="WeaponEditor.cs" t="Include" />
-                  </e>
-                  <e p="MeleeWeapon.cs" t="Include" />
-                  <e p="Projectile.cs" t="Include" />
-                  <e p="ProjectileWeapon.cs" t="Include" />
-                  <e p="ThrownObject.cs" t="Include" />
-                  <e p="Weapon.cs" t="Include" />
-                  <e p="WeaponAim.cs" t="Include" />
-                  <e p="WeaponAmmo.cs" t="Include" />
-                  <e p="WeaponIK.cs" t="Include" />
-                  <e p="WeaponLaserSight.cs" t="Include" />
-                </e>
-              </e>
-              <e p="Camera" t="Include">
-                <e p="Cinemachine" t="Include">
-                  <e p="CinemachineCameraController.cs" t="Include" />
-                </e>
-                <e p="Regular" t="Include">
-                  <e p="CameraController.cs" t="Include" />
-                  <e p="LevelBackground.cs" t="Include" />
-                  <e p="MultiplayerCameraController.cs" t="Include" />
-                  <e p="NoGoingBack.cs" t="Include" />
-                  <e p="ParallaxCamera.cs" t="Include" />
-                  <e p="ParallaxElement.cs" t="Include" />
-                </e>
-              </e>
-              <e p="Editor" t="Include">
-                <e p="MoreMountainsMenu.cs" t="Include" />
-              </e>
-              <e p="Environment" t="Include">
-                <e p="AppearDisappear.cs" t="Include" />
-                <e p="BonusBlock.cs" t="Include" />
-                <e p="ButtonActivator.cs" t="Include" />
-                <e p="CharacterDetector.cs" t="Include" />
-                <e p="CharacterOverrides" t="Include">
-                  <e p="CharacterHorizontalMovementOverride.cs" t="Include" />
-                  <e p="CharacterJumpOverride.cs" t="Include" />
-                  <e p="CorgiControllerPhysicsVolume2D.cs" t="Include" />
-                  <e p="Water.cs" t="Include" />
-                </e>
-                <e p="FallingPlatform.cs" t="Include" />
-                <e p="GravityPoint.cs" t="Include" />
-                <e p="GravityZone.cs" t="Include" />
-                <e p="Grip.cs" t="Include" />
-                <e p="Hittable.cs" t="Include" />
-                <e p="Jumper.cs" t="Include" />
-                <e p="KeyOperatedZone.cs" t="Include" />
-                <e p="Ladder.cs" t="Include" />
-                <e p="Ledge.cs" t="Include" />
-                <e p="MovingPlatform.cs" t="Include" />
-                <e p="Pushable.cs" t="Include" />
-                <e p="RandomSprite.cs" t="Include" />
-                <e p="SurfaceModifier.cs" t="Include" />
-                <e p="Teleporter.cs" t="Include" />
-                <e p="TimeZone.cs" t="Include" />
-                <e p="WallClingingOverride.cs" t="Include" />
-                <e p="Zipline.cs" t="Include" />
-              </e>
-              <e p="Feedbacks" t="Include">
-                <e p="MMFeedbackCorgiEngineSound.cs" t="Include" />
-              </e>
-              <e p="GUI" t="Include">
-                <e p="AmmoDisplay.cs" t="Include" />
-                <e p="ButtonActivated.cs" t="Include" />
-                <e p="ButtonPrompt.cs" t="Include" />
-                <e p="Dialogue" t="Include">
-                  <e p="DialogueBox.cs" t="Include" />
-                  <e p="DialogueZone.cs" t="Include" />
-                </e>
-                <e p="GUIManager.cs" t="Include" />
-                <e p="HeartsGUI.cs" t="Include" />
-                <e p="HipsterGUI.cs" t="Include" />
-                <e p="LevelSelector.cs" t="Include" />
-                <e p="LevelSelectorGUI.cs" t="Include" />
-                <e p="MultiplayerGUIManager.cs" t="Include" />
-                <e p="MusicSwitch.cs" t="Include" />
-                <e p="PauseButton.cs" t="Include" />
-                <e p="SaveResetButton.cs" t="Include" />
-                <e p="SfxSwitch.cs" t="Include" />
-                <e p="StartScreen.cs" t="Include" />
-              </e>
-              <e p="InventoryEngineItems" t="Include">
-                <e p="InventoryEngineChest.cs" t="Include" />
-                <e p="InventoryEngineHealth.cs" t="Include" />
-                <e p="InventoryEngineKey.cs" t="Include" />
-                <e p="InventoryEnginePoints.cs" t="Include" />
-                <e p="InventoryEngineTimeModifier.cs" t="Include" />
-                <e p="InventoryEngineWeapon.cs" t="Include" />
-              </e>
-              <e p="Items" t="Include">
-                <e p="Coin.cs" t="Include" />
-                <e p="InventoryPickableItem.cs" t="Include" />
-                <e p="PickableAction.cs" t="Include" />
-                <e p="PickableItem.cs" t="Include" />
-                <e p="PickableJetpack.cs" t="Include" />
-                <e p="PickableOneUp.cs" t="Include" />
-                <e p="PickableWeapon.cs" t="Include" />
-                <e p="Star.cs" t="Include" />
-                <e p="Stimpack.cs" t="Include" />
-                <e p="TimeModifier.cs" t="Include" />
-              </e>
-              <e p="Managers" t="Include">
-                <e p="CharacterSwapManager.cs" t="Include" />
-                <e p="CharacterSwitchManager.cs" t="Include" />
-                <e p="Editor" t="Include">
-                  <e p="LevelManagerEditor.cs" t="Include" />
-                </e>
-                <e p="GameManager.cs" t="Include" />
-                <e p="InputManager.cs" t="Include" />
-                <e p="LevelManager.cs" t="Include" />
-                <e p="MultiplayerLevelManager.cs" t="Include" />
-                <e p="SoundManager.cs" t="Include" />
-              </e>
-              <e p="Sound" t="Include">
-                <e p="BackgroundMusic.cs" t="Include" />
-              </e>
-              <e p="Spawn" t="Include">
-                <e p="AutoRespawn.cs" t="Include" />
-                <e p="CharacterSelector.cs" t="Include" />
-                <e p="CheckPoint.cs" t="Include" />
-                <e p="FinishLevel.cs" t="Include" />
-                <e p="GoToLevelEntryPoint.cs" t="Include" />
-                <e p="LevelRestarter.cs" t="Include" />
-                <e p="Respawnable.cs" t="Include" />
-              </e>
-              <e p="Welcome" t="Include">
-                <e p="Editor" t="Include">
-                  <e p="DependencyInstaller.cs" t="Include" />
-                  <e p="WelcomeWindow.cs" t="Include" />
-                </e>
-              </e>
-            </e>
-          </e>
-          <e p="Demos" t="Include">
-            <e p="Brobro" t="Include">
-              <e p="Spine" t="Include">
-                <e p="Brobro" t="Include">
-                  <e p="space-corgi.atlas.txt" t="Include" />
-                </e>
-              </e>
-            </e>
-            <e p="Corgi2D" t="Include">
-              <e p="Scripts" t="Include">
-                <e p="BackgroundTree.cs" t="Include" />
-              </e>
-              <e p="Spine" t="Include">
-                <e p="Heavy" t="Include">
-                  <e p="heavy-corgi.atlas.txt" t="Include" />
-                </e>
-                <e p="NativeSpineCorgi" t="Include">
-                  <e p="ExportedFromSpine" t="Include">
-                    <e p="space-corgi.atlas.txt" t="Include" />
-                  </e>
-                </e>
-                <e p="SpaceCorgi" t="Include">
-                  <e p="space-corgi.atlas.txt" t="Include" />
-                </e>
-              </e>
-            </e>
-            <e p="LevelSelection" t="Include">
-              <e p="Scripts" t="Include">
-                <e p="Editor" t="Include">
-                  <e p="LevelMapPathElementEditor.cs" t="Include" />
-                </e>
-                <e p="LevelMapCharacter.cs" t="Include" />
-                <e p="LevelMapPathElement.cs" t="Include" />
-              </e>
-            </e>
-            <e p="Minimal" t="Include">
-              <e p="Scripts" t="Include">
-                <e p="UncheckReverseGravityInput.cs" t="Include" />
-              </e>
-            </e>
-            <e p="Retro" t="Include">
-              <e p="Scripts" t="Include">
-                <e p="RetroCopter.cs" t="Include" />
-              </e>
-            </e>
-            <e p="RetroAdventure" t="Include">
-              <e p="Scripts" t="Include">
-                <e p="Editor" t="Include">
-                  <e p="RetroAdventureProgressManagerMenu.cs" t="Include" />
-                </e>
-                <e p="RetroAdventureFinishLevel.cs" t="Include" />
-                <e p="RetroAdventureGUIManager.cs" t="Include" />
-                <e p="RetroAdventureLevel.cs" t="Include" />
-                <e p="RetroAdventureProgressManager.cs" t="Include" />
-                <e p="RetroNextLevel.cs" t="Include" />
-                <e p="RetroStar.cs" t="Include" />
-              </e>
-            </e>
-            <e p="SuperHipsterBros" t="Include">
-              <e p="Scripts" t="Include">
-                <e p="Mushroom.cs" t="Include" />
-                <e p="SuperHipsterBrosHealth.cs" t="Include" />
-              </e>
-            </e>
-          </e>
-          <e p="IMPORTANT-HOW-TO-INSTALL.txt" t="Include" />
-          <e p="license.txt" t="Include" />
-          <e p="readme.txt" t="Include" />
           <e p="ThirdParty" t="Include">
             <e p="MoreMountains" t="Include">
               <e p="InventoryEngine" t="Include">
@@ -831,6 +520,7 @@
             </e>
           </e>
         </e>
+        <e p="Grow.cs" t="Include" />
         <e p="Materials" t="Include">
           <e p="UVScroller.shader" t="Include" />
         </e>
@@ -840,19 +530,29 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="DoSwap.cs" t="Include" />
+          <e p="Bullet.cs" t="Include" />
+          <e p="Controls.cs" t="Include" />
           <e p="FollowPlayer.cs" t="Include" />
+          <e p="IDamagable.cs" t="Include" />
+          <e p="IPlayerProjectile.cs" t="Include" />
           <e p="LineSmoother.cs" t="Include" />
-          <e p="ResetCharacterPosition.cs" t="Include" />
+          <e p="Meditator.cs" t="Include" />
+          <e p="MeleeWeapon.cs" t="Include" />
+          <e p="PlayParticleSystem.cs" t="Include" />
+          <e p="PrototypeEnemy.cs" t="Include" />
           <e p="RotateZ.cs" t="Include" />
+          <e p="SetBulletTrailScale.cs" t="Include" />
           <e p="SetPolygonCollider3D.cs" t="Include" />
+          <e p="SetTrailPosition.cs" t="Include" />
+          <e p="SetUIChiFill.cs" t="Include" />
           <e p="SpawnEnemy.cs" t="Include" />
           <e p="TrackingBall.cs" t="Include" />
           <e p="UpdateLinePosition.cs" t="Include" />
         </e>
-        <e p="SetBulletTrailScale.cs" t="Include" />
-        <e p="SetTrailPosition.cs" t="Include" />
-        <e p="SetUIChiFill.cs" t="Include" />
+        <e p="SetCameraDistance.cs" t="Include" />
+        <e p="Shaders" t="Include">
+          <e p="RimShader.shader" t="Include" />
+        </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
