@@ -100,11 +100,11 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
    void OnTriggerStay2D(Collider2D other)
    {
        if (iFrames > 0) return;
-       var projectile = other.gameObject.GetComponent<MeleeWeapon>();
+       var damage = other.gameObject.GetComponent<IAttack>();
 
-       if (projectile != null)
+       if (damage != null)
        {
-           TakeDamage(projectile.GetDamage());
+           TakeDamage(damage.DealDamage());
        }
    }
 

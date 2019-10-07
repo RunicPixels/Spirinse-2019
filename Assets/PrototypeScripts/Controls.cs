@@ -208,18 +208,7 @@ public class Controls : MonoBehaviour
 
         chi -= chiAttackCost;
 
-        if (meleeAttack)
-        {
-            foreach (var melee in meleeAttackPrefab)
-            {
-                if (melee.CompareTag("Selected"))
-                {
-                    melee.SetActive(true);
-                    melee.GetComponentInChildren<Animator>().Play(0);
-                }
-                
-            }
-        }
+        DoMelee();
 
         while (Input.GetButton("Fire1"))
         {
@@ -323,6 +312,17 @@ public class Controls : MonoBehaviour
         Time.timeScale = 1f;
         camera.fieldOfView = fov;
         laserSystem.Stop();
+    }
+
+    private void DoMelee()
+    {
+        if (!meleeAttack) return;
+        foreach (var melee in meleeAttackPrefab)
+        {
+            if (!melee.CompareTag("Selected")) continue;
+            melee.SetActive(true);
+            melee.GetComponentInChildren<Animator>().Play(0);
+        }
     }
 
 //    public void Shoot(Vector2 direction) 

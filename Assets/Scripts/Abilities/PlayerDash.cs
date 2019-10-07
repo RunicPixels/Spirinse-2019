@@ -1,14 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Cinemachine.Utility;
-using DefaultNamespace;
 using UnityEngine;
 
-public class MeleeWeapon : MonoBehaviour, IPlayerProjectile
+public class PlayerDash : BaseAbility
 {
-    public float damage = 6;
-
-    public float energySteal = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +16,8 @@ public class MeleeWeapon : MonoBehaviour, IPlayerProjectile
         
     }
 
-    public float GetDamage()
+    public override void Execute()
     {
-        Controls.chi += energySteal;
-        return damage;
+        throw new System.NotImplementedException();
     }
 }

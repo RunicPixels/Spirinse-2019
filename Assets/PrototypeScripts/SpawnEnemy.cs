@@ -19,16 +19,6 @@ public class SpawnEnemy : MonoBehaviour
         Timing.RunCoroutine(_SpawnEnemies());
     }
 
-    private void OnDisable()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private IEnumerator<float> _SpawnEnemies()
     {

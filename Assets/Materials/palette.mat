@@ -8,9 +8,9 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: palette
-  m_Shader: {fileID: 4800000, guid: 80412fe88398cd147be3aacebe2c3fe3, type: 3}
-  m_ShaderKeywords: OUTLINES TCP2_DISABLE_WRAPPED_LIGHT TCP2_OUTLINE_CONST_SIZE TCP2_STYLIZED_FRESNEL
-    TCP2_ZSMOOTH_ON _EMISSION
+  m_Shader: {fileID: 4800000, guid: f8d49205b3b0a644195633020367689d, type: 3}
+  m_ShaderKeywords: OUTLINE_BLENDING TCP2_COLORS_AS_NORMALS TCP2_DISABLE_WRAPPED_LIGHT
+    TCP2_OUTLINE_CONST_SIZE TCP2_SPEC_TOON TCP2_STYLIZED_FRESNEL _EMISSION
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -76,6 +76,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _DstBlendOutline: 10
     - _EnvironmentReflections: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -85,12 +86,12 @@ Material:
     - _OcclusionStrength: 1
     - _Offset1: 0
     - _Offset2: 0
-    - _Outline: 1
+    - _Outline: 3
     - _Parallax: 0.02
     - _QueueOffset: 0
     - _RampSmooth: 0.2
     - _RampSmoothAdd: 0.75
-    - _RampThreshold: 0.5
+    - _RampThreshold: 1
     - _ReceiveShadows: 1
     - _RimMax: 1
     - _RimMin: 1
@@ -101,25 +102,26 @@ Material:
     - _SpecSmooth: 1
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _SrcBlendOutline: 5
     - _Surface: 0
     - _TCP2_DISABLE_WRAPPED_LIGHT: 1
     - _TCP2_OUTLINE_CONST_SIZE: 1
     - _TCP2_OUTLINE_TEXTURED: 0
     - _TCP2_RAMPTEXT: 0
-    - _TCP2_SPEC_TOON: 0
+    - _TCP2_SPEC_TOON: 1
     - _TCP2_STYLIZED_FRESNEL: 1
-    - _TCP2_ZSMOOTH_ON: 1
-    - _TexLod: 5
+    - _TCP2_ZSMOOTH_ON: 0
+    - _TexLod: 3.08
     - _UVSec: 0
     - _WorkflowMode: 1
-    - _ZSmooth: 3
+    - _ZSmooth: 0.98
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.96470594, g: 1, b: 0, a: 1}
     - _EmissionColor: {r: 1.2006855, g: 1.0686729, b: 0.6474901, a: 1}
     - _HColor: {r: 1, g: 1, b: 1, a: 1}
-    - _OutlineColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _RimColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.6}
     - _SColor: {r: 0.25, g: 0.25, b: 0.25, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using DefaultNamespace;
 using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
-public class Bullet : MonoBehaviour, IPlayerProjectile
+public class Bullet : MonoBehaviour, IAttack
 {
     private Vector2 direction;
     private Rigidbody2D rb;
@@ -55,7 +55,7 @@ public class Bullet : MonoBehaviour, IPlayerProjectile
         Destroy(gameObject);
     }
 
-    public float GetDamage()
+    public float DealDamage()
     {
         return damage;
     }
