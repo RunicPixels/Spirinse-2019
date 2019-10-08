@@ -2,6 +2,6 @@ namespace DefaultNamespace
 {
     public interface IAttack
     {
-        float DealDamage();
+        float DoAttack();
     }
 }

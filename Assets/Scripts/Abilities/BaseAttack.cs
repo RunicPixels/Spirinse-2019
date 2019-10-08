@@ -11,10 +11,10 @@ public class BaseAttack : BaseAbility, IAttack
 
     public override void Execute()
     {
-        DealDamage();
+        
     }
 
-    public float DealDamage()
+    public float DoAttack()
     {
         Controls.chi += energySteal;
         return damage;

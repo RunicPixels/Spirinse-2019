@@ -55,7 +55,7 @@ public class Bullet : MonoBehaviour, IAttack
         Destroy(gameObject);
     }
 
-    public float DealDamage()
+    public float DoAttack()
     {
         return damage;
     }
