@@ -85,7 +85,7 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
         }
     }
 
-    void Cure()
+    private void Cure()
     {
         cured = true;
         animator.SetTrigger(Cure1);
@@ -97,14 +97,14 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
         Destroy(gameObject);
     }
 
-   void OnTriggerStay2D(Collider2D other)
+   private void OnTriggerStay2D(Collider2D other)
    {
        if (iFrames > 0) return;
-       var projectile = other.gameObject.GetComponent<MeleeWeapon>();
+       var attack = other.gameObject.GetComponent<IAttack>();
 
-       if (projectile != null)
+       if (attack != null)
        {
-           TakeDamage(projectile.GetDamage());
+           TakeDamage(attack.DoAttack());
        }
    }
 

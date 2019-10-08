@@ -22,7 +22,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: palette
   m_Shader: {fileID: 4800000, guid: 80412fe88398cd147be3aacebe2c3fe3, type: 3}
-  m_ShaderKeywords: OUTLINES TCP2_DISABLE_WRAPPED_LIGHT
+  m_ShaderKeywords: OUTLINES TCP2_DISABLE_WRAPPED_LIGHT TCP2_ZSMOOTH_ON
   m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -95,9 +95,9 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Offset1: 0
-    - _Offset2: 0
-    - _Outline: 4
+    - _Offset1: 2
+    - _Offset2: 1
+    - _Outline: 1
     - _Parallax: 0.02
     - _QueueOffset: 0
     - _RampSmooth: 0.2
@@ -120,11 +120,11 @@ Material:
     - _TCP2_RAMPTEXT: 0
     - _TCP2_SPEC_TOON: 0
     - _TCP2_STYLIZED_FRESNEL: 0
-    - _TCP2_ZSMOOTH_ON: 0
+    - _TCP2_ZSMOOTH_ON: 1
     - _TexLod: 5
     - _UVSec: 0
     - _WorkflowMode: 1
-    - _ZSmooth: -0.5
+    - _ZSmooth: 3
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}

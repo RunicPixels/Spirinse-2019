@@ -6,6 +6,7 @@ using Rewired;
 
 public class InputManager : MonoBehaviour
 {
-    private Action OnMain;
+    private Action OnAttack;
+    private Action OnDodge;
 
 }
