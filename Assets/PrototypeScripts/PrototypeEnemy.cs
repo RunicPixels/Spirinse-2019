@@ -107,5 +107,4 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
            TakeDamage(attack.DoAttack());
        }
    }
-
 }

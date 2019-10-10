@@ -3,7 +3,27 @@ using System.Collections.Generic;
 using Assets.Scripts.Interfaces;
 using UnityEngine;
 
-public abstract class BaseAbility : MonoBehaviour
+public abstract class BaseAbility : MonoBehaviour, IAbility
 {
-    public abstract void Execute();
+    [SerializeField]
+    protected float duration;
+
+    protected float currentDuration;
+    public virtual void Play()
+    {
+        currentDuration = duration;
+    }
+
+    public virtual bool Run()
+    {
+        if (currentDuration < 0f) return false;
+
+        currentDuration -= Time.fixedDeltaTime;
+        return true;
+    }
+
+    public virtual void Stop()
+    {
+
+    }
 }

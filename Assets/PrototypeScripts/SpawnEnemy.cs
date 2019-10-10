@@ -19,7 +19,6 @@ public class SpawnEnemy : MonoBehaviour
         Timing.RunCoroutine(_SpawnEnemies());
     }
 
-
     private IEnumerator<float> _SpawnEnemies()
     {
         while (gameObject.activeSelf)
