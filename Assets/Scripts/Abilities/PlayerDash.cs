@@ -2,53 +2,46 @@
 
 public class PlayerDash : BaseAbility
 {
-    public float chiDashConsumption = 0.2f;
-    public float chiDashDrain = 0.5f;
+    // Gravity 
+    [SerializeField] protected float gravityScale;
 
-    [Header("TimeScale")]
-    float dashTimeScale = 0.8f;
+    // Speed
+    [SerializeField] protected float dashSpeed;
+    [SerializeField] protected float dashSpeedMultiplier;
+    [SerializeField] protected Vector2 dashVelocity = new Vector2(0, 0);
 
-    [Header("Dash")] public float stopBeforeDash;
-    // Dash
-    [SerializeField]
-    protected float dashSpeed, dashSpeedMultiplier, dashDuration;
+    // Curves
+    [SerializeField] protected AnimationCurve dashCurve;
+    [SerializeField] protected AnimationCurve dashCameraCurve;
 
-    [SerializeField]
-    protected AnimationCurve dashCurve;
-
-    [SerializeField]
-    protected internal AnimationCurve dashCameraCurve;
-    [SerializeField]
-    protected GameObject dashSphere;
-    [SerializeField]
-    protected bool canChargeDash = false;
+    // GameObjects
+    [SerializeField] protected GameObject dashSphere;
+    
+    public enum CurveType { Dash, Camera }
 
     private Vector2 direction;
-    private Vector2 dashVelocity = new Vector2(0, 0);
     private float currentDash;
+
+    public float GetGravityScale => gravityScale;
+    public float GetDashSpeed => dashSpeed;
+    public float GetDashSpeedMultiplier => dashSpeedMultiplier;
+    public Vector2 GetDashVelocity => dashVelocity;
+
 
     public override void Play()
     {
+        currentDash = duration;
         dashSphere.SetActive(true);
         base.Play();
     }
 
     public override bool Run()
     {
-        float progression = 1f - (currentDash / dashDuration);
+        var progression = GetProgression();
 
         dashVelocity = direction * dashSpeed * dashCurve.Evaluate(progression);
 
-        if (Input.GetButton("Fire3") && canChargeDash)
-        {
-            Controls.chi -= chiDashDrain * Time.deltaTime; // Needs Chi Manager
-        }
-
-        else
-        {
-            //direction = rb.velocity.normalized;
-            currentDash -= Time.deltaTime;
-        }
+        currentDash -= Time.fixedDeltaTime;
 
         return base.Run();
     }
@@ -68,11 +61,26 @@ public class PlayerDash : BaseAbility
 
     public virtual float GetDuration()
     {
-        return dashDuration;
+        return duration;
     }
 
-    public virtual float GetDashSpeedMultiplier()
+    public virtual float GetProgression()
     {
-        return dashSpeedMultiplier;
+        return 1f - (currentDash / duration);
+    }
+
+    public float GetCurveProgression(CurveType type)
+    {
+        var progression = GetProgression();
+        switch(type)
+        {
+            case CurveType.Dash:
+                return dashCurve.Evaluate(progression);
+            case CurveType.Camera:
+                return dashCameraCurve.Evaluate(progression);
+            default:
+                Debug.LogWarning("Invalid Dash Curve type Specified with " + type);
+                return 0f;
+        }
     }
 }

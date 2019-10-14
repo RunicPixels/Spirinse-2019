@@ -21,25 +21,21 @@ public class Controls : MonoBehaviour
     public float chiAttackCost = 0.1f;
     public float chiDrainAttackMode = 0.5f;
     public float chiDashConsumption = 0.2f;
-    public float chiDashDrain = 0.5f;
     public float chiGravity = 5f;
 
-    [Header("TimeScale")] private float attackTimeScale = 0.8f;
-    float dashTimeScale = 0.8f;
+    [Header("TimeScale")]
+    private float attackTimeScale = 0.8f;
+    private float dashTimeScale = 0.8f;
     
-    [Header("Moving")] public float hAcceleration;
-    // Moving
+    [Header("Moving")]
+    public float hAcceleration;
     public float vAcceleration, speed;
     public Vector2 velocity;
     public enum DirectionMode { Velocity, Mouse, Arrows};
 
-    [Header("Dash")] public PlayerDash dashAbility;
+    [Header("Dash")]
+    public PlayerDash dashAbility;
     public float stopBeforeDash;
-    // Dash
-    public float dashSpeed, dashSpeedMultiplier, dashDuration;
-    public AnimationCurve dashCurve, dashCameraCurve;
-    public GameObject dashSphere;
-    public bool canChargeDash = false;
 
     [Header("Attacks")] 
     // Laser
@@ -114,24 +110,51 @@ public class Controls : MonoBehaviour
 
     private void FixedUpdate()
     {
-        velocity = Time.fixedDeltaTime * 60 *  speedMultiplier * new Vector2(direction.x * hAcceleration, direction.y * vAcceleration);
-        rb.AddForce(velocity + dashVelocity);
-        rb.gravityScale = Mathf.Max(0f, (1f - chi) * chiGravity);
+        velocity = CalculateVelocity();
 
+        rb.AddForce(velocity);
+        rb.gravityScale = CalculateGravity();
+
+        LimitVelocity();
+    }
+
+    private Vector2 CalculateVelocity()
+    {
+        var velocity = Time.fixedDeltaTime * 60 * speedMultiplier * new Vector2(direction.x * hAcceleration, direction.y * vAcceleration);
+        if (dashing)
+        {
+            velocity *= dashAbility.GetDashSpeedMultiplier;
+            velocity += dashAbility.GetDashVelocity;
+        }
+
+        return velocity;
+    }
+
+    private float CalculateGravity()
+    {
+        var gravity = Mathf.Max(0f, (1f - chi) * chiGravity);
+        if (dashing)
+        {
+            gravity = dashAbility.GetGravityScale;
+        }
+        return gravity;
+    }
+
+    private void LimitVelocity()
+    {
         if (goDoDash)
         {
             StartCoroutine(_Dashing(velocity.normalized));
             goDoDash = false;
         }
-        
+
         if (rb.velocity.magnitude > speed && dashing == false)
         {
-            rb.velocity = rb.velocity.normalized * Mathf.Lerp( rb.velocity.magnitude, speed, 0.98f);
+            rb.velocity = rb.velocity.normalized * Mathf.Lerp(rb.velocity.magnitude, speed, 0.98f);
         }
-        else if (rb.velocity.magnitude > dashSpeed && dashing == true)
+        else if (rb.velocity.magnitude > dashAbility.GetDashSpeed && dashing == true)
         {
-            rb.velocity = rb.velocity.normalized * dashSpeed;
-            rb.gravityScale = 0f;
+            rb.velocity = rb.velocity.normalized * dashAbility.GetDashSpeed;
         }
     }
 
@@ -144,7 +167,7 @@ public class Controls : MonoBehaviour
         var trailSystemMain = trailSystem.main; // NEEDS particle system Manager
         var tLife = trailSystem.main.startLifetime;
 
-        var trailSystemRibbon = trailSystem.trails;
+        //var trailSystemRibbon = trailSystem.trails;
 
         dashAbility.SetDirection(direction);
         dashAbility.Play();
@@ -158,20 +181,15 @@ public class Controls : MonoBehaviour
         dashing = true;
         
         rb.velocity *= stopBeforeDash;
+        rb.gravityScale = 0f;
 
-        var progression = 1f - (currentDash / dashDuration);
-
-        while (currentDash > 0f)
+        while (dashAbility.Run())
         {
-            dashAbility.Run();
-
-            camera.fieldOfView = fov + (30 * dashAbility.dashCameraCurve.Evaluate(progression));
+            camera.fieldOfView = fov + (30 * dashAbility.GetCurveProgression(PlayerDash.CurveType.Camera));
 
             // Needs Particle System Manager
-            trailSystemMain.startLifetime = new ParticleSystem.MinMaxCurve(tLife.Evaluate(0) + currentDash + currentDash * dashDuration, tLife.Evaluate(1f) + currentDash + currentDash * dashDuration + 2f);
+            trailSystemMain.startLifetime = new ParticleSystem.MinMaxCurve(tLife.Evaluate(0) + currentDash + currentDash * dashAbility.GetDuration(), tLife.Evaluate(1f) + currentDash + currentDash * dashAbility.GetDuration() + 2f);
             Time.timeScale = dashTimeScale;
-            
-            currentDash -= Time.fixedDeltaTime;
 
             yield return Time.fixedDeltaTime;
         }
@@ -262,8 +280,6 @@ public class Controls : MonoBehaviour
 
             if (chi < 0f) break;
 
-            yield return Time.unscaledDeltaTime;
-
             // Melee Attack
 
             if (meleeAttack)
@@ -274,10 +290,12 @@ public class Controls : MonoBehaviour
                     {
                         Vector2 v = rb.velocity;
                         var angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;
-                        melee.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                        melee.transform.transform.parent.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
                     }
                 }
             }
+
+            yield return Time.unscaledDeltaTime;
         }
 
         if (chargedBullet)
