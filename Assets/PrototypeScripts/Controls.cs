@@ -30,12 +30,10 @@ public class Controls : MonoBehaviour
     [Header("Moving")]
     public float hAcceleration;
     public float vAcceleration, speed;
-    public Vector2 velocity;
     public enum DirectionMode { Velocity, Mouse, Arrows};
 
     [Header("Dash")]
     public PlayerDash dashAbility;
-    public float stopBeforeDash;
 
     [Header("Attacks")] 
     // Laser
@@ -110,9 +108,8 @@ public class Controls : MonoBehaviour
 
     private void FixedUpdate()
     {
-        velocity = CalculateVelocity();
+        rb.AddForce(CalculateVelocity());
 
-        rb.AddForce(velocity);
         rb.gravityScale = CalculateGravity();
 
         LimitVelocity();
@@ -144,7 +141,7 @@ public class Controls : MonoBehaviour
     {
         if (goDoDash)
         {
-            StartCoroutine(_Dashing(velocity.normalized));
+            StartCoroutine(_Dashing(rb.velocity.normalized));
             goDoDash = false;
         }
 
@@ -180,8 +177,7 @@ public class Controls : MonoBehaviour
         chi -= chiDashConsumption;
         dashing = true;
         
-        rb.velocity *= stopBeforeDash;
-        rb.gravityScale = 0f;
+        rb.velocity *= dashAbility.GetStopBeforeDash;
 
         while (dashAbility.Run())
         {
@@ -278,22 +274,10 @@ public class Controls : MonoBehaviour
 
             charge += Time.unscaledDeltaTime;
 
-            if (chi < 0f) break;
-
             // Melee Attack
+            DoMelee();
 
-            if (meleeAttack)
-            {
-                foreach (var melee in meleeAttackPrefab)
-                {
-                    if (melee.CompareTag("Selected") && melee.gameObject.activeSelf)
-                    {
-                        Vector2 v = rb.velocity;
-                        var angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;
-                        melee.transform.transform.parent.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-                    }
-                }
-            }
+            if (chi < 0f) break;
 
             yield return Time.unscaledDeltaTime;
         }
@@ -328,7 +312,12 @@ public class Controls : MonoBehaviour
         {
             if (!melee.CompareTag("Selected")) continue;
             melee.gameObject.SetActive(true);
-            melee.GetComponentInChildren<Animator>().Play(0);
+            //melee.GetComponent<Animator>().StartPlayback();
+
+            Vector2 v = rb.velocity;
+            var angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;
+            melee.transform.transform.parent.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
         }
     }
 }
