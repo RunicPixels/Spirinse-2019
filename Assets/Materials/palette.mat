@@ -10,8 +10,8 @@ Material:
   m_Name: palette
   m_Shader: {fileID: 4800000, guid: f8d49205b3b0a644195633020367689d, type: 3}
   m_ShaderKeywords: OUTLINE_BLENDING TCP2_COLORS_AS_NORMALS TCP2_DISABLE_WRAPPED_LIGHT
-    TCP2_OUTLINE_CONST_SIZE TCP2_SPEC_TOON TCP2_STYLIZED_FRESNEL _EMISSION
-  m_LightmapFlags: 2
+    TCP2_OUTLINE_CONST_SIZE TCP2_SPEC_TOON TCP2_STYLIZED_FRESNEL _EMISSION _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -97,7 +97,7 @@ Material:
     - _RimMin: 1
     - _RimStrength: 2
     - _Smoothness: 0.5
-    - _SmoothnessTextureChannel: 0
+    - _SmoothnessTextureChannel: 1
     - _SpecBlend: 1
     - _SpecSmooth: 1
     - _SpecularHighlights: 1
@@ -118,9 +118,9 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.96470594, g: 1, b: 0, a: 1}
-    - _EmissionColor: {r: 1.2006855, g: 1.0686729, b: 0.6474901, a: 1}
-    - _HColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 4.1985583, g: 2.6598196, b: 0, a: 1}
+    - _HColor: {r: 1, g: 0.8217412, b: 0, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _RimColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.6}
     - _SColor: {r: 0.25, g: 0.25, b: 0.25, a: 1}

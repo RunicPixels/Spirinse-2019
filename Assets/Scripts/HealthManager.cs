@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,17 +8,40 @@ public class HealthManager : MonoBehaviour
     private static HealthManager instance = null;
 
     public static HealthManager Instance => instance;
-    [SerializeField] protected int health;
-    [SerializeField] protected int maxHealth;
+
+    protected int _health;
+    [SerializeField] protected int Health
+    {
+        set
+        {
+            _health = value;
+            ChangeHealthEvent.Invoke(_health);
+        }
+        get => _health;
+    }
+
+    protected int _maxHealth;
+    [SerializeField] protected int MaxHealth
+    {
+        set
+        {
+            _maxHealth = value;
+            ChangeMaxHealthEvent.Invoke(_maxHealth);
+        }
+        get => _maxHealth;
+    }
     [SerializeField] protected int healthCap;
 
     protected ShieldManager shieldManager;
 
+    public Action<int> ChangeHealthEvent;
+    public Action<int> ChangeMaxHealthEvent;
+
     private void Awake()
     {
-        health = maxHealth;
+        Health = MaxHealth;
         instance = this;
-        shieldManager = new ShieldManager(maxHealth);
+        shieldManager = new ShieldManager(MaxHealth);
     }
 
     public void Hit(int damage)
@@ -30,13 +54,14 @@ public class HealthManager : MonoBehaviour
 
     private void DoDamage(int damage = 1)
     {
-        health -= damage;
+        Health -= damage;
+        ChangeHealthEvent.Invoke(Health);
         CheckDeath();
     }
 
     private void CheckDeath()
     {
-        if (health <= 0)
+        if (Health <= 0)
         {
 
         }
@@ -44,16 +69,16 @@ public class HealthManager : MonoBehaviour
 
     public void Heal(int amount)
     {
-        health += amount;
-        if (health > maxHealth)
+        Health += amount;
+        if (Health > MaxHealth)
         {
-            health = maxHealth;
+            Health = MaxHealth;
         }
     }
 
     public void IncreaseHealth(int amount, bool doHeal = true)
     {
-        maxHealth += amount;
-        if (doHeal) health += amount;
+        MaxHealth += amount;
+        if (doHeal) Health += amount;
     }
 }

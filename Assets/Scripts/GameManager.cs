@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,7 +9,9 @@ public class GameManager : MonoBehaviour
 
     private InputManager _inputManager;
 
-    protected HealthManager healthManager;
+    [SerializeField] protected HealthManager healthManager;
+    protected SetHealthUI healthUI;
+
 
     public HealthManager HealthManager => healthManager;
 
@@ -25,11 +28,14 @@ public class GameManager : MonoBehaviour
         }
 
         if (!healthManager) healthManager = HealthManager.Instance;
+
+        healthManager.ChangeHealthEvent += healthUI.ChangeCurrentHealth;
+        healthManager.ChangeMaxHealthEvent += healthUI.ChangeMaxHealth;
     }
 
-    // Update is called once per frame
-    private void Update()
+    private void OnEnable()
     {
-        
+
     }
+
 }
