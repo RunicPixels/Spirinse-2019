@@ -8,8 +8,12 @@ public class GameManager : MonoBehaviour
 
     private InputManager _inputManager;
 
+    protected HealthManager healthManager;
+
+    public HealthManager HealthManager => healthManager;
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         if (Instance != null)
         {
@@ -17,12 +21,14 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
+
+        if (!healthManager) healthManager = HealthManager.Instance;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         
     }
