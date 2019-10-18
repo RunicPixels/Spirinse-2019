@@ -7,30 +7,29 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager Instance;
 
-    private InputManager _inputManager;
+
 
     [SerializeField] protected HealthManager healthManager;
-    protected SetHealthUI healthUI;
+    
 
 
     public HealthManager HealthManager => healthManager;
 
+    protected UIManager uIManager;
+
+    private InputManager _inputManager;
+
     // Start is called before the first frame update
     private void Start()
     {
-        if (Instance != null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        if (Instance != null) Instance = this;
+        else Destroy(gameObject);
 
+        if (!uIManager) uIManager = UIManager.Instance;
         if (!healthManager) healthManager = HealthManager.Instance;
 
-        healthManager.ChangeHealthEvent += healthUI.ChangeCurrentHealth;
-        healthManager.ChangeMaxHealthEvent += healthUI.ChangeMaxHealth;
+        healthManager.ChangeHealthEvent += uIManager.GetHealthUI.ChangeCurrentHealth;
+        healthManager.ChangeMaxHealthEvent += uIManager.GetHealthUI.ChangeMaxHealth;
     }
 
     private void Update()

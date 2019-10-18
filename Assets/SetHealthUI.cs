@@ -18,9 +18,9 @@ public class SetHealthUI : MonoBehaviour
     public Sprite InactiveShieldSprite;
     public Sprite BrokenShieldSprite;
 
-    private int currentHealthContainers;
-    private int currentHealth;
-    private int currentShieldContainers;
+    private int currentHealthContainers = 3;
+    private int currentHealth = 3;
+    private int currentShieldContainers = 3;
 
     private List<Image> HealthSprites;
     private List<Image> ShieldSprites;
