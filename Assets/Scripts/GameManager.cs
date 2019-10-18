@@ -33,6 +33,12 @@ public class GameManager : MonoBehaviour
         healthManager.ChangeMaxHealthEvent += healthUI.ChangeMaxHealth;
     }
 
+    private void Update()
+    {
+        healthManager.ChangeHealthEvent.Invoke(5);
+        healthManager.ChangeMaxHealthEvent.Invoke(5);
+    }
+
     private void OnEnable()
     {
 

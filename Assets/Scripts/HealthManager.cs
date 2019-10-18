@@ -15,7 +15,8 @@ public class HealthManager : MonoBehaviour
         set
         {
             _health = value;
-            ChangeHealthEvent.Invoke(_health);
+            ChangeHealthEvent?.Invoke(_health);
+
         }
         get => _health;
     }
@@ -26,7 +27,7 @@ public class HealthManager : MonoBehaviour
         set
         {
             _maxHealth = value;
-            ChangeMaxHealthEvent.Invoke(_maxHealth);
+            ChangeMaxHealthEvent?.Invoke(_maxHealth);
         }
         get => _maxHealth;
     }
