@@ -10,9 +10,9 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private SetHealthUI setHealthUI;
     // Start is called before the first frame update
-    private void Start()
+    private void Awake()
     {
-        if (Instance != null)
+        if (Instance == null)
         {
             Instance = this;
         }

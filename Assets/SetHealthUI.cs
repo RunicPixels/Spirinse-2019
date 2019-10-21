@@ -18,17 +18,26 @@ public class SetHealthUI : MonoBehaviour
     public Sprite InactiveShieldSprite;
     public Sprite BrokenShieldSprite;
 
+    private int maxHealthContainers;
+
     private int currentHealthContainers = 3;
     private int currentHealth = 3;
     private int currentShieldContainers = 3;
+    
 
     private List<Image> HealthSprites;
     private List<Image> ShieldSprites;
 
+    public void SetMaxHealthContainers(int maxHPContainers)
+    {
+        maxHealthContainers = maxHPContainers;
+        ChangeHealthUI();
+    }
+
     public void ChangeMaxHealth(int newHealthMax)
     {
         currentHealthContainers = newHealthMax;
-        ChangeHealthUI();
+        UpdateHealthUI();
     }
 
     public void ChangeCurrentHealth(int newHealth)
@@ -39,8 +48,9 @@ public class SetHealthUI : MonoBehaviour
 
     private void ChangeHealthUI()
     {
-        HealthSprites.Clear();
-        for (int i = 0; i < currentHealthContainers; i++)
+        foreach(var obj in HealthSprites) Destroy(obj);
+        HealthSprites = new List<Image>();
+        for (int i = 0; i < maxHealthContainers; i++)
         {
             GameObject cur = Instantiate(UIPrefab);
             cur.transform.SetParent(transform);
@@ -55,8 +65,9 @@ public class SetHealthUI : MonoBehaviour
     {
         for (int i = 0; i < currentHealthContainers; i++)
         {
-            if (i <= currentHealthContainers) HealthSprites[i].sprite = FullHealthSprite;
-            else HealthSprites[i].sprite = EmptyHeartSprite;
+            if (i <= currentHealth) HealthSprites[i].sprite = FullHealthSprite;
+            else if (i <= currentHealthContainers) HealthSprites[i].sprite = EmptyHeartSprite;
+            else HealthSprites[i].sprite = null;
         }
     }
 }

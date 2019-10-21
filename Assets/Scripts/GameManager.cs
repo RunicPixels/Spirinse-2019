@@ -22,11 +22,13 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        if (Instance != null) Instance = this;
+        if (Instance == null) Instance = this;
         else Destroy(gameObject);
 
-        if (!uIManager) uIManager = UIManager.Instance;
-        if (!healthManager) healthManager = HealthManager.Instance;
+        if (uIManager == null) uIManager = UIManager.Instance;
+        if (healthManager == null) healthManager = HealthManager.Instance;
+
+        uIManager.GetHealthUI.SetMaxHealthContainers(HealthManager.GetHealthCap);
 
         healthManager.ChangeHealthEvent += uIManager.GetHealthUI.ChangeCurrentHealth;
         healthManager.ChangeMaxHealthEvent += uIManager.GetHealthUI.ChangeMaxHealth;
@@ -36,11 +38,6 @@ public class GameManager : MonoBehaviour
     {
         healthManager.ChangeHealthEvent.Invoke(5);
         healthManager.ChangeMaxHealthEvent.Invoke(5);
-    }
-
-    private void OnEnable()
-    {
-
     }
 
 }

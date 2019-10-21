@@ -32,6 +32,7 @@ public class HealthManager : MonoBehaviour
         get => _maxHealth;
     }
     [SerializeField] protected int healthCap;
+    public int GetHealthCap => healthCap;
 
     protected ShieldManager shieldManager;
 
@@ -40,10 +41,18 @@ public class HealthManager : MonoBehaviour
 
     private void Awake()
     {
+        ChangeHealthEvent += PlaceholderMethod;
+        ChangeMaxHealthEvent += PlaceholderMethod;
         Health = MaxHealth;
         instance = this;
         shieldManager = new ShieldManager(MaxHealth);
     }
+
+    public void PlaceholderMethod(int i)
+    {
+        Debug.Log(i);
+    }
+
 
     public void Hit(int damage)
     {
