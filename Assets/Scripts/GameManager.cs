@@ -1,35 +1,43 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class GameManager : MonoBehaviour
 {
     private static GameManager Instance;
 
-    private InputManager _inputManager;
 
-    protected HealthManager healthManager;
+
+    [SerializeField] protected HealthManager healthManager;
+    
+
 
     public HealthManager HealthManager => healthManager;
+
+    protected UIManager uIManager;
+
+    private InputManager _inputManager;
 
     // Start is called before the first frame update
     private void Start()
     {
-        if (Instance != null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
 
-        if (!healthManager) healthManager = HealthManager.Instance;
+        if (uIManager == null) uIManager = UIManager.Instance;
+        if (healthManager == null) healthManager = HealthManager.Instance;
+
+        uIManager.GetHealthUI.SetMaxHealthContainers(HealthManager.GetHealthCap);
+
+        healthManager.ChangeHealthEvent += uIManager.GetHealthUI.ChangeCurrentHealth;
+        healthManager.ChangeMaxHealthEvent += uIManager.GetHealthUI.ChangeMaxHealth;
     }
 
-    // Update is called once per frame
     private void Update()
     {
-        
+        healthManager.ChangeHealthEvent.Invoke(5);
+        healthManager.ChangeMaxHealthEvent.Invoke(5);
     }
+
 }

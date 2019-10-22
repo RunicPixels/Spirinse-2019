@@ -17,11 +17,11 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   shutterAngle:
-    overrideState: 1
-    value: 184
+    overrideState: 0
+    value: 360
   sampleCount:
-    overrideState: 1
-    value: 20
+    overrideState: 0
+    value: 32
 --- !u!114 &-2513808287158487476
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -148,7 +148,7 @@ MonoBehaviour:
     value: 512
   diffusion:
     overrideState: 1
-    value: 10
+    value: 5
   anamorphicRatio:
     overrideState: 1
     value: 0
