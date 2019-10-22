@@ -2,38 +2,35 @@
 using UnityEditor;
 using UnityEngine;
 using System.Reflection;
-using Assets.Scripts;
+using Assets;
+
 namespace Assets.Scripts.Editor
 {
-    [CustomEditor(typeof(MonoBehaviour))]
-    public class ClickableEditor : UnityEditor.Editor
+    [CustomEditor(typeof(MonoBehaviour), true)]
+    public class ClickableInspector : UnityEditor.Editor
     {
         public override void OnInspectorGUI()
         {
 
-            DrawDefaultInspector();
+            base.OnInspectorGUI();
 
             MonoBehaviour monoBehaviour = target as MonoBehaviour;
 
             GUILayout.BeginVertical();
-            MethodInfo[] methods = monoBehaviour.GetType().GetMethods();
-            foreach (MethodInfo info in methods)
+            MethodInfo[] methodInfo = target.GetType().GetMethods();
+            foreach (MethodInfo info in methodInfo)
             {
-                Debug.Log(info.Name);
-
-                ClickableAttribute attribute = info.GetCustomAttribute<ClickableAttribute>();
+                System.Attribute attribute = info.GetCustomAttribute(typeof(ClickableFunctionAttribute));
                 
-               // if (attribute != null)
+                if (attribute != null)
                 {
                     if(GUILayout.Button(info.Name))
                     {
                         info.Invoke(monoBehaviour, null);
                     }
                 }
-                
             }
             GUILayout.EndVertical();
-
         }
     }
 }

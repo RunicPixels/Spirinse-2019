@@ -34,10 +34,4 @@ public class GameManager : MonoBehaviour
         healthManager.ChangeMaxHealthEvent += uIManager.GetHealthUI.ChangeMaxHealth;
     }
 
-    private void Update()
-    {
-        healthManager.ChangeHealthEvent.Invoke(5);
-        healthManager.ChangeMaxHealthEvent.Invoke(5);
-    }
-
 }

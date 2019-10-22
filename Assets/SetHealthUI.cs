@@ -9,24 +9,23 @@ public class SetHealthUI : MonoBehaviour
     public GameObject UIPrefab;
     public int distance;
 
-    [Header("Health")]
-    public Sprite FullHealthSprite;
+    [Header("Health")] public Sprite FullHealthSprite;
     public Sprite EmptyHeartSprite;
 
-    [Header("Shield")]
-    public Sprite ActiveShieldSprite;
+    [Header("Shield")] public Sprite ActiveShieldSprite;
     public Sprite InactiveShieldSprite;
     public Sprite BrokenShieldSprite;
 
+    [Header("Inactive Parent")] public Transform inactiveParent;
+
     private int maxHealthContainers;
+    private int currentHealthContainers;
+    private int currentHealth;
+    private int currentShieldContainers;
 
-    private int currentHealthContainers = 3;
-    private int currentHealth = 3;
-    private int currentShieldContainers = 3;
-    
 
-    private List<Image> HealthSprites;
-    private List<Image> ShieldSprites;
+    private List<Image> HealthSprites = new List<Image>();
+    private List<Image> ShieldSprites = new List<Image>();
 
     public void SetMaxHealthContainers(int maxHPContainers)
     {
@@ -48,26 +47,45 @@ public class SetHealthUI : MonoBehaviour
 
     private void ChangeHealthUI()
     {
-        foreach(var obj in HealthSprites) Destroy(obj);
+        foreach (var obj in HealthSprites) Destroy(obj.gameObject);
         HealthSprites = new List<Image>();
         for (int i = 0; i < maxHealthContainers; i++)
         {
-            GameObject cur = Instantiate(UIPrefab);
-            cur.transform.SetParent(transform);
+            GameObject cur = Instantiate(UIPrefab, transform);
             RectTransform rTransform = cur.GetComponent<RectTransform>();
-            rTransform.anchoredPosition.Set(rTransform.anchoredPosition.x + (distance * i),rTransform.anchoredPosition.y);
+            rTransform.anchoredPosition.Set(rTransform.anchoredPosition.x + (distance * i),
+                rTransform.anchoredPosition.y);
             HealthSprites.Add(cur.GetComponent<Image>());
         }
+
         UpdateHealthUI();
     }
 
     private void UpdateHealthUI()
     {
-        for (int i = 0; i < currentHealthContainers; i++)
+        for (int i = 0; i < maxHealthContainers; i++)
         {
-            if (i <= currentHealth) HealthSprites[i].sprite = FullHealthSprite;
-            else if (i <= currentHealthContainers) HealthSprites[i].sprite = EmptyHeartSprite;
-            else HealthSprites[i].sprite = null;
+            var image = HealthSprites[i];
+            if (i < currentHealth)
+            {
+                image.sprite = FullHealthSprite;
+                image.transform.SetParent(transform);
+                image.gameObject.SetActive(true);
+            }
+
+            else if (i < currentHealthContainers)
+            {
+                image.sprite = EmptyHeartSprite;
+                image.transform.SetParent(transform);
+                image.gameObject.SetActive(true);
+            }
+
+            else if (i >= currentHealthContainers)
+            {
+                image.sprite = null;
+                image.transform.SetParent(inactiveParent);
+                image.gameObject.SetActive(false);
+            } 
         }
     }
 }
