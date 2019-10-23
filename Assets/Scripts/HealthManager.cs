@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class HealthManager : MonoBehaviour
 {
@@ -9,8 +11,8 @@ public class HealthManager : MonoBehaviour
 
     public static HealthManager Instance => instance;
 
-    protected int _health;
-    [SerializeField] protected int Health
+    [SerializeField] protected int _health;
+    protected int Health
     {
         set
         {
@@ -21,8 +23,8 @@ public class HealthManager : MonoBehaviour
         get => _health;
     }
 
-    protected int _maxHealth;
-    [SerializeField] protected int MaxHealth
+    [SerializeField] protected int _maxHealth;
+    protected int MaxHealth
     {
         set
         {
@@ -90,5 +92,13 @@ public class HealthManager : MonoBehaviour
     {
         MaxHealth += amount;
         if (doHeal) Health += amount;
+    }
+
+    [ClickableFunction]
+    public void DebugUpdateHealth()
+    {
+        UIManager.Instance.GetHealthUI.SetMaxHealthContainers(healthCap);
+        ChangeHealthEvent.Invoke(Health);
+        ChangeMaxHealthEvent.Invoke(MaxHealth);
     }
 }
