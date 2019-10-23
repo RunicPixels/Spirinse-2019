@@ -16223,11 +16223,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3435031174896469566}
     m_Modifications:
-    - target: {fileID: 9159956823212384833, guid: 4b431bab3901d8c4e84d80ab37fd1282,
-        type: 3}
-      propertyPath: m_Name
-      value: HammerContainer
-      objectReference: {fileID: 0}
     - target: {fileID: 9159956823212384832, guid: 4b431bab3901d8c4e84d80ab37fd1282,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16282,6 +16277,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159956823212384833, guid: 4b431bab3901d8c4e84d80ab37fd1282,
+        type: 3}
+      propertyPath: m_Name
+      value: HammerContainer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b431bab3901d8c4e84d80ab37fd1282, type: 3}
