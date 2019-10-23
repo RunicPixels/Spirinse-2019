@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-public interface IAbility
+namespace Spirinse.Interfaces
 {
-    void Play();
-    bool Run();
-    void Stop();
+    public interface IAbility
+    {
+        void Play();
+        bool Run();
+        void Stop();
+    }
 }

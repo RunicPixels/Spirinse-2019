@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using DefaultNamespace;
+using Spirinse.Interfaces;
 using UnityEngine;
-
+using Spirinse.Player;
 public class PrototypeEnemy : MonoBehaviour, IDamagable
 {
     public float speed;
@@ -23,7 +24,7 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
     public float stunned = 0;
 
     public ParticleSystem hitParticles;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,9 +69,9 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
-    public void TakeDamage(float damage)
+    public int TakeDamage(int damage)
     {
-        if (iFrames > 0f) return;
+        if (iFrames > 0f) return 0;
         health -= damage;
 
         rb.velocity = direction * -speed;
@@ -83,6 +84,7 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
         {
             Cure();
         }
+        return damage;
     }
 
     private void Cure()

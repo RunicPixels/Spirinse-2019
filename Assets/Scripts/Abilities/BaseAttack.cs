@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Cinemachine.Utility;
-using DefaultNamespace;
+using Spirinse.Interfaces;
 using UnityEngine;
 
 public class BaseAttack : BaseAbility, IAttack
 {
-    public float damage = 6;
+    public int damage = 6;
     public float energySteal = 0f;
 
     public override void Play()
@@ -24,7 +24,7 @@ public class BaseAttack : BaseAbility, IAttack
         base.Stop();
     }
 
-    public float DoAttack()
+    public int DoAttack()
     {
         Controls.chi += energySteal;
         return damage;

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
-using DefaultNamespace;
+using Spirinse.Interfaces;
 using MEC;
 using MoreMountains.Tools;
 using UnityEngine;
@@ -317,7 +317,6 @@ public class Controls : MonoBehaviour
             Vector2 v = rb.velocity;
             var angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;
             melee.transform.transform.parent.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
         }
     }
 }

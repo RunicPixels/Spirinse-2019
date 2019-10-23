@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using DefaultNamespace;
+using Spirinse.Interfaces;
 using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Bullet : MonoBehaviour, IAttack
@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour, IAttack
     private Rigidbody2D rb;
     public float velocity = 5f;
     public float timeLeft = 2f;
-    public float damage = 6;
+    public int damage = 6;
     
     // Start is called before the first frame update
     private void Start()
@@ -55,7 +55,7 @@ public class Bullet : MonoBehaviour, IAttack
         Destroy(gameObject);
     }
 
-    public float DoAttack()
+    public int DoAttack()
     {
         return damage;
     }
