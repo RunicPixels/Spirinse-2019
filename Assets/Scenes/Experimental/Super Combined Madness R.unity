@@ -699,6 +699,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 954871709}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &84787847 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4912903076253594375, guid: 57a2e677bb35da545825824945f9fbdd,
+    type: 3}
+  m_PrefabInstance: {fileID: 649218425}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &96487042
 GameObject:
   m_ObjectHideFlags: 0
@@ -1398,15 +1404,20 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 4912903074942856559, guid: 57a2e677bb35da545825824945f9fbdd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4912903076253594375, guid: 57a2e677bb35da545825824945f9fbdd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.66
+      value: -22.54
       objectReference: {fileID: 0}
     - target: {fileID: 4912903076253594375, guid: 57a2e677bb35da545825824945f9fbdd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.32
+      value: 5.58
       objectReference: {fileID: 0}
     - target: {fileID: 4912903076253594375, guid: 57a2e677bb35da545825824945f9fbdd,
         type: 3}
@@ -1469,15 +1480,30 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 4912903074616713362, guid: 57a2e677bb35da545825824945f9fbdd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4912903075005609213, guid: 57a2e677bb35da545825824945f9fbdd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912903075005609213, guid: 57a2e677bb35da545825824945f9fbdd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912903074663226853, guid: 57a2e677bb35da545825824945f9fbdd,
         type: 3}
       propertyPath: m_Layer
       value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4912903074663226853, guid: 57a2e677bb35da545825824945f9fbdd,
         type: 3}
-      propertyPath: m_Layer
-      value: 25
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4912903074942856544, guid: 57a2e677bb35da545825824945f9fbdd,
         type: 3}
@@ -12176,7 +12202,7 @@ PrefabInstance:
     - target: {fileID: 4912903076253594375, guid: 57a2e677bb35da545825824945f9fbdd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.78
+      value: 23.59
       objectReference: {fileID: 0}
     - target: {fileID: 4912903076253594375, guid: 57a2e677bb35da545825824945f9fbdd,
         type: 3}
@@ -27039,6 +27065,101 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 389399557}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &819204766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 819204767}
+  - component: {fileID: 819204770}
+  - component: {fileID: 819204769}
+  - component: {fileID: 819204768}
+  m_Layer: 25
+  m_Name: Sphere (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &819204767
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819204766}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 4}
+  m_Children: []
+  m_Father: {fileID: 84787847}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &819204768
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819204766}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!23 &819204769
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819204766}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 9c6030d30e4aabc42ad312d8b4fdca9f, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &819204770
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819204766}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &830378238
 GameObject:
   m_ObjectHideFlags: 0
@@ -39110,7 +39231,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh113868
+  m_Name: pb_Mesh188450
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -54703,7 +54824,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh113588
+  m_Name: pb_Mesh188166
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
