@@ -52,9 +52,7 @@ namespace Spirinse.System
 
             shieldManager.ChangeShieldEvent            += uIManager.GetShieldUI.ChangeCurrentShield;
             shieldManager.ChangeMaxShieldEvent         += uIManager.GetShieldUI.ChangeMaxShield;
-
-            
-
+        
             // Manage Player Events
             var meditator = playerManager.player.meditator;
 
