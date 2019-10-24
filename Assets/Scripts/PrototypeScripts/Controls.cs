@@ -167,6 +167,7 @@ public class Controls : MonoBehaviour
         //var trailSystemRibbon = trailSystem.trails;
 
         dashAbility.SetDirection(direction);
+        
         dashAbility.Play();
 
         var currentDash = dashAbility.GetDuration();
@@ -187,7 +188,7 @@ public class Controls : MonoBehaviour
             trailSystemMain.startLifetime = new ParticleSystem.MinMaxCurve(tLife.Evaluate(0) + currentDash + currentDash * dashAbility.GetDuration(), tLife.Evaluate(1f) + currentDash + currentDash * dashAbility.GetDuration() + 2f);
             Time.timeScale = dashTimeScale;
 
-            yield return Time.fixedDeltaTime;
+            yield return Time.deltaTime;
         }
 
         dashAbility.Stop();

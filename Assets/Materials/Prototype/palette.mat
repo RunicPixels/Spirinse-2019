@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: palette
   m_Shader: {fileID: 4800000, guid: f8d49205b3b0a644195633020367689d, type: 3}
-  m_ShaderKeywords: OUTLINE_BLENDING TCP2_COLORS_AS_NORMALS TCP2_DISABLE_WRAPPED_LIGHT
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA OUTLINE_BLENDING TCP2_COLORS_AS_NORMALS TCP2_DISABLE_WRAPPED_LIGHT
     TCP2_OUTLINE_CONST_SIZE TCP2_SPEC_TOON TCP2_STYLIZED_FRESNEL _EMISSION _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
@@ -119,7 +119,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0, g: 0, b: 0, a: 1}
-    - _EmissionColor: {r: 4.1985583, g: 2.6598196, b: 0, a: 1}
+    - _EmissionColor: {r: 4.198559, g: 2.4117453, b: 0, a: 1}
     - _HColor: {r: 1, g: 0.8217412, b: 0, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _RimColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.6}

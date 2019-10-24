@@ -21,7 +21,6 @@ public class PlayerDash : BaseAbility
     public enum CurveType { Dash, Camera }
 
     private Vector2 direction;
-    private float currentDash;
 
     public float GetGravityScale => gravityScale;
     public float GetDashSpeed => dashSpeed;
@@ -33,7 +32,6 @@ public class PlayerDash : BaseAbility
 
     public override void Play()
     {
-        currentDash = duration;
         dashSphere.SetActive(true);
         base.Play();
     }
@@ -44,7 +42,6 @@ public class PlayerDash : BaseAbility
 
         dashVelocity = direction * dashSpeed * dashCurve.Evaluate(progression);
 
-        currentDash -= Time.fixedDeltaTime;
 
         return base.Run();
     }
@@ -69,7 +66,7 @@ public class PlayerDash : BaseAbility
 
     public virtual float GetProgression()
     {
-        return 1f - (currentDash / duration);
+        return 1f - (currentDuration / duration);
     }
 
     public float GetCurveProgression(CurveType type)

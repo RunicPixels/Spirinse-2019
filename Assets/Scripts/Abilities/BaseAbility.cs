@@ -16,10 +16,13 @@ public abstract class BaseAbility : MonoBehaviour, IAbility
 
     public virtual bool Run()
     {
-        if (currentDuration < 0f) return false;
+        if (currentDuration > 0f)
+        {
+            currentDuration -= Time.deltaTime;
+            return true;
+        }
 
-        currentDuration -= Time.fixedDeltaTime;
-        return true;
+        return false;
     }
 
     public virtual void Stop()
