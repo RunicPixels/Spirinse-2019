@@ -9,5 +9,6 @@ namespace Spirinse.Player
     public class Player : MonoBehaviour
     {
         public Meditator meditator;
+        public Defender defender;
     }
 }

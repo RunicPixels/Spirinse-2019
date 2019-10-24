@@ -6,6 +6,7 @@ using UnityEngine;
 using Spirinse.Player;
 public class PrototypeEnemy : MonoBehaviour, IDamagable
 {
+    private const string StrB = "Player";
     public float speed;
     public float health = 5;
     public Animator animator;
@@ -19,6 +20,8 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
     private static readonly int Cure1 = Animator.StringToHash("Cure");
 
     private bool flipped;
+
+    private int damage = 1;
 
     public float iFrames = 0f;
     public float stunned = 0;
@@ -74,10 +77,10 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
         if (iFrames > 0f) return 0;
         health -= damage;
 
-        rb.velocity = direction * -speed;
+        rb.velocity = direction * -speed * 2f;
         
         iFrames = 0.25f;
-        stunned = 0.6f;
+        stunned = 0.35f;
         
         hitParticles.Play();
         if (health < 0)
@@ -108,5 +111,13 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
        {
            TakeDamage(attack.DoAttack());
        }
+
+        if (other.CompareTag(StrB))
+        {
+            var player = other.GetComponent<IDamagable>();
+
+            player.TakeDamage(damage);
+            TakeDamage(0); // Temporary Method to retreat when interacting with player;
+        }
    }
 }

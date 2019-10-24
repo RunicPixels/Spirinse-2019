@@ -55,8 +55,10 @@ namespace Spirinse.System
         
             // Manage Player Events
             var meditator = playerManager.player.meditator;
+            var defender = playerManager.player.defender;
 
             meditator.TakeDamageAction                 += healthManager.Hit;
+            defender.TakeDamageAction                  += healthManager.Hit;
 
             // ...
         }
