@@ -11,7 +11,9 @@ public class FMODSliderComponent : MonoBehaviour
     [EventRef]
     public string Event = "";
 
-    private float parameter;
+
+    [ SerializeField][Range(0f,2f)] private float parameter;
+
 
     public float Parameter
     {
@@ -39,7 +41,11 @@ public class FMODSliderComponent : MonoBehaviour
         rainOnParameterId = rainParameterDescription.id;
     }
 
-    public void UpdateParam()
+    public void Update()
+    {
+        UpdateParam();
+    }
+    [ClickableFunction] public void UpdateParam()
     {
         rain.setParameterByName("RainIntensity", parameter);
     }
