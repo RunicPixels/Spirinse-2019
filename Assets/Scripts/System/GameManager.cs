@@ -27,6 +27,7 @@ namespace Spirinse.System
         private void Start()
         {
             SetupConnections();
+            SetupEvents();
             InitGame();
         }
 
@@ -40,7 +41,10 @@ namespace Spirinse.System
             if (inputManager == null)   inputManager    = InputManager.Instance;
             if (playerManager == null)  playerManager   = PlayerManager.Instance;
             if (uIManager == null)      uIManager       = UIManager.Instance;
+        }
 
+        private void SetupEvents()
+        {
             // Manage Health Events
             var shieldManager = healthManager.ShieldManager;
 
@@ -62,6 +66,7 @@ namespace Spirinse.System
 
             // ...
         }
+
         private void InitGame()
         {
             healthManager.InitHealth();
@@ -69,3 +74,37 @@ namespace Spirinse.System
         }
     }
 }
+
+
+
+//public class FMODImplementation
+//{
+//    //HIERIN KOMT FMOD Implemetatie voor audio.
+//    public void PlayOnce(params)
+//    {
+
+//    }
+//}
+
+//public class AudioManager
+//{
+//    public PlayerAudio playerAudio = new PlayerAudio();
+//    public EnvironmentAudio environmentAudio;
+//}
+
+//public class PlayerAudio
+//{
+//    private FMODImplementation fmodImplementation;
+//    public void PlayHitSound(int damage, CharacterType type)
+//    {
+//        fmodImplementation.PlayOnce(params);
+//    }
+//}
+
+//public class EnvironmentAudio
+//{
+//    public void PlayBirdSound()
+//    {
+
+//    }
+//}
