@@ -22,6 +22,7 @@ public class FMODSliderComponent : MonoBehaviour
             UpdateParam();
         }
     }
+
     FMOD.Studio.EventInstance rain;
     FMOD.Studio.EventDescription rainEventDescription;
 
