@@ -12,7 +12,7 @@ public class FMODSliderComponent : MonoBehaviour
     public string Event = "";
 
 
-    [ SerializeField][Range(0f,2f)] private float parameter;
+    [ SerializeField][Range(0f,4.1f)] private float parameter;
 
 
     public float Parameter
@@ -36,7 +36,7 @@ public class FMODSliderComponent : MonoBehaviour
         rain = FMODUnity.RuntimeManager.CreateInstance(Event);
         rainEventDescription = FMODUnity.RuntimeManager.GetEventDescription(Event);
         rain.getDescription(out rainEventDescription);
-        rainEventDescription.getParameterDescriptionByName("RainIntensity", out rainParameterDescription);
+        rainEventDescription.getParameterDescriptionByName("Intensity Battle", out rainParameterDescription);
         rain.start();
         rainOnParameterId = rainParameterDescription.id;
     }
