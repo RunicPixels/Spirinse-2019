@@ -8,8 +8,6 @@ using Spirinse.Player;
 
 namespace Spirinse.System.Health
 {
-    
-
     public class HealthManager : MonoBehaviour
     {
         private static HealthManager instance = null;
