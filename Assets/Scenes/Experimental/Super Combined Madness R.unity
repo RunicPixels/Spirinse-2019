@@ -601,6 +601,7 @@ GameObject:
   m_Component:
   - component: {fileID: 67640770}
   - component: {fileID: 67640771}
+  - component: {fileID: 67640772}
   m_Layer: 0
   m_Name: AudioEffects
   m_TagString: Untagged
@@ -637,6 +638,19 @@ MonoBehaviour:
   value: 0
   Event: event:/Battle
   parameter: 4.1
+--- !u!114 &67640772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67640769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: -1
 --- !u!1 &75466986
 GameObject:
   m_ObjectHideFlags: 0
@@ -1152,6 +1166,7 @@ GameObject:
   - component: {fileID: 415884695}
   - component: {fileID: 415884696}
   - component: {fileID: 415884694}
+  - component: {fileID: 415884697}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1217,6 +1232,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setHealthUI: {fileID: 834442918}
   setShieldUI: {fileID: 13728155}
+--- !u!114 &415884697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415884692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3832488ba49533448bce99bcaf07505, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &487041432
 PrefabInstance:
   m_ObjectHideFlags: 0
