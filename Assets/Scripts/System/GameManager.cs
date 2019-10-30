@@ -58,8 +58,8 @@ namespace Spirinse.System
             var meditator = playerManager.player.meditator;
             var defender = playerManager.player.defender;
 
-            meditator.TakeDamageAction                 += healthManager.Hit;
-            defender.TakeDamageAction                  += healthManager.Hit;
+            meditator.TakeDamageAction                 += healthManager.HitMeditator;
+            defender.TakeDamageAction                  += healthManager.HitDefender;
 
             // ...
         }

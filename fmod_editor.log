@@ -4,13 +4,45 @@
 [LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
 [LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
 [LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
-[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
-[LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
-[LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000001F37EFDCEE8 isAsync 0 updatePeriod 0.02
-[LOG] AsyncManager::init                       : done
-[LOG] PlaybackSystem::init                     : 
-[LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
-[LOG] PlaybackSystem::init                     : done
-[LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
-[LOG] Manager::init                            : done.
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C9560DC6D8
+[LOG] OutputWASAPI::init                       :     Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
+[LOG] Thread::initThread                       :     Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] Thread::initThread                       :     Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
+[LOG] AsyncManager::init                       :     manager 000001C94F6127A8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       :     done
+[LOG] PlaybackSystem::init                     :     
+[LOG] Thread::initThread                       :     Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
+[LOG] PlaybackSystem::init                     :     done
+[LOG] Thread::initThread                       :     Init FMOD Studio bank load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
+[LOG] Manager::init                            :     done.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C9560DC6D8
+[LOG] SoundI::release                          :  (000001C953C04908)
+[LOG] SoundI::release                          :     Drums_Intensity_2 (000001C95EA1ADF8)
+[LOG] SoundI::release                          :  (000001C953C062E8)
+[LOG] SoundI::release                          :     Bass_Intense_01 (000001C95EA1C4B8)
+[LOG] SoundI::release                          :  (000001C953C04A78)
+[LOG] SoundI::release                          :     Bass_Intense_02 (000001C95EA1C318)
+[LOG] SoundI::release                          :  (000001C953C06CF8)
+[LOG] SoundI::release                          :     Drums_Intensity_4 (000001C95EA1AF98)
+[LOG] SoundI::release                          :  (000001C953C07B58)
+[LOG] SoundI::release                          :     Riser_02 (000001C95EA1A0F8)
+[LOG] SoundI::release                          : Softpad_Intense_01 (000001C9560DBCB8)
+[LOG] SoundI::release                          :     Softpad_Intense_01 (000001C95E2C6748)
+[LOG] SoundI::release                          :     Softpad_Intense_01 (000001C9560DC6D8)
+[LOG] SoundI::release                          : Flute_Lead_Loop (000001C9560DC018)
+[LOG] SoundI::release                          :     Flute_Lead_Loop (000001C95E2C7E08)
+[LOG] SoundI::release                          :     Flute_Lead_Loop (000001C9560DC378)
+[LOG] SoundI::release                          :  (000001C953C05BB8)
+[LOG] SoundI::release                          :     Riser_01 (000001C95EA1BC98)
+[LOG] SoundI::release                          :  (000001C953C06B88)
+[LOG] SoundI::release                          :     Drums_Intensity_3 (000001C95EA1B958)
+[LOG] SoundI::release                          :  (000001C953C065C8)
+[LOG] SoundI::release                          :     Flute_Intensity (000001C95EA1AAB8)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] SystemI::close                           : Closed.

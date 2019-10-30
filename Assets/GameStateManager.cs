@@ -22,12 +22,17 @@ namespace Spirinse.System
         public void CheckGameOver(int health)
         {
             if (health > 0) return;
-            GameOverEvent.Invoke();
+            GameOverEvent?.Invoke();
         }
 
         public void DebugGameOver()
         {
             Debug.Log("Game Over");
+        }
+
+        public void DoGameOver()
+        {
+
         }
     }
 }
