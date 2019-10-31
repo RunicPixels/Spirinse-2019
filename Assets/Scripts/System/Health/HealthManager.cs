@@ -60,6 +60,7 @@ namespace Spirinse.System.Health
         [ClickableFunction]
         public void InitHealth()
         {
+            Health = MaxHealth;
             UI.UIManager.Instance.GetHealthUI.SetMaxHealthContainers(healthCap);
             ChangeHealthEvent?.Invoke(Health);
             ChangeMaxHealthEvent?.Invoke(MaxHealth);
