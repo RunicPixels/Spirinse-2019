@@ -40,7 +40,7 @@ namespace Spirinse.System.Health
         public Action<int> ChangeHealthEvent;
         public Action<int> ChangeMaxHealthEvent;
 
-        private void Awake()
+        private void OnEnable()
         {
             ChangeHealthEvent += CheckDeath;
             ChangeMaxHealthEvent += CheckDeath;
@@ -51,12 +51,18 @@ namespace Spirinse.System.Health
             InitShield();
         }
 
+        private void OnDisable()
+        {
+            ChangeHealthEvent -= CheckDeath;
+            ChangeMaxHealthEvent -= CheckDeath;
+        }
+
         [ClickableFunction]
         public void InitHealth()
         {
             UI.UIManager.Instance.GetHealthUI.SetMaxHealthContainers(healthCap);
-            ChangeHealthEvent.Invoke(Health);
-            ChangeMaxHealthEvent.Invoke(MaxHealth);
+            ChangeHealthEvent?.Invoke(Health);
+            ChangeMaxHealthEvent?.Invoke(MaxHealth);
         }
         [ClickableFunction]
         public void InitShield()
@@ -68,23 +74,20 @@ namespace Spirinse.System.Health
             shieldManager.InitShield();
         }
 
-        public void Hit(int damage, CharacterType hitType)
+        public void HitMeditator(int damage)
         {
-            switch (hitType)
-            {
-                case CharacterType.Defender:
-                    shieldManager.DamageShield(damage, 0);
-                    break;
-                case CharacterType.Meditator:
-                    DoDamage(shieldManager.DamageShield(damage, Health));
-                    break;
-            }
+            DoDamage(shieldManager.DamageShield(damage, Health));
+        }
+
+        public void HitDefender(int damage)
+        {
+            shieldManager.DamageShield(damage, 0);
         }
 
         private void DoDamage(int damage = 1)
         {
             Health -= damage;
-            ChangeHealthEvent.Invoke(Health);
+            ChangeHealthEvent?.Invoke(Health);
         }
 
         private void CheckDeath(int health)

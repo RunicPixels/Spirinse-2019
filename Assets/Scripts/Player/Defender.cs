@@ -10,12 +10,11 @@ namespace Spirinse.Player
     {
         public Transform model;
         private Rigidbody2D rb;
-        public Action<int, CharacterType> TakeDamageAction;
+        public Action<int> TakeDamageAction;
         public int rotateSpeed = 50;
-        public int TakeDamage(int damage)
+        public void TakeDamage(int damage)
         {
-            TakeDamageAction.Invoke(damage, CharacterType.Defender);
-            return 0;
+            TakeDamageAction?.Invoke(damage);
         }
 
         // Start is called before the first frame update
