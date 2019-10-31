@@ -154,7 +154,7 @@ namespace MoreMountains.Tools
                 }
                 if (CountdownRefreshEvent != null)
                 {
-                    CountdownRefreshEvent?.Invoke();
+                    CountdownRefreshEvent.Invoke();
                 }
                 _lastRefreshAt = Time.time;
             }
@@ -169,7 +169,7 @@ namespace MoreMountains.Tools
             {
                 if (CountdownCompleteEvent != null)
                 {
-                    CountdownCompleteEvent?.Invoke();
+                    CountdownCompleteEvent.Invoke();
                 }
                 if (AutoReset)
                 {
@@ -195,7 +195,7 @@ namespace MoreMountains.Tools
                 {
                     if (floor.FloorEvent != null)
                     {
-                        floor.FloorEvent?.Invoke();
+                        floor.FloorEvent.Invoke();
                     }
 
                     if (Direction == MMCountdownDirections.Descending)

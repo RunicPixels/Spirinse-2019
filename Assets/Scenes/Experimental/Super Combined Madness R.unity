@@ -10379,7 +10379,6 @@ GameObject:
   m_Component:
   - component: {fileID: 67640770}
   - component: {fileID: 67640771}
-  - component: {fileID: 67640772}
   m_Layer: 0
   m_Name: AudioEffects
   m_TagString: Untagged
@@ -13188,8 +13187,6 @@ GameObject:
   - component: {fileID: 415884695}
   - component: {fileID: 415884696}
   - component: {fileID: 415884694}
-  - component: {fileID: 415884697}
-  - component: {fileID: 415884698}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -13241,9 +13238,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthManager: {fileID: 1910055707}
   playerManager: {fileID: 1509543338}
-  uIManager: {fileID: 415884696}
-  inputManager: {fileID: 415884698}
-  gameStateManager: {fileID: 415884697}
 --- !u!114 &415884696
 MonoBehaviour:
   m_ObjectHideFlags: 0
