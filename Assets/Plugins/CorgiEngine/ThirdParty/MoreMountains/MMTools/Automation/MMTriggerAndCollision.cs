@@ -2,7 +2,9 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Policy;
 using MoreMountains.Tools;
+using Rewired;
 using UnityEngine.Events;
 
 namespace MoreMountains.Tools
@@ -35,7 +37,7 @@ namespace MoreMountains.Tools
 		{
 			if (Collision2DLayerMask.MMContains (collision.gameObject))
 			{
-				OnCollision2DEnterEvent.Invoke();
+				OnCollision2DEnterEvent?.Invoke();
 			}
 		}
 
@@ -43,7 +45,7 @@ namespace MoreMountains.Tools
 		{
 			if (Collision2DLayerMask.MMContains (collision.gameObject))
 			{
-				OnCollision2DExitEvent.Invoke();
+				OnCollision2DExitEvent?.Invoke();
 			}
 		}
 
@@ -51,7 +53,7 @@ namespace MoreMountains.Tools
 		{
 			if (Collision2DLayerMask.MMContains (collision.gameObject))
 			{
-				OnCollision2DStayEvent.Invoke();
+				OnCollision2DStayEvent?.Invoke();
 			}
 		}
 
@@ -61,7 +63,7 @@ namespace MoreMountains.Tools
 		{
 			if (Trigger2DLayerMask.MMContains (collider.gameObject))
 			{
-				OnTrigger2DEnterEvent.Invoke();
+				OnTrigger2DEnterEvent?.Invoke();
 			}
 		}
 
@@ -69,7 +71,7 @@ namespace MoreMountains.Tools
 		{
 			if (Trigger2DLayerMask.MMContains (collider.gameObject))
 			{
-				OnTrigger2DExitEvent.Invoke();
+				OnTrigger2DExitEvent?.Invoke();
 			}
 		}
 
@@ -77,7 +79,7 @@ namespace MoreMountains.Tools
 		{
 			if (Trigger2DLayerMask.MMContains (collider.gameObject))
 			{
-				OnTrigger2DStayEvent.Invoke();
+				OnTrigger2DStayEvent?.Invoke();
 			}
 		}
 
@@ -87,7 +89,7 @@ namespace MoreMountains.Tools
 		{
 			if (0 != (CollisionLayerMask.value & 1 << c.transform.gameObject.layer))
 			{
-				OnCollisionEnterEvent.Invoke();
+				OnCollisionEnterEvent?.Invoke();
 			}
 		}
 
@@ -95,7 +97,7 @@ namespace MoreMountains.Tools
 		{
 			if (0 != (CollisionLayerMask.value & 1 << c.transform.gameObject.layer))
 			{
-				OnCollisionExitEvent.Invoke();
+				OnCollisionExitEvent?.Invoke();
 			}
 		}
 
@@ -103,7 +105,7 @@ namespace MoreMountains.Tools
 		{
 			if (0 != (CollisionLayerMask.value & 1 << c.transform.gameObject.layer))
 			{
-				OnCollisionStayEvent.Invoke();
+				OnCollisionStayEvent?.Invoke();
 			}
 		}
 
@@ -113,7 +115,7 @@ namespace MoreMountains.Tools
 		{
 			if (TriggerLayerMask.MMContains (collider.gameObject))
 			{
-				OnTriggerEnterEvent.Invoke();
+				OnTriggerEnterEvent?.Invoke();
 			}
 		}
 
@@ -121,7 +123,7 @@ namespace MoreMountains.Tools
 		{
 			if (TriggerLayerMask.MMContains (collider.gameObject))
 			{
-				OnTriggerExitEvent.Invoke();
+				OnTriggerExitEvent?.Invoke();
 			}
 		}
 
@@ -129,7 +131,7 @@ namespace MoreMountains.Tools
 		{
 			if (TriggerLayerMask.MMContains (collider.gameObject))
 			{
-				OnTriggerStayEvent.Invoke();
+				OnTriggerStayEvent?.Invoke();
 			}
 		}
 
