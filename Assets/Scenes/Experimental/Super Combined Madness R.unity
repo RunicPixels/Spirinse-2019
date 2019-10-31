@@ -10380,6 +10380,8 @@ GameObject:
   - component: {fileID: 67640770}
   - component: {fileID: 67640771}
   - component: {fileID: 67640772}
+  - component: {fileID: 67640773}
+  - component: {fileID: 67640774}
   m_Layer: 0
   m_Name: AudioEffects
   m_TagString: Untagged
@@ -10408,7 +10410,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 67640769}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21681dd9b29c26f488a668a5c397069a, type: 3}
   m_Name: 
@@ -10429,6 +10431,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ListenerNumber: -1
+--- !u!114 &67640773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67640769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Rain
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &67640774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67640769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/Battle
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: Intensity Battle
+    Value: 3.12
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &75466986
 GameObject:
   m_ObjectHideFlags: 0
@@ -11337,6 +11387,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6e21fe28c82adb144b6860150fb4fdc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &178582715 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3435031174896469565, guid: 70907cfb21be91547b27cb539dbe9c2d,
+    type: 3}
+  m_PrefabInstance: {fileID: 487041432}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea05ea2f5fd1b674283bea932c5c2359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &207735392
@@ -13171,6 +13233,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1437806053, guid: 70907cfb21be91547b27cb539dbe9c2d, type: 3}
+      propertyPath: energySteal
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1437806053, guid: 70907cfb21be91547b27cb539dbe9c2d, type: 3}
+      propertyPath: damage
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8798587592023310213, guid: 70907cfb21be91547b27cb539dbe9c2d,
         type: 3}
@@ -41047,6 +41117,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 409376824}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1326328027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51916,6 +51997,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b461431f243cf864685bb3780f57f226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAnimator: {fileID: 1912976594}
+  controls: {fileID: 178582715}
   meditator: {fileID: 1882390385}
   defender: {fileID: 178582709}
 --- !u!4 &1665379722
@@ -62655,7 +62738,13 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 487041432}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1912976592
+--- !u!95 &1912976593 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1481929528185049855, guid: 70907cfb21be91547b27cb539dbe9c2d,
+    type: 3}
+  m_PrefabInstance: {fileID: 487041432}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1912976594
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -62667,6 +62756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c422ce78579980478b7acee2192769f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 1912976593}
 --- !u!1 &1926767579
 GameObject:
   m_ObjectHideFlags: 0

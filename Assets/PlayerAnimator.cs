@@ -9,6 +9,6 @@ public class PlayerAnimator : MonoBehaviour
 
     public void ChangeAnimation(float speed)
     {
-        anim.SetBool("flying", speed > 0.1f);
+        anim.SetBool("Flying", speed > 0.1f);
     }
 }
