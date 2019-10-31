@@ -5004,8 +5004,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3716170116baa744199277939d8c6d26, type: 2}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: e9efd9efd0057f44d80aa65a4af8edc5, type: 2}
+  - {fileID: 2100000, guid: e9efd9efd0057f44d80aa65a4af8edc5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10134,7 +10134,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29824
+  m_Name: pb_Mesh37674
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12415,6 +12415,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 4912903076253594373, guid: 57a2e677bb35da545825824945f9fbdd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4912903076253594375, guid: 57a2e677bb35da545825824945f9fbdd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12590,7 +12595,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2081948892}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50.000004, y: 15.000001, z: 0}
 --- !u!108 &356591728
 Light:
@@ -13062,7 +13067,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &409376825
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13148,11 +13153,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27d5a987d39a9c94b93a71dbd8213cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthManager: {fileID: 1910055707}
-  playerManager: {fileID: 1509543338}
-  uIManager: {fileID: 415884696}
-  inputManager: {fileID: 415884698}
-  gameStateManager: {fileID: 415884697}
+  <HealthManager>k__BackingField: {fileID: 0}
+  <PlayerManager>k__BackingField: {fileID: 0}
+  <UiManager>k__BackingField: {fileID: 0}
+  <InputManager>k__BackingField: {fileID: 0}
+  <StateManager>k__BackingField: {fileID: 0}
 --- !u!114 &415884696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13179,6 +13184,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3832488ba49533448bce99bcaf07505, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  temporaryTextGameOverWin: {fileID: 0}
+  temporaryTextAndButtonContainer: {fileID: 0}
 --- !u!114 &415884698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13666,7 +13673,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2081948892}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &523087916
 Light:
@@ -14136,8 +14143,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3716170116baa744199277939d8c6d26, type: 2}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: e9efd9efd0057f44d80aa65a4af8edc5, type: 2}
+  - {fileID: 2100000, guid: e9efd9efd0057f44d80aa65a4af8edc5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18886,6 +18893,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912903076253594373, guid: 57a2e677bb35da545825824945f9fbdd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4912903076253594375, guid: 57a2e677bb35da545825824945f9fbdd,
         type: 3}
@@ -24061,6 +24073,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: M_Enemies_LongMan_02
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: ebf2cd44bab83614f96227e6d5d1bafc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -7699001765735806333, guid: ebf2cd44bab83614f96227e6d5d1bafc,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -25252,8 +25269,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3716170116baa744199277939d8c6d26, type: 2}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: e9efd9efd0057f44d80aa65a4af8edc5, type: 2}
+  - {fileID: 2100000, guid: e9efd9efd0057f44d80aa65a4af8edc5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30303,7 +30320,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!60 &1016135281
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -52167,8 +52184,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3716170116baa744199277939d8c6d26, type: 2}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: e9efd9efd0057f44d80aa65a4af8edc5, type: 2}
+  - {fileID: 2100000, guid: e9efd9efd0057f44d80aa65a4af8edc5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -57893,8 +57910,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3716170116baa744199277939d8c6d26, type: 2}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: e9efd9efd0057f44d80aa65a4af8edc5, type: 2}
+  - {fileID: 2100000, guid: e9efd9efd0057f44d80aa65a4af8edc5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -63157,8 +63174,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3716170116baa744199277939d8c6d26, type: 2}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: e9efd9efd0057f44d80aa65a4af8edc5, type: 2}
+  - {fileID: 2100000, guid: e9efd9efd0057f44d80aa65a4af8edc5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -72975,7 +72992,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29678
+  m_Name: pb_Mesh37242
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -73235,9 +73252,7 @@ Transform:
   - {fileID: 500964933}
   - {fileID: 493108332}
   - {fileID: 1926767580}
-  - {fileID: 486155855}
   - {fileID: 523087915}
-  - {fileID: 70205547}
   - {fileID: 356591727}
   m_Father: {fileID: 1497956533}
   m_RootOrder: 0
