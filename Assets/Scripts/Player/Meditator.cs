@@ -9,7 +9,7 @@ namespace Spirinse.Player {
     {
         public static Meditator Instance;
 
-        public Action<int> TakeDamageAction;
+        public Action<int, CharacterType> TakeDamageAction;
 
         public LayerMask hitLayers;
 
@@ -35,10 +35,10 @@ namespace Spirinse.Player {
             if (iFramesCD > 0f) iFramesCD -= Time.deltaTime;
         }
 
-        public void TakeDamage(int damage)
+        public int TakeDamage(int damage)
         {
-            // Hier door abilities lopen voor damage reduction
-            TakeDamageAction?.Invoke(damage);
+            TakeDamageAction.Invoke(damage,CharacterType.Meditator);
+            return damage;
         }
     }
 }

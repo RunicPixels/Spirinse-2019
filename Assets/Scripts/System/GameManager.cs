@@ -14,11 +14,14 @@ namespace Spirinse.System
 
         private static GameManager Instance;
 
-        [SerializeField] protected HealthManager healthManager; public HealthManager HealthManager => healthManager;
-        [SerializeField] protected PlayerManager playerManager; public PlayerManager PlayerManager => playerManager;
-        [SerializeField] protected UIManager uIManager;         public UIManager UiManager=>uIManager;
-        [SerializeField] protected InputManager inputManager;   public InputManager InputManager=>inputManager;
-        [SerializeField] protected GameStateManager gameStateManager;            public GameStateManager GameStateManager=>gameStateManager;
+        [SerializeField] protected HealthManager healthManager;
+        public HealthManager HealthManager => healthManager;
+
+        [SerializeField] protected PlayerManager playerManager;
+        public PlayerManager PlayerManager => playerManager;
+
+        protected UIManager uIManager;
+        protected InputManager inputManager;
 
         // Start is called before the first frame update
         private void Start()
@@ -58,8 +61,8 @@ namespace Spirinse.System
             var meditator = playerManager.player.meditator;
             var defender = playerManager.player.defender;
 
-            meditator.TakeDamageAction                 += healthManager.HitMeditator;
-            defender.TakeDamageAction                  += healthManager.HitDefender;
+            meditator.TakeDamageAction                 += healthManager.Hit;
+            defender.TakeDamageAction                  += healthManager.Hit;
 
             // ...
         }
