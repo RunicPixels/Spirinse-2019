@@ -2,14 +2,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Spirinse.System
 {
     public class GameStateManager : MonoBehaviour
     {
-        private static GameStateManager Instance;
+        public static GameStateManager Instance { get; private set; } = null;
 
         public Action GameOverEvent;
+
+        public Text temporaryTextGameOverWin;
+        public Transform temporaryTextAndButtonContainer;
+
 
         // Start is called before the first frame update
         private void Awake()
@@ -17,6 +22,7 @@ namespace Spirinse.System
             if (Instance == null) Instance = this;
             else Destroy(gameObject);
             GameOverEvent += DebugGameOver;
+            GameOverEvent += DoGameOver;
         }
 
         public void CheckGameOver(int health)
@@ -32,7 +38,9 @@ namespace Spirinse.System
 
         public void DoGameOver()
         {
-
+            temporaryTextGameOverWin.text = "You <b><color=red>lost</color></b>... :C";
+            temporaryTextAndButtonContainer.gameObject.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 }
