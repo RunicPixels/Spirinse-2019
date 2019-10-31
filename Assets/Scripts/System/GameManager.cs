@@ -14,7 +14,6 @@ namespace Spirinse.System
 
         private static GameManager Instance;
 
-<<<<<<< HEAD
         [field: SerializeField]
         public HealthManager HealthManager { get; protected set; }
 
@@ -29,13 +28,6 @@ namespace Spirinse.System
 
         [field: SerializeField]
         public GameStateManager StateManager { get; protected set; }
-=======
-        [SerializeField] protected HealthManager healthManager; public HealthManager HealthManager => healthManager;
-        [SerializeField] protected PlayerManager playerManager; public PlayerManager PlayerManager => playerManager;
-        [SerializeField] protected UIManager uIManager;         public UIManager UiManager=>uIManager;
-        [SerializeField] protected InputManager inputManager;   public InputManager InputManager=>inputManager;
-        [SerializeField] protected GameStateManager gameStateManager;            public GameStateManager GameStateManager=>gameStateManager;
->>>>>>> parent of 14f279b... Merge Conflict resolve
 
         // Start is called before the first frame update
         private void Start()
@@ -80,13 +72,8 @@ namespace Spirinse.System
             meditator.TakeDamageAction                 += HealthManager.HitMeditator;
             defender.TakeDamageAction                  += HealthManager.HitDefender;
 
-<<<<<<< HEAD
             // Game Over Events
             StateManager.GameOverEvent += InitGame;
-=======
-            meditator.TakeDamageAction                 += healthManager.HitMeditator;
-            defender.TakeDamageAction                  += healthManager.HitDefender;
->>>>>>> parent of 14f279b... Merge Conflict resolve
 
             // ...
         }
