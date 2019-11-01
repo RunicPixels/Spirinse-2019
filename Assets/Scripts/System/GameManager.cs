@@ -73,7 +73,7 @@ namespace Spirinse.System
             defender.TakeDamageAction                  += HealthManager.HitDefender;
 
             // Game Over Events
-            StateManager.GameOverEvent += InitGame;
+            StateManager.GameOverEvent                 += InitGame;
 
             // ...
         }

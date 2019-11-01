@@ -1,10 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using Spirinse.Interfaces;
 using MEC;
-using MoreMountains.Tools;
 using UnityEngine;
 using UnityEngine.Assertions.Comparers;
 
@@ -66,6 +66,7 @@ public class Controls : MonoBehaviour
     private bool dashing = false;
     private bool goDoDash = false;
 
+    public Action<float> playerMovementAction; // Move this to input manager.
 
     // Start is called before the first frame update
     private void Start()
@@ -89,7 +90,9 @@ public class Controls : MonoBehaviour
     private void Update()
     {
         direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
-        
+
+        playerMovementAction.Invoke(direction.magnitude);
+
         if (Input.GetButtonDown("Fire3") && dashing == false && chiDashConsumption < chi)
         {
             goDoDash = true;
