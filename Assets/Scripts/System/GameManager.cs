@@ -14,20 +14,11 @@ namespace Spirinse.System
 
         private static GameManager Instance;
 
-        [field: SerializeField]
-        public HealthManager HealthManager { get; protected set; }
-
-        [field: SerializeField]
-        public PlayerManager PlayerManager { get; protected set; }
-
-        [field: SerializeField]
-        public UIManager UiManager { get; protected set; }
-
-        [field: SerializeField]
-        public InputManager InputManager { get; protected set; }
-
-        [field: SerializeField]
-        public GameStateManager StateManager { get; protected set; }
+        [field: SerializeField] public HealthManager HealthManager { get; protected set; }
+        [field: SerializeField] public PlayerManager PlayerManager { get; protected set; }
+        [field: SerializeField] public UIManager UiManager { get; protected set; }
+        [field: SerializeField] public InputManager InputManager { get; protected set; }
+        [field: SerializeField] public GameStateManager StateManager { get; protected set; }
 
         // Start is called before the first frame update
         private void Start()

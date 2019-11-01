@@ -66,7 +66,7 @@ public class Controls : MonoBehaviour
     private bool dashing = false;
     private bool goDoDash = false;
 
-    public Action<float> playerMovementAction; // Move this to input manager.
+    public Action<bool> playerMovementAction; // Move this to input manager.
 
     // Start is called before the first frame update
     private void Start()
@@ -90,8 +90,6 @@ public class Controls : MonoBehaviour
     private void Update()
     {
         direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
-
-        playerMovementAction.Invoke(direction.magnitude);
 
         if (Input.GetButtonDown("Fire3") && dashing == false && chiDashConsumption < chi)
         {
@@ -121,6 +119,16 @@ public class Controls : MonoBehaviour
     private Vector2 CalculateVelocity()
     {
         var velocity = Time.fixedDeltaTime * 60 * speedMultiplier * new Vector2(direction.x * hAcceleration, direction.y * vAcceleration);
+        //Debug.Log(velocity.magnitude);
+        if (velocity.magnitude > 1f)
+        {
+            playerMovementAction.Invoke(true);
+        }
+        else
+        {
+            playerMovementAction.Invoke(false);
+        }
+
         if (dashing)
         {
             velocity *= dashAbility.GetDashSpeedMultiplier;

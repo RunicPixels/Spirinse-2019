@@ -13117,11 +13117,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27d5a987d39a9c94b93a71dbd8213cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <HealthManager>k__BackingField: {fileID: 0}
-  <PlayerManager>k__BackingField: {fileID: 0}
-  <UiManager>k__BackingField: {fileID: 0}
-  <InputManager>k__BackingField: {fileID: 0}
-  <StateManager>k__BackingField: {fileID: 0}
+  <HealthManager>k__BackingField: {fileID: 1910055707}
+  <PlayerManager>k__BackingField: {fileID: 1509543338}
+  <UiManager>k__BackingField: {fileID: 415884696}
+  <InputManager>k__BackingField: {fileID: 415884698}
+  <StateManager>k__BackingField: {fileID: 415884697}
 --- !u!114 &415884696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13148,7 +13148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3832488ba49533448bce99bcaf07505, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  temporaryTextGameOverWin: {fileID: 0}
+  temporaryTextGameOverWin: {fileID: 1631024587}
   temporaryTextAndButtonContainer: {fileID: 0}
 --- !u!114 &415884698
 MonoBehaviour:
@@ -13261,6 +13261,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3688590840828404065, guid: 70907cfb21be91547b27cb539dbe9c2d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70907cfb21be91547b27cb539dbe9c2d, type: 3}
@@ -72915,7 +72920,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh37242
+  m_Name: pb_Mesh83176
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
