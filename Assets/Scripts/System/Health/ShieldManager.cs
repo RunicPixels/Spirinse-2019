@@ -42,38 +42,38 @@ namespace Spirinse.System.Health
         {
             shield += amount;
             if (shield > maxShield) shield = maxShield;
-            ChangeShieldEvent.Invoke(shield);
+            ChangeShieldEvent?.Invoke(shield);
         }
 
         public void IncreaseShield(int amount)
         {
             maxShield += amount;
             if (maxShield > shieldCap) maxShield = shieldCap;
-            ChangeMaxShieldEvent.Invoke(maxShield);
+            ChangeMaxShieldEvent?.Invoke(maxShield);
         }
         public void SetShield(int amount)
         {
             shield = amount;
-            ChangeShieldEvent.Invoke(shield);
-        } 
+            ChangeShieldEvent?.Invoke(shield);
+        }
 
         public void SetNewMaxShield(int amount)
         {
             maxShield = amount;
-            ChangeMaxShieldEvent.Invoke(maxShield);
+            ChangeMaxShieldEvent?.Invoke(maxShield);
         }
 
         public void SetShieldCap(int amount)
         {
             shieldCap = amount;
-            ChangeMaxShieldEvent.Invoke(maxShield);
+            ChangeMaxShieldEvent?.Invoke(maxShield);
         }
         [ClickableFunction]
         public void InitShield()
         {
             UI.UIManager.Instance.GetShieldUI.SetMaxShieldContainers(ShieldCap);
-            ChangeShieldEvent.Invoke(shield);
-            ChangeMaxShieldEvent.Invoke(maxShield);
+            ChangeShieldEvent?.Invoke(shield);
+            ChangeMaxShieldEvent?.Invoke(maxShield);
         }
 
         public void PlaceHolderFunction(int amount)
