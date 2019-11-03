@@ -12,10 +12,12 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
     public Animator animator;
 
     public bool cured = false;
-    
+
     private Vector3 direction;
 
     private Rigidbody2D rb;
+
+    public Transform target;
 
     private static readonly int Cure1 = Animator.StringToHash("Cure");
 
@@ -31,37 +33,39 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
     // Start is called before the first frame update
     void Start()
     {
+        //target = Meditator.Instance.transform;
         rb = GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
     {
+        if (!target) target = Meditator.Instance.transform;
         if (iFrames > 0f)
         {
             iFrames -= Time.fixedDeltaTime;
         }
-        
+
         if (stunned > 0f)
         {
             stunned -= Time.fixedDeltaTime;
             goto StunJump;
         }
-        
-        direction = (Meditator.Instance.transform.position - transform.position).normalized;
-        
+
+        direction = (target.position - transform.position).normalized;
+
         rb.velocity = direction * speed;
-        
+
         if (cured)
         {
             rb.velocity += Vector2.up * 1.5f;
-            
+
         }
 
         StunJump:
-        
+
         flipped = rb.velocity.x < 0;
 
-        
+
         var xScale = flipped ? 2f : -2f;
 
         transform.localScale = new Vector3(2f, xScale, 2f);
@@ -78,10 +82,10 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
         health -= damage;
 
         rb.velocity = direction * -speed * 2f;
-        
+
         iFrames = 0.25f;
         stunned = 0.35f;
-        
+
         hitParticles.Play();
 
         if (health < 0)
@@ -97,27 +101,29 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
         transform.gameObject.layer = LayerMask.NameToLayer("NoCollision");
     }
 
-   public void Destroy()
+    public void Destroy()
     {
         Destroy(gameObject);
     }
 
-   private void OnTriggerStay2D(Collider2D other)
-   {
-       if (iFrames > 0) return;
-       var attack = other.gameObject.GetComponent<IAttack>();
-
-       if (attack != null)
-       {
-           TakeDamage(attack.DoAttack());
-       }
-
-        if (other.CompareTag(StrB))
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
         {
-            var player = other.GetComponent<IDamagable>();
-
-            player.TakeDamage(damage);
-            TakeDamage(0); // Temporary Method to retreat when interacting with player;
+            target = other.transform;
         }
-   }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        var damageable = collision.gameObject.GetComponent<IDamagable>();
+        var attack = collision.gameObject.GetComponent<IAttack>();
+        if(damageable != null)
+        {
+            damageable.TakeDamage(damage);
+        }
+        if(attack != null)
+        {
+            TakeDamage(attack.DoAttack());
+        }
+    }
 }
