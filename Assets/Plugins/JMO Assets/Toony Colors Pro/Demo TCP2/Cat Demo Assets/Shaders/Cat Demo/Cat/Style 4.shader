@@ -1,7 +1,7 @@
 ﻿// Upgrade NOTE: upgraded instancing buffer 'Props' to new syntax.
 
 // Toony Colors Pro+Mobile 2
-// (c) 2014-2017 Jean Moreno
+// (c) 2014-2019 Jean Moreno
 
 Shader "Toony Colors Pro 2/Examples/Cat Demo/Cat/Style 4"
 {
@@ -26,7 +26,7 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/Cat/Style 4"
 	[TCP2HeaderHelp(SPECULAR, Specular)]
 		//SPECULAR
 		_SpecColor ("Specular Color", Color) = (0.5, 0.5, 0.5, 1)
-		_Smoothness ("Smoothness", Float) = 0.2
+		_Smoothness ("Size", Float) = 0.2
 		_SpecBands ("Bands", Float) = 3
 	[TCP2Separator]
 
@@ -51,6 +51,8 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/Cat/Style 4"
 		fixed4 _Color;
 		sampler2D _MainTex;
 		fixed _Smoothness;
+
+		#define UV_MAINTEX uv_MainTex
 
 		struct Input
 		{
@@ -150,7 +152,7 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/Cat/Style 4"
 
 		void surf(Input IN, inout SurfaceOutputCustom o)
 		{
-			fixed4 mainTex = tex2D(_MainTex, IN.uv_MainTex);
+			fixed4 mainTex = tex2D(_MainTex, IN.UV_MAINTEX);
 			o.Albedo = mainTex.rgb * _Color.rgb;
 			o.Alpha = mainTex.a * _Color.a;
 

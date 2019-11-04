@@ -1,7 +1,7 @@
 ﻿// Upgrade NOTE: upgraded instancing buffer 'Props' to new syntax.
 
 // Toony Colors Pro+Mobile 2
-// (c) 2014-2017 Jean Moreno
+// (c) 2014-2019 Jean Moreno
 
 Shader "Toony Colors Pro 2/Examples/Cat Demo/UnityChan/Style 3"
 {
@@ -35,17 +35,11 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/UnityChan/Style 3"
 		[Space]
 	[TCP2Separator]
 
-	[TCP2HeaderHelp(NORMAL MAPPING, Normal Bump Map)]
-		//BUMP
-		_BumpMap ("Normal map (RGB)", 2D) = "bump" {}
-		_BumpScale ("Scale", Float) = 1.0
-	[TCP2Separator]
-
 	[TCP2HeaderHelp(RIM, Rim)]
 		//RIM LIGHT
 		_RimColor ("Rim Color", Color) = (0.8,0.8,0.8,0.6)
-		_RimMin ("Rim Min", Range(0,1)) = 0.5
-		_RimMax ("Rim Max", Range(0,1)) = 1.0
+		_RimMin ("Rim Min", Range(0,2)) = 0.5
+		_RimMax ("Rim Max", Range(0,2)) = 1.0
 	[TCP2Separator]
 
 
@@ -72,17 +66,16 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/UnityChan/Style 3"
 		float _Shadow_HSV_H;
 		float _Shadow_HSV_S;
 		float _Shadow_HSV_V;
-		sampler2D _BumpMap;
-		half _BumpScale;
 		fixed4 _RimColor;
 		fixed _RimMin;
 		fixed _RimMax;
 		float4 _RimDir;
 
+		#define UV_MAINTEX uv_MainTex
+
 		struct Input
 		{
 			half2 uv_MainTex;
-			half2 uv_BumpMap;
 			float3 viewDir;
 			float vFace : VFACE;
 		};
@@ -205,13 +198,9 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/UnityChan/Style 3"
 
 		void surf(Input IN, inout SurfaceOutputCustom o)
 		{
-			fixed4 mainTex = tex2D(_MainTex, IN.uv_MainTex);
+			fixed4 mainTex = tex2D(_MainTex, IN.UV_MAINTEX);
 			o.Albedo = mainTex.rgb * _Color.rgb;
 			o.Alpha = mainTex.a * _Color.a;
-
-			//Normal map
-			half4 normalMap = tex2D(_BumpMap, IN.uv_BumpMap.xy);
-			o.Normal = UnpackScaleNormal(normalMap, _BumpScale);
 
 			//Rim
 			float3 viewDir = normalize(IN.viewDir);

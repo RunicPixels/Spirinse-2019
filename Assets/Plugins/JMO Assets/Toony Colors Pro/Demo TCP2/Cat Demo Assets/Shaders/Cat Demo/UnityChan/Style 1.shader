@@ -1,7 +1,7 @@
 ﻿// Upgrade NOTE: upgraded instancing buffer 'Props' to new syntax.
 
 // Toony Colors Pro+Mobile 2
-// (c) 2014-2017 Jean Moreno
+// (c) 2014-2019 Jean Moreno
 
 Shader "Toony Colors Pro 2/Examples/Cat Demo/UnityChan/Style 1"
 {
@@ -12,7 +12,7 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/UnityChan/Style 1"
 		_Color ("Color", Color) = (1,1,1,1)
 		_HColor ("Highlight Color", Color) = (0.785,0.785,0.785,1.0)
 		_SColor ("Shadow Color", Color) = (0.195,0.195,0.195,1.0)
-		_STexture ("Shadow Color Texture", 2D) = "white" {}
+		[NoScaleOffset] _STexture ("Shadow Color Texture", 2D) = "white" {}
 
 		//DIFFUSE
 		_MainTex ("Main Texture", 2D) = "white" {}
@@ -31,17 +31,11 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/UnityChan/Style 1"
 		[Space]
 	[TCP2Separator]
 
-	[TCP2HeaderHelp(NORMAL MAPPING, Normal Bump Map)]
-		//BUMP
-		_BumpMap ("Normal map (RGB)", 2D) = "bump" {}
-		_BumpScale ("Scale", Float) = 1.0
-	[TCP2Separator]
-
 	[TCP2HeaderHelp(RIM, Rim)]
 		//RIM LIGHT
 		_RimColor ("Rim Color", Color) = (0.8,0.8,0.8,0.6)
-		_RimMin ("Rim Min", Range(0,1)) = 0.5
-		_RimMax ("Rim Max", Range(0,1)) = 1.0
+		_RimMin ("Rim Min", Range(0,2)) = 0.5
+		_RimMax ("Rim Max", Range(0,2)) = 1.0
 	[TCP2Separator]
 
 
@@ -66,17 +60,16 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/UnityChan/Style 1"
 		fixed4 _Color;
 		sampler2D _MainTex;
 		sampler2D _STexture;
-		sampler2D _BumpMap;
-		half _BumpScale;
 		fixed4 _RimColor;
 		fixed _RimMin;
 		fixed _RimMax;
 		float4 _RimDir;
 
+		#define UV_MAINTEX uv_MainTex
+
 		struct Input
 		{
 			half2 uv_MainTex;
-			half2 uv_BumpMap;
 			float3 viewDir;
 			float vFace : VFACE;
 		};
@@ -163,9 +156,9 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/UnityChan/Style 1"
 			c.rgb += s.Albedo * gi.indirect.diffuse;
 		#endif
 
-
 			//Rim light mask
 			c.rgb += ndl * lightColor.rgb * atten * s.Rim * _RimColor.rgb * _RimColor.a;
+
 			return c;
 		}
 
@@ -182,17 +175,13 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/UnityChan/Style 1"
 
 		void surf(Input IN, inout SurfaceOutputCustom o)
 		{
-			fixed4 mainTex = tex2D(_MainTex, IN.uv_MainTex);
+			fixed4 mainTex = tex2D(_MainTex, IN.UV_MAINTEX);
 
 			//Shadow Color Texture
-			fixed4 shadowTex = tex2D(_STexture, IN.uv_MainTex);
+			fixed4 shadowTex = tex2D(_STexture, IN.UV_MAINTEX);
 			o.ShadowColorTex = shadowTex.rgb;
 			o.Albedo = mainTex.rgb * _Color.rgb;
 			o.Alpha = mainTex.a * _Color.a;
-
-			//Normal map
-			half4 normalMap = tex2D(_BumpMap, IN.uv_BumpMap.xy);
-			o.Normal = UnpackScaleNormal(normalMap, _BumpScale);
 			o.DiffTintMask = mainTex.a;
 
 			//Rim

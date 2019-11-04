@@ -1,7 +1,7 @@
 ﻿// Upgrade NOTE: upgraded instancing buffer 'Props' to new syntax.
 
 // Toony Colors Pro+Mobile 2
-// (c) 2014-2017 Jean Moreno
+// (c) 2014-2019 Jean Moreno
 
 Shader "Toony Colors Pro 2/Examples/Default/Old School"
 {
@@ -44,6 +44,8 @@ Shader "Toony Colors Pro 2/Examples/Default/Old School"
 		fixed4 _Color;
 		sampler2D _MainTex;
 		fixed _SketchSpeed;
+
+		#define UV_MAINTEX uv_MainTex
 
 		struct Input
 		{
@@ -130,7 +132,7 @@ Shader "Toony Colors Pro 2/Examples/Default/Old School"
 
 		void surf(Input IN, inout SurfaceOutputCustom o)
 		{
-			fixed4 mainTex = tex2D(_MainTex, IN.uv_MainTex);
+			fixed4 mainTex = tex2D(_MainTex, IN.UV_MAINTEX);
 			o.Albedo = mainTex.rgb * _Color.rgb;
 			o.Alpha = mainTex.a * _Color.a;
 		}

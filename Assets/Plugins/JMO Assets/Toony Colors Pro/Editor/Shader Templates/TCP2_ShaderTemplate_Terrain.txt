@@ -1,5 +1,5 @@
 // Toony Colors Pro+Mobile 2
-// (c) 2014-2017 Jean Moreno
+// (c) 2014-2019 Jean Moreno
 #NAME=Terrain
 #CONFIG=terrain
 #INFO=Template: Terrain  Three shaders will be generated: Base, FirstPass and AddPass.
@@ -96,13 +96,13 @@ Shader "@%SHADER_NAME%@"
 	Properties
 	{
 /// IF TRIPLANAR
-		[TCP2Vector4Floats(Triplanar Parameters,Contrast X,Contrast Y,Contrast Z,Smoothing,1,16,1,16,1,16,0.05,1)] _TriplanarBlendStrength ("Strength (XYZ) Smoothing (W)", Vector) = (2,8,2,0.5)
+		[TCP2Vector4Floats(Contrast X,Contrast Y,Contrast Z,Smoothing,1,16,1,16,1,16,0.05,1)] _TriplanarBlendStrength ("Triplanar Parameters", Vector) = (2,8,2,0.5)
 ///
 /// IF TEXBLEND_HEIGHT
 		//Height-based texture blending
 	[TCP2Header(HEIGHT BLENDING)]
-		[TCP2Vector4Floats(Height Smoothing,R,G,B,A,0.001,2,0.001,2,0.001,2,0.001,2)] _VColorBlendSmooth ("Smooth", Vector) = (0.25,0.25,0.25,0.25)
-		[TCP2Vector4Floats(Height Offset,R,G,B,A)] _VColorBlendOffset ("Height Offset", Vector) = (0,0,0,0)
+		[TCP2Vector4Floats(R,G,B,A,0.001,2,0.001,2,0.001,2,0.001,2)] _VColorBlendSmooth ("Height Smoothing", Vector) = (0.25,0.25,0.25,0.25)
+		[TCP2Vector4Floats(R,G,B,A)] _VColorBlendOffset ("Height Offset", Vector) = (0,0,0,0)
 		[PowerSlider(4.0)] _BlendContrast ("Blending Contrast", Range(1,4)) = 1
 		[TCP2HelpBox(Info,Height will be taken from each texture alpha channel.  No alpha in the texture will result in linear blending.)]
 	[TCP2Separator]

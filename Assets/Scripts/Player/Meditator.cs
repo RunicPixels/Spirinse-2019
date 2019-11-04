@@ -16,7 +16,6 @@ namespace Spirinse.Player {
         public float iFrames = 1f;
 
         private float iFramesCD;
-        // Start is called before the first frame update
         private void Start()
         {
             if (Instance == null)
@@ -37,7 +36,7 @@ namespace Spirinse.Player {
 
         public void TakeDamage(int damage)
         {
-            // Hier door abilities lopen voor damage reduction
+            // Loop Abilities here for damage reduction
             TakeDamageAction?.Invoke(damage);
         }
     }

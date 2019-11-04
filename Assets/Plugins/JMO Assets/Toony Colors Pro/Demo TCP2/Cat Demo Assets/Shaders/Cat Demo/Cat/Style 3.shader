@@ -1,7 +1,7 @@
 ﻿// Upgrade NOTE: upgraded instancing buffer 'Props' to new syntax.
 
 // Toony Colors Pro+Mobile 2
-// (c) 2014-2017 Jean Moreno
+// (c) 2014-2019 Jean Moreno
 
 Shader "Toony Colors Pro 2/Examples/Cat Demo/Cat/Style 3"
 {
@@ -33,14 +33,14 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/Cat/Style 3"
 	[TCP2HeaderHelp(SPECULAR, Specular)]
 		//SPECULAR
 		_SpecColor ("Specular Color", Color) = (0.5, 0.5, 0.5, 1)
-		_Smoothness ("Smoothness", Float) = 0.2
+		_Smoothness ("Size", Float) = 0.2
 	[TCP2Separator]
 
 	[TCP2HeaderHelp(RIM, Rim)]
 		//RIM LIGHT
 		_RimColor ("Rim Color", Color) = (0.8,0.8,0.8,0.6)
-		_RimMin ("Rim Min", Range(0,1)) = 0.5
-		_RimMax ("Rim Max", Range(0,1)) = 1.0
+		_RimMin ("Rim Min", Range(0,2)) = 0.5
+		_RimMax ("Rim Max", Range(0,2)) = 1.0
 	[TCP2Separator]
 
 
@@ -69,6 +69,8 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/Cat/Style 3"
 		fixed _RimMin;
 		fixed _RimMax;
 		float4 _RimDir;
+
+		#define UV_MAINTEX uv_MainTex
 
 		struct Input
 		{
@@ -178,7 +180,7 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/Cat/Style 3"
 
 		void surf(Input IN, inout SurfaceOutputCustom o)
 		{
-			fixed4 mainTex = tex2D(_MainTex, IN.uv_MainTex);
+			fixed4 mainTex = tex2D(_MainTex, IN.UV_MAINTEX);
 			o.Albedo = mainTex.rgb * _Color.rgb;
 			o.Alpha = mainTex.a * _Color.a;
 
