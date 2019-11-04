@@ -11682,7 +11682,7 @@ GameObject:
   - component: {fileID: 255252081}
   - component: {fileID: 255252082}
   m_Layer: 0
-  m_Name: Left point light (4)
+  m_Name: Lantern light_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11700,7 +11700,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 830378239}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &255252082
 Light:
@@ -16540,11 +16540,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 267872727}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 34.64, y: 26.46, z: -27.4}
+  m_LocalPosition: {x: 34.64, y: 26.46, z: -28.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 830378239}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &267872729
 Light:
@@ -22086,14 +22086,14 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 1
-  m_Color: {r: 1, g: 0.8401221, b: 0.6839622, a: 1}
-  m_Intensity: 0.1
+  m_Color: {r: 0.3018868, g: 0.1490799, b: 0, a: 1}
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -22148,7 +22148,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 830378239}
-  m_RootOrder: 20
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50.000004, y: 15.000001, z: 0}
 --- !u!1 &362983542
 GameObject:
@@ -22239,7 +22239,7 @@ GameObject:
   - component: {fileID: 363762440}
   - component: {fileID: 363762441}
   m_Layer: 0
-  m_Name: Waterfall point light (7)
+  m_Name: Statue light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22253,11 +22253,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 363762439}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.51, y: 39.99, z: -43.49}
+  m_LocalPosition: {x: 20.94, y: 39.99, z: -38.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 830378239}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &363762441
 Light:
@@ -22269,14 +22269,14 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 2
-  m_Color: {r: 1, g: 0.74431705, b: 0.5137255, a: 1}
-  m_Intensity: 1.5
+  m_Color: {r: 1, g: 0.813939, b: 0.5137255, a: 1}
+  m_Intensity: 1
   m_Range: 13.4
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -22448,7 +22448,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 830378239}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &402643990
 Light:
@@ -22605,7 +22605,7 @@ GameObject:
   - component: {fileID: 424539195}
   - component: {fileID: 424539196}
   m_Layer: 0
-  m_Name: Left point light (6)
+  m_Name: Lantern light_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22623,7 +22623,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 830378239}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &424539196
 Light:
@@ -28217,7 +28217,7 @@ GameObject:
   - component: {fileID: 553612082}
   - component: {fileID: 553612083}
   m_Layer: 0
-  m_Name: Left point light (8)
+  m_Name: Left path point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28235,7 +28235,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 830378239}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &553612083
 Light:
@@ -28542,7 +28542,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 830378239}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &564782031
 GameObject:
@@ -28741,7 +28741,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 830378239}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &577071326
 Light:
@@ -53992,6 +53992,8 @@ Transform:
   m_LocalPosition: {x: -155.32219, y: -26.534782, z: 53.51217}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 361873721}
+  - {fileID: 2013831779}
   - {fileID: 560307309}
   - {fileID: 267872728}
   - {fileID: 1989868281}
@@ -53999,7 +54001,6 @@ Transform:
   - {fileID: 577071325}
   - {fileID: 947089947}
   - {fileID: 1860446307}
-  - {fileID: 2013831779}
   - {fileID: 833299637}
   - {fileID: 553612082}
   - {fileID: 1100786370}
@@ -54012,7 +54013,6 @@ Transform:
   - {fileID: 255252081}
   - {fileID: 940632695}
   - {fileID: 424539195}
-  - {fileID: 361873721}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -54027,7 +54027,7 @@ GameObject:
   - component: {fileID: 833299637}
   - component: {fileID: 833299636}
   m_Layer: 0
-  m_Name: Left point light
+  m_Name: Left tower point light (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54105,7 +54105,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 830378239}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &837178895
 GameObject:
@@ -54663,7 +54663,7 @@ GameObject:
   - component: {fileID: 940632695}
   - component: {fileID: 940632696}
   m_Layer: 0
-  m_Name: Left point light (5)
+  m_Name: Lantern light_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54681,7 +54681,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 830378239}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &940632696
 Light:
@@ -54772,7 +54772,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 830378239}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &947089948
 Light:
@@ -65036,7 +65036,7 @@ GameObject:
   - component: {fileID: 1100786370}
   - component: {fileID: 1100786371}
   m_Layer: 0
-  m_Name: Left point light (1)
+  m_Name: 'Left tower point light '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65054,7 +65054,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 830378239}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1100786371
 Light:
@@ -66005,7 +66005,7 @@ GameObject:
   - component: {fileID: 1262378296}
   - component: {fileID: 1262378297}
   m_Layer: 0
-  m_Name: Right point light (1)
+  m_Name: Right stoneArch point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66023,7 +66023,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 830378239}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1262378297
 Light:
@@ -66902,7 +66902,7 @@ GameObject:
   - component: {fileID: 1376294298}
   - component: {fileID: 1376294299}
   m_Layer: 0
-  m_Name: Left point light (3)
+  m_Name: 'Left tower point light '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66920,7 +66920,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 830378239}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1376294299
 Light:
@@ -94456,7 +94456,7 @@ GameObject:
   - component: {fileID: 1763817087}
   - component: {fileID: 1763817086}
   m_Layer: 0
-  m_Name: Right point light
+  m_Name: Bridge point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94534,7 +94534,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 830378239}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1767041700
 PrefabInstance:
@@ -104823,7 +104823,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 830378239}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1860446308
 Light:
@@ -105048,7 +105048,7 @@ GameObject:
   - component: {fileID: 1912195209}
   - component: {fileID: 1912195210}
   m_Layer: 0
-  m_Name: Left point light (2)
+  m_Name: Middle tower point light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105066,7 +105066,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 830378239}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1912195210
 Light:
@@ -105329,7 +105329,7 @@ GameObject:
   - component: {fileID: 1946859276}
   - component: {fileID: 1946859277}
   m_Layer: 0
-  m_Name: Left point light (7)
+  m_Name: Right woodArch point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105347,7 +105347,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 830378239}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1946859277
 Light:
@@ -105695,7 +105695,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 830378239}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1989868282
 Light:
@@ -105842,11 +105842,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2013831777}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.9309845, y: 26.49, z: -52.75}
+  m_LocalPosition: {x: 12.9309845, y: 27.18, z: -52.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 830378239}
-  m_RootOrder: 7
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2020567853
 PrefabInstance:
