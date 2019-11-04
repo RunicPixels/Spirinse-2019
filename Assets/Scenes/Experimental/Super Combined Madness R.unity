@@ -12829,6 +12829,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Defender
       objectReference: {fileID: 0}
+    - target: {fileID: 178582709, guid: 70907cfb21be91547b27cb539dbe9c2d, type: 3}
+      propertyPath: rotateSpeed
+      value: 1500
+      objectReference: {fileID: 0}
     - target: {fileID: 3435031174896469565, guid: 70907cfb21be91547b27cb539dbe9c2d,
         type: 3}
       propertyPath: chiRechargeRate
@@ -30395,7 +30399,7 @@ MonoBehaviour:
   volumeLayer:
     serializedVersion: 2
     m_Bits: 2
-  stopNaNPropagation: 1
+  stopNaNPropagation: 0
   finalBlitToCameraTarget: 0
   antialiasingMode: 2
   temporalAntialiasing:
@@ -30409,8 +30413,8 @@ MonoBehaviour:
     fastMode: 0
     keepAlpha: 0
   fog:
-    enabled: 1
-    excludeSkybox: 0
+    enabled: 0
+    excludeSkybox: 1
   debugLayer:
     lightMeter:
       width: 512
