@@ -1,7 +1,7 @@
 ﻿// Upgrade NOTE: upgraded instancing buffer 'Props' to new syntax.
 
 // Toony Colors Pro+Mobile 2
-// (c) 2014-2017 Jean Moreno
+// (c) 2014-2019 Jean Moreno
 
 Shader "Toony Colors Pro 2/Examples/Default/HSV"
 {
@@ -60,6 +60,8 @@ Shader "Toony Colors Pro 2/Examples/Default/HSV"
 		float _HSV_V;
 		fixed _SketchSpeed;
 		fixed _Smoothness;
+
+		#define UV_MAINTEX uv_MainTex
 
 		struct Input
 		{
@@ -181,7 +183,7 @@ Shader "Toony Colors Pro 2/Examples/Default/HSV"
 
 		void surf(Input IN, inout SurfaceOutputCustom o)
 		{
-			fixed4 mainTex = tex2D(_MainTex, IN.uv_MainTex);
+			fixed4 mainTex = tex2D(_MainTex, IN.UV_MAINTEX);
 
 			//Hsv
 			float3 mainTexHSV = rgb2hsv(mainTex.rgb);

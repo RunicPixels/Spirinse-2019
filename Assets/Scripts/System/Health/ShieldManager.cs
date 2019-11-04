@@ -80,5 +80,10 @@ namespace Spirinse.System.Health
         {
             // Yoink!
         }
+
+        public int GetShield()
+        {
+            return shield;
+        }
     }
 }

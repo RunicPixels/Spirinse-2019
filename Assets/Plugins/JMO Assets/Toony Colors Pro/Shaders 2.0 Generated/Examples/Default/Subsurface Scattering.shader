@@ -1,7 +1,7 @@
 ﻿// Upgrade NOTE: upgraded instancing buffer 'Props' to new syntax.
 
 // Toony Colors Pro+Mobile 2
-// (c) 2014-2017 Jean Moreno
+// (c) 2014-2019 Jean Moreno
 
 Shader "Toony Colors Pro 2/Examples/Default/Subsurface Scattering"
 {
@@ -60,6 +60,8 @@ Shader "Toony Colors Pro 2/Examples/Default/Subsurface Scattering"
 		half _SSPower;
 		half _SSScale;
 		fixed _SketchSpeed;
+
+		#define UV_MAINTEX uv_MainTex
 
 		struct Input
 		{
@@ -160,14 +162,12 @@ Shader "Toony Colors Pro 2/Examples/Default/Subsurface Scattering"
 
 		void surf(Input IN, inout SurfaceOutputCustom o)
 		{
-			fixed4 mainTex = tex2D(_MainTex, IN.uv_MainTex);
+			fixed4 mainTex = tex2D(_MainTex, IN.UV_MAINTEX);
 
 			//Masks
-			fixed4 mask1 = tex2D(_Mask1, IN.uv_MainTex);
+			fixed4 mask1 = tex2D(_Mask1, IN.UV_MAINTEX);
 			o.Albedo = mainTex.rgb * _Color.rgb;
 			o.Alpha = mainTex.a * _Color.a;
-
-			//Subsurface Scattering
 			o.SubsurfaceMask = mask1.a;
 		}
 

@@ -1,5 +1,5 @@
 // Toony Colors Pro+Mobile 2
-// (c) 2014-2017 Jean Moreno
+// (c) 2014-2019 Jean Moreno
 
 using UnityEngine;
 
@@ -9,10 +9,16 @@ using UnityEngine;
 // - getting the world height position of the wave with the TCP2_GetPosOnWater script
 // - syncing to Unity's Time.timeScale value
 
-public class TCP2_ShaderUpdateUnityTime : MonoBehaviour
+namespace ToonyColorsPro
 {
-	void LateUpdate()
+	namespace Runtime
 	{
-		Shader.SetGlobalFloat("unityTime", Time.time);
+		public class TCP2_ShaderUpdateUnityTime : MonoBehaviour
+		{
+			void LateUpdate()
+			{
+				Shader.SetGlobalFloat("unityTime", Time.time);
+			}
+		}
 	}
 }

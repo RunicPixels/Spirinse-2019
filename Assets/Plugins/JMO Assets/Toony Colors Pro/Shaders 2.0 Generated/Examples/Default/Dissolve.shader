@@ -1,7 +1,7 @@
 ﻿// Upgrade NOTE: upgraded instancing buffer 'Props' to new syntax.
 
 // Toony Colors Pro+Mobile 2
-// (c) 2014-2017 Jean Moreno
+// (c) 2014-2019 Jean Moreno
 
 Shader "Toony Colors Pro 2/Examples/Default/Dissolve"
 {
@@ -35,6 +35,7 @@ Shader "Toony Colors Pro 2/Examples/Default/Dissolve"
 	[TCP2HeaderHelp(TRANSPARENCY)]
 		//Alpha Testing
 		_Cutoff ("Alpha cutoff", Range(0,1)) = 0.5
+	[TCP2Separator]
 
 
 		//Avoid compile error if the properties are ending with a drawer
@@ -62,6 +63,8 @@ Shader "Toony Colors Pro 2/Examples/Default/Dissolve"
 		half _DissolveGradientWidth;
 		fixed _SketchSpeed;
 		fixed _Cutoff;
+
+		#define UV_MAINTEX uv_MainTex
 
 		struct Input
 		{
@@ -149,12 +152,12 @@ Shader "Toony Colors Pro 2/Examples/Default/Dissolve"
 
 		void surf(Input IN, inout SurfaceOutputCustom o)
 		{
-			fixed4 mainTex = tex2D(_MainTex, IN.uv_MainTex);
+			fixed4 mainTex = tex2D(_MainTex, IN.UV_MAINTEX);
 			o.Albedo = mainTex.rgb * _Color.rgb;
 			o.Alpha = _Color.a;
 
 			//Dissolve
-			fixed4 dslv = tex2D(_DissolveMap, IN.uv_MainTex.xy);
+			fixed4 dslv = tex2D(_DissolveMap, IN.UV_MAINTEX.xy);
 			#define DSLV dslv.r
 			float dissValue = lerp(-_DissolveGradientWidth, 1, _DissolveValue);
 			float dissolveUV = smoothstep(DSLV - _DissolveGradientWidth, DSLV + _DissolveGradientWidth, dissValue);

@@ -1,7 +1,7 @@
 ﻿// Upgrade NOTE: upgraded instancing buffer 'Props' to new syntax.
 
 // Toony Colors Pro+Mobile 2
-// (c) 2014-2017 Jean Moreno
+// (c) 2014-2019 Jean Moreno
 
 Shader "Toony Colors Pro 2/Examples/Water/Water WindWaker"
 {
@@ -59,7 +59,7 @@ Shader "Toony Colors Pro 2/Examples/Water/Water WindWaker"
 
 		CGPROGRAM
 
-		#pragma surface surf ToonyColorsWater keepalpha vertex:vert nolightmap
+		#pragma surface surf ToonyColorsWater keepalpha vertex:vert 
 		#pragma target 3.0
 
 		//================================================================
@@ -88,9 +88,9 @@ Shader "Toony Colors Pro 2/Examples/Water/Water WindWaker"
 
 		struct Input
 		{
-			half2 texcoord;
+			float2 texcoord;
 			half3 viewDir;
-			half2 sinAnim;
+			float2 sinAnim;
 			float4 sPos;
 		};
 
@@ -175,6 +175,9 @@ Shader "Toony Colors Pro 2/Examples/Water/Water WindWaker"
 			float4 texcoord : TEXCOORD0;
 			float4 texcoord1 : TEXCOORD1;
 			float4 texcoord2 : TEXCOORD2;
+	#if !defined(LIGHTMAP_OFF) && defined(DIRLIGHTMAP_COMBINED)
+			float4 tangent : TANGENT;
+	#endif
 	#if UNITY_VERSION >= 550
 			UNITY_VERTEX_INPUT_INSTANCE_ID
 	#endif
@@ -188,7 +191,7 @@ Shader "Toony Colors Pro 2/Examples/Water/Water WindWaker"
 
 			//Main texture UVs
 			float3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
-			half2 mainTexcoords = worldPos.xz * 0.1;
+			float2 mainTexcoords = worldPos.xz * 0.1;
 			o.texcoord.xy = TRANSFORM_TEX(mainTexcoords.xy, _MainTex);
 			half2 x = ((v.vertex.xy+v.vertex.yz) * _UVWaveFrequency) + (TIME.xx * _UVWaveSpeed);
 			o.sinAnim = x;

@@ -1,7 +1,7 @@
 ﻿// Upgrade NOTE: upgraded instancing buffer 'Props' to new syntax.
 
 // Toony Colors Pro+Mobile 2
-// (c) 2014-2017 Jean Moreno
+// (c) 2014-2019 Jean Moreno
 
 Shader "Toony Colors Pro 2/Examples/Water/Realistic"
 {
@@ -117,7 +117,7 @@ Shader "Toony Colors Pro 2/Examples/Water/Realistic"
 
 		struct Input
 		{
-			half2 texcoord;
+			float2 texcoord;
 			half2 bump_texcoord;
 			half3 viewDir;
 			float3 wPos;
@@ -186,7 +186,7 @@ Shader "Toony Colors Pro 2/Examples/Water/Realistic"
 			//Specular
 			half3 h = normalize(lightDir + viewDir);
 			float ndh = max(0, dot (s.Normal, h));
-			float spec = pow(ndh, s.Specular*128.0) * s.Gloss * 2.0;
+			float spec = pow(ndh, (s.Specular+1e-4f)*128.0) * s.Gloss * 2.0;
 			spec *= atten;
 			c.rgb += lightColor.rgb * _SpecColor.rgb * spec;
 
@@ -230,7 +230,7 @@ Shader "Toony Colors Pro 2/Examples/Water/Realistic"
 			//Main texture UVs
 			float3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
 			o.wPos = worldPos;
-			half2 mainTexcoords = worldPos.xz * 0.1;
+			float2 mainTexcoords = worldPos.xz * 0.1;
 			o.texcoord.xy = TRANSFORM_TEX(mainTexcoords.xy, _MainTex);
 			o.bump_texcoord = mainTexcoords.xy + TIME.xx * _BumpSpeed.xy * 0.1;
 			//vertex waves

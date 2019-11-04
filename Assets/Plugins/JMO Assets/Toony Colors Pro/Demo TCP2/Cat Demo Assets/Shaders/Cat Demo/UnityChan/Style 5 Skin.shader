@@ -1,7 +1,7 @@
 ﻿// Upgrade NOTE: upgraded instancing buffer 'Props' to new syntax.
 
 // Toony Colors Pro+Mobile 2
-// (c) 2014-2017 Jean Moreno
+// (c) 2014-2019 Jean Moreno
 
 Shader "Toony Colors Pro 2/Examples/Cat Demo/UnityChan/Style 5 Skin"
 {
@@ -12,7 +12,7 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/UnityChan/Style 5 Skin"
 		_Color ("Color", Color) = (1,1,1,1)
 		_HColor ("Highlight Color", Color) = (0.785,0.785,0.785,1.0)
 		_SColor ("Shadow Color", Color) = (0.195,0.195,0.195,1.0)
-		_STexture ("Shadow Color Texture", 2D) = "white" {}
+		[NoScaleOffset] _STexture ("Shadow Color Texture", 2D) = "white" {}
 
 		//DIFFUSE
 		_MainTex ("Main Texture", 2D) = "white" {}
@@ -30,17 +30,11 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/UnityChan/Style 5 Skin"
 		[Space]
 	[TCP2Separator]
 
-	[TCP2HeaderHelp(NORMAL MAPPING, Normal Bump Map)]
-		//BUMP
-		_BumpMap ("Normal map (RGB)", 2D) = "bump" {}
-		_BumpScale ("Scale", Float) = 1.0
-	[TCP2Separator]
-
 	[TCP2HeaderHelp(RIM, Rim)]
 		//RIM LIGHT
 		_RimColor ("Rim Color", Color) = (0.8,0.8,0.8,0.6)
-		_RimMin ("Rim Min", Range(0,1)) = 0.5
-		_RimMax ("Rim Max", Range(0,1)) = 1.0
+		_RimMin ("Rim Min", Range(0,2)) = 0.5
+		_RimMax ("Rim Max", Range(0,2)) = 1.0
 	[TCP2Separator]
 
 	[TCP2HeaderHelp(SKETCH, Sketch)]
@@ -70,7 +64,7 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/UnityChan/Style 5 Skin"
 		[TCP2KeywordFilter(TCP2_ZSMOOTH_ON)] _Offset2 ("Z Offset 2", Float) = 0
 
 		//This property will be ignored and will draw the custom normals GUI instead
-		[TCP2OutlineNormalsGUI] __outline_gui_dummy__ ("unused", Float) = 0
+		[TCP2OutlineNormalsGUI] __outline_gui_dummy__ ("_unused_", Float) = 0
 	[TCP2Separator]
 
 
@@ -194,7 +188,7 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/UnityChan/Style 5 Skin"
 
 		#define OUTLINE_COLOR _OutlineColor
 
-		float4 TCP2_Outline_Frag (v2f IN) : COLOR
+		float4 TCP2_Outline_Frag (v2f IN) : SV_Target
 		{
 	#if TCP2_OUTLINE_TEXTURED
 			return float4(IN.texlod, 1) * OUTLINE_COLOR;
@@ -222,18 +216,17 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/UnityChan/Style 5 Skin"
 		sampler2D _MainTex;
 		sampler2D _STexture;
 		fixed _SketchSpeed;
-		sampler2D _BumpMap;
-		half _BumpScale;
 		fixed4 _RimColor;
 		fixed _RimMin;
 		fixed _RimMax;
 		float4 _RimDir;
 		fixed4 _Random;
 
+		#define UV_MAINTEX uv_MainTex
+
 		struct Input
 		{
 			half2 uv_MainTex;
-			half2 uv_BumpMap;
 			float3 viewDir;
 			half4 sketchUv;
 		};
@@ -372,12 +365,13 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/UnityChan/Style 5 Skin"
 			float4 texcoord : TEXCOORD0;
 			float4 texcoord1 : TEXCOORD1;
 			float4 texcoord2 : TEXCOORD2;
+		#if defined(LIGHTMAP_ON) && defined(DIRLIGHTMAP_COMBINED)
 			float4 tangent : TANGENT;
+		#endif
 	#if UNITY_VERSION >= 550
 			UNITY_VERTEX_INPUT_INSTANCE_ID
 	#endif
 		};
-		
 
 		//================================================================
 		// VERTEX FUNCTION
@@ -397,10 +391,10 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/UnityChan/Style 5 Skin"
 
 		void surf(Input IN, inout SurfaceOutputCustom o)
 		{
-			fixed4 mainTex = tex2D(_MainTex, IN.uv_MainTex);
+			fixed4 mainTex = tex2D(_MainTex, IN.UV_MAINTEX);
 
 			//Shadow Color Texture
-			fixed4 shadowTex = tex2D(_STexture, IN.uv_MainTex);
+			fixed4 shadowTex = tex2D(_STexture, IN.UV_MAINTEX);
 			o.ShadowColorTex = shadowTex.rgb;
 			o.Albedo = mainTex.rgb * _Color.rgb;
 			o.Alpha = mainTex.a * _Color.a;
@@ -414,10 +408,6 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/UnityChan/Style 5 Skin"
 			_Random.y = -round(_Time.z * _SketchSpeed) / _SketchSpeed;
 			screenUV.xy += frac(_Random.xy);
 			o.ScreenUVs = screenUV;
-
-			//Normal map
-			half4 normalMap = tex2D(_BumpMap, IN.uv_BumpMap.xy);
-			o.Normal = UnpackScaleNormal(normalMap, _BumpScale);
 
 			//Rim
 			float3 viewDir = normalize(IN.viewDir);

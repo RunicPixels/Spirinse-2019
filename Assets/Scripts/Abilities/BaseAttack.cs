@@ -29,8 +29,4 @@ public class BaseAttack : BaseAbility, IAttack
         Controls.chi += energySteal;
         return damage;
     }
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-        
-    }
 }
