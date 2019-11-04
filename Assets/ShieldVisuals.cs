@@ -8,7 +8,7 @@ public class ShieldVisuals : MonoBehaviour
 
     public void SetShieldVisuals(int state)
     {
-        if(state >= 0) {        mesh.enabled = false;}
+        if(state <= 0) {        mesh.enabled = false;}
         else {                  mesh.enabled = true; }
     }
 }
