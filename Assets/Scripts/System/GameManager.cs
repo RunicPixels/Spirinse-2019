@@ -14,19 +14,17 @@ namespace Spirinse.System
 
         private static GameManager Instance;
 
-        [SerializeField] protected HealthManager healthManager;
-        public HealthManager HealthManager => healthManager;
-
-        [SerializeField] protected PlayerManager playerManager;
-        public PlayerManager PlayerManager => playerManager;
-
-        protected UIManager uIManager;
-        protected InputManager inputManager;
+        [field: SerializeField] public HealthManager HealthManager { get; protected set; }
+        [field: SerializeField] public PlayerManager PlayerManager { get; protected set; }
+        [field: SerializeField] public UIManager UiManager { get; protected set; }
+        [field: SerializeField] public InputManager InputManager { get; protected set; }
+        [field: SerializeField] public GameStateManager StateManager { get; protected set; }
 
         // Start is called before the first frame update
         private void Start()
         {
             SetupConnections();
+            SetupEvents();
             InitGame();
         }
 
@@ -36,36 +34,79 @@ namespace Spirinse.System
             if (Instance == null)       Instance        = this;
             else Destroy(gameObject);
 
-            if (healthManager == null)  healthManager   = HealthManager.Instance;
-            if (inputManager == null)   inputManager    = InputManager.Instance;
-            if (playerManager == null)  playerManager   = PlayerManager.Instance;
-            if (uIManager == null)      uIManager       = UIManager.Instance;
+            if (HealthManager == null)  HealthManager   = HealthManager.Instance;
+            if (InputManager == null)   InputManager    = InputManager.Instance;
+            if (PlayerManager == null)  PlayerManager   = PlayerManager.Instance;
+            if (UiManager == null)      UiManager       = UIManager.Instance;
+            if (StateManager == null)   StateManager    = GameStateManager.Instance;
+        }
 
+        private void SetupEvents()
+        {
             // Manage Health Events
-            var shieldManager = healthManager.ShieldManager;
+            var shieldManager = HealthManager.ShieldManager;
 
-            uIManager.GetHealthUI.SetMaxHealthContainers(HealthManager.GetHealthCap);
-            uIManager.GetShieldUI.SetMaxShieldContainers(shieldManager.ShieldCap);
+            UiManager.GetHealthUI.SetMaxHealthContainers(HealthManager.GetHealthCap);
+            UiManager.GetShieldUI.SetMaxShieldContainers(shieldManager.ShieldCap);
 
-            healthManager.ChangeHealthEvent            += uIManager.GetHealthUI.ChangeCurrentHealth;
-            healthManager.ChangeMaxHealthEvent         += uIManager.GetHealthUI.ChangeMaxHealth;
+            HealthManager.ChangeHealthEvent            += UiManager.GetHealthUI.ChangeCurrentHealth;
+            HealthManager.ChangeHealthEvent            += StateManager.CheckGameOver;
+            HealthManager.ChangeMaxHealthEvent         += UiManager.GetHealthUI.ChangeMaxHealth;
 
-            shieldManager.ChangeShieldEvent            += uIManager.GetShieldUI.ChangeCurrentShield;
-            shieldManager.ChangeMaxShieldEvent         += uIManager.GetShieldUI.ChangeMaxShield;
+            shieldManager.ChangeShieldEvent            += UiManager.GetShieldUI.ChangeCurrentShield;
+            shieldManager.ChangeMaxShieldEvent         += UiManager.GetShieldUI.ChangeMaxShield;
         
             // Manage Player Events
-            var meditator = playerManager.player.meditator;
-            var defender = playerManager.player.defender;
+            var meditator = PlayerManager.player.meditator;
+            var defender = PlayerManager.player.defender;
 
-            meditator.TakeDamageAction                 += healthManager.Hit;
-            defender.TakeDamageAction                  += healthManager.Hit;
+            meditator.TakeDamageAction                 += HealthManager.HitMeditator;
+            defender.TakeDamageAction                  += HealthManager.HitDefender;
+
+            // Game Over Events
+            StateManager.GameOverEvent                 += InitGame;
 
             // ...
         }
+
         private void InitGame()
         {
-            healthManager.InitHealth();
-            healthManager.InitShield();
+            HealthManager.InitHealth();
+            HealthManager.InitShield();
         }
     }
 }
+
+
+
+//public class FMODImplementation
+//{
+//    //HIERIN KOMT FMOD Implemetatie voor audio.
+//    public void PlayOnce(params)
+//    {
+
+//    }
+//}
+
+//public class AudioManager
+//{
+//    public PlayerAudio playerAudio = new PlayerAudio();
+//    public EnvironmentAudio environmentAudio;
+//}
+
+//public class PlayerAudio
+//{
+//    private FMODImplementation fmodImplementation;
+//    public void PlayHitSound(int damage, CharacterType type)
+//    {
+//        fmodImplementation.PlayOnce(params);
+//    }
+//}
+
+//public class EnvironmentAudio
+//{
+//    public void PlayBirdSound()
+//    {
+
+//    }
+//}

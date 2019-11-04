@@ -72,9 +72,9 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
-    public int TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
-        if (iFrames > 0f) return 0;
+        if (iFrames > 0f) return;
         health -= damage;
 
         rb.velocity = direction * -speed * 2f;
@@ -83,11 +83,11 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
         stunned = 0.35f;
         
         hitParticles.Play();
+
         if (health < 0)
         {
             Cure();
         }
-        return damage;
     }
 
     private void Cure()
