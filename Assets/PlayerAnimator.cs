@@ -9,7 +9,6 @@ public class PlayerAnimator : MonoBehaviour
 
     public void ChangeAnimation(bool state)
     {
-        Debug.Log("Changing Animation");
         if(anim.GetBool("Flying") == !state)anim.SetBool("Flying", state);
     }
 }

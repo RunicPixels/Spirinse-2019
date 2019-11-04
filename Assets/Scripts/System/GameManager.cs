@@ -19,6 +19,7 @@ namespace Spirinse.System
         [field: SerializeField] public UIManager UiManager { get; protected set; }
         [field: SerializeField] public InputManager InputManager { get; protected set; }
         [field: SerializeField] public GameStateManager StateManager { get; protected set; }
+        [field: SerializeField] public CleanseManager CleanseManager { get; protected set; }
 
         // Start is called before the first frame update
         private void Start()
@@ -39,6 +40,7 @@ namespace Spirinse.System
             if (PlayerManager == null)  PlayerManager   = PlayerManager.Instance;
             if (UiManager == null)      UiManager       = UIManager.Instance;
             if (StateManager == null)   StateManager    = GameStateManager.Instance;
+            if (CleanseManager == null) CleanseManager  = CleanseManager.Instance;
         }
 
         private void SetupEvents()
@@ -69,6 +71,9 @@ namespace Spirinse.System
 
             // Game Over Events
             StateManager.GameOverEvent                 += InitGame;
+
+            // Cleansinator
+
 
             // ...
         }

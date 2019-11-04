@@ -1,17 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using MEC;
+using Spirinse.System;
 using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour
 {
     public GameObject enemyPrefab;
-
+    public Cleansinator cleansinator;
     public float delay = 2f;
+
+    public static int enemyAmount;
+    public int maxEnemies = 3;
     // Start is called before the first frame update
     void Start()
     {
-
+        cleansinator = CleanseManager.Instance.cleansinator;
     }
 
     private void OnEnable()
@@ -23,9 +27,20 @@ public class SpawnEnemy : MonoBehaviour
     {
         while (gameObject.activeSelf)
         {
-            GameObject enemy = Instantiate(enemyPrefab, transform);
-            enemy.transform.position = transform.position;
-            enemy.transform.parent = null;
+            if (enemyAmount >= maxEnemies)
+            {
+                yield return Timing.WaitForSeconds(0.25f);
+            }
+            else
+            {
+                enemyAmount += 1;
+                var newPos = cleansinator.GetNextObjectTransform().position;
+                transform.position = (Random.insideUnitCircle).normalized * Random.Range(25f, 30f);
+                transform.position = new Vector3(transform.position.x, Mathf.Abs(transform.position.y), transform.position.z);
+                GameObject enemy = Instantiate(enemyPrefab, transform);
+                enemy.transform.position = transform.position;
+                enemy.transform.parent = null;
+            }
             yield return Timing.WaitForSeconds(delay);
         }
     }

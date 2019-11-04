@@ -7,10 +7,11 @@ using UnityEngine;
 
 namespace Spirinse.System
 {
-    class CleanseManager : MonoBehaviour
+    public class CleanseManager : MonoBehaviour
     {
-        CleanseManager Instance;
-        Action cleanseEvent;
+        public static CleanseManager Instance;
+        public Cleansinator cleansinator;
+        public Action cleanseEvent;
 
         private void Awake()
         {
@@ -22,6 +23,7 @@ namespace Spirinse.System
             {
                 Destroy(this);
             }
+            cleanseEvent += cleansinator.CleanseNextObject;
         }
     }
 }

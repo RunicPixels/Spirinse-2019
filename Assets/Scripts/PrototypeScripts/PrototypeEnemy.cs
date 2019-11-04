@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using Spirinse.Interfaces;
 using UnityEngine;
 using Spirinse.Player;
+using Spirinse.System;
+
 public class PrototypeEnemy : MonoBehaviour, IDamagable
 {
     private const string StrB = "Player";
@@ -80,9 +82,15 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
 
     public void TakeDamage(int damage)
     {
-        if (iFrames > 0f) return;
+        if (iFrames > 0f || cured) return;
         health -= damage;
         animator.SetTrigger(Hit);
+
+        if (health < 0 && !cured)
+        {
+            SpawnEnemy.enemyAmount -= 1;
+            Cure();
+        }
 
         Stun();
 
@@ -94,14 +102,13 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
         iFrames = 0.3f;
         hitParticles.Play();
         stunned = 0.4f;
-        if (health < 0)
-        {
-            Cure();
-        }
+
     }
 
     private void Cure()
     {
+        CleanseManager.Instance.cleanseEvent?.Invoke();
+        
         cured = true;
         animator.SetTrigger(Cure1);
         transform.gameObject.layer = LayerMask.NameToLayer("NoCollision");
