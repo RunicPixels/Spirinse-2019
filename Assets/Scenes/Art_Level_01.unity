@@ -22086,14 +22086,14 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 1
-  m_Color: {r: 0.3018868, g: 0.1490799, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.83037245, b: 0.6650944, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -22276,7 +22276,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -65136,7 +65136,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 4b264c376fbf0bd45b4e29eade2111d3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.668
+      value: -27.96
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4b264c376fbf0bd45b4e29eade2111d3,
         type: 3}
@@ -65146,7 +65146,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 4b264c376fbf0bd45b4e29eade2111d3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -24.86
+      value: -17.12
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4b264c376fbf0bd45b4e29eade2111d3,
         type: 3}
@@ -105033,6 +105033,11 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 0262678afbd437b4598ff71e2d3967db,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -799428842186331452, guid: 0262678afbd437b4598ff71e2d3967db,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
