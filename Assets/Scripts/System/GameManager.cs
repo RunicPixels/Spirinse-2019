@@ -54,11 +54,12 @@ namespace Spirinse.System
             HealthManager.ChangeMaxHealthEvent         += UiManager.GetHealthUI.ChangeMaxHealth;
 
             shieldManager.ChangeShieldEvent            += UiManager.GetShieldUI.ChangeCurrentShield;
+            shieldManager.ChangeShieldEvent            += PlayerManager.player.meditator.shieldVisuals.SetShieldVisuals;
             shieldManager.ChangeMaxShieldEvent         += UiManager.GetShieldUI.ChangeMaxShield;
         
             // Manage Player Events
-            var meditator = PlayerManager.player.meditator;
-            var defender = PlayerManager.player.defender;
+            var meditator                               = PlayerManager.player.meditator;
+            var defender                                = PlayerManager.player.defender;
 
             meditator.TakeDamageAction                 += HealthManager.HitMeditator;
             defender.TakeDamageAction                  += HealthManager.HitDefender;

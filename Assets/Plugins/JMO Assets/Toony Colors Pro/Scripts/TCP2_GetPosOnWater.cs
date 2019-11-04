@@ -34,9 +34,9 @@ namespace ToonyColorsPro
 			public Vector3 postRotation = new Vector3(0, 0, 0);
 
 			[SerializeField, HideInInspector]
-			bool isValid;
+			bool isValid = false;
 			[SerializeField, HideInInspector]
-			int sineCount;
+			int sineCount = 3;
 
 			float[] sinePosOffsetsX = { 1.0f, 2.2f, 2.7f, 3.4f, 1.4f, 1.8f, 4.2f, 3.6f };
 			float[] sinePosOffsetsZ = { 0.6f, 1.3f, 3.1f, 2.4f, 1.1f, 2.8f, 1.7f, 4.3f };

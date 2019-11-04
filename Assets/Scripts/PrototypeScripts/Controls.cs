@@ -30,6 +30,8 @@ public class Controls : MonoBehaviour
     [Header("Moving")]
     public float hAcceleration;
     public float vAcceleration, speed;
+    public float altitudeModifier = 2;
+    public float altitudeVelocity = 1;
     public enum DirectionMode { Velocity, Mouse, Arrows};
 
     [Header("Dash")]
@@ -93,7 +95,7 @@ public class Controls : MonoBehaviour
 
         if (Input.GetButtonDown("Fire3") && dashing == false && chiDashConsumption < chi)
         {
-            goDoDash = true;
+            StartCoroutine(_Dashing(rb.velocity.normalized));
         }
 
         if (chi < 1f)
@@ -118,7 +120,22 @@ public class Controls : MonoBehaviour
 
     private Vector2 CalculateVelocity()
     {
-        var velocity = Time.fixedDeltaTime * 60 * speedMultiplier * new Vector2(direction.x * hAcceleration, direction.y * vAcceleration);
+        var velocity = Time.fixedDeltaTime * 60 * speedMultiplier * new Vector2(direction.x * hAcceleration * altitudeVelocity, direction.y * vAcceleration * altitudeVelocity);
+        
+        if(velocity.y < -0.1f)
+        {
+            altitudeVelocity -= rb.velocity.y * 0.11f * Time.fixedDeltaTime;
+            altitudeVelocity = Mathf.Min(altitudeVelocity, altitudeModifier);
+        }
+        else if (altitudeVelocity > 1f)
+        {
+            altitudeVelocity -= rb.velocity.y * 0.07f * Time.fixedDeltaTime;
+            altitudeVelocity -= 0.5f * Time.fixedDeltaTime;
+            
+        }
+
+        if (altitudeVelocity < 1f) altitudeVelocity = 1f;
+
         //Debug.Log(velocity.magnitude);
         if (velocity.magnitude > 1f)
         {
@@ -135,6 +152,8 @@ public class Controls : MonoBehaviour
             velocity += dashAbility.GetDashVelocity;
         }
 
+
+
         return velocity;
     }
 
@@ -150,15 +169,9 @@ public class Controls : MonoBehaviour
 
     private void LimitVelocity()
     {
-        if (goDoDash)
+        if (rb.velocity.magnitude > speed * altitudeVelocity && dashing == false)
         {
-            StartCoroutine(_Dashing(rb.velocity.normalized));
-            goDoDash = false;
-        }
-
-        if (rb.velocity.magnitude > speed && dashing == false)
-        {
-            rb.velocity = rb.velocity.normalized * Mathf.Lerp(rb.velocity.magnitude, speed, 0.98f);
+            rb.velocity = rb.velocity.normalized * Mathf.Lerp(rb.velocity.magnitude, speed * altitudeVelocity, 0.98f);
         }
         else if (rb.velocity.magnitude > dashAbility.GetDashSpeed && dashing == true)
         {
@@ -172,6 +185,7 @@ public class Controls : MonoBehaviour
     }*/
     private IEnumerator<float> _Dashing(Vector2 direction)
     {
+        goDoDash = false;
         var trailSystemMain = trailSystem.main; // NEEDS particle system Manager
         var tLife = trailSystem.main.startLifetime;
 

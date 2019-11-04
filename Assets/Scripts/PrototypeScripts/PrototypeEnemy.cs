@@ -35,7 +35,7 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
     // Start is called before the first frame update
     void Start()
     {
-        //target = Meditator.Instance.transform;
+        originalTarget = target;
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -118,7 +118,7 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
         {
             target = other.transform;
         }
-        else
+        else if(other.CompareTag("Defender"))
         {
             target = originalTarget;
         }
