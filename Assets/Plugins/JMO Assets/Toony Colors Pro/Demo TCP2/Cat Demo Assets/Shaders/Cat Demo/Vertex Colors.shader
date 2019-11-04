@@ -1,7 +1,7 @@
 ﻿// Upgrade NOTE: upgraded instancing buffer 'Props' to new syntax.
 
 // Toony Colors Pro+Mobile 2
-// (c) 2014-2017 Jean Moreno
+// (c) 2014-2019 Jean Moreno
 
 Shader "Toony Colors Pro 2/Examples/Cat Demo/Vertex Colors"
 {
@@ -44,6 +44,8 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/Vertex Colors"
 
 		fixed4 _Color;
 		sampler2D _MainTex;
+
+		#define UV_MAINTEX uv_MainTex
 
 		struct Input
 		{
@@ -132,10 +134,17 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/Vertex Colors"
 
 		void surf(Input IN, inout SurfaceOutputCustom o)
 		{
-			fixed4 mainTex = tex2D(_MainTex, IN.uv_MainTex);
+			fixed4 mainTex = tex2D(_MainTex, IN.UV_MAINTEX);
 
 			//Vertex Colors
 			float4 vertexColors = IN.color;
+		#if UNITY_VERSION >= 550
+		  #ifndef UNITY_COLORSPACE_GAMMA
+			vertexColors.rgb = GammaToLinearSpace(vertexColors.rgb);
+		  #endif
+		#else
+			vertexColors.rgb = IsGammaSpace() ? vertexColors.rgb : GammaToLinearSpace(vertexColors.rgb);
+		#endif
 			mainTex *= vertexColors;
 			o.Albedo = mainTex.rgb * _Color.rgb;
 			o.Alpha = mainTex.a * _Color.a;

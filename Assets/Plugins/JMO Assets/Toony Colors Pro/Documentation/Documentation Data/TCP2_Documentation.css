@@ -10,6 +10,8 @@ body
 	margin-right:	auto;
 	margin-top: 	0px;
 	margin-bottom: 0px;
+	
+	font-size: 14px;
 }
 body div.main
 {
@@ -21,11 +23,11 @@ body div.main
 	line-height: 1.3;
 }
 p { margin: 8px; padding: 0px; }
-h1 { font-size: 28px; font-family: 'Helvetica', 'Arial', sans-serif; margin-bottom: 2px; }
-h2 { font-size: 24px; font-family: 'Helvetica', 'Arial', sans-serif; margin-top: 2px; margin-bottom: 2px; }
-h3 { font-size: 20px; font-family: 'Helvetica', 'Arial', sans-serif; margin-top: 16px; margin-bottom: 6px; color: #606060; }
-h4 { font-size: 18px; font-family: 'Helvetica', 'Arial', sans-serif; margin-top: 16px; margin-bottom: 8px; color: #606060;  border-bottom: solid 1px #909090; display:inline-block; }
-h5 { font-size: 16px; font-family: 'Helvetica', 'Arial', sans-serif; margin-top: 4px; margin-bottom: 4px; padding: 2px; color: #747474; }
+h1 { font-size: 24px; font-family: 'Helvetica', 'Arial', sans-serif; margin-bottom: 2px; }
+h2 { font-size: 22px; font-family: 'Helvetica', 'Arial', sans-serif; margin-top: 2px; margin-bottom: 2px; }
+h3 { font-size: 18px; font-family: 'Helvetica', 'Arial', sans-serif; margin-top: 16px; margin-bottom: 6px; color: #606060; }
+h4 { font-size: 16px; font-family: 'Helvetica', 'Arial', sans-serif; margin-top: 16px; margin-bottom: 8px; color: #606060;  border-bottom: solid 1px #909090; display:inline-block; }
+h5 { font-size: 14px; font-family: 'Helvetica', 'Arial', sans-serif; margin-top: 4px; margin-bottom: 4px; padding: 2px; color: #747474; }
 strong { font-weight: normal; color: #FF5500; }
 
 ul { margin: 5px 0px 5px 0px; list-style-type: circle; }
@@ -117,6 +119,12 @@ div.box
 	background-color: #fcfcfc;
 	border: solid 1px #d8d8d8;
 	/*text-align: justify;*/
+}
+
+div.box pre
+{
+	background-color: #e0e0e0;
+	margin: 2px 0px 2px 0px;
 }
 
 div.header:target + div { border-color: #ff8000; }
@@ -250,6 +258,21 @@ border-color: #cf6d16;
 color: #cf6d16;
 }
 div.warning td:first-child { padding-right: 4px; }
+
+table.template_ui
+{
+	font-size:13px;
+	border-collapse: collapse;
+}
+table.template_ui th { border: solid 1px #808080; margin:0px; padding: 4px; }
+table.template_ui td { border: solid 1px #808080; margin:0px; padding: 4px; }
+
+table.template_ui td.left
+{
+	font-weight: normal;
+	color: #FF5500;
+	padding-right: 8px;
+}
 
 /* IMAGES */
 

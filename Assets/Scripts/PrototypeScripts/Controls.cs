@@ -143,7 +143,7 @@ public class Controls : MonoBehaviour
         var gravity = Mathf.Max(0f, (1f - chi) * chiGravity);
         if (dashing)
         {
-            gravity = dashAbility.GetGravityScale;
+            gravity = dashAbility.GetGravityScale();
         }
         return gravity;
     }

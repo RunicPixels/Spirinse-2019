@@ -1,12 +1,14 @@
 // Toony Colors Pro+Mobile 2
-// (c) 2014-2017 Jean Moreno
+// (c) 2014-2019 Jean Moreno
 
 //Enable this to display the default Inspector (in case the custom Inspector is broken)
 //#define SHOW_DEFAULT_INSPECTOR
 
-using UnityEngine;
-using UnityEditor;
 using System.Collections.Generic;
+using UnityEditor;
+using UnityEngine;
+using ToonyColorsPro.Utilities;
+using ToonyColorsPro.Legacy;
 
 // Custom material inspector for generated shader
 
@@ -30,7 +32,7 @@ public class TCP2_MaterialInspector_SG : ShaderGUI
 
 		//Header
 		EditorGUILayout.BeginHorizontal();
-		string label = (Screen.width > 450f) ? "TOONY COLORS PRO 2 - INSPECTOR (Generated Shader)" : (Screen.width > 300f ? "TOONY COLORS PRO 2 - INSPECTOR" : "TOONY COLORS PRO 2");
+		var label = (Screen.width > 450f) ? "TOONY COLORS PRO 2 - INSPECTOR (Generated Shader)" : (Screen.width > 300f ? "TOONY COLORS PRO 2 - INSPECTOR" : "TOONY COLORS PRO 2");
 		TCP2_GUI.HeaderBig(label);
 		if(TCP2_GUI.Button(TCP2_GUI.CogIcon, "O", "Open in Shader Generator"))
 		{
@@ -44,20 +46,20 @@ public class TCP2_MaterialInspector_SG : ShaderGUI
 
 		//Iterate Shader properties
 		materialEditor.serializedObject.Update();
-		SerializedProperty mShader = materialEditor.serializedObject.FindProperty("m_Shader");
+		var mShader = materialEditor.serializedObject.FindProperty("m_Shader");
 		toggledGroups.Clear();
 		if(materialEditor.isVisible && !mShader.hasMultipleDifferentValues && mShader.objectReferenceValue != null)
 		{
 			//Retina display fix
-			EditorGUIUtility.labelWidth = TCP2_Utils.ScreenWidthRetina - 120f;
+			EditorGUIUtility.labelWidth = Utils.ScreenWidthRetina - 120f;
 			EditorGUIUtility.fieldWidth = 64f;
 
 			EditorGUI.BeginChangeCheck();
 
 			EditorGUI.indentLevel++;
-			foreach (MaterialProperty p in properties)
+			foreach (var p in properties)
 			{
-				bool visible = (toggledGroups.Count == 0 || toggledGroups.Peek());
+				var visible = (toggledGroups.Count == 0 || toggledGroups.Peek());
 
 				//Hacky way to separate material inspector properties into foldout groups
 				if(p.name.StartsWith("__BeginGroup"))
@@ -102,60 +104,5 @@ public class TCP2_MaterialInspector_SG : ShaderGUI
 #if UNITY_5_6_OR_NEWER
 		materialEditor.EnableInstancingField();
 #endif
-	}
-
-	//--------------------------------------------------------------------------------------------------
-	// Properties GUI
-
-	private void DirectionalAmbientGUI(string filter, MaterialProperty[] properties)
-	{
-		float width = (EditorGUIUtility.currentViewWidth-20)/6;
-		EditorGUILayout.BeginHorizontal();
-		foreach(MaterialProperty p in properties)
-		{
-			//Filter
-			string displayName = p.displayName;
-			if(filter != null)
-			{
-				if(!displayName.Contains(filter))
-					continue;
-				displayName = displayName.Remove(displayName.IndexOf(filter), filter.Length+1);
-			}
-			else if(displayName.Contains("#"))
-				continue;
-
-			GUILayout.Label(displayName, GUILayout.Width(width));
-		}
-		EditorGUILayout.EndHorizontal();
-		EditorGUILayout.BeginHorizontal();
-		foreach(MaterialProperty p in properties)
-		{
-			//Filter
-			string displayName = p.displayName;
-			if(filter != null)
-			{
-				if(!displayName.Contains(filter))
-					continue;
-				displayName = displayName.Remove(displayName.IndexOf(filter), filter.Length+1);
-			}
-			else if(displayName.Contains("#"))
-				continue;
-			
-			DirAmbientColorProperty(p, displayName, width);
-		}
-		EditorGUILayout.EndHorizontal();
-	}
-
-	private Color DirAmbientColorProperty(MaterialProperty prop, string label, float width)
-	{
-		EditorGUI.BeginChangeCheck();
-		EditorGUI.showMixedValue = prop.hasMixedValue;
-		Color colorValue = EditorGUILayout.ColorField(prop.colorValue, GUILayout.Width(width));
-		EditorGUI.showMixedValue = false;
-		if(EditorGUI.EndChangeCheck())
-		{
-			prop.colorValue = colorValue;
-		}
-		return prop.colorValue;
 	}
 }

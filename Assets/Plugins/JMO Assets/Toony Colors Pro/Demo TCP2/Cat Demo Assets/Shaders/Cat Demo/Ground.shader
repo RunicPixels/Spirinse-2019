@@ -1,7 +1,7 @@
 ﻿// Upgrade NOTE: upgraded instancing buffer 'Props' to new syntax.
 
 // Toony Colors Pro+Mobile 2
-// (c) 2014-2017 Jean Moreno
+// (c) 2014-2019 Jean Moreno
 
 Shader "Toony Colors Pro 2/Examples/Cat Demo/Ground"
 {
@@ -26,8 +26,8 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/Ground"
 		_BlendTex1 ("Texture 1 (r)", 2D) = "white" {}
 		_BlendTex2 ("Texture 2 (g)", 2D) = "white" {}
 		[Header(Height Blending Parameters)]
-		[TCP2Vector4Floats(Height Smoothing,R,G,B,A,0.001,2,0.001,2,0.001,2,0.001,2)] _VColorBlendSmooth ("Smooth", Vector) = (0.25,0.25,0.25,0.25)
-		[TCP2Vector4Floats(Height Offset,R,G,B,A)] _VColorBlendOffset ("Height Offset", Vector) = (0,0,0,0)
+		[TCP2Vector4Floats(R,G,B,A,0.001,2,0.001,2,0.001,2,0.001,2)] _VColorBlendSmooth ("Height Smoothing", Vector) = (0.25,0.25,0.25,0.25)
+		[TCP2Vector4Floats(R,G,B,A)] _VColorBlendOffset ("Height Offset", Vector) = (0,0,0,0)
 		[TCP2HelpBox(Info,Height will be taken from each texture alpha channel.  No alpha in the texture will result in linear blending.)]
 	[TCP2Separator]
 
@@ -79,6 +79,8 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/Ground"
 		float4 _BlendTex1_ST;
 		sampler2D _BlendTex2;
 		float4 _BlendTex2_ST;
+
+		#define UV_MAINTEX uv_MainTex
 
 		struct Input
 		{
@@ -264,22 +266,20 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/Ground"
 
 		void surf(Input IN, inout SurfaceOutputCustom o)
 		{
-			fixed4 mainTex = tex2D(_MainTex, IN.uv_MainTex);
+			fixed4 mainTex = tex2D(_MainTex, IN.UV_MAINTEX);
 
 			//Texture Blending
-			#define MAIN_UV IN.uv_MainTex
+			#define MAIN_UV IN.UV_MAINTEX
 			#define BLEND_SOURCE IN.color
 
-			#define SAMPLE_TEX1		tex2D(_BlendTex1, MAIN_UV * _BlendTex1_ST.xy + _BlendTex1_ST.zw)
-			#define SAMPLE_TEX2		tex2D(_BlendTex2, MAIN_UV * _BlendTex2_ST.xy + _BlendTex2_ST.zw)
+			fixed4 tex1 = tex2D(_BlendTex1, MAIN_UV * _BlendTex1_ST.xy + _BlendTex1_ST.zw);
+			fixed4 tex2 = tex2D(_BlendTex2, MAIN_UV * _BlendTex2_ST.xy + _BlendTex2_ST.zw);
 
 
 			#define CONTRAST 5.0
 			#define CONTRAST_half CONTRAST/2
 
-			fixed4 tex1 = SAMPLE_TEX1;
 			mainTex = lerp(mainTex, blend_height_smooth(mainTex, mainTex.a, tex1, BLEND_SOURCE.r * CONTRAST - CONTRAST_half + tex1.a + _VColorBlendOffset.x, _VColorBlendSmooth.x), saturate(BLEND_SOURCE.r * CONTRAST_half));
-			fixed4 tex2 = SAMPLE_TEX2;
 			mainTex = lerp(mainTex, blend_height_smooth(mainTex, mainTex.a, tex2, BLEND_SOURCE.g * CONTRAST - CONTRAST_half + tex2.a + _VColorBlendOffset.y, _VColorBlendSmooth.y), saturate(BLEND_SOURCE.g * CONTRAST_half));
 			o.Albedo = mainTex.rgb * _Color.rgb;
 			o.Alpha = mainTex.a * _Color.a;

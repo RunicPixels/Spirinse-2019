@@ -12,12 +12,16 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
     public Animator animator;
 
     public bool cured = false;
-    
+
     private Vector3 direction;
 
     private Rigidbody2D rb;
 
+    public Transform target;
+    private Transform originalTarget;
+
     private static readonly int Cure1 = Animator.StringToHash("Cure");
+    private static readonly int Hit = Animator.StringToHash("Hit");
 
     private bool flipped;
 
@@ -31,37 +35,39 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
     // Start is called before the first frame update
     void Start()
     {
+        //target = Meditator.Instance.transform;
         rb = GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
     {
+        if (!target) target = Meditator.Instance.transform;
         if (iFrames > 0f)
         {
             iFrames -= Time.fixedDeltaTime;
         }
-        
+
         if (stunned > 0f)
         {
             stunned -= Time.fixedDeltaTime;
             goto StunJump;
         }
-        
-        direction = (Meditator.Instance.transform.position - transform.position).normalized;
-        
+
+        direction = (target.position - transform.position).normalized;
+
         rb.velocity = direction * speed;
-        
+
         if (cured)
         {
             rb.velocity += Vector2.up * 1.5f;
-            
+
         }
 
         StunJump:
-        
+
         flipped = rb.velocity.x < 0;
 
-        
+
         var xScale = flipped ? 2f : -2f;
 
         transform.localScale = new Vector3(2f, xScale, 2f);
@@ -76,14 +82,18 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
     {
         if (iFrames > 0f) return;
         health -= damage;
+        animator.SetTrigger(Hit);
 
+        Stun();
+
+    }
+
+    private void Stun()
+    {
         rb.velocity = direction * -speed * 2f;
-        
-        iFrames = 0.25f;
-        stunned = 0.35f;
-        
+        iFrames = 0.3f;
         hitParticles.Play();
-
+        stunned = 0.4f;
         if (health < 0)
         {
             Cure();
@@ -97,27 +107,54 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
         transform.gameObject.layer = LayerMask.NameToLayer("NoCollision");
     }
 
-   public void Destroy()
+    public void Destroy()
     {
         Destroy(gameObject);
     }
 
-   private void OnTriggerStay2D(Collider2D other)
-   {
-       if (iFrames > 0) return;
-       var attack = other.gameObject.GetComponent<IAttack>();
-
-       if (attack != null)
-       {
-           TakeDamage(attack.DoAttack());
-       }
-
-        if (other.CompareTag(StrB))
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Defender") && Spirinse.System.Health.HealthManager.Instance.ShieldManager.GetShield() > 0)
         {
-            var player = other.GetComponent<IDamagable>();
-
-            player.TakeDamage(damage);
-            TakeDamage(0); // Temporary Method to retreat when interacting with player;
+            target = other.transform;
         }
-   }
+        else
+        {
+            target = originalTarget;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Defender"))
+        {
+            target = originalTarget;
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Collider2D myCollider = collision.GetContact(0).collider;
+
+        MonoBehaviour[] list = myCollider.gameObject.GetComponents<MonoBehaviour>();
+
+
+        foreach(MonoBehaviour mb in list)
+        {
+            if (mb is IDamagable)
+            {
+                Debug.Log("Hitting Damageable");
+                IDamagable damageable = (IDamagable)mb;
+                
+                damageable.TakeDamage(damage);
+                Stun();
+            }
+            if (mb is IAttack && iFrames <= 0)
+            {
+                Debug.Log("Hitting Attack");
+                IAttack attack = (IAttack)mb;
+
+                TakeDamage(attack.DoAttack());
+            }
+        }
+    }
 }

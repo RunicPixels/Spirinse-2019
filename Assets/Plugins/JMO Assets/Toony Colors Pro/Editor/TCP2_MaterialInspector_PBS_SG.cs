@@ -1,12 +1,13 @@
 // Toony Colors Pro+Mobile 2
-// (c) 2014-2017 Jean Moreno
+// (c) 2014-2019 Jean Moreno
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
 using UnityEditor;
-
+using UnityEngine;
+using UnityEngine.Rendering;
+using ToonyColorsPro.Utilities;
+using ToonyColorsPro.Legacy;
 
 internal class TCP2_MaterialInspector_PBS_SG : ShaderGUI
 {
@@ -28,16 +29,16 @@ internal class TCP2_MaterialInspector_PBS_SG : ShaderGUI
 	public enum SmoothnessMapChannel
 	{
 		SpecularMetallicAlpha,
-		AlbedoAlpha,
+		AlbedoAlpha
 	}
 
 	private static class Styles
 	{
-		public static GUIStyle optionsButton = "PaneOptions";
+		//public static GUIStyle optionsButton = "PaneOptions";
 		public static GUIContent uvSetLabel = new GUIContent("UV Set");
-		public static GUIContent[] uvSetOptions = new GUIContent[] { new GUIContent("UV channel 0"), new GUIContent("UV channel 1") };
+		//public static GUIContent[] uvSetOptions = { new GUIContent("UV channel 0"), new GUIContent("UV channel 1") };
 
-		public static string emptyTootip = "";
+		//public static string emptyTootip = "";
 		public static GUIContent albedoText = new GUIContent("Albedo", "Albedo (RGB) and Transparency (A)");
 		public static GUIContent alphaCutoffText = new GUIContent("Alpha Cutoff", "Threshold for alpha cutoff");
 		public static GUIContent specularMapText = new GUIContent("Specular", "Specular (RGB) and Smoothness (A)");
@@ -55,18 +56,19 @@ internal class TCP2_MaterialInspector_PBS_SG : ShaderGUI
 		public static GUIContent detailAlbedoText = new GUIContent("Detail Albedo x2", "Albedo (RGB) multiplied by 2");
 		public static GUIContent detailNormalMapText = new GUIContent("Normal Map", "Normal Map");
 
-		public static string whiteSpaceString = " ";
+		//public static string whiteSpaceString = " ";
 		public static string primaryMapsText = "Main Maps";
 		public static string secondaryMapsText = "Secondary Maps";
 //		public static string forwardText = "Forward Rendering Options";
 		public static string renderingMode = "Rendering Mode";
 		public static GUIContent emissiveWarning = new GUIContent ("Emissive value is animated but the material has not been configured to support emissive. Please make sure the material itself has some amount of emissive.");
-		public static GUIContent emissiveColorWarning = new GUIContent ("Ensure emissive color is non-black for emission to have effect.");
+		//public static GUIContent emissiveColorWarning = new GUIContent ("Ensure emissive color is non-black for emission to have effect.");
 		public static readonly string[] blendNames = Enum.GetNames (typeof (BlendMode));
 
-		public static string tcp2_HeaderText = "Toony Colors Pro 2 - Stylization";
+		//public static string tcp2_HeaderText = "Toony Colors Pro 2 - Stylization";
 		public static string tcp2_highlightColorText = "Highlight Color";
 		public static string tcp2_shadowColorText = "Shadow Color";
+		/*
 		public static GUIContent tcp2_rampText = new GUIContent("Ramp Texture", "Ramp 1D Texture (R)");
 		public static GUIContent tcp2_rampThresholdText = new GUIContent("Threshold", "Threshold for the separation between shadows and highlights");
 		public static GUIContent tcp2_rampSmoothText = new GUIContent("Main Light Smoothing", "Main Light smoothing of the separation between shadows and highlights");
@@ -85,47 +87,50 @@ internal class TCP2_MaterialInspector_PBS_SG : ShaderGUI
 		public static string tcp2_Offset2Text = "Offset Units";
 		public static string tcp2_srcBlendOutlineText = "Source Factor";
 		public static string tcp2_dstBlendOutlineText = "Destination Factor";
+		*/
 	}
 
-	MaterialProperty blendMode = null;
-	MaterialProperty albedoMap = null;
-	MaterialProperty albedoColor = null;
-	MaterialProperty alphaCutoff = null;
-	MaterialProperty specularMap = null;
-	MaterialProperty specularColor = null;
-	MaterialProperty metallicMap = null;
-	MaterialProperty metallic = null;
-	MaterialProperty smoothness = null;
-	MaterialProperty smoothnessScale = null;
-	MaterialProperty smoothnessMapChannel = null;
+	MaterialProperty blendMode;
+	MaterialProperty albedoMap;
+	MaterialProperty albedoColor;
+	MaterialProperty alphaCutoff;
+	MaterialProperty specularMap;
+	MaterialProperty specularColor;
+	MaterialProperty metallicMap;
+	MaterialProperty metallic;
+	MaterialProperty smoothness;
+	MaterialProperty smoothnessScale;
+	MaterialProperty smoothnessMapChannel;
 	//MaterialProperty highlights = null;
 //	MaterialProperty reflections = null;
-	MaterialProperty bumpScale = null;
-	MaterialProperty bumpMap = null;
-	MaterialProperty occlusionStrength = null;
-	MaterialProperty occlusionMap = null;
-	MaterialProperty heigtMapScale = null;
-	MaterialProperty heightMap = null;
-	MaterialProperty emissionColorForRendering = null;
-	MaterialProperty emissionMap = null;
-	MaterialProperty detailMask = null;
-	MaterialProperty detailAlbedoMap = null;
-	MaterialProperty detailNormalMapScale = null;
-	MaterialProperty detailNormalMap = null;
-	MaterialProperty uvSetSecondary = null;
+	MaterialProperty bumpScale;
+	MaterialProperty bumpMap;
+	MaterialProperty occlusionStrength;
+	MaterialProperty occlusionMap;
+	MaterialProperty heigtMapScale;
+	MaterialProperty heightMap;
+	MaterialProperty emissionColorForRendering;
+	MaterialProperty emissionMap;
+	MaterialProperty detailMask;
+	MaterialProperty detailAlbedoMap;
+	MaterialProperty detailNormalMapScale;
+	MaterialProperty detailNormalMap;
+	MaterialProperty uvSetSecondary;
 
 	//TCP2
 	List<MaterialProperty> SGProperties;
-	MaterialProperty tcp2_highlightColor = null;
-	MaterialProperty tcp2_shadowColor = null;
+	MaterialProperty tcp2_highlightColor;
+	MaterialProperty tcp2_shadowColor;
 
 	static bool expandStandardProperties = true;
 	static bool expandTCP2Properties = true;
-	readonly string[] outlineNormalsKeywords = new string[] { "TCP2_NONE", "TCP2_COLORS_AS_NORMALS", "TCP2_TANGENT_AS_NORMALS", "TCP2_UV2_AS_NORMALS" };
+	readonly string[] outlineNormalsKeywords = { "TCP2_NONE", "TCP2_COLORS_AS_NORMALS", "TCP2_TANGENT_AS_NORMALS", "TCP2_UV2_AS_NORMALS" };
 
 	MaterialEditor m_MaterialEditor;
 	WorkflowMode m_WorkflowMode = WorkflowMode.Specular;
+#if !UNITY_2018_1_OR_NEWER
 	readonly ColorPickerHDRConfig m_ColorPickerHDRConfig = new ColorPickerHDRConfig(0f, 99f, 1/99f, 3f);
+#endif
 
 	bool m_FirstTimeApply = true;
 
@@ -133,7 +138,7 @@ internal class TCP2_MaterialInspector_PBS_SG : ShaderGUI
 	{
 		//Iterate through all properties so that we can extract the 'unknown' ones
 		SGProperties = new List<MaterialProperty>();
-		for (int i = 0; i < props.Length; i++)
+		for (var i = 0; i < props.Length; i++)
 		{
 			var property = props[i];
 			if(property != null)
@@ -196,7 +201,7 @@ internal class TCP2_MaterialInspector_PBS_SG : ShaderGUI
 	{
 		FindProperties (props); // MaterialProperties can be animated so we do not cache them but fetch them every event to ensure animated values are updated correctly
 		m_MaterialEditor = materialEditor;
-		Material material = materialEditor.target as Material;
+		var material = materialEditor.target as Material;
 
 		// Make sure that needed setup (ie keywords/renderqueue) are set up if we're switching some existing
 		// material to a standard shader.
@@ -209,7 +214,7 @@ internal class TCP2_MaterialInspector_PBS_SG : ShaderGUI
 
 		//TCP2 Header
 		EditorGUILayout.BeginHorizontal();
-		string label = (Screen.width > 450f) ? "TOONY COLORS PRO 2 - INSPECTOR (Generated Shader)" : (Screen.width > 300f ? "TOONY COLORS PRO 2 - INSPECTOR" : "TOONY COLORS PRO 2");
+		var label = (Screen.width > 450f) ? "TOONY COLORS PRO 2 - INSPECTOR (Generated Shader)" : (Screen.width > 300f ? "TOONY COLORS PRO 2 - INSPECTOR" : "TOONY COLORS PRO 2");
 		TCP2_GUI.HeaderBig(label);
 		if (TCP2_GUI.Button(TCP2_GUI.CogIcon, "O", "Open in Shader Generator"))
 		{
@@ -246,10 +251,10 @@ internal class TCP2_MaterialInspector_PBS_SG : ShaderGUI
 			if (expandStandardProperties)
 			{
 				//Background
-				Rect vertRect = EditorGUILayout.BeginVertical();
+				var vertRect = EditorGUILayout.BeginVertical();
 				vertRect.xMax += 2;
 				vertRect.xMin--;
-				GUI.Box(vertRect, "", (GUIStyle)"RL Background");
+				GUI.Box(vertRect, "", "RL Background");
 				GUILayout.Space(4f);
 
 				// Primary properties
@@ -302,10 +307,10 @@ internal class TCP2_MaterialInspector_PBS_SG : ShaderGUI
 			if (expandTCP2Properties)
 			{
 				//Background
-				Rect vertRect = EditorGUILayout.BeginVertical();
+				var vertRect = EditorGUILayout.BeginVertical();
 				vertRect.xMax += 2;
 				vertRect.xMin--;
-				GUI.Box(vertRect, "", (GUIStyle)"RL Background");
+				GUI.Box(vertRect, "", "RL Background");
 				GUILayout.Space(4f);
 
 				GUILayout.Label("Base Properties", EditorStyles.boldLabel);
@@ -314,12 +319,12 @@ internal class TCP2_MaterialInspector_PBS_SG : ShaderGUI
 				EditorGUILayout.Space();
 
 				//Shader Generator Properties
-				for(int i = 0; i < SGProperties.Count; i++)
+				for(var i = 0; i < SGProperties.Count; i++)
 				{
 					if (SGProperties[i].type == MaterialProperty.PropType.Texture)
 					{
 						//Compensate margins so that texture slot looks square
-						float fw = EditorGUIUtility.fieldWidth;
+						var fw = EditorGUIUtility.fieldWidth;
 						EditorGUIUtility.fieldWidth = 64f;
 						m_MaterialEditor.ShaderProperty(SGProperties[i], SGProperties[i].displayName);
 						EditorGUIUtility.fieldWidth = fw;
@@ -346,13 +351,13 @@ internal class TCP2_MaterialInspector_PBS_SG : ShaderGUI
 
 	void UpdateOutlineNormalsKeyword(int index)
 	{
-		string selectedKeyword = outlineNormalsKeywords[index];
+		var selectedKeyword = outlineNormalsKeywords[index];
 
 		foreach (var obj in m_MaterialEditor.targets)
 		{
 			if (obj is Material)
 			{
-				Material m = obj as Material;
+				var m = obj as Material;
 				foreach (var kw in outlineNormalsKeywords)
 					m.DisableKeyword(kw);
 				m.EnableKeyword(selectedKeyword);
@@ -387,7 +392,7 @@ internal class TCP2_MaterialInspector_PBS_SG : ShaderGUI
 			return;
 		}
 
-		BlendMode blendMode = BlendMode.Opaque;
+		var blendMode = BlendMode.Opaque;
 		if (oldShader.name.Contains("/Transparent/Cutout/"))
 		{
 			blendMode = BlendMode.Cutout;
@@ -400,7 +405,7 @@ internal class TCP2_MaterialInspector_PBS_SG : ShaderGUI
 		}
 		material.SetFloat("_Mode", (float)blendMode);
 
-		DetermineWorkflow( MaterialEditor.GetMaterialProperties (new Material[] { material }) );
+		DetermineWorkflow( MaterialEditor.GetMaterialProperties (new[] { material }) );
 		MaterialChanged(material, m_WorkflowMode);
 	}
 
@@ -431,15 +436,19 @@ internal class TCP2_MaterialInspector_PBS_SG : ShaderGUI
 
 	void DoEmissionArea( Material material )
 	{
-		bool showHelpBox = !HasValidEmissiveKeyword(material);
+		var showHelpBox = !HasValidEmissiveKeyword(material);
 
-		bool hadEmissionTexture = emissionMap.textureValue != null;
+		var hadEmissionTexture = emissionMap.textureValue != null;
 
 		// Texture and HDR color controls
+#if !UNITY_2018_1_OR_NEWER
 		m_MaterialEditor.TexturePropertyWithHDRColor(Styles.emissionText, emissionMap, emissionColorForRendering, m_ColorPickerHDRConfig, false);
+#else
+		m_MaterialEditor.TexturePropertyWithHDRColor(Styles.emissionText, emissionMap, emissionColorForRendering, false);
+#endif
 
 		// If texture was assigned and color was black set color to white
-		float brightness = emissionColorForRendering.colorValue.maxColorComponent;
+		var brightness = emissionColorForRendering.colorValue.maxColorComponent;
 		if (emissionMap.textureValue != null && !hadEmissionTexture && brightness <= 0f)
 			emissionColorForRendering.colorValue = Color.white;
 
@@ -454,7 +463,7 @@ internal class TCP2_MaterialInspector_PBS_SG : ShaderGUI
 
 	void DoSpecularMetallicArea()
 	{
-		bool hasGlossMap = false;
+		var hasGlossMap = false;
 		if (m_WorkflowMode == WorkflowMode.Specular)
 		{
 			hasGlossMap = specularMap.textureValue != null;
@@ -466,15 +475,15 @@ internal class TCP2_MaterialInspector_PBS_SG : ShaderGUI
 			m_MaterialEditor.TexturePropertySingleLine(Styles.metallicMapText, metallicMap, hasGlossMap ? null : metallic);
 		}
 
-		bool showSmoothnessScale = hasGlossMap;
+		var showSmoothnessScale = hasGlossMap;
 		if (smoothnessMapChannel != null)
 		{
-			int smoothnessChannel = (int)smoothnessMapChannel.floatValue;
+			var smoothnessChannel = (int)smoothnessMapChannel.floatValue;
 			if (smoothnessChannel == (int)SmoothnessMapChannel.AlbedoAlpha)
 				showSmoothnessScale = true;
 		}
 
-		int indentation = 2; // align with labels of texture properties
+		var indentation = 2; // align with labels of texture properties
 		m_MaterialEditor.ShaderProperty(showSmoothnessScale ? smoothnessScale : smoothness, showSmoothnessScale ? Styles.smoothnessScaleText : Styles.smoothnessText, indentation);
 
 		//++indentation;
@@ -504,7 +513,7 @@ internal class TCP2_MaterialInspector_PBS_SG : ShaderGUI
 				material.EnableKeyword("_ALPHATEST_ON");
 				material.DisableKeyword("_ALPHABLEND_ON");
 				material.DisableKeyword("_ALPHAPREMULTIPLY_ON");
-				material.renderQueue = (int)UnityEngine.Rendering.RenderQueue.AlphaTest;
+				material.renderQueue = (int)RenderQueue.AlphaTest;
 				break;
 			case BlendMode.Fade:
 				material.SetOverrideTag("RenderType", "Transparent");
@@ -514,7 +523,7 @@ internal class TCP2_MaterialInspector_PBS_SG : ShaderGUI
 				material.DisableKeyword("_ALPHATEST_ON");
 				material.EnableKeyword("_ALPHABLEND_ON");
 				material.DisableKeyword("_ALPHAPREMULTIPLY_ON");
-				material.renderQueue = (int)UnityEngine.Rendering.RenderQueue.Transparent;
+				material.renderQueue = (int)RenderQueue.Transparent;
 				break;
 			case BlendMode.Transparent:
 				material.SetOverrideTag("RenderType", "Transparent");
@@ -524,18 +533,17 @@ internal class TCP2_MaterialInspector_PBS_SG : ShaderGUI
 				material.DisableKeyword("_ALPHATEST_ON");
 				material.DisableKeyword("_ALPHABLEND_ON");
 				material.EnableKeyword("_ALPHAPREMULTIPLY_ON");
-				material.renderQueue = (int)UnityEngine.Rendering.RenderQueue.Transparent;
+				material.renderQueue = (int)RenderQueue.Transparent;
 				break;
 		}
 	}
 
 	static SmoothnessMapChannel GetSmoothnessMapChannel( Material material )
 	{
-		int ch = (int)material.GetFloat("_SmoothnessTextureChannel");
+		var ch = (int)material.GetFloat("_SmoothnessTextureChannel");
 		if (ch == (int)SmoothnessMapChannel.AlbedoAlpha)
 			return SmoothnessMapChannel.AlbedoAlpha;
-		else
-			return SmoothnessMapChannel.SpecularMetallicAlpha;
+		return SmoothnessMapChannel.SpecularMetallicAlpha;
 	}
 
 	static bool ShouldEmissionBeEnabled( Material mat, Color color )
@@ -556,7 +564,7 @@ internal class TCP2_MaterialInspector_PBS_SG : ShaderGUI
 		SetKeyword (material, "_PARALLAXMAP", material.GetTexture ("_ParallaxMap"));
 		SetKeyword (material, "_DETAIL_MULX2", material.GetTexture ("_DetailAlbedoMap") || material.GetTexture ("_DetailNormalMap"));
 
-		bool shouldEmissionBeEnabled = ShouldEmissionBeEnabled (material, material.GetColor("_EmissionColor"));
+		var shouldEmissionBeEnabled = ShouldEmissionBeEnabled (material, material.GetColor("_EmissionColor"));
 		SetKeyword (material, "_EMISSION", shouldEmissionBeEnabled);
 
 		if (material.HasProperty("_SmoothnessTextureChannel"))
@@ -565,7 +573,7 @@ internal class TCP2_MaterialInspector_PBS_SG : ShaderGUI
 		}
 
 		// Setup lightmap emissive flags
-		MaterialGlobalIlluminationFlags flags = material.globalIlluminationFlags;
+		var flags = material.globalIlluminationFlags;
 		if ((flags & (MaterialGlobalIlluminationFlags.BakedEmissive | MaterialGlobalIlluminationFlags.RealtimeEmissive)) != 0)
 		{
 			flags &= ~MaterialGlobalIlluminationFlags.EmissiveIsBlack;
@@ -581,11 +589,10 @@ internal class TCP2_MaterialInspector_PBS_SG : ShaderGUI
 		// Material animation might be out of sync with the material keyword.
 		// So if the emission support is disabled on the material, but the property blocks have a value that requires it, then we need to show a warning.
 		// (note: (Renderer MaterialPropertyBlock applies its values to emissionColorForRendering))
-		bool hasEmissionKeyword = material.IsKeywordEnabled ("_EMISSION");
+		var hasEmissionKeyword = material.IsKeywordEnabled ("_EMISSION");
 		if (!hasEmissionKeyword && ShouldEmissionBeEnabled (material, emissionColorForRendering.colorValue))
 			return false;
-		else
-			return true;
+		return true;
 	}
 
 	static void MaterialChanged(Material material, WorkflowMode workflowMode)

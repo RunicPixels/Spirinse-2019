@@ -1,5 +1,5 @@
 // Toony Colors Pro+Mobile Shaders
-// (c) 2014-2017 Jean Moreno
+// (c) 2014-2019 Jean Moreno
 
 #ifndef TOONYCOLORS_OUTLINE_INCLUDED
 	#define TOONYCOLORS_OUTLINE_INCLUDED

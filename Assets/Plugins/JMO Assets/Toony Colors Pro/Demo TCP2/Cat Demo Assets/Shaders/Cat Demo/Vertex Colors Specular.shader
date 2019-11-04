@@ -1,7 +1,7 @@
 ﻿// Upgrade NOTE: upgraded instancing buffer 'Props' to new syntax.
 
 // Toony Colors Pro+Mobile 2
-// (c) 2014-2017 Jean Moreno
+// (c) 2014-2019 Jean Moreno
 
 Shader "Toony Colors Pro 2/Examples/Cat Demo/Vertex Colors Specular"
 {
@@ -31,14 +31,14 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/Vertex Colors Specular"
 	[TCP2HeaderHelp(SPECULAR, Specular)]
 		//SPECULAR
 		_SpecColor ("Specular Color", Color) = (0.5, 0.5, 0.5, 1)
-		_Smoothness ("Smoothness", Range(0,1)) = 0.5
+		_Smoothness ("Roughness", Range(0,1)) = 0.5
 	[TCP2Separator]
 
 	[TCP2HeaderHelp(RIM, Rim)]
 		//RIM LIGHT
 		_RimColor ("Rim Color", Color) = (0.8,0.8,0.8,0.6)
-		_RimMin ("Rim Min", Range(0,1)) = 0.5
-		_RimMax ("Rim Max", Range(0,1)) = 1.0
+		_RimMin ("Rim Min", Range(0,2)) = 0.5
+		_RimMax ("Rim Max", Range(0,2)) = 1.0
 	[TCP2Separator]
 
 
@@ -67,6 +67,8 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/Vertex Colors Specular"
 		fixed _RimMin;
 		fixed _RimMax;
 		float4 _RimDir;
+
+		#define UV_MAINTEX uv_MainTex
 
 		struct Input
 		{
@@ -162,7 +164,7 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/Vertex Colors Specular"
 			half3 halfDir = SafeNormalize(lightDir + viewDir);
 			half roughness = s.Specular*s.Specular;
 			half nh = saturate(dot(IN_NORMAL, halfDir));
-			half spec = NDFBlinnPhong(nh, PercRoughnessToSpecPower(roughness));
+			half spec = NDFBlinnPhong(nh, PercRoughnessToSpecPower(roughness)) * s.Gloss;
 			spec *= atten;
 			fixed4 c;
 			c.rgb = s.Albedo * lightColor.rgb * ramp;
@@ -178,9 +180,9 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/Vertex Colors Specular"
 			c.rgb += s.Albedo * gi.indirect.diffuse;
 		#endif
 
-
 			//Rim light mask
 			c.rgb += ndl * lightColor.rgb * atten * s.Rim * _RimColor.rgb * _RimColor.a;
+
 			return c;
 		}
 
@@ -199,10 +201,17 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/Vertex Colors Specular"
 
 		void surf(Input IN, inout SurfaceOutputCustom o)
 		{
-			fixed4 mainTex = tex2D(_MainTex, IN.uv_MainTex);
+			fixed4 mainTex = tex2D(_MainTex, IN.UV_MAINTEX);
 
 			//Vertex Colors
 			float4 vertexColors = IN.color;
+		#if UNITY_VERSION >= 550
+		  #ifndef UNITY_COLORSPACE_GAMMA
+			vertexColors.rgb = GammaToLinearSpace(vertexColors.rgb);
+		  #endif
+		#else
+			vertexColors.rgb = IsGammaSpace() ? vertexColors.rgb : GammaToLinearSpace(vertexColors.rgb);
+		#endif
 			mainTex *= vertexColors;
 			o.Albedo = mainTex.rgb * _Color.rgb;
 			o.Alpha = mainTex.a * _Color.a;
@@ -220,7 +229,10 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/Vertex Colors Specular"
 			o.Rim = rim;
 
 			//Emission
-			o.Emission += mainTex.rgb * (vcolors.a * _EmissionColor.a) * _EmissionColor.rgb;
+			half3 emissiveColor = half3(1,1,1);
+			emissiveColor *= mainTex.rgb * vcolors.a;
+			emissiveColor *= _EmissionColor.rgb * _EmissionColor.a;
+			o.Emission += emissiveColor;
 		}
 
 		ENDCG

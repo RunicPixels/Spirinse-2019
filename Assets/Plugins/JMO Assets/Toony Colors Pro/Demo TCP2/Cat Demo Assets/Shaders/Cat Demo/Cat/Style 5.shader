@@ -1,7 +1,7 @@
 ﻿// Upgrade NOTE: upgraded instancing buffer 'Props' to new syntax.
 
 // Toony Colors Pro+Mobile 2
-// (c) 2014-2017 Jean Moreno
+// (c) 2014-2019 Jean Moreno
 
 Shader "Toony Colors Pro 2/Examples/Cat Demo/Cat/Style 5"
 {
@@ -36,7 +36,7 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/Cat/Style 5"
 	[TCP2HeaderHelp(SPECULAR, Specular)]
 		//SPECULAR
 		_SpecColor ("Specular Color", Color) = (0.5, 0.5, 0.5, 1)
-		_Smoothness ("Smoothness", Float) = 0.2
+		_Smoothness ("Size", Float) = 0.2
 	[TCP2Separator]
 
 	[TCP2HeaderHelp(SKETCH, Sketch)]
@@ -67,7 +67,7 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/Cat/Style 5"
 		[TCP2KeywordFilter(TCP2_ZSMOOTH_ON)] _Offset2 ("Z Offset 2", Float) = 0
 
 		//This property will be ignored and will draw the custom normals GUI instead
-		[TCP2OutlineNormalsGUI] __outline_gui_dummy__ ("unused", Float) = 0
+		[TCP2OutlineNormalsGUI] __outline_gui_dummy__ ("_unused_", Float) = 0
 	[TCP2Separator]
 
 
@@ -167,7 +167,7 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/Cat/Style 5"
 
 	#ifdef TCP2_OUTLINE_CONST_SIZE
 			//Camera-independent outline size
-			float dist = distance(_WorldSpaceCameraPos, mul(unity_ObjectToWorld, v.vertex));
+			float dist = distance(mul(unity_WorldToObject, float4(_WorldSpaceCameraPos, 0)).xyz, v.vertex.xyz);
 			#define SIZE	dist
 	#else
 			#define SIZE	1.0
@@ -189,7 +189,7 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/Cat/Style 5"
 
 		#define OUTLINE_COLOR _OutlineColor
 
-		float4 TCP2_Outline_Frag (v2f IN) : COLOR
+		float4 TCP2_Outline_Frag (v2f IN) : SV_Target
 		{
 	#if TCP2_OUTLINE_TEXTURED
 			return float4(IN.texlod, 1) * OUTLINE_COLOR;
@@ -217,6 +217,8 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/Cat/Style 5"
 		sampler2D _MainTex;
 		float _HSV_S;
 		fixed _Smoothness;
+
+		#define UV_MAINTEX uv_MainTex
 
 		struct Input
 		{
@@ -367,11 +369,13 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/Cat/Style 5"
 			float4 texcoord : TEXCOORD0;
 			float4 texcoord1 : TEXCOORD1;
 			float4 texcoord2 : TEXCOORD2;
+		#if defined(LIGHTMAP_ON) && defined(DIRLIGHTMAP_COMBINED)
+			float4 tangent : TANGENT;
+		#endif
 	#if UNITY_VERSION >= 550
 			UNITY_VERTEX_INPUT_INSTANCE_ID
 	#endif
 		};
-		
 
 		//================================================================
 		// VERTEX FUNCTION
@@ -391,7 +395,7 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/Cat/Style 5"
 
 		void surf(Input IN, inout SurfaceOutputCustom o)
 		{
-			fixed4 mainTex = tex2D(_MainTex, IN.uv_MainTex);
+			fixed4 mainTex = tex2D(_MainTex, IN.UV_MAINTEX);
 			
 			//Saturation control
 			float3 mainTexLuminance = Luminance(mainTex.rgb);
