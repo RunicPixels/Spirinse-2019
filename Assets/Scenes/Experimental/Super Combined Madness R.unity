@@ -13993,7 +13993,7 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 1, g: 0.57009107, b: 0, a: 1}
-  m_Intensity: 4
+  m_Intensity: 2
   m_Range: 5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -41445,6 +41445,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rhys-Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 3622249284619769651, guid: cd30d4d1f336cfe43ab8e9a657e458f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3622249284619769647, guid: cd30d4d1f336cfe43ab8e9a657e458f2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -52424,7 +52429,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1665379720}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.68, y: -12.98, z: 0}
+  m_LocalPosition: {x: 2.74, y: -12.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1882390381}
@@ -73315,7 +73320,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh172282
+  m_Name: pb_Mesh260424
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
