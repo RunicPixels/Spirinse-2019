@@ -10798,13 +10798,13 @@ GameObject:
   m_Component:
   - component: {fileID: 3435031174896469566}
   - component: {fileID: 3435031174896469567}
+  - component: {fileID: 178582709}
   - component: {fileID: 3435031174896469565}
   - component: {fileID: 8724849549467373818}
   - component: {fileID: 3435031174896469564}
   - component: {fileID: 3435031174896469538}
   - component: {fileID: 3435031174896469539}
   - component: {fileID: 3435031174896469536}
-  - component: {fileID: 178582709}
   m_Layer: 9
   m_Name: Defender
   m_TagString: Player
@@ -10860,6 +10860,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.2}
   m_EdgeRadius: 0
+--- !u!114 &178582709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3435031174896469561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e21fe28c82adb144b6860150fb4fdc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  model: {fileID: 3435031175023981246}
+  tempControls: {fileID: 3435031174896469565}
+  rotateSpeed: 500
 --- !u!114 &3435031174896469565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10881,6 +10896,8 @@ MonoBehaviour:
   hAcceleration: 34
   vAcceleration: 34
   speed: 12
+  altitudeModifier: 2
+  altitudeVelocity: 1
   dashAbility: {fileID: 8724849549467373818}
   laser: 0
   laserLength: 12
@@ -11011,7 +11028,7 @@ Rigidbody2D:
   m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: dbc84264839913f4fb4600556fca296c, type: 2}
+  m_Material: {fileID: 0}
   m_Interpolate: 2
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -11232,20 +11249,6 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
---- !u!114 &178582709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3435031174896469561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e21fe28c82adb144b6860150fb4fdc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  model: {fileID: 3435031175023981246}
-  rotateSpeed: 500
 --- !u!1 &3435031175023981241
 GameObject:
   m_ObjectHideFlags: 0
@@ -16309,6 +16312,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3435031174896469566}
     m_Modifications:
+    - target: {fileID: 9159956823212384833, guid: 4b431bab3901d8c4e84d80ab37fd1282,
+        type: 3}
+      propertyPath: m_Name
+      value: HammerContainer
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159956823212384833, guid: 4b431bab3901d8c4e84d80ab37fd1282,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9159956823212384832, guid: 4b431bab3901d8c4e84d80ab37fd1282,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16362,16 +16375,6 @@ PrefabInstance:
     - target: {fileID: 9159956823212384832, guid: 4b431bab3901d8c4e84d80ab37fd1282,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9159956823212384833, guid: 4b431bab3901d8c4e84d80ab37fd1282,
-        type: 3}
-      propertyPath: m_Name
-      value: HammerContainer
-      objectReference: {fileID: 0}
-    - target: {fileID: 9159956823212384833, guid: 4b431bab3901d8c4e84d80ab37fd1282,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7011675549810170935, guid: 4b431bab3901d8c4e84d80ab37fd1282,

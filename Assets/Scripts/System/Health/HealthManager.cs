@@ -90,15 +90,25 @@ namespace Spirinse.System.Health
         public void HitMeditator(int damage)
         {
             if (iFramesCalc > 0) return;
-            iFramesCalc = iFrames;
+            
             DoDamage(shieldManager.DamageShield(damage, Health));
+
+            SetIFramesCD(iFrames);
+
         }
 
         public void HitDefender(int damage)
         {
             if (iFramesCalc > 0) return;
-            iFramesCalc = iFrames;
+
+            SetIFramesCD(iFrames);
+
             shieldManager.DamageShield(damage, 0);
+        }
+
+        public void SetIFramesCD(float amount)
+        {
+            iFramesCalc = amount;
         }
 
         private void DoDamage(int damage = 1)

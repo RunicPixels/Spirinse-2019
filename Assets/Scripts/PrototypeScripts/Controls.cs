@@ -60,7 +60,8 @@ public class Controls : MonoBehaviour
     // Privates 
     private LineRenderer lineRenderer;
     private Rigidbody2D rb;
-    
+
+    private float logVelocity;
     private Vector2 direction;
     private float speedMultiplier = 1f;
     private Vector2 dashVelocity = new Vector2(0,0);
@@ -69,7 +70,7 @@ public class Controls : MonoBehaviour
     private bool goDoDash = false;
 
     public Action<bool> playerMovementAction; // Move this to input manager.
-
+    public Action<float> useDashAction;
     // Start is called before the first frame update
     private void Start()
     {
@@ -95,7 +96,7 @@ public class Controls : MonoBehaviour
 
         if (Input.GetButtonDown("Fire3") && dashing == false && chiDashConsumption < chi)
         {
-            StartCoroutine(_Dashing(rb.velocity.normalized));
+            StartCoroutine(_Dashing(direction.normalized));
         }
 
         if (chi < 1f)
@@ -111,30 +112,34 @@ public class Controls : MonoBehaviour
 
     private void FixedUpdate()
     {
+        CalculateLogVelocity();
+
         rb.AddForce(CalculateVelocity());
 
         rb.gravityScale = CalculateGravity();
 
         LimitVelocity();
     }
-
-    private Vector2 CalculateVelocity()
+    private void CalculateLogVelocity()
     {
-        var velocity = Time.fixedDeltaTime * 60 * speedMultiplier * new Vector2(direction.x * hAcceleration * altitudeVelocity, direction.y * vAcceleration * altitudeVelocity);
-        
-        if(velocity.y < -0.1f)
+        if (rb.velocity.y < -0.1f)
         {
             altitudeVelocity -= rb.velocity.y * 0.11f * Time.fixedDeltaTime;
-            altitudeVelocity = Mathf.Min(altitudeVelocity, altitudeModifier);
         }
         else if (altitudeVelocity > 1f)
         {
             altitudeVelocity -= rb.velocity.y * 0.07f * Time.fixedDeltaTime;
-            altitudeVelocity -= 0.5f * Time.fixedDeltaTime;
-            
-        }
+            altitudeVelocity -= (0.5f + altitudeVelocity * 0.4f) * Time.fixedDeltaTime;
 
-        if (altitudeVelocity < 1f) altitudeVelocity = 1f;
+        }
+        if (altitudeVelocity < 0f) altitudeVelocity = 0f;
+
+        logVelocity = Mathf.Max(1f, 4f * Mathf.Log(altitudeVelocity, 4f));
+    }
+
+    private Vector2 CalculateVelocity()
+    {
+        var velocity = Time.fixedDeltaTime * 60 * speedMultiplier * new Vector2(direction.x * hAcceleration * logVelocity, direction.y * vAcceleration * logVelocity);
 
         //Debug.Log(velocity.magnitude);
         if (velocity.magnitude > 1f)
@@ -151,8 +156,6 @@ public class Controls : MonoBehaviour
             velocity *= dashAbility.GetDashSpeedMultiplier;
             velocity += dashAbility.GetDashVelocity;
         }
-
-
 
         return velocity;
     }
@@ -171,11 +174,11 @@ public class Controls : MonoBehaviour
     {
         if (rb.velocity.magnitude > speed * altitudeVelocity && dashing == false)
         {
-            rb.velocity = rb.velocity.normalized * Mathf.Lerp(rb.velocity.magnitude, speed * altitudeVelocity, 0.98f);
+            rb.velocity = rb.velocity.normalized * Mathf.Lerp(rb.velocity.magnitude, speed * logVelocity, 0.98f);
         }
-        else if (rb.velocity.magnitude > dashAbility.GetDashSpeed && dashing == true)
+        else if (rb.velocity.magnitude > dashAbility.GetDashSpeed * logVelocity && dashing == true)
         {
-            rb.velocity = rb.velocity.normalized * dashAbility.GetDashSpeed;
+            rb.velocity = rb.velocity.normalized * dashAbility.GetDashSpeed * logVelocity;
         }
     }
 
@@ -185,6 +188,7 @@ public class Controls : MonoBehaviour
     }*/
     private IEnumerator<float> _Dashing(Vector2 direction)
     {
+        useDashAction?.Invoke(dashAbility.GetDuration());
         goDoDash = false;
         var trailSystemMain = trailSystem.main; // NEEDS particle system Manager
         var tLife = trailSystem.main.startLifetime;

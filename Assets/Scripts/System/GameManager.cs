@@ -64,6 +64,9 @@ namespace Spirinse.System
             meditator.TakeDamageAction                 += HealthManager.HitMeditator;
             defender.TakeDamageAction                  += HealthManager.HitDefender;
 
+            // Manage Player Action Events
+            defender.tempControls.useDashAction        += HealthManager.SetIFramesCD;
+
             // Game Over Events
             StateManager.GameOverEvent                 += InitGame;
 
