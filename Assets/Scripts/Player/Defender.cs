@@ -21,12 +21,12 @@ namespace Spirinse.Player
         }
 
         // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
             rb = GetComponent<Rigidbody2D>();
         }
 
-        void Update()
+        private void Update()
         {
             // TEMPORARY
             var dir = rb.velocity;
