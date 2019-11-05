@@ -14,20 +14,12 @@ namespace Spirinse.System
 
         private static GameManager Instance;
 
-        [field: SerializeField]
-        public HealthManager HealthManager { get; protected set; }
-
-        [field: SerializeField]
-        public PlayerManager PlayerManager { get; protected set; }
-
-        [field: SerializeField]
-        public UIManager UiManager { get; protected set; }
-
-        [field: SerializeField]
-        public InputManager InputManager { get; protected set; }
-
-        [field: SerializeField]
-        public GameStateManager StateManager { get; protected set; }
+        [field: SerializeField] public HealthManager HealthManager { get; protected set; }
+        [field: SerializeField] public PlayerManager PlayerManager { get; protected set; }
+        [field: SerializeField] public UIManager UiManager { get; protected set; }
+        [field: SerializeField] public InputManager InputManager { get; protected set; }
+        [field: SerializeField] public GameStateManager StateManager { get; protected set; }
+        [field: SerializeField] public CleanseManager CleanseManager { get; protected set; }
 
         // Start is called before the first frame update
         private void Start()
@@ -48,6 +40,7 @@ namespace Spirinse.System
             if (PlayerManager == null)  PlayerManager   = PlayerManager.Instance;
             if (UiManager == null)      UiManager       = UIManager.Instance;
             if (StateManager == null)   StateManager    = GameStateManager.Instance;
+            if (CleanseManager == null) CleanseManager  = CleanseManager.Instance;
         }
 
         private void SetupEvents()
@@ -63,17 +56,24 @@ namespace Spirinse.System
             HealthManager.ChangeMaxHealthEvent         += UiManager.GetHealthUI.ChangeMaxHealth;
 
             shieldManager.ChangeShieldEvent            += UiManager.GetShieldUI.ChangeCurrentShield;
+            shieldManager.ChangeShieldEvent            += PlayerManager.player.meditator.shieldVisuals.SetShieldVisuals;
             shieldManager.ChangeMaxShieldEvent         += UiManager.GetShieldUI.ChangeMaxShield;
         
             // Manage Player Events
-            var meditator = PlayerManager.player.meditator;
-            var defender = PlayerManager.player.defender;
+            var meditator                               = PlayerManager.player.meditator;
+            var defender                                = PlayerManager.player.defender;
 
             meditator.TakeDamageAction                 += HealthManager.HitMeditator;
             defender.TakeDamageAction                  += HealthManager.HitDefender;
 
+            // Manage Player Action Events
+            defender.tempControls.useDashAction        += HealthManager.SetIFramesCD;
+
             // Game Over Events
             StateManager.GameOverEvent                 += InitGame;
+
+            // Cleansinator
+
 
             // ...
         }

@@ -10,7 +10,7 @@ public class SetCameraDistance : MonoBehaviour
     void Update()
     {
         var position = transform.position;
-        var distance = Mathf.Max(18f,baseDistance + Grow.currentGrowth);
+        var distance = Mathf.Max(25f,baseDistance + Grow.currentGrowth);
         position = new Vector3(position.x,position.y,-distance);
         transform.position = position;
     }

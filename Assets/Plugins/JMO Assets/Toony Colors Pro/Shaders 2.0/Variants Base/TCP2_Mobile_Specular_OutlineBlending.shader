@@ -1,6 +1,6 @@
 ﻿
 // Toony Colors Pro+Mobile 2
-// (c) 2014-2017 Jean Moreno
+// (c) 2014-2019 Jean Moreno
 
 
 Shader "Hidden/Toony Colors Pro 2/Variants/Mobile Specular OutlineBlending"
@@ -57,7 +57,7 @@ Shader "Hidden/Toony Colors Pro 2/Variants/Mobile Specular OutlineBlending"
 		
 		#include "../Include/TCP2_Include.cginc"
 		
-		#pragma surface surf ToonyColorsSpec noforwardadd interpolateview halfasview
+		#pragma surface surf ToonyColorsSpec nodirlightmap noforwardadd halfasview
 		#pragma target 2.0
 		
 		#pragma shader_feature TCP2_DISABLE_WRAPPED_LIGHT

@@ -13,6 +13,9 @@ namespace Spirinse.System.Health
         private static HealthManager instance = null;
         public static HealthManager Instance => instance;
 
+        private float iFrames = 0.5f;
+        private float iFramesCalc;
+
         [SerializeField] protected int _health;
         protected int Health {
             set {
@@ -57,6 +60,15 @@ namespace Spirinse.System.Health
             ChangeMaxHealthEvent -= CheckDeath;
         }
 
+        private void Update()
+        {
+            if (iFramesCalc > 0)
+            {
+                iFramesCalc -= Time.deltaTime;
+                // Create iFrame visuals;
+            }
+        }
+
         [ClickableFunction]
         public void InitHealth()
         {
@@ -77,12 +89,26 @@ namespace Spirinse.System.Health
 
         public void HitMeditator(int damage)
         {
+            if (iFramesCalc > 0) return;
+            
             DoDamage(shieldManager.DamageShield(damage, Health));
+
+            SetIFramesCD(iFrames);
+
         }
 
         public void HitDefender(int damage)
         {
+            if (iFramesCalc > 0) return;
+
+            SetIFramesCD(iFrames);
+
             shieldManager.DamageShield(damage, 0);
+        }
+
+        public void SetIFramesCD(float amount)
+        {
+            iFramesCalc = amount;
         }
 
         private void DoDamage(int damage = 1)

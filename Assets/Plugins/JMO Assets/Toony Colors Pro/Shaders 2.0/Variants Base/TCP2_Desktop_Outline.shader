@@ -1,6 +1,6 @@
 ﻿
 // Toony Colors Pro+Mobile 2
-// (c) 2014-2017 Jean Moreno
+// (c) 2014-2019 Jean Moreno
 
 
 Shader "Hidden/Toony Colors Pro 2/Variants/Desktop Outline"
@@ -48,7 +48,7 @@ Shader "Hidden/Toony Colors Pro 2/Variants/Desktop Outline"
 		
 		#include "../Include/TCP2_Include.cginc"
 		
-		#pragma surface surf ToonyColors 
+		#pragma surface surf ToonyColors nodirlightmap 
 		#pragma target 3.0
 		
 		#pragma shader_feature TCP2_DISABLE_WRAPPED_LIGHT

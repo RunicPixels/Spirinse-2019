@@ -1,19 +1,20 @@
 ﻿// Toony Colors Pro+Mobile 2
-// (c) 2014-2017 Jean Moreno
+// (c) 2014-2019 Jean Moreno
 
 //#define SHOW_DEFAULT_INSPECTOR
 
-using UnityEngine;
-using UnityEditor;
-using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
+using UnityEngine;
+using UnityEngine.Rendering;
+using ToonyColorsPro.Utilities;
 
 // Custom Inspector when using the Outline Only shaders
 
 public class TCP2_OutlineInspector : MaterialEditor
 {
 	//Properties
-	private Material targetMaterial { get { return this.target as Material; } }
+	private Material targetMaterial { get { return target as Material; } }
 	private Shader mCurrentShader;
 	private bool mIsOutlineBlending;
 	private bool mShaderModel2;
@@ -36,7 +37,7 @@ public class TCP2_OutlineInspector : MaterialEditor
 	{
 		if(targetMaterial != null && targetMaterial.shader != null)
 		{
-			string name = targetMaterial.shader.name;
+			var name = targetMaterial.shader.name;
 			mIsOutlineBlending = name.ToLowerInvariant().Contains("blended");
 			mShaderModel2 = name.ToLowerInvariant().Contains("sm2");
 		}
@@ -44,7 +45,7 @@ public class TCP2_OutlineInspector : MaterialEditor
 
 	public override void OnInspectorGUI()
 	{
-		if(!this.isVisible)
+		if(!isVisible)
 		{
 			return;
 		}
@@ -63,8 +64,8 @@ public class TCP2_OutlineInspector : MaterialEditor
 		UpdateFeaturesFromShader();
 
 		//Get material keywords
-		List<string> keywordsList = new List<string>(targetMaterial.shaderKeywords);
-		bool updateKeywords = false;
+		var keywordsList = new List<string>(targetMaterial.shaderKeywords);
+		var updateKeywords = false;
 
 		//Header
 		TCP2_GUI.HeaderBig("TOONY COLORS PRO 2 - Outlines Only");
@@ -72,15 +73,15 @@ public class TCP2_OutlineInspector : MaterialEditor
 
 		//Iterate Shader properties
 		serializedObject.Update();
-		SerializedProperty mShader = serializedObject.FindProperty("m_Shader");
+		var mShader = serializedObject.FindProperty("m_Shader");
 		if(isVisible && !mShader.hasMultipleDifferentValues && mShader.objectReferenceValue != null)
 		{
-			EditorGUIUtility.labelWidth = TCP2_Utils.ScreenWidthRetina - 120f;
+			EditorGUIUtility.labelWidth = Utils.ScreenWidthRetina - 120f;
 			EditorGUIUtility.fieldWidth = 64f;
 
 			EditorGUI.BeginChangeCheck();
 
-			MaterialProperty[] props = GetMaterialProperties(this.targets);
+			var props = GetMaterialProperties(targets);
 
 			//UNFILTERED PARAMETERS ==============================================================
 			
@@ -95,27 +96,27 @@ public class TCP2_OutlineInspector : MaterialEditor
 			ShowFilteredProperties("#OUTLINE#", props, false);
 			if(!mShaderModel2)
 			{
-				bool texturedOutline = TCP2_Utils.ShaderKeywordToggle("TCP2_OUTLINE_TEXTURED", "Outline Color from Texture", "If enabled, outline will take an averaged color from the main texture multiplied by Outline Color", keywordsList, ref updateKeywords);
+				var texturedOutline = Utils.ShaderKeywordToggle("TCP2_OUTLINE_TEXTURED", "Outline Color from Texture", "If enabled, outline will take an averaged color from the main texture multiplied by Outline Color", keywordsList, ref updateKeywords);
 				if(texturedOutline)
 				{
 					ShowFilteredProperties("#OUTLINETEX#", props);
 				}
 			}
 
-			TCP2_Utils.ShaderKeywordToggle("TCP2_OUTLINE_CONST_SIZE", "Constant Size Outline", "If enabled, outline will have a constant size independently from camera distance", keywordsList, ref updateKeywords);
-			if( TCP2_Utils.ShaderKeywordToggle("TCP2_ZSMOOTH_ON", "Correct Z Artefacts", "Enable the outline z-correction to try to hide artefacts from complex models", keywordsList, ref updateKeywords) )
+			Utils.ShaderKeywordToggle("TCP2_OUTLINE_CONST_SIZE", "Constant Size Outline", "If enabled, outline will have a constant size independently from camera distance", keywordsList, ref updateKeywords);
+			if( Utils.ShaderKeywordToggle("TCP2_ZSMOOTH_ON", "Correct Z Artefacts", "Enable the outline z-correction to try to hide artefacts from complex models", keywordsList, ref updateKeywords) )
 			{
 				ShowFilteredProperties("#OUTLINEZ#", props);
 			}
 			
 			//Smoothed Normals -----------------------------------------------------------------------
 			TCP2_GUI.Header("OUTLINE NORMALS", "Defines where to take the vertex normals from to draw the outline.\nChange this when using a smoothed mesh to fill the gaps shown in hard-edged meshes.");
-			TCP2_Utils.ShaderKeywordRadio(null, new string[]{"TCP2_NONE", "TCP2_COLORS_AS_NORMALS", "TCP2_TANGENT_AS_NORMALS", "TCP2_UV2_AS_NORMALS"}, new GUIContent[]
+			Utils.ShaderKeywordRadio(null, new[]{"TCP2_NONE", "TCP2_COLORS_AS_NORMALS", "TCP2_TANGENT_AS_NORMALS", "TCP2_UV2_AS_NORMALS"}, new[]
 			{
 				new GUIContent("Regular", "Use regular vertex normals"),
 				new GUIContent("Vertex Colors", "Use vertex colors as normals (with smoothed mesh)"),
 				new GUIContent("Tangents", "Use tangents as normals (with smoothed mesh)"),
-				new GUIContent("UV2", "Use second texture coordinates as normals (with smoothed mesh)"),
+				new GUIContent("UV2", "Use second texture coordinates as normals (with smoothed mesh)")
 			},
 			keywordsList, ref updateKeywords);
 
@@ -123,7 +124,7 @@ public class TCP2_OutlineInspector : MaterialEditor
 
 			if(mIsOutlineBlending)
 			{
-				MaterialProperty[] blendProps = GetFilteredProperties("#BLEND#", props);
+				var blendProps = GetFilteredProperties("#BLEND#", props);
 
 				if(blendProps.Length != 2)
 				{
@@ -133,16 +134,16 @@ public class TCP2_OutlineInspector : MaterialEditor
 				{
 					TCP2_GUI.Header("OUTLINE BLENDING", "BLENDING EXAMPLES:\nAlpha Transparency: SrcAlpha / OneMinusSrcAlpha\nMultiply: DstColor / Zero\nAdd: One / One\nSoft Add: OneMinusDstColor / One");
 
-					UnityEngine.Rendering.BlendMode blendSrc = (UnityEngine.Rendering.BlendMode)blendProps[0].floatValue;
-					UnityEngine.Rendering.BlendMode blendDst = (UnityEngine.Rendering.BlendMode)blendProps[1].floatValue;
+					var blendSrc = (BlendMode)blendProps[0].floatValue;
+					var blendDst = (BlendMode)blendProps[1].floatValue;
 
 					EditorGUI.BeginChangeCheck();
-					float f = EditorGUIUtility.fieldWidth;
-					float l = EditorGUIUtility.labelWidth;
+					var f = EditorGUIUtility.fieldWidth;
+					var l = EditorGUIUtility.labelWidth;
 					EditorGUIUtility.fieldWidth = 110f;
 					EditorGUIUtility.labelWidth -= Mathf.Abs(f - EditorGUIUtility.fieldWidth);
-					blendSrc = (UnityEngine.Rendering.BlendMode)EditorGUILayout.EnumPopup("Source Factor", blendSrc);
-					blendDst = (UnityEngine.Rendering.BlendMode)EditorGUILayout.EnumPopup("Destination Factor", blendDst);
+					blendSrc = (BlendMode)EditorGUILayout.EnumPopup("Source Factor", blendSrc);
+					blendDst = (BlendMode)EditorGUILayout.EnumPopup("Destination Factor", blendDst);
 					EditorGUIUtility.fieldWidth = f;
 					EditorGUIUtility.labelWidth = l;
 					if(EditorGUI.EndChangeCheck())
@@ -168,7 +169,7 @@ public class TCP2_OutlineInspector : MaterialEditor
 		{
 			if(targets != null && targets.Length > 0)
 			{
-				foreach(Object t in targets)
+				foreach(var t in targets)
 				{
 					(t as Material).shaderKeywords = keywordsList.ToArray();
 					EditorUtility.SetDirty(t);
@@ -191,8 +192,8 @@ public class TCP2_OutlineInspector : MaterialEditor
 		if(indent)
 			EditorGUI.indentLevel++;
 
-		bool propertiesShown = false;
-		foreach(MaterialProperty p in properties)
+		var propertiesShown = false;
+		foreach(var p in properties)
 			propertiesShown |= ShaderMaterialPropertyImpl(p, filter);
 
 		if(indent)
@@ -203,9 +204,9 @@ public class TCP2_OutlineInspector : MaterialEditor
 
 	private MaterialProperty[] GetFilteredProperties(string filter, MaterialProperty[] properties, bool indent = true)
 	{
-		List<MaterialProperty> propList = new List<MaterialProperty>();
+		var propList = new List<MaterialProperty>();
 
-		foreach(MaterialProperty p in properties)
+		foreach(var p in properties)
 		{
 			if(p.displayName.Contains(filter))
 				propList.Add(p);
@@ -217,7 +218,7 @@ public class TCP2_OutlineInspector : MaterialEditor
 	private bool ShaderMaterialPropertyImpl(MaterialProperty property, string filter = null)
 	{
 		//Filter
-		string displayName = property.displayName;
+		var displayName = property.displayName;
 		if(filter != null)
 		{
 			if(!displayName.Contains(filter))
@@ -270,7 +271,7 @@ public class TCP2_OutlineInspector : MaterialEditor
 			break;
 
 		default:
-			EditorGUILayout.LabelField("Unknown Material Property Type: " + property.type.ToString());
+			EditorGUILayout.LabelField("Unknown Material Property Type: " + property.type);
 			break;
 		}
 

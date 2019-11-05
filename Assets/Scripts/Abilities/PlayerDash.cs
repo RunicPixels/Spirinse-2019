@@ -2,16 +2,15 @@
 
 public class PlayerDash : BaseAbility
 {
-    // Gravity 
-    [SerializeField] protected float gravityScale;
 
     // Speed
     [SerializeField] protected float dashSpeed;
     [SerializeField] protected float dashSpeedMultiplier;
     [SerializeField] protected float stopBeforeDash = 0.2f;
     [SerializeField] protected Vector2 dashVelocity = new Vector2(0, 0);
-    
+
     // Curves
+    [SerializeField] protected AnimationCurve gravityCurve;
     [SerializeField] protected AnimationCurve dashCurve;
     [SerializeField] protected AnimationCurve dashCameraCurve;
 
@@ -22,7 +21,6 @@ public class PlayerDash : BaseAbility
 
     private Vector2 direction;
 
-    public float GetGravityScale => gravityScale;
     public float GetDashSpeed => dashSpeed;
     public float GetDashSpeedMultiplier => dashSpeedMultiplier;
     public float GetStopBeforeDash => stopBeforeDash;
@@ -69,6 +67,10 @@ public class PlayerDash : BaseAbility
         return 1f - (currentDuration / duration);
     }
 
+    public virtual float GetGravityScale()
+    {
+        return gravityCurve.Evaluate(GetProgression());
+    }
     public float GetCurveProgression(CurveType type)
     {
         var progression = GetProgression();

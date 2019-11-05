@@ -57,7 +57,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 931f595ce4ebb154ebc6923cf1a21e54, type: 2}
+  - {fileID: 2100000, guid: 7a82abf81fba81d4e9d0b6329540e936, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10469,10 +10469,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4178158d1f387b442947c664fae5b562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 6
   health: 5
   animator: {fileID: 2275836241694124329}
   cured: 0
+  target: {fileID: 0}
   iFrames: 0
   stunned: 0
   hitParticles: {fileID: 4328785497082149364}
@@ -10509,9 +10510,9 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!95 &2275836241694124329
 Animator:
@@ -10547,7 +10548,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 5
 --- !u!1 &4182230981329213809
 GameObject:
   m_ObjectHideFlags: 0

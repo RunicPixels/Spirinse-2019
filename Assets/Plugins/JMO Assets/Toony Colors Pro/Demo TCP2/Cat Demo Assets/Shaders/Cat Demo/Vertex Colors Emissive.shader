@@ -1,7 +1,7 @@
 ﻿// Upgrade NOTE: upgraded instancing buffer 'Props' to new syntax.
 
 // Toony Colors Pro+Mobile 2
-// (c) 2014-2017 Jean Moreno
+// (c) 2014-2019 Jean Moreno
 
 Shader "Toony Colors Pro 2/Examples/Cat Demo/Vertex Colors Emissive"
 {
@@ -49,6 +49,8 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/Vertex Colors Emissive"
 		fixed4 _Color;
 		sampler2D _MainTex;
 		half4 _EmissionColor;
+
+		#define UV_MAINTEX uv_MainTex
 
 		struct Input
 		{
@@ -139,7 +141,7 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/Vertex Colors Emissive"
 
 		void surf(Input IN, inout SurfaceOutputCustom o)
 		{
-			fixed4 mainTex = tex2D(_MainTex, IN.uv_MainTex);
+			fixed4 mainTex = tex2D(_MainTex, IN.UV_MAINTEX);
 
 			//Vertex Colors
 			float4 vertexColors = IN.color;
@@ -148,7 +150,10 @@ Shader "Toony Colors Pro 2/Examples/Cat Demo/Vertex Colors Emissive"
 			o.Alpha = mainTex.a * _Color.a;
 
 			//Emission
-			o.Emission += mainTex.rgb * (vcolors.a * _EmissionColor.a) * _EmissionColor.rgb;
+			half3 emissiveColor = half3(1,1,1);
+			emissiveColor *= mainTex.rgb * vcolors.a;
+			emissiveColor *= _EmissionColor.rgb * _EmissionColor.a;
+			o.Emission += emissiveColor;
 		}
 
 		ENDCG

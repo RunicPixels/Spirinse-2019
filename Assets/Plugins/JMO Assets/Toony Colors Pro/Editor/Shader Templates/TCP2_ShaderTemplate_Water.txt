@@ -1,27 +1,23 @@
 // Toony Colors Pro+Mobile 2
-// (c) 2014-2017 Jean Moreno
+// (c) 2014-2019 Jean Moreno
 #NAME=Water
 #INFO=Water Template  Use this template to generate stylized water shaders.
 #CONFIG=water
 #FEATURES
+dd_start	lbl=SHADING/SURFACE
+---
 mult	lbl=Lighting Function		kw=Unity 5|,Unity 4 (Legacy)|LIGHTING_UNITY4	nohelp	tt=Which Surface Shader lighting function model to use.\nTCP2 before v2.3.3 was using the Legacy one; if you experience issues with your shaders, try to use it as well.
 ---
 mult	lbl=Water UVs				kw=From Mesh|,World Space Planar|WORLDSPACE_UV		nohelp		tt=Defines how to apply the UVs to the textures
 sngl	lbl=Second Texture			kw=SECOND_TEX										nohelp		tt=Use a secondary texture for extra detail
-space	space=4
-header	lbl=Shading
-#mult	lbl=Ramp Style				kw=Slider Ramp|,Texture Ramp|TEXTURE_RAMP				tt=Defines the transitioning between dark and lit areas of the model
-#sngl	lbl=Separated Ramps			kw=SEPARATE_RAMPS		excl=TEXTURE_RAMP	nohelp	tt=Separates the ramp settings between the main directional light and the other lights (like in the PBS shaders)
-
+---
 mult	lbl=Ramp Style				kw=Slider Ramp|,RGB Slider Ramp|RGB_RAMP,Texture Ramp|TEXTURE_RAMP		hlptop=ramp_style_sg				tt=Defines the transitioning between dark and lit areas of the model
 mult	lbl=Ramp Control			kw=Global|,Main + Other Lights|RAMP_MAIN_OTHER,Main + Light Type|RAMP_MAIN_LIGHTTYPE	toggles=RAMP_SEPARATED	hlptop=ramp_control_sg		tt=Defines how many ramp controls the material will have:\n\nGlobal: one control for all lights\n\nMain + Other Lights: one control for the main directional light and one for all other lights\n\nMain + Light Type: one control for the main directional light and one for each light type (directional, point, spot)
 sngl	lbl=Bypass Point light falloff	kw=BYPASS_POINT_FALLOFF							nohelp	tt=Bypass Unity's built-in point light falloff and only use the TCP2 ramp instead
 sngl	lbl=Bypass Spot light falloff	kw=BYPASS_SPOT_FALLOFF							nohelp	tt=Bypass Unity's built-in spot light falloff and only use the TCP2 ramp instead
 ---
-#sngl	lbl=Wrapped Lighting		kw=WRAPPED_LIGHTING	nohelp					tt=Enable wrapped diffuse lighting
 mult	lbl=Wrapped Lighting		kw=Off|,Half|WRAPPED_LIGHTING,Custom|WRAP_CUSTOM		tt=Enable wrapped lighting, with different levels of control
 ---
-#sngl	lbl=Diffuse Tint			kw=DIFFUSE_TINT											tt=Adds a diffuse tint color, to add some subtle coloring to the diffuse lighting
 sngl	lbl=Colors Multipliers		kw=COLOR_MULTIPLIERS						nohelp	tt=Adds multiplier values for highlight and shadow colors to enhance contrast or colors
 sngl	lbl=Shadow Color (other lights)	kw=ENABLE_SHADOW_2ND_LIGHTS		nohelp	tt=Enable shadow color for additive lights; this means that the model will get some tint in unlit areas when using secondary lights. This was the default behavior before v2.3.3.
 ---
@@ -31,6 +27,8 @@ sngl	lbl=Vertex Colors			kw=VCOLORS												tt=Multiplies the color with vert
 sngl	lbl=Gamma to Linear Space	kw=VCOLORS_LINEAR	needs=VCOLORS	indent	nohelp		tt=Converts the vertex color from gamma to linear space (when linear color space is enabled)
 mask	lbl=Color Mask				msk=COLORMASK	ch=COLORMASK_CHANNEL	kw=COLORMASK	dispName=Color		hlptop=Color Mask
 sngl	lbl=Separate Color			kw=COLORMASK_SEPARATE					needs=COLORMASK						indent			nohelp			tt=Use a separate masked color (if disabled, will use the main Color property)
+---
+sngl	lbl=Backfaces Color			kw=CULL_BACKFACE_COLOR	needs=CULL_OFF						nohelp		tt=Use a different water color for backfaces
 ---
 sngl	lbl=Specular			kw=SPECULAR
 mask	lbl=Specular Mask	msk=SPEC_MASK		ch=SPEC_MASK_CHANNEL		kw=SPECULAR_MASK	dispName=Specular	needs=SPECULAR	indent	nohelp		tt=Enables specular mask (gloss map)
@@ -62,23 +60,24 @@ sngl	lbl=Disable Obj-Space Offset	kw=NO_SKETCH_OFFSET		needsOr=SKETCH,SKETCH_GRA
 mult	lbl=Custom Ambient		kw=Off|,Cubemap Ambient|CUBE_AMBIENT,Directional Ambient|DIRAMBIENT		tt=Custom ambient lighting
 sngl	lbl=View Dependent		kw=DIRAMBIENT_VIEW		needs=DIRAMBIENT	nohelp	indent		tt=Makes directional ambient view dependent (e.g. left color is always coming from the left no matter the view direction)
 space	space=4
+dd_end
+dd_start	lbl=DEPTH-BASED EFFECTS
 ---
-header	lbl=Depth Buffer Effects
 sngl	lbl=Depth-based Color			kw=DEPTH_BUFFER_COLOR	nohelp											tt=Colors the water based on depth buffer, so that immersed objects alter the water color
 space	space=2
 sngl	lbl=Depth-based Foam			kw=DEPTH_BUFFER_FOAM	nohelp											tt=Adds foam at intersection with other objects, based on the depth buffer
 sngl	lbl=Foam Smoothness				kw=SMOOTH_FOAM			nohelp	indent	needs=DEPTH_BUFFER_FOAM		tt=Adds a control for the foam smoothness
 sngl	lbl=Independent UVs				kw=UV_FOAM				nohelp	indent	needs=DEPTH_BUFFER_FOAM		tt=Independent UVs for the foam texture
+sngl	lbl=Hide on Backfaces			kw=NO_FOAM_BACKFACE		nohelp	indent	needs=DEPTH_BUFFER_FOAM		tt=Prevent foam effect to appear on backfaces
 space	space=2
 sngl	lbl=Depth-based Transparency	kw=DEPTH_BUFFER_ALPHA	nohelp				needs=ALPHA					tt=Change the water transparency based on depth buffer (requires Alpha Blending)
 space	space=2
 sngl	lbl=Depth View Correction		kw=DEPTH_VIEW_CORRECTION	nohelp	needsOr=DEPTH_BUFFER_COLOR,DEPTH_BUFFER_FOAM,DEPTH_BUFFER_ALPHA		tt=Applies view-based depth sampling correction
 warning	msgType=warning					needs=DEPTH_VIEW_CORRECTION		lbl=Depth View Correction may cause artifacts when not using a planar mesh, or with vertex animation enabled
 space	space=4
+dd_end
+dd_start	lbl=WATER ANIMATION
 ---
-header	lbl=Animation
-sngl	lbl=Custom Time					kw=CUSTOM_TIME			nohelp											tt=Use custom time variable, that can react to Time.scale (this will disable Editor animation preview)
-space	space=2
 sngl	lbl=Vertex Waves				kw=VERTEX_SIN_WAVES		nohelp											tt=Basic vertex motion using a sine displacement function
 mult	lbl=Sine Functions Count		kw=1|,2|VSW_2,4|VSW_4,8|VSW_8		nohelp	indent	needs=VERTEX_SIN_WAVES		tt=Number of sine functions to add together (more randomness but also more shader instructions)
 sngl	lbl=World-based Position		kw=VSW_WORLDPOS						nohelp	indent	needs=VERTEX_SIN_WAVES		tt=Calculates the sine function according to the vertices' world position (useful when using different meshes)
@@ -98,27 +97,34 @@ space	space=2
 #space	space=2
 sngl	lbl=Scrolling Normal Map		kw=NORMAL_MAP		nohelp																										tt=Use a normal map for the waves
 sngl	lbl=Depth/Planar Reflections	kw=NORMAL_MAP_DEPTH	nohelp	indent	needs=NORMAL_MAP	needsOr=DEPTH_BUFFER_COLOR,DEPTH_BUFFER_FOAM,DEPTH_BUFFER_ALPHA,PLANAR_REFLECTION		tt=Makes the normal map affect depth buffer sampling (for pseudo-refraction effects)
-space	space=4
+space	space=2
+sngl	lbl=Custom Time					kw=CUSTOM_TIME			nohelp											tt=Use custom time variable, that can react to Time.scale (this will disable Editor animation preview)
+dd_end
+dd_start	lbl=TRANSPARENCY
 ---
-header	lbl=Transparency
-sngl	lbl=Alpha Blending			kw=ALPHA		excl=GRAB_PASS
-sngl	lbl=Grab Pass				kw=GRAB_PASS	excl=ALPHA	nohelp		tt=Performs a Grab Pass to simulate transparency, allowing refraction effects
+sngl	lbl=Alpha Blending			kw=ALPHA				excl=GRAB_PASS
+sngl	lbl=Ignore Main Texture		kw=ALPHA_NO_MAINTEX		excl=GRAB_PASS	needs=ALPHA	indent	nohelp	tt=Ignore the main texture's alpha channel for alpha blending
+sngl	lbl=Ignore Color			kw=ALPHA_NO_COLOR		excl=GRAB_PASS	needs=ALPHA	indent	nohelp	tt=Ignore the main color's alpha channel for alpha blending
+sngl	lbl=Grab Pass				kw=GRAB_PASS			excl=ALPHA							nohelp	tt=Performs a Grab Pass to simulate transparency, allowing refraction effects
 #sngl	lbl=Alpha Testing (Cutout)	kw=CUTOUT
 space	space=4
----
-header	lbl=Options
-sngl	lbl=Vertex View Dir			kw=NDV_VERTEX	nohelp		needsOr=RIM,DEPTH_VIEW_CORRECTION				tt=Compute view direction per vertex
+dd_end
+dd_start	lbl=OPTIONS
+sngl	lbl=Vertex View Dir			kw=NDV_VERTEX	nohelp		needsOr=RIM,DEPTH_VIEW_CORRECTION				tt=Compute view direction per vertex (for rim lighting or depth view correction)
 flag	lbl=Enable Shadows			kw=addshadow	toggles=ADDSHADOW	excl=DEPTH_BUFFER_COLOR,DEPTH_BUFFER_ALPHA,DEPTH_BUFFER_FOAM,ALPHA,GRAB_PASS	tt=Enable shadow receiving for the shader
 warning	msgType=warning		needsOr=DEPTH_BUFFER_COLOR,DEPTH_BUFFER_ALPHA,DEPTH_BUFFER_FOAM,ALPHA,GRAB_PASS							lbl=Shadows are incompatible with:  - transparency  - depth-based effects  - grab pass
 warning	msgType=info				excl=ADDSHADOW																					lbl=Make sure to also turn off "Receive Shadows" on the Mesh Renderer if you don't enable shadows
+dd_end
+dd_start	lbl=SHADER STATES
 ---
 mult	lbl=Culling						kw=Back (default)|,Front|CULL_FRONT,Off (double-sided)|CULL_OFF		nohelp		tt=Defines how to cull faces
+sngl	lbl=Backfaces Color				kw=CULL_BACKFACE_COLOR	needs=CULL_OFF						indent	nohelp		tt=Use a different water color for backfaces
 ---
 keyword	lbl=Shader Target	kw=SHADER_TARGET	forceKeyword=true	values=2.0 (Old hardware)|2.0,2.5 (Mobile devices)|2.5,3.0 (Recommended default)|3.0,3.5|3.5,4.0|4.0,4.5|4.5,4.6|4.6,5.0|5.0		default=2
 warning	msgType=info		lbl=Use Shader Target 2.5 for maximum compatibility across mobile devices    Increase the number if the shader fails to compile (not enough instructions or interpolators)
+dd_end
+dd_start	lbl= SURFACE SHADER FLAGS
 ---
-space	space=6
-header	lbl=FLAGS
 #flag	lbl=Add Shadow Passes			kw=addshadow													tt=Force the shader to have the Shadow Caster and Collector passes.\nCan help if shadows don't work properly with the shader
 flag	lbl=Full Forward Shadows		kw=fullforwardshadows											tt=Enable support for all shadow types in Forward rendering path
 #flag	lbl=Disable Shadows				kw=noshadow														tt=Disables all shadow receiving support in this shader
@@ -126,11 +132,13 @@ flag	lbl=Disable Fog					kw=nofog														tt=Disables Unity Fog support.\nC
 flag	lbl=Disable Lightmaps			kw=nolightmap													tt=Disables all lightmapping support in this shader.\nCan help if you run out of vertex interpolators and don't need lightmaps.
 flag	lbl=Disable Ambient Lighting	kw=noambient		excl=DIRAMBIENT,CUBE_AMBIENT				tt=Disable ambient lighting
 flag	lbl=Disable Vertex Lighting		kw=novertexlights												tt=Disable vertex lights and spherical harmonics (light probes)
+sngl	lbl=Disable Dynamic Batching	kw=DISABLE_BATCHING		nohelp									tt=Disable dynamic batching support for this shader.  Can help if dynamic batching causes UV or vertex displacement issues among water planes for example.
 space	space=6
-header	lbl=FLAGS (Mobile-Friendly)
+header	lbl=Mobile-Friendly
 flag	lbl=One Directional Light		kw=noforwardadd													tt=Use additive lights as vertex lights.\nRecommended for Mobile
 #flag	lbl=Vertex View Dir				kw=interpolateview												tt=Calculate view direction per-vertex instead of per-pixel.\nRecommended for Mobile	needsOr=SPECULAR,SPECULAR_ANISOTROPIC,SUBSURFACE,PARALLAX,RIM,RIM_OUTLINE
 flag	lbl=Half as View				kw=halfasview													tt=Pass half-direction vector into the lighting function instead of view-direction.\nFaster but inaccurate.\nRecommended for Specular, but use Vertex Rim to optimize Rim Effects instead	needsOr=SPECULAR,SUBSURFACE,PARALLAX,RIM,RIM_OUTLINE
+dd_end
 #END
 #KEYWORDS
 
@@ -317,6 +325,9 @@ Shader "@%SHADER_NAME%@"
 /// ELSE
 		_Color ("Water Color", Color) = (0.5,0.5,0.5,1.0)
 ///
+/// IF CULL_BACKFACE_COLOR
+		_BackColor ("Water Color (backfaces)", Color) = (0.3,0.3,0.3,1.0)
+///
 /// IF COLORMASK && COLORMASK_SEPARATE
 		_MaskedColor ("Masked Color", Color) = (1.0, 0.0, 0.0, 1.0)
 ///
@@ -497,6 +508,9 @@ Shader "@%SHADER_NAME%@"
 
 	SubShader
 	{
+/// IF DISABLE_BATCHING
+		Tags { "DisableBatching" = "True" }
+///
 /// IF ALPHA
 		Tags {"Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent"}
 		Blend [_SrcBlendTCP2] [_DstBlendTCP2]
@@ -524,6 +538,9 @@ Shader "@%SHADER_NAME%@"
 		// VARIABLES
 
 		fixed4 _Color;
+/// IF CULL_BACKFACE_COLOR
+		fixed4 _BackColor;
+///
 /// IF COLORMASK && COLORMASK_SEPARATE
 		fixed4 _MaskedColor;
 ///
@@ -655,9 +672,9 @@ Shader "@%SHADER_NAME%@"
 		struct Input
 		{
 /// IF SECOND_TEX
-			half4 texcoord;
+			float4 texcoord;
 /// ELSE
-			half2 texcoord;
+			float2 texcoord;
 ///
 /// IF UVMASK1
 			half2 uv_Mask1;
@@ -690,9 +707,9 @@ Shader "@%SHADER_NAME%@"
 ///
 /// IF UV_SIN_WAVES && !VERTEX_USW
 	/// IF SECOND_TEX && USW_SECOND_TEX
-			half4 sinAnim;
+			float4 sinAnim;
 	/// ELSE
-			half2 sinAnim;
+			float2 sinAnim;
 	///
 ///
 /// IF (REFLECTION_PROBES && !NORMAL_MAP) || CUBE_AMBIENT
@@ -723,6 +740,9 @@ Shader "@%SHADER_NAME%@"
 ///
 /// IF USE_SCREENPOS
 			float4 sPos;
+///
+/// IF CULL_BACKFACE_COLOR || (DEPTH_BUFFER_FOAM && NO_FOAM_BACKFACE)
+			float vFace : VFACE;
 ///
 		};
 
@@ -796,9 +816,15 @@ Shader "@%SHADER_NAME%@"
 		// Instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
 		// See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
 		// #pragma instancing_options assumeuniformscaling
+/// IF UNITY_2018_1
+		UNITY_INSTANCING_BUFFER_START(Props)
+			// put more per-instance properties here
+		UNITY_INSTANCING_BUFFER_END(Props)
+/// ELSE
 		UNITY_INSTANCING_CBUFFER_START(Props)
 			// put more per-instance properties here
 		UNITY_INSTANCING_CBUFFER_END
+///
 
 		//Custom SurfaceOutput
 		struct SurfaceOutputWater
@@ -1192,8 +1218,12 @@ Shader "@%SHADER_NAME%@"
 			float4 texcoord : TEXCOORD0;
 			float4 texcoord1 : TEXCOORD1;
 			float4 texcoord2 : TEXCOORD2;
-/// IF NORMAL_MAP
+/// IF !NORMAL_MAP
+	#if !defined(LIGHTMAP_OFF) && defined(DIRLIGHTMAP_COMBINED)
+///
 			float4 tangent : TANGENT;
+/// IF !NORMAL_MAP
+	#endif
 ///
 /// IF USE_VERTEX_COLORS
 			float4 color : COLOR;
@@ -1222,9 +1252,9 @@ Shader "@%SHADER_NAME%@"
 ///
 /// IF WORLDSPACE_UV
 	/// IF SECOND_TEX
-			half4 mainTexcoords = worldPos.xzxz * 0.1;
+			float4 mainTexcoords = worldPos.xzxz * 0.1;
 	/// ELSE
-			half2 mainTexcoords = worldPos.xz * 0.1;
+			float2 mainTexcoords = worldPos.xz * 0.1;
 	///
 /// ELSE
 	/// IF SECOND_TEX
@@ -1564,6 +1594,12 @@ Shader "@%SHADER_NAME%@"
 			_Color = lerp(fixed4(1,1,1,1), _Color, @%COLORMASK%@@%COLORMASK_CHANNEL%@);
 	///
 ///
+/// IF CULL_OFF && CULL_BACKFACE_COLOR
+			_Color = lerp(_BackColor, _Color, saturate(IN.vFace));
+///
+/// IF DEPTH_BUFFER_FOAM && NO_FOAM_BACKFACE
+			foamTerm *= saturate(IN.vFace);
+///
 /// IF DEPTH_BUFFER_FOAM
 			o.Albedo = lerp(mainTex.rgb * _Color.rgb, _FoamColor.rgb, foamTerm);
 /// ELSE
@@ -1572,7 +1608,15 @@ Shader "@%SHADER_NAME%@"
 /// IF DEPTH_BUFFER_ALPHA && ALPHA
 			_Color.a *= saturate((_DepthAlpha * depthDiff) + _DepthMinAlpha);
 ///
+/// IF ALPHA_NO_MAINTEX && ALPHA_NO_COLOR
+			o.Alpha = 1;
+/// ELIF ALPHA_NO_MAINTEX
+			o.Alpha = _Color.a;
+/// ELIF ALPHA_NO_COLOR
+			o.Alpha = mainTex.a;
+/// ELSE
 			o.Alpha = mainTex.a * _Color.a;
+///
 /// IF DEPTH_BUFFER_FOAM
 			o.Alpha = lerp(o.Alpha, _FoamColor.a, foamTerm);
 ///

@@ -7,8 +7,8 @@ public class PlayerAnimator : MonoBehaviour
     [SerializeField] private Animator anim;
     // Start is called before the first frame update
 
-    public void ChangeAnimation(float speed)
+    public void ChangeAnimation(bool state)
     {
-        anim.SetBool("Flying", speed > 0.1f);
+        if(anim.GetBool("Flying") == !state)anim.SetBool("Flying", state);
     }
 }
