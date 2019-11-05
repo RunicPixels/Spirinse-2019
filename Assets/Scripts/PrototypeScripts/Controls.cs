@@ -124,17 +124,17 @@ public class Controls : MonoBehaviour
     {
         if (rb.velocity.y < -0.1f)
         {
-            altitudeVelocity -= rb.velocity.y * 0.11f * Time.fixedDeltaTime;
+            altitudeVelocity -= rb.velocity.y * 0.1f * Time.fixedDeltaTime;
         }
         else if (altitudeVelocity > 1f)
         {
-            altitudeVelocity -= rb.velocity.y * 0.07f * Time.fixedDeltaTime;
-            altitudeVelocity -= (0.5f + altitudeVelocity * 0.4f) * Time.fixedDeltaTime;
+            altitudeVelocity -= rb.velocity.y * 0.06f * Time.fixedDeltaTime;
+            altitudeVelocity -= (0.5f + altitudeVelocity * 0.38f) * Time.fixedDeltaTime;
 
         }
         if (altitudeVelocity < 0f) altitudeVelocity = 0f;
 
-        logVelocity = Mathf.Max(1f, 4f * Mathf.Log(altitudeVelocity, 4f));
+        logVelocity = Mathf.Max(1f, 3.4f * Mathf.Log(altitudeVelocity, 3.5f));
     }
 
     private Vector2 CalculateVelocity()
