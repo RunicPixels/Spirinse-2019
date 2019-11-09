@@ -8,6 +8,7 @@ public class FadeAway : MonoBehaviour
     private void Awake()
     {
         Time.timeScale = 0f;
+        gameObject.SetActive(true);
     }
 
     // Update is called once per frame

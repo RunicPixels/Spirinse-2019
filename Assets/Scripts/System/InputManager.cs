@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Rewired;
+using UnityEngine.SceneManagement;
 
 namespace Spirinse.System
 {
@@ -17,6 +18,19 @@ namespace Spirinse.System
         {
             if (Instance == null) Instance = this;
             else Destroy(gameObject);
+        }
+
+        public void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene(0);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Application.Quit();
+            }
         }
     }
 }

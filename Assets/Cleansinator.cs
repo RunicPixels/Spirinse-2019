@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Cleansinator : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class Cleansinator : MonoBehaviour
 
     public void CleanseNextObject()
     {
-        if (currentNumber > objectsToCleanse.Count) return;
+        if (currentNumber > objectsToCleanse.Count) SceneManager.LoadScene(0);
         objectsToCleanse[currentNumber].material = cleansedMaterial;
         currentNumber += 1;
     }
