@@ -44,6 +44,11 @@ public class PlayerDash : BaseAbility
         return base.Run();
     }
 
+    public float GetDashVelocityMagnitude()
+    {
+        return dashVelocity.magnitude;
+    }
+
     public override void Stop()
     {
         dashSphere.SetActive(false);
