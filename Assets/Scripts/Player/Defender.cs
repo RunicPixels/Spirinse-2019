@@ -14,6 +14,8 @@ namespace Spirinse.Player
 
         public Controls tempControls;
 
+        public DefenderParticles defenderParticles;
+
         public int rotateSpeed = 50;
         public void TakeDamage(int damage)
         {
@@ -24,6 +26,7 @@ namespace Spirinse.Player
         private void Start()
         {
             rb = GetComponent<Rigidbody2D>();
+            TakeDamageAction += defenderParticles.GetHit;
         }
 
         private void Update()

@@ -36,13 +36,18 @@ public class CameraShake : MonoBehaviour
             float modifier = Mathf.Max(shakeDuration, 1f);
             camTransform.localPosition = originalPos + Random.insideUnitSphere * shakeAmount * modifier;
 
-            shakeDuration -= Time.deltaTime * decreaseFactor;
+            shakeDuration -= Time.unscaledDeltaTime * decreaseFactor;
         }
         else
         {
             shakeDuration = 0f;
             camTransform.localPosition = originalPos;
         }
+    }
+
+    public void PlayerHitShake(int damage)
+    {
+        DoShake(damage * 0.4f, 0.3f);
     }
 
     public void DoShake(float intensity, float duration, float maxIntensityModifier = 1f, float maxDurationModifier = 1f, bool addDuration = false)

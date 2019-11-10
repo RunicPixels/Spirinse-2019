@@ -9,7 +9,7 @@ namespace Spirinse.Player
     public class Player : MonoBehaviour
     {
         public PlayerAnimator playerAnimator;
-        public Controls controls;
+        public Controls controls; // Needs reorganizing.
         public Meditator meditator;
         public Defender defender;
 

@@ -5,6 +5,7 @@ using System;
 using Spirinse.System.Health;
 using Spirinse.Player;
 using Spirinse.System.UI;
+using Spirinse.System.Effects;
 
 namespace Spirinse.System
 {
@@ -20,6 +21,7 @@ namespace Spirinse.System
         [field: SerializeField] public InputManager InputManager { get; protected set; }
         [field: SerializeField] public GameStateManager StateManager { get; protected set; }
         [field: SerializeField] public CleanseManager CleanseManager { get; protected set; }
+        [field: SerializeField] public EffectsManager EffectsManager { get; protected set; }
 
         // Start is called before the first frame update
         private void Start()
@@ -41,6 +43,7 @@ namespace Spirinse.System
             if (UiManager == null)      UiManager       = UIManager.Instance;
             if (StateManager == null)   StateManager    = GameStateManager.Instance;
             if (CleanseManager == null) CleanseManager  = CleanseManager.Instance;
+            if (EffectsManager == null) EffectsManager  = EffectsManager.Instance;
         }
 
         private void SetupEvents()
@@ -64,7 +67,12 @@ namespace Spirinse.System
             var defender                                = PlayerManager.player.defender;
 
             meditator.TakeDamageAction                 += HealthManager.HitMeditator;
+            meditator.TakeDamageAction                 += EffectsManager.timeManager.PlayerHitFreeze;
+            meditator.TakeDamageAction                 += EffectsManager.cameraShake.PlayerHitShake;
+           
             defender.TakeDamageAction                  += HealthManager.HitDefender;
+            defender.TakeDamageAction                  += EffectsManager.timeManager.PlayerHitFreeze;
+            defender.TakeDamageAction                  += EffectsManager.cameraShake.PlayerHitShake;
 
             // Manage Player Action Events
             defender.tempControls.useDashAction        += HealthManager.SetIFramesCD;
