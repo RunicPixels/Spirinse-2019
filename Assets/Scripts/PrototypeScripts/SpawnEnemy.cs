@@ -20,7 +20,7 @@ public class SpawnEnemy : MonoBehaviour
 
     private void OnEnable()
     {
-        Timing.RunCoroutine(_SpawnEnemies());
+        Timing.RunCoroutine(_SpawnEnemies().CancelWith(gameObject));
     }
 
     private IEnumerator<float> _SpawnEnemies()

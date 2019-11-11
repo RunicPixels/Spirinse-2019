@@ -14,5 +14,10 @@ namespace Spirinse.System.Audio
             if (Instance == null) instance = this;
             else Destroy(gameObject);
         }
+        private void OnDestroy()
+        {
+            Debug.LogWarning("Destroying" + Instance);
+            instance = null;
+        }
     }
 }

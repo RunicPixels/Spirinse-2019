@@ -24,7 +24,7 @@ public class Controls : MonoBehaviour
     public float chiGravity = 5f;
 
     [Header("TimeScale")]
-    private float attackTimeScale = 0.8f;
+    private float attackTimeScale = 0.4f;
     private float dashTimeScale = 0.8f;
     
     [Header("Moving")]
@@ -61,7 +61,7 @@ public class Controls : MonoBehaviour
     private LineRenderer lineRenderer;
     private Rigidbody2D rb;
 
-    private float logVelocity;
+    private float powVelocity;
     private Vector2 direction;
     private float speedMultiplier = 1f;
     private Vector2 dashVelocity = new Vector2(0,0);
@@ -112,34 +112,48 @@ public class Controls : MonoBehaviour
 
     private void FixedUpdate()
     {
-        CalculateLogVelocity();
+        CalculateAltitudeVelocity();
+
+        LimitVelocity();
 
         rb.AddForce(CalculateVelocity());
 
         rb.gravityScale = CalculateGravity();
 
-        LimitVelocity();
+        
     }
-    private void CalculateLogVelocity()
+    private void CalculateAltitudeVelocity()
     {
         if (rb.velocity.y < -0.1f)
         {
-            altitudeVelocity -= rb.velocity.y * 0.11f * Time.fixedDeltaTime;
+            altitudeVelocity -= rb.velocity.y * 0.1f * Time.fixedDeltaTime;
         }
         else if (altitudeVelocity > 1f)
         {
-            altitudeVelocity -= rb.velocity.y * 0.07f * Time.fixedDeltaTime;
-            altitudeVelocity -= (0.5f + altitudeVelocity * 0.4f) * Time.fixedDeltaTime;
+            if (dashing)
+            {
+                altitudeVelocity += rb.velocity.magnitude * 0.01f * Time.fixedDeltaTime;
+            }
+            else
+            {
+                altitudeVelocity -= rb.velocity.y * 0.06f * Time.fixedDeltaTime;
+                
+            }
+            altitudeVelocity -= (0.5f + altitudeVelocity * 0.38f) * Time.fixedDeltaTime;
 
         }
-        if (altitudeVelocity < 0f) altitudeVelocity = 0f;
+        if(rb.velocity.magnitude < speed)
+        {
+            altitudeVelocity *= 0.8f;
+        }
+        if (altitudeVelocity < 1f) altitudeVelocity = 1f;
 
-        logVelocity = Mathf.Max(1f, 4f * Mathf.Log(altitudeVelocity, 4f));
+        powVelocity = Mathf.Pow(altitudeVelocity, 0.33f);
     }
 
     private Vector2 CalculateVelocity()
     {
-        var velocity = Time.fixedDeltaTime * 60 * speedMultiplier * new Vector2(direction.x * hAcceleration * logVelocity, direction.y * vAcceleration * logVelocity);
+        var velocity = Time.fixedDeltaTime * 60 * speedMultiplier * new Vector2(direction.x * hAcceleration * powVelocity, direction.y * vAcceleration * powVelocity);
 
         //Debug.Log(velocity.magnitude);
         if (velocity.magnitude > 1f)
@@ -162,7 +176,7 @@ public class Controls : MonoBehaviour
 
     private float CalculateGravity()
     {
-        var gravity = Mathf.Max(0f, (1f - chi) * chiGravity);
+        var gravity = Mathf.Max(0f, (1f - chi) * chiGravity) * 2;
         if (dashing)
         {
             gravity = dashAbility.GetGravityScale();
@@ -172,13 +186,14 @@ public class Controls : MonoBehaviour
 
     private void LimitVelocity()
     {
-        if (rb.velocity.magnitude > speed * altitudeVelocity && dashing == false)
+        var speedLimit = speed * altitudeVelocity;
+        if(dashing)
         {
-            rb.velocity = rb.velocity.normalized * Mathf.Lerp(rb.velocity.magnitude, speed * logVelocity, 0.98f);
+            speedLimit *= 1+dashAbility.GetDashVelocityMagnitude();
         }
-        else if (rb.velocity.magnitude > dashAbility.GetDashSpeed * logVelocity && dashing == true)
+        if (rb.velocity.magnitude > speedLimit)
         {
-            rb.velocity = rb.velocity.normalized * dashAbility.GetDashSpeed * logVelocity;
+            rb.velocity = rb.velocity.normalized * Mathf.Lerp(rb.velocity.magnitude, speedLimit, 0.33f);
         }
     }
 
