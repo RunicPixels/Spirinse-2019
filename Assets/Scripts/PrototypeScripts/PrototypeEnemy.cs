@@ -56,13 +56,13 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
         }
 
         direction = (target.position - transform.position).normalized;
+        if (cured) direction = -direction;
 
         rb.velocity = direction * speed;
 
         if (cured)
         {
             rb.velocity += Vector2.up * 1.5f;
-
         }
 
         StunJump:
@@ -75,7 +75,7 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
         transform.localScale = new Vector3(2f, xScale, 2f);
 
 
-        var v = -rb.velocity;
+        var v = rb.velocity;
         var angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
@@ -84,7 +84,7 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
     {
         if (iFrames > 0f || cured) return;
         health -= damage;
-        animator.SetTrigger(Hit);
+        //animator.SetTrigger(Hit);
 
         if (health < 0 && !cured)
         {
@@ -110,7 +110,7 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
         CleanseManager.Instance.cleanseEvent?.Invoke();
         
         cured = true;
-        animator.SetTrigger(Cure1);
+        //animator.SetTrigger(Cure1);
         transform.gameObject.layer = LayerMask.NameToLayer("NoCollision");
     }
 
@@ -149,7 +149,6 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
         {
             if (mb is IDamagable)
             {
-                Debug.Log("Hitting Damageable");
                 IDamagable damageable = (IDamagable)mb;
                 
                 damageable.TakeDamage(damage);
@@ -157,7 +156,6 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
             }
             if (mb is IAttack && iFrames <= 0)
             {
-                Debug.Log("Hitting Attack");
                 IAttack attack = (IAttack)mb;
 
                 TakeDamage(attack.DoAttack());
