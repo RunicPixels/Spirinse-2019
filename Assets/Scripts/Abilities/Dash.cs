@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PlayerDash : BaseAbility
+public class Dash : BaseAbility
 {
 
     // Speed

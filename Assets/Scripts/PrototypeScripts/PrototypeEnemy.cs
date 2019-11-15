@@ -5,11 +5,16 @@ using Spirinse.Interfaces;
 using UnityEngine;
 using Spirinse.Player;
 using Spirinse.System;
+using Spirinse.System.Effects;
 
 public class PrototypeEnemy : MonoBehaviour, IDamagable
 {
     private const string StrB = "Player";
-    public float speed;
+    private float speed;
+
+    public float idleSpeed;
+    public float activeSpeed;
+
     public float health = 5;
     public Animator animator;
 
@@ -37,6 +42,7 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
     // Start is called before the first frame update
     void Start()
     {
+        speed = idleSpeed;
         originalTarget = target;
         rb = GetComponent<Rigidbody2D>();
     }
@@ -84,6 +90,7 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
     {
         if (iFrames > 0f || cured) return;
         health -= damage;
+        TimeManager.Instance.Freeze(0.05f, 0, 3f, 3f);
         //animator.SetTrigger(Hit);
 
         if (health < 0 && !cured)
@@ -100,7 +107,6 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
     {
         rb.velocity = direction * -speed * 2f;
         iFrames = 0.3f;
-        hitParticles.Play();
         stunned = 0.4f;
 
     }
@@ -119,15 +125,13 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Defender") && Spirinse.System.Health.HealthManager.Instance.ShieldManager.GetShield() > 0)
         {
             target = other.transform;
-        }
-        else if(other.CompareTag("Defender"))
-        {
-            target = originalTarget;
+            speed = activeSpeed;
+            animator.SetBool("Active", true);
         }
     }
 
@@ -136,6 +140,8 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
         if (other.CompareTag("Defender"))
         {
             target = originalTarget;
+            speed = idleSpeed;
+            animator.SetBool("Active", false);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -150,7 +156,7 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
             if (mb is IDamagable)
             {
                 IDamagable damageable = (IDamagable)mb;
-                
+                hitParticles.Play();
                 damageable.TakeDamage(damage);
                 Stun();
             }
