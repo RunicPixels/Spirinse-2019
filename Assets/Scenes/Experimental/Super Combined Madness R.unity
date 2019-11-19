@@ -16701,6 +16701,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4912903076253594373, guid: 57a2e677bb35da545825824945f9fbdd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4912903076253594375, guid: 57a2e677bb35da545825824945f9fbdd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17332,6 +17337,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Defender
       objectReference: {fileID: 0}
+    - target: {fileID: 3435031174896469565, guid: 70907cfb21be91547b27cb539dbe9c2d,
+        type: 3}
+      propertyPath: hAcceleration
+      value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435031174896469565, guid: 70907cfb21be91547b27cb539dbe9c2d,
+        type: 3}
+      propertyPath: vAcceleration
+      value: 44
+      objectReference: {fileID: 0}
     - target: {fileID: 3435031174896469566, guid: 70907cfb21be91547b27cb539dbe9c2d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17515,7 +17530,57 @@ PrefabInstance:
     - target: {fileID: 3435031174896469564, guid: 70907cfb21be91547b27cb539dbe9c2d,
         type: 3}
       propertyPath: m_LinearDrag
-      value: 0.1
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435031174896469564, guid: 70907cfb21be91547b27cb539dbe9c2d,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724849549467373818, guid: 70907cfb21be91547b27cb539dbe9c2d,
+        type: 3}
+      propertyPath: dashSpeed
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724849549467373818, guid: 70907cfb21be91547b27cb539dbe9c2d,
+        type: 3}
+      propertyPath: dashSpeedMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724849549467373818, guid: 70907cfb21be91547b27cb539dbe9c2d,
+        type: 3}
+      propertyPath: stopBeforeDash
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724849549467373818, guid: 70907cfb21be91547b27cb539dbe9c2d,
+        type: 3}
+      propertyPath: gravityCurve.m_Curve.Array.data[1].value
+      value: 0.33891013
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724849549467373818, guid: 70907cfb21be91547b27cb539dbe9c2d,
+        type: 3}
+      propertyPath: gravityCurve.m_Curve.Array.data[1].time
+      value: 0.5045278
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724849549467373818, guid: 70907cfb21be91547b27cb539dbe9c2d,
+        type: 3}
+      propertyPath: gravityCurve.m_Curve.Array.data[1].inSlope
+      value: -0.3225109
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724849549467373818, guid: 70907cfb21be91547b27cb539dbe9c2d,
+        type: 3}
+      propertyPath: gravityCurve.m_Curve.Array.data[1].outSlope
+      value: -0.3225109
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724849549467373818, guid: 70907cfb21be91547b27cb539dbe9c2d,
+        type: 3}
+      propertyPath: gravityCurve.m_Curve.Array.data[1].inWeight
+      value: 0.30055112
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724849549467373818, guid: 70907cfb21be91547b27cb539dbe9c2d,
+        type: 3}
+      propertyPath: gravityCurve.m_Curve.Array.data[1].outWeight
+      value: 0.377698
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3435031174896469567, guid: 70907cfb21be91547b27cb539dbe9c2d, type: 3}
@@ -17897,6 +17962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b54e75dce17edde4bbed286ffd085795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraDistance: {fileID: 860330522}
 --- !u!1 &514939945
 GameObject:
   m_ObjectHideFlags: 0
@@ -28146,16 +28212,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4912903074942856559, guid: 57a2e677bb35da545825824945f9fbdd,
-        type: 3}
-      propertyPath: m_Layer
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4912903074942856559, guid: 57a2e677bb35da545825824945f9fbdd,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4912903076253594424, guid: 57a2e677bb35da545825824945f9fbdd,
         type: 3}
       propertyPath: enemyPrefab
@@ -28166,6 +28222,16 @@ PrefabInstance:
         type: 3}
       propertyPath: delay
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912903074942856559, guid: 57a2e677bb35da545825824945f9fbdd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912903074942856559, guid: 57a2e677bb35da545825824945f9fbdd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4912903074616713362, guid: 57a2e677bb35da545825824945f9fbdd,
         type: 3}
@@ -34294,7 +34360,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 860330520}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 251, z: -25}
+  m_LocalPosition: {x: 0, y: 251, z: -26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1625742808}
@@ -34313,6 +34379,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94b23f08929c5be4da5afc451775e8b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraDistance: 22
+  velocityModifier: 0.125
 --- !u!1 &901582249
 GameObject:
   m_ObjectHideFlags: 0
@@ -39276,7 +39344,7 @@ Camera:
   m_BackGroundColor: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
-  m_FOVAxisMode: 1
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
   m_FocalLength: 50
@@ -39288,7 +39356,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 51.72782
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -65254,7 +65322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1375838164}
   meditator: {fileID: 1882390380}
-  lerpPosition: 0.05
+  lerpPosition: 0.02
   speedDelay: 0.15
   followPlayer: 1
 --- !u!1001 &1462575195
@@ -65518,11 +65586,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4912903074942856559, guid: 57a2e677bb35da545825824945f9fbdd,
-        type: 3}
-      propertyPath: m_Layer
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 4912903076253594424, guid: 57a2e677bb35da545825824945f9fbdd,
         type: 3}
       propertyPath: enemyPrefab
@@ -65533,6 +65596,11 @@ PrefabInstance:
         type: 3}
       propertyPath: delay
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912903074942856559, guid: 57a2e677bb35da545825824945f9fbdd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4912903074616713362, guid: 57a2e677bb35da545825824945f9fbdd,
         type: 3}
