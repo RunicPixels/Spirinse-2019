@@ -74,6 +74,8 @@ public class Controls : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+
+
         if (meleeAttack)
         {
             foreach (var melee in meleeAttackPrefab)
@@ -120,6 +122,10 @@ public class Controls : MonoBehaviour
         rb.AddForce(CalculateVelocity());
 
         rb.gravityScale = CalculateGravity();
+
+        // Temporary Stuff
+
+        Spirinse.System.CameraManager.Instance.cameraDistance.SetVelocityDistance(rb.velocity.magnitude);
 
         
     }
@@ -339,7 +345,8 @@ public class Controls : MonoBehaviour
         {
             if (melee.gameObject.activeSelf)
             {
-                melee.gameObject.SetActive(false);
+                if(melee.GetComponent<Animator>().GetBool("Active") == true) melee.GetComponent<Animator>().SetBool("Active", false);
+                //melee.gameObject.SetActive(false);
             }
         }
 
@@ -355,9 +362,11 @@ public class Controls : MonoBehaviour
         if (!meleeAttack) return;
         foreach (var melee in meleeAttackPrefab)
         {
+            var animator = melee.GetComponent<Animator>();
             if (!melee.CompareTag("Selected")) continue;
             melee.gameObject.SetActive(true);
-            //melee.GetComponent<Animator>().StartPlayback();
+            if (animator.GetBool("Active") == false) animator.SetBool("Active", true);
+            
 
             Vector2 v = rb.velocity;
             var angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;
