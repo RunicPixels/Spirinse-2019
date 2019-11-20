@@ -45,9 +45,9 @@ namespace Spirinse.System.Effects
             Timing.RunCoroutine(DoFreeze(playerHitFreezeDuration, 0.05f, 4f, 4f));
         }
 
-        public void FreezeCustom(float duration)
+        public void Freeze(float duration, float delay = 0.1f, float timeDecrease = 4f, float timeIncrease = 4f)
         {
-            Timing.RunCoroutine(DoFreeze(duration));
+            Timing.RunCoroutine(DoFreeze(duration,delay,timeDecrease,timeIncrease));
         }
 
         public void TimeUpdate()
@@ -56,7 +56,7 @@ namespace Spirinse.System.Effects
             Time.timeScale = currentTimeScale;
         }
 
-        public IEnumerator<float> DoFreeze(float duration, float delay = 0.1f, float timeDecrease = 4f, float timeIncrease = 4f) {
+        private IEnumerator<float> DoFreeze(float duration, float delay = 0.1f, float timeDecrease = 4f, float timeIncrease = 4f) {
             timeFreeze = true;
             while(delay>0)
             {

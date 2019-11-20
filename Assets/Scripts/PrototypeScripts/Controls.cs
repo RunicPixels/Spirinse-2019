@@ -35,7 +35,7 @@ public class Controls : MonoBehaviour
     public enum DirectionMode { Velocity, Mouse, Arrows};
 
     [Header("Dash")]
-    public PlayerDash dashAbility;
+    public Dash dashAbility;
 
     [Header("Attacks")] 
     // Laser
@@ -74,6 +74,8 @@ public class Controls : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+
+
         if (meleeAttack)
         {
             foreach (var melee in meleeAttackPrefab)
@@ -106,6 +108,7 @@ public class Controls : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
+            Time.timeScale = 1f;
             StartCoroutine(_Shooting());
         }
     }
@@ -119,6 +122,10 @@ public class Controls : MonoBehaviour
         rb.AddForce(CalculateVelocity());
 
         rb.gravityScale = CalculateGravity();
+
+        // Temporary Stuff
+
+        Spirinse.System.CameraManager.Instance.cameraDistance.SetVelocityDistance(rb.velocity.magnitude);
 
         
     }
@@ -226,7 +233,7 @@ public class Controls : MonoBehaviour
 
         while (dashAbility.Run())
         {
-            camera.fieldOfView = fov + (30 * dashAbility.GetCurveProgression(PlayerDash.CurveType.Camera));
+            camera.fieldOfView = fov + (30 * dashAbility.GetCurveProgression(Dash.CurveType.Camera));
 
             // Needs Particle System Manager
             trailSystemMain.startLifetime = new ParticleSystem.MinMaxCurve(tLife.Evaluate(0) + currentDash + currentDash * dashAbility.GetDuration(), tLife.Evaluate(1f) + currentDash + currentDash * dashAbility.GetDuration() + 2f);
@@ -268,7 +275,6 @@ public class Controls : MonoBehaviour
         while (Input.GetButton("Fire1"))
         {
             var direction = rb.velocity.normalized;
-            Time.timeScale = attackTimeScale;
             camera.fieldOfView += Time.unscaledDeltaTime * 1f;
             chi -= chiDrainAttackMode * Time.unscaledDeltaTime;
 
@@ -339,13 +345,14 @@ public class Controls : MonoBehaviour
         {
             if (melee.gameObject.activeSelf)
             {
-                melee.gameObject.SetActive(false);
+                if(melee.GetComponent<Animator>().GetBool("Active") == true) melee.GetComponent<Animator>().SetBool("Active", false);
+                //melee.gameObject.SetActive(false);
             }
         }
 
         lineRenderer.SetPosition(0, Vector3.zero);
         lineRenderer.SetPosition(1, Vector3.zero);
-        Time.timeScale = 1f;
+        //Time.timeScale = 1f;
         camera.fieldOfView = fov;
         laserSystem.Stop();
     }
@@ -355,9 +362,11 @@ public class Controls : MonoBehaviour
         if (!meleeAttack) return;
         foreach (var melee in meleeAttackPrefab)
         {
+            var animator = melee.GetComponent<Animator>();
             if (!melee.CompareTag("Selected")) continue;
             melee.gameObject.SetActive(true);
-            //melee.GetComponent<Animator>().StartPlayback();
+            if (animator.GetBool("Active") == false) animator.SetBool("Active", true);
+            
 
             Vector2 v = rb.velocity;
             var angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;
