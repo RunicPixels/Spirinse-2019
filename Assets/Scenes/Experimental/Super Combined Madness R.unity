@@ -16763,6 +16763,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4912903076253594424, guid: 57a2e677bb35da545825824945f9fbdd,
         type: 3}
+      propertyPath: enemyPrefab
+      value: 
+      objectReference: {fileID: 1091770310172960911, guid: f92a6c5fa21561949bb1a04da7192b89,
+        type: 3}
+    - target: {fileID: 4912903076253594424, guid: 57a2e677bb35da545825824945f9fbdd,
+        type: 3}
+      propertyPath: delay
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912903076253594424, guid: 57a2e677bb35da545825824945f9fbdd,
+        type: 3}
+      propertyPath: maxEnemies
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4912903076253594424, guid: 57a2e677bb35da545825824945f9fbdd,
+        type: 3}
       propertyPath: cleansinator
       value: 
       objectReference: {fileID: 1864829183}
@@ -17581,6 +17597,11 @@ PrefabInstance:
         type: 3}
       propertyPath: gravityCurve.m_Curve.Array.data[1].outWeight
       value: 0.377698
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435031174597603150, guid: 70907cfb21be91547b27cb539dbe9c2d,
+        type: 3}
+      propertyPath: maxDistance
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3435031174896469567, guid: 70907cfb21be91547b27cb539dbe9c2d, type: 3}
