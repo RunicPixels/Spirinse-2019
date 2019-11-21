@@ -94,6 +94,9 @@ public class Controls : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+
+        // Put this stuff into Input Manager
+
         direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
 
         if (Input.GetButtonDown("Fire3") && dashing == false && chiDashConsumption < chi)
