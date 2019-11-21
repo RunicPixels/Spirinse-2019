@@ -11,8 +11,6 @@ namespace Spirinse.System
 {
     public class GameManager : MonoBehaviour
     {
-        // Future Edit Notes: Input needs to be done from Input Manager
-
         private static GameManager Instance;
 
         [field: SerializeField] public HealthManager HealthManager { get; protected set; }
@@ -35,7 +33,7 @@ namespace Spirinse.System
         {
             // Assign Managers & Variables
             if (Instance == null)       Instance        = this;
-            else Destroy(gameObject);
+            else                        Destroy(gameObject);
 
             if (HealthManager == null)  HealthManager   = HealthManager.Instance;
             if (InputManager == null)   InputManager    = InputManager.Instance;
@@ -49,7 +47,7 @@ namespace Spirinse.System
         private void SetupEvents()
         {
             // Manage Health Events
-            var shieldManager = HealthManager.ShieldManager;
+            var shieldManager =                           HealthManager.ShieldManager;
 
             UiManager.GetHealthUI.SetMaxHealthContainers(HealthManager.GetHealthCap);
             UiManager.GetShieldUI.SetMaxShieldContainers(shieldManager.ShieldCap);
@@ -79,8 +77,6 @@ namespace Spirinse.System
 
             // Game Over Events
             StateManager.GameOverEvent                 += InitGame;
-
-            // Cleansinator
 
 
             // ...
