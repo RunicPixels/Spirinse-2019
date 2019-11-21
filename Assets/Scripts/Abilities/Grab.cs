@@ -12,7 +12,7 @@ public class Grab : BaseAbility
 
     public Rigidbody2D parentRB;
 
-    public Collider2D col;
+    public CircleCollider2D col;
 
     private void Update()
     {
@@ -30,10 +30,14 @@ public class Grab : BaseAbility
         if(grabbing)
         {
             col.enabled = true;
+            if(col.radius < 3f) col.radius += 24 * Time.fixedDeltaTime;
+
+
         }
         else
         {
             col.enabled = false;
+            col.radius = 0f;
             if (heldObject != null) Launch();
         }
     }
