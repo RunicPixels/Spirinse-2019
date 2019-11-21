@@ -13,9 +13,15 @@ namespace Spirinse.System
 
         private Action OnAttack;
         private Action OnDodge;
+        private Rewired.Player player;
+
+        private const string Grab = "Grab";
+
+        public bool Grabbing { private set; get; }
 
         public void Awake()
         {
+            player = ReInput.players.GetPlayer(0);
             if (Instance == null) Instance = this;
             else Destroy(gameObject);
         }
@@ -31,6 +37,19 @@ namespace Spirinse.System
             {
                 Application.Quit();
             }
+
+        }
+
+        public void SpiritUpdate()
+        {
+            //if (player.GetButton(Grab))
+            //{
+            //    Grabbing = true;
+            //}
+            //else
+            //{
+            //    Grabbing = false;
+            //}
         }
     }
 }
