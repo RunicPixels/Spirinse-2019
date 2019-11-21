@@ -87,6 +87,11 @@ namespace Spirinse.System
             HealthManager.InitHealth();
             HealthManager.InitShield();
         }
+
+        public void Update()
+        {
+            InputManager.SpiritUpdate();
+        }
     }
 }
 

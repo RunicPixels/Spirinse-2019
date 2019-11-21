@@ -91,7 +91,7 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
         if (iFrames > 0f || cured) return;
         health -= damage;
         TimeManager.Instance.Freeze(0.05f, 0, 3f, 3f);
-        //animator.SetTrigger(Hit);
+        animator.SetTrigger(Hit);
 
         if (health < 0 && !cured)
         {
