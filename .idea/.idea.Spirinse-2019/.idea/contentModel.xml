@@ -86,7 +86,6 @@
             </e>
           </e>
         </e>
-        <e p="DefenderParticles.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="FMOD" t="Include">
             <e p="addons" t="Include">
@@ -646,6 +645,7 @@
             <e p="BaseAbility.cs" t="Include" />
             <e p="BaseAttack.cs" t="Include" />
             <e p="Dash.cs" t="Include" />
+            <e p="Grab.cs" t="Include" />
             <e p="PlayerLaser.cs" t="Include" />
           </e>
           <e p="Audio" t="Include">
@@ -654,6 +654,7 @@
           <e p="CameraShake.cs" t="Include" />
           <e p="Cleansinator.cs" t="Include" />
           <e p="ClickableFunctionAttribute.cs" t="Include" />
+          <e p="DefenderParticles.cs" t="Include" />
           <e p="DontDestroyOnLoad.cs" t="Include" />
           <e p="Editor" t="Include">
             <e p="ClickableEditor.cs" t="Include" />
@@ -665,6 +666,10 @@
             <e p="IAbility.cs" t="Include" />
             <e p="IAttack.cs" t="Include" />
             <e p="IDamagable.cs" t="Include" />
+            <e p="IGrabbable.cs" t="Include" />
+          </e>
+          <e p="Objects" t="Include">
+            <e p="BaseGrabObject.cs" t="Include" />
           </e>
           <e p="PlaceholderRestart.cs" t="Include" />
           <e p="Player" t="Include">
@@ -692,6 +697,7 @@
             <e p="UpdateLinePosition.cs" t="Include" />
           </e>
           <e p="SetCameraDistance.cs" t="Include" />
+          <e p="SetState.cs" t="Include" />
           <e p="ShieldVisuals.cs" t="Include" />
           <e p="system" t="Include">
             <e p="Audio" t="Include">
@@ -718,8 +724,8 @@
               <e p="UIManager.cs" t="Include" />
             </e>
           </e>
+          <e p="WalkerMover.cs" t="Include" />
         </e>
-        <e p="SetState.cs" t="Include" />
         <e p="Shaders" t="Include">
           <e p="HiddenNormalsTexture.shader" t="Include" />
           <e p="Outline.shader" t="Include" />
@@ -728,7 +734,6 @@
           <e p="RimShader.shader" t="Include" />
           <e p="UVScroller.shader" t="Include" />
         </e>
-        <e p="WalkerMover.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />

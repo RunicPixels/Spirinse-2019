@@ -2,20 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce2e14ff-e13a-4da1-95b5-be1e6d97996a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Worm Prefab.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Prototype animations/SwordAttack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Prototype animations/SwordAttack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Environment.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefab_Environment.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefab_Environment.meta~Stashed changes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/General.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Prefab_Environment.meta~Stashed changes_0.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Actors.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Physics/SwordAttack2.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Physics/SwordAttack2.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Worm Prefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Worm Prefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Experimental/Super Combined Madness R.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Experimental/Super Combined Madness R.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/System/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/System/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Actors/M_Enemies_Worm_04.fbm.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Other/Spirinput Manager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Other/Spirinput Manager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioCache.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/TestTexture/Materials.meta" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,10 +20,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PrototypeScripts/SpawnEnemy.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-90">
+            <state>
               <folding>
                 <marker date="1573037083364" expanded="true" signature="6:112" ph="..." />
                 <marker date="1573037083364" expanded="true" signature="153:1447" ph="{...}" />
@@ -43,20 +38,36 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/System/GameManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="96" selection-start-line="96" selection-end-line="96" />
+            <state relative-caret-position="1440">
+              <caret line="101" selection-start-line="101" selection-end-line="101" />
               <folding>
-                <marker date="1574262378808" expanded="true" signature="6:202" ph="..." />
-                <marker date="1574262378808" expanded="true" signature="229:4116" ph="{...}" />
-                <marker date="1574262378808" expanded="true" signature="276:4114" ph="{...}" />
-                <marker date="1574262378808" expanded="true" signature="1048:1151" ph="{...}" />
-                <marker date="1574262378808" expanded="true" signature="1192:1955" ph="{...}" />
-                <marker date="1574262378808" expanded="true" signature="1991:3975" ph="{...}" />
-                <marker date="1574262378808" expanded="true" signature="4008:4108" ph="{...}" />
-                <marker date="1574262378808" expanded="true" signature="4120:4713" ph="/* public class FMODImplementation ... */" />
+                <marker date="1574421694059" expanded="true" signature="6:202" ph="..." />
+                <marker date="1574421694059" expanded="true" signature="229:4207" ph="{...}" />
+                <marker date="1574421694059" expanded="true" signature="276:4205" ph="{...}" />
+                <marker date="1574421694059" expanded="true" signature="1048:1151" ph="{...}" />
+                <marker date="1574421694059" expanded="true" signature="1192:1955" ph="{...}" />
+                <marker date="1574421694059" expanded="true" signature="1991:3975" ph="{...}" />
+                <marker date="1574421694059" expanded="true" signature="4008:4108" ph="{...}" />
+                <marker date="1574421694059" expanded="true" signature="4211:4804" ph="/* public class FMODImplementation ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/System/InputManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+              <folding>
+                <marker date="1574421694064" expanded="true" signature="6:142" ph="..." />
+                <marker date="1574421694064" expanded="true" signature="169:1201" ph="{...}" />
+                <marker date="1574421694064" expanded="true" signature="217:1199" ph="{...}" />
+                <marker date="1574421694064" expanded="true" signature="1182:1183" ph="{...}" />
+                <marker date="1574421694064" expanded="true" signature="1182:1193" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -65,7 +76,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
+            <state relative-caret-position="75">
               <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
               <folding>
                 <marker date="1573465781583" expanded="false" signature="6:101" ph="..." />
@@ -80,7 +91,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/Player.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="15">
               <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
               <folding>
                 <marker date="1573465781574" expanded="false" signature="6:92" ph="..." />
@@ -102,6 +113,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@2.1.7/PostProcessing/Runtime/Effects/AmbientOcclusion.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/System/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/System/InputManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@1.1.0/Rider/Editor/RiderInitializer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PrototypeScripts/SpawnEnemy.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -153,15 +165,15 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
+      <pane id="AssemblyExplorer" />
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
         <option name="show-project-names" value="true" />
       </pane>
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
       <pane id="FileSystemExplorer" />
-      <pane id="AssemblyExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -234,7 +246,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61009000" />
+    <option name="totallyTimeSpent" value="61608000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -248,7 +260,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1618" height="877" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27663672" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2804878" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -388,7 +400,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/SetCameraDistance.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/Player.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="15">
           <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
           <folding>
             <marker date="1573465781574" expanded="false" signature="6:92" ph="..." />
@@ -401,7 +413,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="75">
           <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
           <folding>
             <marker date="1573465781583" expanded="false" signature="6:101" ph="..." />
@@ -414,7 +426,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PrototypeScripts/SpawnEnemy.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
+        <state>
           <folding>
             <marker date="1573037083364" expanded="true" signature="6:112" ph="..." />
             <marker date="1573037083364" expanded="true" signature="153:1447" ph="{...}" />
@@ -430,17 +442,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/System/GameManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="96" selection-start-line="96" selection-end-line="96" />
+        <state relative-caret-position="1440">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
           <folding>
-            <marker date="1574262378808" expanded="true" signature="6:202" ph="..." />
-            <marker date="1574262378808" expanded="true" signature="229:4116" ph="{...}" />
-            <marker date="1574262378808" expanded="true" signature="276:4114" ph="{...}" />
-            <marker date="1574262378808" expanded="true" signature="1048:1151" ph="{...}" />
-            <marker date="1574262378808" expanded="true" signature="1192:1955" ph="{...}" />
-            <marker date="1574262378808" expanded="true" signature="1991:3975" ph="{...}" />
-            <marker date="1574262378808" expanded="true" signature="4008:4108" ph="{...}" />
-            <marker date="1574262378808" expanded="true" signature="4120:4713" ph="/* public class FMODImplementation ... */" />
+            <marker date="1574421694059" expanded="true" signature="6:202" ph="..." />
+            <marker date="1574421694059" expanded="true" signature="229:4207" ph="{...}" />
+            <marker date="1574421694059" expanded="true" signature="276:4205" ph="{...}" />
+            <marker date="1574421694059" expanded="true" signature="1048:1151" ph="{...}" />
+            <marker date="1574421694059" expanded="true" signature="1192:1955" ph="{...}" />
+            <marker date="1574421694059" expanded="true" signature="1991:3975" ph="{...}" />
+            <marker date="1574421694059" expanded="true" signature="4008:4108" ph="{...}" />
+            <marker date="1574421694059" expanded="true" signature="4211:4804" ph="/* public class FMODImplementation ... */" />
           </folding>
         </state>
       </provider>
