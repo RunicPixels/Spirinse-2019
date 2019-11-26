@@ -24134,7 +24134,7 @@ MonoBehaviour:
   duration: 0
   grabbing: 0
   parentRB: {fileID: 3435031174896469564}
-  col: {fileID: 0}
+  col: {fileID: 396034382167714848}
 --- !u!58 &396034382167714848
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -24150,7 +24150,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 4
+  m_Radius: 3
 --- !u!1 &702109058544555888
 GameObject:
   m_ObjectHideFlags: 0
@@ -24210,7 +24210,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1131235657095385634}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 0.06, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3435031174896469566}
@@ -34854,7 +34854,6 @@ GameObject:
   - component: {fileID: 3435031174896469539}
   - component: {fileID: 3435031174896469536}
   - component: {fileID: 539900546}
-  - component: {fileID: 539900552}
   m_Layer: 9
   m_Name: Defender
   m_TagString: Defender
@@ -34915,8 +34914,8 @@ MonoBehaviour:
   chiDrainAttackMode: 0.45
   chiDashConsumption: 0.7
   chiGravity: 2
-  hAcceleration: 44
-  vAcceleration: 44
+  hAcceleration: 35
+  vAcceleration: 35
   speed: 11
   altitudeModifier: 1
   altitudeVelocity: 1
@@ -35323,22 +35322,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.8
---- !u!114 &539900552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3435031174896469561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a4c9680570bcda44bc3d47dfd9120c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  duration: 0
-  grabbing: 0
-  parentRB: {fileID: 0}
-  col: {fileID: 0}
 --- !u!1 &3435031175023981241
 GameObject:
   m_ObjectHideFlags: 0
@@ -40546,6 +40529,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7264011798610362492, guid: 7d6ff9e401da77f44b8f630ee72c0050,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7264011798610362492, guid: 7d6ff9e401da77f44b8f630ee72c0050,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7264011798610362492, guid: 7d6ff9e401da77f44b8f630ee72c0050,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7264011798610362492, guid: 7d6ff9e401da77f44b8f630ee72c0050,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7264011798610362492, guid: 7d6ff9e401da77f44b8f630ee72c0050,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7537664810782988732, guid: 7d6ff9e401da77f44b8f630ee72c0050,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -40883,12 +40891,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d6ff9e401da77f44b8f630ee72c0050, type: 3}
---- !u!95 &1481929528185049855 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5876814235408105090, guid: 7d6ff9e401da77f44b8f630ee72c0050,
-    type: 3}
-  m_PrefabInstance: {fileID: 4980555010981276797}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5494819344068349334 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 675532729935667691, guid: 7d6ff9e401da77f44b8f630ee72c0050,
@@ -40898,6 +40900,12 @@ GameObject:
 --- !u!4 &8798587592023310213 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4540930970905334776, guid: 7d6ff9e401da77f44b8f630ee72c0050,
+    type: 3}
+  m_PrefabInstance: {fileID: 4980555010981276797}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1481929528185049855 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5876814235408105090, guid: 7d6ff9e401da77f44b8f630ee72c0050,
     type: 3}
   m_PrefabInstance: {fileID: 4980555010981276797}
   m_PrefabAsset: {fileID: 0}

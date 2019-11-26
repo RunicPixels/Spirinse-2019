@@ -42,14 +42,14 @@ namespace Spirinse.System
 
         public void SpiritUpdate()
         {
-            //if (player.GetButton(Grab))
-            //{
-            //    Grabbing = true;
-            //}
-            //else
-            //{
-            //    Grabbing = false;
-            //}
+            if (player.GetButton(Grab))
+            {
+                Grabbing = true;
+            }
+            else
+            {
+                Grabbing = false;
+            }
         }
     }
 }
