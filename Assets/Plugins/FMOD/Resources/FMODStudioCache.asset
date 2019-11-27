@@ -68,7 +68,7 @@ MonoBehaviour:
   Min: 1
   Max: 4
   Default: 1
-  Exists: 1
+  Exists: 0
 --- !u!114 &-8768545336548250970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,6 +191,23 @@ MonoBehaviour:
   Default: 1
   Exists: 1
 --- !u!114 &-5982115054652118551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Battle/Intensity Battle
+  m_EditorClassIdentifier: 
+  Name: Intensity Battle
+  Min: 1
+  Max: 4
+  Default: 1
+  Exists: 1
+--- !u!114 &-5764074408339649070
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -393,7 +410,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Audio/Spirinse FMOD Project/Build/Desktop/Master.strings.bank
   SubDir: Build/Desktop
-  lastModified: 637098431706857414
+  lastModified: 637083846543399231
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -421,6 +438,24 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+  Exists: 1
+--- !u!114 &-2283394926604266420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/Spirinse FMOD Project/Build/Desktop/Master.bank
+  SubDir: Build/Desktop
+  lastModified: 637083846543369254
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
 --- !u!114 &-1972499124765608602
 MonoBehaviour:
@@ -592,16 +627,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -2720980322477259071}
-  - {fileID: 1924127169765240014}
+  - {fileID: -2283394926604266420}
   EditorEvents:
   - {fileID: 1612915430834853730}
   - {fileID: 9148342079335919417}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 1924127169765240014}
+  - {fileID: -2283394926604266420}
   StringsBanks:
   - {fileID: -2720980322477259071}
-  stringsBankWriteTime: 637098431706857414
+  stringsBankWriteTime: 637083846543399231
   cacheVersion: 3
 --- !u!114 &947604857455000063
 MonoBehaviour:
@@ -656,12 +691,12 @@ MonoBehaviour:
   - {fileID: 6822579548111464883}
   - {fileID: -144093674308615007}
   - {fileID: 4713536233303731955}
-  - {fileID: 1924127169765240014}
+  - {fileID: -2283394926604266420}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 6610457995917620672}
+  - {fileID: 5173529242546289171}
   MinDistance: 0
   MaxDistance: 0
   Length: 23750
@@ -682,7 +717,7 @@ MonoBehaviour:
   lastModified: 637098431706857414
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &2211260541178064982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1012,6 +1047,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &5173529242546289171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Rain/RainIntensity
+  m_EditorClassIdentifier: 
+  Name: RainIntensity
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &5326693202103131305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1134,7 +1186,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &6822579548111464883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1309,12 +1361,12 @@ MonoBehaviour:
   - {fileID: 6822579548111464883}
   - {fileID: -144093674308615007}
   - {fileID: 4713536233303731955}
-  - {fileID: 1924127169765240014}
+  - {fileID: -2283394926604266420}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -8798739651840335318}
+  - {fileID: -5764074408339649070}
   MinDistance: 0
   MaxDistance: 0
   Length: 85333
