@@ -37,9 +37,6 @@ namespace Spirinse.System.Health
         [SerializeField] protected int healthCap;
         public int GetHealthCap => healthCap;
 
-        [SerializeField] protected ShieldManager shieldManager;
-        public ShieldManager ShieldManager => shieldManager;
-
         public Action<int> ChangeHealthEvent;
         public Action<int> ChangeMaxHealthEvent;
 
@@ -50,8 +47,6 @@ namespace Spirinse.System.Health
 
             Health = MaxHealth;
             instance = this;
-
-            InitShield();
         }
 
         private void OnDisable()
@@ -77,21 +72,12 @@ namespace Spirinse.System.Health
             ChangeHealthEvent?.Invoke(Health);
             ChangeMaxHealthEvent?.Invoke(MaxHealth);
         }
-        [ClickableFunction]
-        public void InitShield()
-        {
-            if (!shieldManager) Debug.LogError("No ShieldManager Assigned!");
-            shieldManager.SetNewMaxShield(MaxHealth);
-            shieldManager.SetShieldCap(healthCap);
-            shieldManager.SetShield(MaxHealth);
-            shieldManager.InitShield();
-        }
 
         public void HitMeditator(int damage)
         {
             if (iFramesCalc > 0) return;
             
-            DoDamage(shieldManager.DamageShield(damage, Health));
+            DoDamage(damage);
 
             SetIFramesCD(iFrames);
 
@@ -101,9 +87,9 @@ namespace Spirinse.System.Health
         {
             if (iFramesCalc > 0) return;
 
-            SetIFramesCD(iFrames);
+            DoDamage(damage);
 
-            shieldManager.DamageShield(damage, 0);
+            SetIFramesCD(iFrames);
         }
 
         public void SetIFramesCD(float amount)

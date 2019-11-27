@@ -9,6 +9,7 @@ namespace Spirinse.Objects
     {
         private Rigidbody2D rb;
         private Collider2D[] colliders;
+        public float damage = 1;
 
         private void Awake()
         {
@@ -42,6 +43,11 @@ namespace Spirinse.Objects
             {
                 col.enabled = true;
             }
+        }
+
+        public int GetDamage()
+        {
+            return Mathf.FloorToInt(damage * rb.velocity.magnitude * 0.1f);
         }
     }
 }

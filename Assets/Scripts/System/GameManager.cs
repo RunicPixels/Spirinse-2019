@@ -47,7 +47,6 @@ namespace Spirinse.System
         private void SetupEvents()
         {
             // Manage Health Events
-            var shieldManager =                           HealthManager.ShieldManager;
 
             UiManager.GetHealthUI.SetMaxHealthContainers(HealthManager.GetHealthCap);
 
@@ -80,7 +79,6 @@ namespace Spirinse.System
         private void InitGame()
         {
             HealthManager.InitHealth();
-            HealthManager.InitShield();
         }
 
         public void Update()
