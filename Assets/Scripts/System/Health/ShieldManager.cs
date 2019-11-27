@@ -71,9 +71,9 @@ namespace Spirinse.System.Health
         [ClickableFunction]
         public void InitShield()
         {
-            if(UI.UIManager.Instance)UI.UIManager.Instance.GetShieldUI.SetMaxShieldContainers(ShieldCap);
-            ChangeShieldEvent?.Invoke(shield);
-            ChangeMaxShieldEvent?.Invoke(maxShield);
+            //if(UI.UIManager.Instance)UI.UIManager.Instance.GetShieldUI.SetMaxShieldContainers(ShieldCap);
+            //ChangeShieldEvent?.Invoke(shield);
+            //ChangeMaxShieldEvent?.Invoke(maxShield);
         }
 
         public void PlaceHolderFunction(int amount)

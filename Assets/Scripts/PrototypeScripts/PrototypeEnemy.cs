@@ -49,7 +49,9 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
 
     void FixedUpdate()
     {
-        if (!target) target = Meditator.Instance.transform;
+        // Ugly code, needs refactoring.
+        if (!target) target = PlayerManager.Instance.player.defender.transform; 
+        
         if (iFrames > 0f)
         {
             iFrames -= Time.fixedDeltaTime;
@@ -117,12 +119,35 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
         
         cured = true;
         //animator.SetTrigger(Cure1);
-        transform.gameObject.layer = LayerMask.NameToLayer("NoCollision");
+        transform.gameObject.layer = LayerMask.NameToLayer("Invulnerable");
     }
 
     public void Destroy()
     {
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        MonoBehaviour[] list = collision.gameObject.GetComponents<MonoBehaviour>();
+
+        foreach (MonoBehaviour mb in list)
+        {
+            if (mb is IDamagable)
+            {
+                IDamagable damageable = (IDamagable)mb;
+                hitParticles.Play();
+                damageable.TakeDamage(damage);
+                Stun();
+            }
+            if (mb is IAttack && iFrames <= 0)
+            {
+                IAttack attack = (IAttack)mb;
+
+                TakeDamage(attack.DoAttack());
+            }
+        }
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -144,28 +169,5 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
             animator.SetBool("Active", false);
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Collider2D myCollider = collision.GetContact(0).collider;
 
-        MonoBehaviour[] list = myCollider.gameObject.GetComponents<MonoBehaviour>();
-
-
-        foreach(MonoBehaviour mb in list)
-        {
-            if (mb is IDamagable)
-            {
-                IDamagable damageable = (IDamagable)mb;
-                hitParticles.Play();
-                damageable.TakeDamage(damage);
-                Stun();
-            }
-            if (mb is IAttack && iFrames <= 0)
-            {
-                IAttack attack = (IAttack)mb;
-
-                TakeDamage(attack.DoAttack());
-            }
-        }
-    }
 }
