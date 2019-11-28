@@ -142,14 +142,14 @@ public class Controls : MonoBehaviour
         {
             if (dashing)
             {
-                altitudeVelocity += rb.velocity.magnitude * 0.01f * Time.fixedDeltaTime;
+                altitudeVelocity += rb.velocity.magnitude * 0.0155f * Time.fixedDeltaTime;
             }
             else
             {
-                altitudeVelocity -= rb.velocity.y * 0.06f * Time.fixedDeltaTime;
+                altitudeVelocity -= rb.velocity.y * 0.08f * Time.fixedDeltaTime;
                 
             }
-            altitudeVelocity -= (0.5f + altitudeVelocity * 0.38f) * Time.fixedDeltaTime;
+            altitudeVelocity -= (0.5f + altitudeVelocity * 0.45f) * Time.fixedDeltaTime;
 
         }
         if(rb.velocity.magnitude < speed)
@@ -158,7 +158,7 @@ public class Controls : MonoBehaviour
         }
         if (altitudeVelocity < 1f) altitudeVelocity = 1f;
 
-        powVelocity = Mathf.Pow(altitudeVelocity, 0.33f);
+        powVelocity = Mathf.Pow(altitudeVelocity, 0.3f);
     }
 
     private Vector2 CalculateVelocity()

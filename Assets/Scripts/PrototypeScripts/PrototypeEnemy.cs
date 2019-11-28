@@ -6,6 +6,7 @@ using UnityEngine;
 using Spirinse.Player;
 using Spirinse.System;
 using Spirinse.System.Effects;
+using Spirinse.Objects;
 
 public class PrototypeEnemy : MonoBehaviour, IDamagable
 {
@@ -27,7 +28,11 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
     public Transform target;
     private Transform originalTarget;
 
-    private static readonly int Cure1 = Animator.StringToHash("Cure");
+    public SkinnedMeshRenderer meshRenderer;
+    public Material cleansedMaterial;
+    private Material oldMaterial;
+
+    private static readonly int Cured = Animator.StringToHash("Cured");
     private static readonly int Hit = Animator.StringToHash("Hit");
 
     private bool flipped;
@@ -37,11 +42,13 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
     public float iFrames = 0f;
     public float stunned = 0;
 
+    private float progression = 0f;
     public ParticleSystem hitParticles;
 
     // Start is called before the first frame update
     void Start()
     {
+        oldMaterial = meshRenderer.material;
         speed = idleSpeed;
         originalTarget = target;
         rb = GetComponent<Rigidbody2D>();
@@ -49,7 +56,9 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
 
     void FixedUpdate()
     {
-        if (!target) target = Meditator.Instance.transform;
+        // Ugly code, needs refactoring.
+        if (!target) target = PlayerManager.Instance.player.defender.transform;
+
         if (iFrames > 0f)
         {
             iFrames -= Time.fixedDeltaTime;
@@ -62,23 +71,19 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
         }
 
         direction = (target.position - transform.position).normalized;
-        if (cured) direction = -direction;
+        if (cured) direction = -direction * 0.01f;
+        if(animator.transform.localScale.x < 0.05f) { Destroy(); }
 
         rb.velocity = direction * speed;
 
-        if (cured)
-        {
-            rb.velocity += Vector2.up * 1.5f;
-        }
-
-        StunJump:
+    StunJump:
 
         flipped = rb.velocity.x < 0;
 
 
         var xScale = flipped ? 2f : -2f;
 
-        transform.localScale = new Vector3(2f, xScale, 2f);
+        //transform.localScale = new Vector3(2f, xScale, 2f);
 
 
         var v = rb.velocity;
@@ -88,10 +93,11 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
 
     public void TakeDamage(int damage)
     {
-        if (iFrames > 0f || cured) return;
+        if (iFrames > 0f || cured || damage < 1) return;
         health -= damage;
         TimeManager.Instance.Freeze(0.05f, 0, 3f, 3f);
         animator.SetTrigger(Hit);
+        hitParticles.Play();
 
         if (health < 0 && !cured)
         {
@@ -114,10 +120,10 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
     private void Cure()
     {
         CleanseManager.Instance.cleanseEvent?.Invoke();
-        
         cured = true;
-        //animator.SetTrigger(Cure1);
-        transform.gameObject.layer = LayerMask.NameToLayer("NoCollision");
+        animator.SetTrigger(Cured);
+        meshRenderer.material = cleansedMaterial;
+        transform.gameObject.layer = LayerMask.NameToLayer("Invulnerable");
     }
 
     public void Destroy()
@@ -125,38 +131,16 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
         Destroy(gameObject);
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.CompareTag("Defender") && Spirinse.System.Health.HealthManager.Instance.ShieldManager.GetShield() > 0)
-        {
-            target = other.transform;
-            speed = activeSpeed;
-            animator.SetBool("Active", true);
-        }
-    }
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Defender"))
-        {
-            target = originalTarget;
-            speed = idleSpeed;
-            animator.SetBool("Active", false);
-        }
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Collider2D myCollider = collision.GetContact(0).collider;
+        MonoBehaviour[] list = collision.gameObject.GetComponents<MonoBehaviour>();
 
-        MonoBehaviour[] list = myCollider.gameObject.GetComponents<MonoBehaviour>();
-
-
-        foreach(MonoBehaviour mb in list)
+        foreach (var mb in list)
         {
             if (mb is IDamagable)
             {
                 IDamagable damageable = (IDamagable)mb;
-                hitParticles.Play();
                 damageable.TakeDamage(damage);
                 Stun();
             }
@@ -166,6 +150,29 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
 
                 TakeDamage(attack.DoAttack());
             }
+            if (mb is BaseGrabObject && collision.GetComponent<Rigidbody2D>())
+            {
+                BaseGrabObject grabObject = (BaseGrabObject)mb;
+                TakeDamage(grabObject.GetDamage());
+            }
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("Defender"))
+        {
+            speed = activeSpeed;
+            animator.SetBool("Active", true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Defender"))
+        {
+            speed = idleSpeed;
+            animator.SetBool("Active", false);
         }
     }
 }
