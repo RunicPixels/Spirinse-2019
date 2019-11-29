@@ -86,6 +86,13 @@
             </e>
           </e>
         </e>
+        <e p="Placer" t="Include">
+          <e p="Tools" t="Include">
+            <e p="Editor" t="Include">
+              <e p="DuplicateTool.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Plugins" t="Include">
           <e p="FMOD" t="Include">
             <e p="addons" t="Include">
@@ -651,16 +658,30 @@
           <e p="Audio" t="Include">
             <e p="FMODSliderComponent.cs" t="Include" />
           </e>
-          <e p="CameraShake.cs" t="Include" />
           <e p="Cleansinator.cs" t="Include" />
-          <e p="ClickableFunctionAttribute.cs" t="Include" />
           <e p="DefenderParticles.cs" t="Include" />
           <e p="DontDestroyOnLoad.cs" t="Include" />
           <e p="Editor" t="Include">
             <e p="ClickableEditor.cs" t="Include" />
           </e>
+          <e p="Effects" t="Include">
+            <e p="CameraShake.cs" t="Include" />
+            <e p="SetCameraDistance.cs" t="Include" />
+          </e>
+          <e p="Entities" t="Include">
+            <e p="Enemies" t="Include">
+              <e p="BaseEnemy.cs" t="Include" />
+              <e p="Behaviour" t="Include">
+                <e p="BaseBehaviourState.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Player" t="Include">
+              <e p="Defender.cs" t="Include" />
+              <e p="Meditator.cs" t="Include" />
+              <e p="Player.cs" t="Include" />
+            </e>
+          </e>
           <e p="FadeAway.cs" t="Include" />
-          <e p="GameStateManager.cs" t="Include" />
           <e p="HealthContainerImage.cs" t="Include" />
           <e p="Interfaces" t="Include">
             <e p="IAbility.cs" t="Include" />
@@ -672,11 +693,6 @@
             <e p="BaseGrabObject.cs" t="Include" />
           </e>
           <e p="PlaceholderRestart.cs" t="Include" />
-          <e p="Player" t="Include">
-            <e p="Defender.cs" t="Include" />
-            <e p="Meditator.cs" t="Include" />
-            <e p="Player.cs" t="Include" />
-          </e>
           <e p="PlayerAnimator.cs" t="Include" />
           <e p="PlayerManager.cs" t="Include" />
           <e p="PrototypeScripts" t="Include">
@@ -696,7 +712,6 @@
             <e p="TrackingBall.cs" t="Include" />
             <e p="UpdateLinePosition.cs" t="Include" />
           </e>
-          <e p="SetCameraDistance.cs" t="Include" />
           <e p="SetState.cs" t="Include" />
           <e p="ShieldVisuals.cs" t="Include" />
           <e p="system" t="Include">
@@ -712,6 +727,7 @@
             </e>
             <e p="EffectsManager.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
+            <e p="GameStateManager.cs" t="Include" />
             <e p="Health" t="Include">
               <e p="HealthManager.cs" t="Include" />
               <e p="ShieldManager.cs" t="Include" />
@@ -723,6 +739,9 @@
               <e p="SetShieldUI.cs" t="Include" />
               <e p="UIManager.cs" t="Include" />
             </e>
+          </e>
+          <e p="Tools" t="Include">
+            <e p="ClickableFunctionAttribute.cs" t="Include" />
           </e>
           <e p="WalkerMover.cs" t="Include" />
         </e>
