@@ -88111,9 +88111,9 @@ GameObject:
   - component: {fileID: 2023677125}
   - component: {fileID: 2023677130}
   - component: {fileID: 2023677129}
-  - component: {fileID: 2023677128}
   - component: {fileID: 2023677127}
   - component: {fileID: 2023677126}
+  - component: {fileID: 2023677131}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -88174,7 +88174,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.55}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -88187,18 +88187,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1, y: 1.1}
   m_EdgeRadius: 0
---- !u!114 &2023677128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2023677124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 171de5b60da231b47ad6233535675d4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &2023677129
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -88245,6 +88233,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023677124}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2023677131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023677124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae5c858cb964494ebddb01cec17193fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2024438496
 PrefabInstance:
   m_ObjectHideFlags: 0
