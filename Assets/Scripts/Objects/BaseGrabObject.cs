@@ -67,7 +67,6 @@ namespace Spirinse.Objects
             {
                 if (mb is IDamagable)
                 {
-                    // DOING SOME DAMAGE;
                     IDamagable damageable = (IDamagable)mb;
                     damageable.TakeDamage(GetDamage());
                 }

@@ -13,6 +13,8 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
     private const string StrB = "Player";
     private float speed;
 
+    public Transform visualContainer;
+
     public float idleSpeed;
     public float activeSpeed;
 
@@ -78,17 +80,17 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
 
     StunJump:
 
-        flipped = rb.velocity.x < 0;
+        //flipped = rb.velocity.x < 0;
 
 
-        var xScale = flipped ? 2f : -2f;
+        //var xScale = flipped ? 2f : -2f;
 
         //transform.localScale = new Vector3(2f, xScale, 2f);
 
 
         var v = rb.velocity;
         var angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        visualContainer.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
     public void TakeDamage(int damage)
