@@ -6,6 +6,8 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class SetEdgeColliderPoints : MonoBehaviour
 {
+    public bool enableGizmos;
+
     public List<Transform> points;
 
     public EdgeCollider2D edgy;
@@ -39,7 +41,7 @@ public class SetEdgeColliderPoints : MonoBehaviour
     }
     public void OnDrawGizmos()
     {
-        
+        if (!enableGizmos) return;
         Gizmos.color = new Color(255, 0, 255);
         for (int i = 0; i < points.Count - 1; i++)
         {
