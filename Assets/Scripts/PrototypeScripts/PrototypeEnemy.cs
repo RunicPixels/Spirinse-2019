@@ -93,6 +93,7 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
 
     public void TakeDamage(int damage)
     {
+        Debug.Log("Yeet");
         if (iFrames > 0f || cured || damage < 1) return;
         health -= damage;
         TimeManager.Instance.Freeze(0.05f, 0, 3f, 3f);
@@ -133,7 +134,6 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         MonoBehaviour[] list = collision.gameObject.GetComponents<MonoBehaviour>();
 
         foreach (var mb in list)
@@ -149,11 +149,6 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
                 IAttack attack = (IAttack)mb;
 
                 TakeDamage(attack.DoAttack());
-            }
-            if (mb is BaseGrabObject && collision.GetComponent<Rigidbody2D>())
-            {
-                BaseGrabObject grabObject = (BaseGrabObject)mb;
-                TakeDamage(grabObject.GetDamage());
             }
         }
     }
