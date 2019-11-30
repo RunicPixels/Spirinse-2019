@@ -37,7 +37,7 @@ namespace Spirinse.Objects
         {
             rb.isKinematic = false;
             // Slight Delay until collisions return;
-            Invoke("ReturnCollision", 0.1f);
+            Invoke(nameof(ReturnCollision), 0.1f);
             transform.parent = null;
             rb.velocity = velocity;
         }

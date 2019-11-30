@@ -686,10 +686,12 @@
           <e p="Interfaces" t="Include">
             <e p="IAbility.cs" t="Include" />
             <e p="IAttack.cs" t="Include" />
+            <e p="IBreakable.cs" t="Include" />
             <e p="IDamagable.cs" t="Include" />
             <e p="IGrabbable.cs" t="Include" />
           </e>
           <e p="Objects" t="Include">
+            <e p="BaseBreakableObject.cs" t="Include" />
             <e p="BaseGrabObject.cs" t="Include" />
           </e>
           <e p="PlaceholderRestart.cs" t="Include" />
