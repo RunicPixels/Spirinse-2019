@@ -137,7 +137,8 @@ Shader "Ronald/CorruptPBS"
 				}
 
 				fixed4 fragBase(v2f i) : SV_Target{
-					fixed4 col = tex2D(_MainTex, i.uv);
+				    fixed4 col = fixed4(1,0,1,1);
+					//fixed4 col = tex2D(_MainTex, i.uv);
 				// apply fog
 				UNITY_APPLY_FOG(i.fogCoord, col);
 				return col;

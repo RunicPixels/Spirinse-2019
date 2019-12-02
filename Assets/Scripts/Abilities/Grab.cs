@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Spirinse.Objects;
 using Spirinse.Interfaces;
+using Rewired;
 
 public class Grab : BaseAbility
 {
