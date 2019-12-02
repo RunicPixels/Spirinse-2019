@@ -12,13 +12,22 @@ public class Grab : BaseAbility
 
     public Rigidbody2D parentRB;
 
+    public float launchVelocity;
+
     public CircleCollider2D col;
 
     private void Update()
     {
-        if(Input.GetKey(KeyCode.Space)) {
+        if(Input.GetKey(KeyCode.Space) && Input.GetKey(KeyCode.Q) == false) {
             grabbing = true;
         }
+
+        else if(Input.GetKeyDown(KeyCode.Q) && grabbing)
+        {
+            grabbing = false;
+            Launch();
+        } 
+
         else if (grabbing)
         {
             grabbing = false;
@@ -38,7 +47,7 @@ public class Grab : BaseAbility
         {
             col.enabled = false;
             col.radius = 0f;
-            if (heldObject != null) Launch();
+            if (heldObject != null) Launch(launchVelocity);
         }
     }
 
@@ -55,9 +64,9 @@ public class Grab : BaseAbility
         heldObject.Hold(transform);
     }
 
-    private void Launch()
+    private void Launch(float velocity = 0f)
     {
-        heldObject.Release(parentRB.velocity);
+        heldObject.Release(parentRB.velocity + parentRB.velocity.normalized * velocity);
         heldObject = null;
     }
 }
