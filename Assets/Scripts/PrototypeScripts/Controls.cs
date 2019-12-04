@@ -10,8 +10,8 @@ using UnityEngine.Assertions.Comparers;
 
 public class Controls : MonoBehaviour
 {
-    
-    [Header("Visuals")] 
+
+    [Header("Visuals")]
     public ParticleSystem trailSystem;
 
     [Range(0f, 1f)] public static float chi =1f;
@@ -26,7 +26,7 @@ public class Controls : MonoBehaviour
     [Header("TimeScale")]
     private float attackTimeScale = 0.4f;
     private float dashTimeScale = 0.8f;
-    
+
     [Header("Moving")]
     public float hAcceleration;
     public float vAcceleration, speed;
@@ -37,7 +37,7 @@ public class Controls : MonoBehaviour
     [Header("Dash")]
     public Dash dashAbility;
 
-    [Header("Attacks")] 
+    [Header("Attacks")]
     // Laser
     public bool laser;
     public float laserLength = 15f;
@@ -56,8 +56,8 @@ public class Controls : MonoBehaviour
     // Melee
     [Space(10)] public bool meleeAttack;
     public BaseAttack[] meleeAttackPrefab;
-    
-    // Privates 
+
+    // Privates
     private LineRenderer lineRenderer;
     private Rigidbody2D rb;
 
@@ -86,7 +86,7 @@ public class Controls : MonoBehaviour
 
         //meleeAttackPrefab.ToList().MMShuffle();
         //meleeAttackPrefab.ToList().OrderBy((x => x.GetComponent<ControllerColliderHit>().transform.position.y)).Take(3);
-        
+
         lineRenderer = GetComponent<LineRenderer>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -130,7 +130,7 @@ public class Controls : MonoBehaviour
 
         Spirinse.System.CameraManager.Instance.cameraDistance.SetVelocityDistance(rb.velocity.magnitude);
 
-        
+
     }
     private void CalculateAltitudeVelocity()
     {
@@ -147,7 +147,7 @@ public class Controls : MonoBehaviour
             else
             {
                 altitudeVelocity -= rb.velocity.y * 0.08f * Time.fixedDeltaTime;
-                
+
             }
             altitudeVelocity -= (0.5f + altitudeVelocity * 0.45f) * Time.fixedDeltaTime;
 
@@ -221,7 +221,7 @@ public class Controls : MonoBehaviour
         //var trailSystemRibbon = trailSystem.trails;
 
         dashAbility.SetDirection(direction);
-        
+
         dashAbility.Play();
 
         var currentDash = dashAbility.GetDuration();
@@ -231,7 +231,7 @@ public class Controls : MonoBehaviour
 
         chi -= chiDashConsumption;
         dashing = true;
-        
+
         rb.velocity *= dashAbility.GetStopBeforeDash;
 
         while (dashAbility.Run())
@@ -253,7 +253,7 @@ public class Controls : MonoBehaviour
         Time.timeScale = 1f;
 
         trailSystemMain.startLifetime = tLife;
-        
+
 //      if (rb.velocity.magnitude > speed)
 //      {
 //          rb.velocity = rb.velocity.normalized * speed;
@@ -369,7 +369,7 @@ public class Controls : MonoBehaviour
             if (!melee.CompareTag("Selected")) continue;
             melee.gameObject.SetActive(true);
             if (animator.GetBool("Active") == false) animator.SetBool("Active", true);
-            
+
 
             Vector2 v = rb.velocity;
             var angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;
