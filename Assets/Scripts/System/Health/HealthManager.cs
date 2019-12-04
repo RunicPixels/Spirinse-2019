@@ -13,7 +13,7 @@ namespace Spirinse.System.Health
         private static HealthManager instance = null;
         public static HealthManager Instance => instance;
 
-        private float iFrames = 0.5f;
+        private float iFrames = 0.1f;
         private float iFramesCalc;
 
         [SerializeField] protected int _health;
@@ -76,7 +76,7 @@ namespace Spirinse.System.Health
         public void HitMeditator(int damage)
         {
             if (iFramesCalc > 0) return;
-            
+
             DoDamage(damage);
 
             SetIFramesCD(iFrames);
