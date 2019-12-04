@@ -4878,8 +4878,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visualContainer: {fileID: 5288520752964030062}
-  idleSpeed: 6
-  activeSpeed: 12
+  idleSpeed: 35
+  activeSpeed: 5
   health: 5
   animator: {fileID: 2877406928871842580}
   cured: 0
@@ -4938,11 +4938,11 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0.6
   m_Points:
-  - {x: -1.9750338, y: 1.4180851}
-  - {x: -1.1579267, y: 0.4518366}
-  - {x: -0.30591607, y: -0.005027771}
-  - {x: 0.30877653, y: 0}
-  - {x: 1.3640237, y: 0.47976875}
+  - {x: -1.9750328, y: 1.4180851}
+  - {x: -1.1579266, y: 0.45183563}
+  - {x: -0.30591583, y: -0.005027771}
+  - {x: 0.30877686, y: 0}
+  - {x: 1.3640232, y: 0.47976875}
 --- !u!114 &260012584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24145,6 +24145,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1091770310172960913}
     m_Modifications:
+    - target: {fileID: -8470697959465052179, guid: 113136df6984ab849b4438ba12567f2a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -9.596489
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 113136df6984ab849b4438ba12567f2a,
         type: 3}
       propertyPath: m_Name
@@ -24254,11 +24259,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: -8470697959465052179, guid: 113136df6984ab849b4438ba12567f2a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -9.596489
       objectReference: {fileID: 0}
     - target: {fileID: -7357050027859888954, guid: 113136df6984ab849b4438ba12567f2a,
         type: 3}

@@ -86,6 +86,7 @@
             </e>
           </e>
         </e>
+        <e p="CurrentMeleeManager.cs" t="Include" />
         <e p="Placer" t="Include">
           <e p="Tools" t="Include">
             <e p="Editor" t="Include">
@@ -693,6 +694,8 @@
           <e p="Objects" t="Include">
             <e p="BaseBreakableObject.cs" t="Include" />
             <e p="BaseGrabObject.cs" t="Include" />
+            <e p="FakeLevelTransition.cs" t="Include" />
+            <e p="FakeLevelTransition1.cs" t="Include" />
           </e>
           <e p="PlaceholderRestart.cs" t="Include" />
           <e p="PlayerAnimator.cs" t="Include" />
@@ -747,12 +750,20 @@
           </e>
           <e p="WalkerMover.cs" t="Include" />
         </e>
+        <e p="SetEdgeColliderPoints.cs" t="Include" />
         <e p="Shaders" t="Include">
           <e p="HiddenNormalsTexture.shader" t="Include" />
           <e p="Outline.shader" t="Include" />
           <e p="PostProcessOutline.cs" t="Include" />
           <e p="RenderReplacementShaderToTexture.cs" t="Include" />
           <e p="RimShader.shader" t="Include" />
+          <e p="Ronald" t="Include">
+            <e p="CorruptPBS.shader" t="Include" />
+            <e p="CorruptShader.shader" t="Include" />
+            <e p="TCP2_PBS_BRDF.cginc" t="Include" />
+            <e p="TCP2_PBS_Core.cginc" t="Include" />
+            <e p="TCP2_PBS_Main.cginc" t="Include" />
+          </e>
           <e p="UVScroller.shader" t="Include" />
         </e>
       </e>
