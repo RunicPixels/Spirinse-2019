@@ -45,10 +45,10 @@ public class Grab : BaseAbility
 
     private void FixedUpdate()
     {
-        if(grabbing)
+        if (grabbing)
         {
             col.enabled = true;
-            if(col.radius < 3f) col.radius += 24 * Time.fixedDeltaTime;
+            if (col.radius < 3f) col.radius += 24 * Time.fixedDeltaTime;
 
 
         }
