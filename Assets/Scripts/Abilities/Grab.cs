@@ -17,6 +17,8 @@ public class Grab : BaseAbility
 
     public CircleCollider2D col;
 
+    public float chiDrain;
+
     private void Update()
     {
         if(Input.GetKey(KeyCode.Space) && Input.GetKey(KeyCode.Q) == false) {
@@ -27,11 +29,17 @@ public class Grab : BaseAbility
         {
             grabbing = false;
             Launch();
-        } 
+        }
 
         else if (grabbing)
         {
             grabbing = false;
+        }
+
+        if(grabbing)
+        {
+            Controls.chi -= chiDrain * Time.deltaTime;
+            Controls.chi = Mathf.Max(0f, Controls.chi);
         }
     }
 

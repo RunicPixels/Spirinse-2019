@@ -6,18 +6,17 @@ using System;
 
 public class FakeLevelTransition : MonoBehaviour
 {
-    public GameObject levelZero;
-    public GameObject levelOne;
-    public GameObject levelTwo;
+    public GameObject barrier;
+    public GameObject enemyGroup;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-          if (levelZero.activeSelf)
+          if (barrier.activeSelf)
           {
-            levelZero.SetActive(false);
-            levelOne.SetActive(true);
+            barrier.SetActive(false);
+            enemyGroup.SetActive(true);
           }
 
 
