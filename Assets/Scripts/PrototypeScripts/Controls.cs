@@ -268,7 +268,7 @@ public class Controls : MonoBehaviour
         Camera camera = Camera.main;
         fov = camera.fieldOfView;
 
-        var bulletCD = 0.1f;
+        var bulletCD = 0.0f;
         var charge = 0.5f;
 
         chi -= chiAttackCost;
