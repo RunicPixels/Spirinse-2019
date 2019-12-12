@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using Spirinse.Interfaces;
-using MEC;
 using UnityEngine;
-using UnityEngine.Assertions.Comparers;
+using Spirinse.Abilities;
 
 public class Controls : MonoBehaviour
 {

@@ -6,6 +6,9 @@ namespace Spirinse.Objects
     [RequireComponent(typeof(Rigidbody2D))]
     public class BaseBreakableObject : MonoBehaviour, IBreakable
     {
+        [EnumFlag][SerializeField]
+        System.Enums.DamageEnums.DamageType damageTypes = System.Enums.DamageEnums.DamageType.Everything;
+
         private Rigidbody2D rb;
         private void Awake()
         {
@@ -17,9 +20,10 @@ namespace Spirinse.Objects
 
         private void OnTriggerEnter2D(Collider2D col)
         {
-            if (col.GetComponent<BaseGrabObject>() && col.tag == "Throwable")
+            var dt = col.GetComponent<Spirinse.System.Combat.DamageType>();
+            if (dt != null)
             {
-                Break();
+                if(damageTypes.HasFlag(dt.damageType)) Break();
             }
 
         }
@@ -30,11 +34,11 @@ namespace Spirinse.Objects
             {
                 rb.isKinematic = false;
             }
-            //Invoke("Destroy", 1f);
+            Invoke("Destroy", 0.1f);
         }
         public void Destroy()
         {
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 }
