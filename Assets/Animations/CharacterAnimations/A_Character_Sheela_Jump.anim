@@ -6,12 +6,62 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Character_Sheela_Jump
+  m_Name: A_Character_Sheela_Jump
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
   m_UseHighQualityCurve: 1
   m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.79166675
+        value: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sheela_Model/Sheela_Rig
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 0, y: -0, z: -0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      - serializedVersion: 3
+        time: 0.79166675
+        value: {x: 0, y: -0, z: -0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sheela_Model/Sheela_Rig/Rig_Container
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -99,7 +149,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -160,7 +210,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -338,7 +388,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -516,7 +566,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenL/KnieL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenL/Retopologie13__1_:KnieL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -685,7 +735,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenL/KnieL/VoetL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenL/Retopologie13__1_:KnieL/Retopologie13__1_:VoetL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -818,7 +868,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenL/KnieL/VoetL/HielL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenL/Retopologie13__1_:KnieL/Retopologie13__1_:VoetL/Retopologie13__1_:HielL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -843,7 +893,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenL/KnieL/VoetL/HielL/VoorVoetL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenL/Retopologie13__1_:KnieL/Retopologie13__1_:VoetL/Retopologie13__1_:HielL/Retopologie13__1_:VoorVoetL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -868,7 +918,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenL/KnieL/VoetL/HielL/VoorVoetL/TeenL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenL/Retopologie13__1_:KnieL/Retopologie13__1_:VoetL/Retopologie13__1_:HielL/Retopologie13__1_:VoorVoetL/Retopologie13__1_:TeenL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1019,7 +1069,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1197,7 +1247,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenR/KnieR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenR/Retopologie13__1_:KnieR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1222,7 +1272,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenR/KnieR/VoetR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenR/Retopologie13__1_:KnieR/Retopologie13__1_:VoetR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1373,7 +1423,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenR/KnieR/VoetR/HierR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenR/Retopologie13__1_:KnieR/Retopologie13__1_:VoetR/Retopologie13__1_:HierR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1398,7 +1448,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenR/KnieR/VoetR/HierR/VoorVoetR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenR/Retopologie13__1_:KnieR/Retopologie13__1_:VoetR/Retopologie13__1_:HierR/Retopologie13__1_:VoorVoetR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1423,7 +1473,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenR/KnieR/VoetR/HierR/VoorVoetR/TeenR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenR/Retopologie13__1_:KnieR/Retopologie13__1_:VoetR/Retopologie13__1_:HierR/Retopologie13__1_:VoorVoetR/Retopologie13__1_:TeenR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1565,7 +1615,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1590,7 +1640,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1723,7 +1773,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1901,7 +1951,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderL/ElbowL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderL/Retopologie13__1_:ElbowL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2016,7 +2066,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderL/ElbowL/WristL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderL/Retopologie13__1_:ElbowL/Retopologie13__1_:WristL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2041,7 +2091,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderL/ElbowL/WristL/HandL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderL/Retopologie13__1_:ElbowL/Retopologie13__1_:WristL/Retopologie13__1_:HandL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2066,7 +2116,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderL/ElbowL/WristL/HandL/joint23
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderL/Retopologie13__1_:ElbowL/Retopologie13__1_:WristL/Retopologie13__1_:HandL/Retopologie13__1_:joint23
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2091,7 +2141,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderL/ElbowL/WristL/ThumbL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderL/Retopologie13__1_:ElbowL/Retopologie13__1_:WristL/Retopologie13__1_:ThumbL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2116,7 +2166,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderL/ElbowL/WristL/ThumbL/joint23
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderL/Retopologie13__1_:ElbowL/Retopologie13__1_:WristL/Retopologie13__1_:ThumbL/Retopologie13__1_:joint23
       1
   - curve:
       serializedVersion: 2
@@ -2259,7 +2309,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2437,7 +2487,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderR/ElbowR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderR/Retopologie13__1_:ElbowR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2552,7 +2602,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderR/ElbowR/WristR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderR/Retopologie13__1_:ElbowR/Retopologie13__1_:WristR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2577,7 +2627,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderR/ElbowR/WristR/HandR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderR/Retopologie13__1_:ElbowR/Retopologie13__1_:WristR/Retopologie13__1_:HandR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2602,7 +2652,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderR/ElbowR/WristR/HandR/joint40
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderR/Retopologie13__1_:ElbowR/Retopologie13__1_:WristR/Retopologie13__1_:HandR/Retopologie13__1_:joint40
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2627,7 +2677,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderR/ElbowR/WristR/ThumbR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderR/Retopologie13__1_:ElbowR/Retopologie13__1_:WristR/Retopologie13__1_:ThumbR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2652,7 +2702,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderR/ElbowR/WristR/ThumbR/joint42
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderR/Retopologie13__1_:ElbowR/Retopologie13__1_:WristR/Retopologie13__1_:ThumbR/Retopologie13__1_:joint42
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2713,7 +2763,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/Gezicht
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:Gezicht
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2738,7 +2788,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/Gezicht/Haar
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:Gezicht/Retopologie13__1_:Haar
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2907,7 +2957,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/Gezicht/Haar/Staart
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:Gezicht/Retopologie13__1_:Haar/Retopologie13__1_:Staart
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2995,7 +3045,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/Gezicht/Haar/Staart/Staart1
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:Gezicht/Retopologie13__1_:Haar/Retopologie13__1_:Staart/Retopologie13__1_:Staart1
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3092,7 +3142,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/Gezicht/Haar/Staart/Staart1/Staart2
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:Gezicht/Retopologie13__1_:Haar/Retopologie13__1_:Staart/Retopologie13__1_:Staart1/Retopologie13__1_:Staart2
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3198,7 +3248,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/Gezicht/Haar/Staart/Staart1/Staart2/Staart3
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:Gezicht/Retopologie13__1_:Haar/Retopologie13__1_:Staart/Retopologie13__1_:Staart1/Retopologie13__1_:Staart2/Retopologie13__1_:Staart3
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3223,7 +3273,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/Gezicht/Haar/Staart/Staart1/Staart2/Staart3/Staart4
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:Gezicht/Retopologie13__1_:Haar/Retopologie13__1_:Staart/Retopologie13__1_:Staart1/Retopologie13__1_:Staart2/Retopologie13__1_:Staart3/Retopologie13__1_:Staart4
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3248,10 +3298,60 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/Gezicht/Haar/Staart/Staart1/Staart2/Staart3/Staart4/Staart5
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:Gezicht/Retopologie13__1_:Haar/Retopologie13__1_:Staart/Retopologie13__1_:Staart1/Retopologie13__1_:Staart2/Retopologie13__1_:Staart3/Retopologie13__1_:Staart4/Retopologie13__1_:Staart5
   m_CompressedRotationCurves: []
   m_EulerCurves: []
   m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0, y: 0, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.7916665
+        value: {x: -0, y: 0, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sheela_Model/Sheela_Rig
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: -0, y: 0, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.7916665
+        value: {x: -0, y: 0, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sheela_Model/Sheela_Rig/Rig_Container
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3348,7 +3448,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3373,7 +3473,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3398,7 +3498,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3423,7 +3523,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenL/KnieL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenL/Retopologie13__1_:KnieL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3448,7 +3548,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenL/KnieL/VoetL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenL/Retopologie13__1_:KnieL/Retopologie13__1_:VoetL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3473,7 +3573,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenL/KnieL/VoetL/HielL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenL/Retopologie13__1_:KnieL/Retopologie13__1_:VoetL/Retopologie13__1_:HielL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3498,7 +3598,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenL/KnieL/VoetL/HielL/VoorVoetL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenL/Retopologie13__1_:KnieL/Retopologie13__1_:VoetL/Retopologie13__1_:HielL/Retopologie13__1_:VoorVoetL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3523,7 +3623,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenL/KnieL/VoetL/HielL/VoorVoetL/TeenL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenL/Retopologie13__1_:KnieL/Retopologie13__1_:VoetL/Retopologie13__1_:HielL/Retopologie13__1_:VoorVoetL/Retopologie13__1_:TeenL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3548,7 +3648,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3573,7 +3673,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenR/KnieR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenR/Retopologie13__1_:KnieR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3598,7 +3698,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenR/KnieR/VoetR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenR/Retopologie13__1_:KnieR/Retopologie13__1_:VoetR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3623,7 +3723,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenR/KnieR/VoetR/HierR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenR/Retopologie13__1_:KnieR/Retopologie13__1_:VoetR/Retopologie13__1_:HierR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3648,7 +3748,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenR/KnieR/VoetR/HierR/VoorVoetR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenR/Retopologie13__1_:KnieR/Retopologie13__1_:VoetR/Retopologie13__1_:HierR/Retopologie13__1_:VoorVoetR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3673,7 +3773,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenR/KnieR/VoetR/HierR/VoorVoetR/TeenR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenR/Retopologie13__1_:KnieR/Retopologie13__1_:VoetR/Retopologie13__1_:HierR/Retopologie13__1_:VoorVoetR/Retopologie13__1_:TeenR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3698,7 +3798,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3723,7 +3823,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3748,7 +3848,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3773,7 +3873,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderL/ElbowL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderL/Retopologie13__1_:ElbowL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3798,7 +3898,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderL/ElbowL/WristL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderL/Retopologie13__1_:ElbowL/Retopologie13__1_:WristL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3823,7 +3923,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderL/ElbowL/WristL/HandL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderL/Retopologie13__1_:ElbowL/Retopologie13__1_:WristL/Retopologie13__1_:HandL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3848,7 +3948,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderL/ElbowL/WristL/HandL/joint23
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderL/Retopologie13__1_:ElbowL/Retopologie13__1_:WristL/Retopologie13__1_:HandL/Retopologie13__1_:joint23
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3873,7 +3973,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderL/ElbowL/WristL/ThumbL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderL/Retopologie13__1_:ElbowL/Retopologie13__1_:WristL/Retopologie13__1_:ThumbL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3898,7 +3998,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderL/ElbowL/WristL/ThumbL/joint23
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderL/Retopologie13__1_:ElbowL/Retopologie13__1_:WristL/Retopologie13__1_:ThumbL/Retopologie13__1_:joint23
       1
   - curve:
       serializedVersion: 2
@@ -3924,7 +4024,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3949,7 +4049,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderR/ElbowR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderR/Retopologie13__1_:ElbowR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3974,7 +4074,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderR/ElbowR/WristR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderR/Retopologie13__1_:ElbowR/Retopologie13__1_:WristR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3999,7 +4099,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderR/ElbowR/WristR/HandR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderR/Retopologie13__1_:ElbowR/Retopologie13__1_:WristR/Retopologie13__1_:HandR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4024,7 +4124,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderR/ElbowR/WristR/HandR/joint40
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderR/Retopologie13__1_:ElbowR/Retopologie13__1_:WristR/Retopologie13__1_:HandR/Retopologie13__1_:joint40
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4049,7 +4149,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderR/ElbowR/WristR/ThumbR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderR/Retopologie13__1_:ElbowR/Retopologie13__1_:WristR/Retopologie13__1_:ThumbR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4074,7 +4174,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderR/ElbowR/WristR/ThumbR/joint42
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderR/Retopologie13__1_:ElbowR/Retopologie13__1_:WristR/Retopologie13__1_:ThumbR/Retopologie13__1_:joint42
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4099,7 +4199,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/Gezicht
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:Gezicht
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4124,7 +4224,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/Gezicht/Haar
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:Gezicht/Retopologie13__1_:Haar
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4149,7 +4249,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/Gezicht/Haar/Staart
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:Gezicht/Retopologie13__1_:Haar/Retopologie13__1_:Staart
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4174,7 +4274,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/Gezicht/Haar/Staart/Staart1
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:Gezicht/Retopologie13__1_:Haar/Retopologie13__1_:Staart/Retopologie13__1_:Staart1
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4199,7 +4299,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/Gezicht/Haar/Staart/Staart1/Staart2
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:Gezicht/Retopologie13__1_:Haar/Retopologie13__1_:Staart/Retopologie13__1_:Staart1/Retopologie13__1_:Staart2
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4224,7 +4324,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/Gezicht/Haar/Staart/Staart1/Staart2/Staart3
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:Gezicht/Retopologie13__1_:Haar/Retopologie13__1_:Staart/Retopologie13__1_:Staart1/Retopologie13__1_:Staart2/Retopologie13__1_:Staart3
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4249,7 +4349,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/Gezicht/Haar/Staart/Staart1/Staart2/Staart3/Staart4
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:Gezicht/Retopologie13__1_:Haar/Retopologie13__1_:Staart/Retopologie13__1_:Staart1/Retopologie13__1_:Staart2/Retopologie13__1_:Staart3/Retopologie13__1_:Staart4
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4274,14 +4374,14 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/Gezicht/Haar/Staart/Staart1/Staart2/Staart3/Staart4/Staart5
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:Gezicht/Retopologie13__1_:Haar/Retopologie13__1_:Staart/Retopologie13__1_:Staart1/Retopologie13__1_:Staart2/Retopologie13__1_:Staart3/Retopologie13__1_:Staart4/Retopologie13__1_:Staart5
   m_ScaleCurves:
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 1, y: 1, z: 1}
+        value: {x: 0.4, y: 0.4, z: 0.4}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -4290,7 +4390,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.79166675
-        value: {x: 1, y: 1, z: 1}
+        value: {x: 0.4, y: 0.4, z: 0.4}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -4300,7 +4400,32 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik
+    path: Sheela_Model/Sheela_Rig
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 82.943245, y: 82.943245, z: 82.943245}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.79166675
+        value: {x: 82.943245, y: 82.943245, z: 82.943245}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sheela_Model/Sheela_Rig/Rig_Container
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4325,7 +4450,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4350,7 +4475,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4375,7 +4500,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenL/KnieL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4400,7 +4525,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenL/KnieL/VoetL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenL/Retopologie13__1_:KnieL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4425,7 +4550,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenL/KnieL/VoetL/HielL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenL/Retopologie13__1_:KnieL/Retopologie13__1_:VoetL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4450,7 +4575,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenL/KnieL/VoetL/HielL/VoorVoetL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenL/Retopologie13__1_:KnieL/Retopologie13__1_:VoetL/Retopologie13__1_:HielL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4475,7 +4600,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenL/KnieL/VoetL/HielL/VoorVoetL/TeenL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenL/Retopologie13__1_:KnieL/Retopologie13__1_:VoetL/Retopologie13__1_:HielL/Retopologie13__1_:VoorVoetL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4500,7 +4625,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenL/Retopologie13__1_:KnieL/Retopologie13__1_:VoetL/Retopologie13__1_:HielL/Retopologie13__1_:VoorVoetL/Retopologie13__1_:TeenL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4525,7 +4650,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenR/KnieR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4550,7 +4675,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenR/KnieR/VoetR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenR/Retopologie13__1_:KnieR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4575,7 +4700,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenR/KnieR/VoetR/HierR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenR/Retopologie13__1_:KnieR/Retopologie13__1_:VoetR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4600,7 +4725,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenR/KnieR/VoetR/HierR/VoorVoetR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenR/Retopologie13__1_:KnieR/Retopologie13__1_:VoetR/Retopologie13__1_:HierR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4625,7 +4750,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Blaas/BeenR/KnieR/VoetR/HierR/VoorVoetR/TeenR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenR/Retopologie13__1_:KnieR/Retopologie13__1_:VoetR/Retopologie13__1_:HierR/Retopologie13__1_:VoorVoetR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4650,7 +4775,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Blaas/Retopologie13__1_:BeenR/Retopologie13__1_:KnieR/Retopologie13__1_:VoetR/Retopologie13__1_:HierR/Retopologie13__1_:VoorVoetR/Retopologie13__1_:TeenR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4675,7 +4800,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4700,7 +4825,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4725,7 +4850,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderL/ElbowL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4750,7 +4875,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderL/ElbowL/WristL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderL/Retopologie13__1_:ElbowL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4775,7 +4900,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderL/ElbowL/WristL/HandL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderL/Retopologie13__1_:ElbowL/Retopologie13__1_:WristL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4800,7 +4925,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderL/ElbowL/WristL/HandL/joint23
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderL/Retopologie13__1_:ElbowL/Retopologie13__1_:WristL/Retopologie13__1_:HandL
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4825,7 +4950,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderL/ElbowL/WristL/ThumbL
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderL/Retopologie13__1_:ElbowL/Retopologie13__1_:WristL/Retopologie13__1_:HandL/Retopologie13__1_:joint23
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4850,7 +4975,32 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderL/ElbowL/WristL/ThumbL/joint23
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderL/Retopologie13__1_:ElbowL/Retopologie13__1_:WristL/Retopologie13__1_:ThumbL
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.79166675
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderL/Retopologie13__1_:ElbowL/Retopologie13__1_:WristL/Retopologie13__1_:ThumbL/Retopologie13__1_:joint23
       1
   - curve:
       serializedVersion: 2
@@ -4876,7 +5026,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4901,7 +5051,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderR/ElbowR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderR/Retopologie13__1_:ElbowR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4926,7 +5076,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderR/ElbowR/WristR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderR/Retopologie13__1_:ElbowR/Retopologie13__1_:WristR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4951,7 +5101,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderR/ElbowR/WristR/HandR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderR/Retopologie13__1_:ElbowR/Retopologie13__1_:WristR/Retopologie13__1_:HandR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4976,7 +5126,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderR/ElbowR/WristR/HandR/joint40
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderR/Retopologie13__1_:ElbowR/Retopologie13__1_:WristR/Retopologie13__1_:HandR/Retopologie13__1_:joint40
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -5001,7 +5151,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderR/ElbowR/WristR/ThumbR
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderR/Retopologie13__1_:ElbowR/Retopologie13__1_:WristR/Retopologie13__1_:ThumbR
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -5026,7 +5176,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/SchouderR/ElbowR/WristR/ThumbR/joint42
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:SchouderR/Retopologie13__1_:ElbowR/Retopologie13__1_:WristR/Retopologie13__1_:ThumbR/Retopologie13__1_:joint42
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -5051,7 +5201,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/Gezicht
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:Gezicht
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -5076,7 +5226,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/Gezicht/Haar
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:Gezicht/Retopologie13__1_:Haar
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -5101,7 +5251,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/Gezicht/Haar/Staart
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:Gezicht/Retopologie13__1_:Haar/Retopologie13__1_:Staart
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -5126,7 +5276,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/Gezicht/Haar/Staart/Staart1
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:Gezicht/Retopologie13__1_:Haar/Retopologie13__1_:Staart/Retopologie13__1_:Staart1
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -5151,7 +5301,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/Gezicht/Haar/Staart/Staart1/Staart2
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:Gezicht/Retopologie13__1_:Haar/Retopologie13__1_:Staart/Retopologie13__1_:Staart1/Retopologie13__1_:Staart2
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -5176,7 +5326,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/Gezicht/Haar/Staart/Staart1/Staart2/Staart3
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:Gezicht/Retopologie13__1_:Haar/Retopologie13__1_:Staart/Retopologie13__1_:Staart1/Retopologie13__1_:Staart2/Retopologie13__1_:Staart3
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -5201,7 +5351,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/Gezicht/Haar/Staart/Staart1/Staart2/Staart3/Staart4
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:Gezicht/Retopologie13__1_:Haar/Retopologie13__1_:Staart/Retopologie13__1_:Staart1/Retopologie13__1_:Staart2/Retopologie13__1_:Staart3/Retopologie13__1_:Staart4
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -5226,7 +5376,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Pivot/Rig/Rig 1/Rig_Buik/Ribben/BorstKas/Gezicht/Haar/Staart/Staart1/Staart2/Staart3/Staart4/Staart5
+    path: Sheela_Model/Sheela_Rig/Rig_Container/Sheela_Rig 1/Retopologie13__1_:Ribben/Retopologie13__1_:BorstKas/Retopologie13__1_:Gezicht/Retopologie13__1_:Haar/Retopologie13__1_:Staart/Retopologie13__1_:Staart1/Retopologie13__1_:Staart2/Retopologie13__1_:Staart3/Retopologie13__1_:Staart4/Retopologie13__1_:Staart5
   m_FloatCurves:
   - curve:
       serializedVersion: 2
@@ -5253,7 +5403,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: Pivot/Body
+    path: Sheela_Model/Sheela_Body
     classID: 25
     script: {fileID: 0}
   - curve:
@@ -5281,7 +5431,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: Pivot/Body/Gesp
+    path: Sheela_Model/Sheela_Body/Retopologie13__1_:Gesp
     classID: 25
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -5291,819 +5441,7 @@ AnimationClip:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
-    genericBindings:
-    - serializedVersion: 2
-      path: 1272660150
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1272660150
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 4059986493
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2059586671
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3277975168
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1881974501
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2521826635
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2160980236
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 244266096
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1176594322
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3888920626
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 187958325
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2283050787
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1360750670
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 4047190358
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 455772505
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1798631694
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3486170012
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3296499872
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3151331701
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3690350226
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 877984684
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 4059986493
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2059586671
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3277975168
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1881974501
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2521826635
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 898319970
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3324784602
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2160980236
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 244266096
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 4079212159
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1176594322
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3576489195
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1982163523
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3888920626
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 787793734
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 187958325
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2283050787
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1360750670
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3873772309
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1591959554
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 983146850
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 530378826
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 4047190358
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 455772505
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1798631694
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 503955029
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2274567704
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1660096227
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3512393733
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3486170012
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1580470118
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3296499872
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3151331701
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3690350226
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 877984684
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2240143819
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 533157201
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 898319970
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3324784602
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 4079212159
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3576489195
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1982163523
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 787793734
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3873772309
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1591959554
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 983146850
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 530378826
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 503955029
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2274567704
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1660096227
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3512393733
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1580470118
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2240143819
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 533157201
-      attribute: 2
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1272660150
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 4059986493
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2059586671
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3277975168
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1881974501
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2521826635
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 898319970
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3324784602
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2160980236
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 244266096
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 4079212159
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1176594322
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3576489195
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1982163523
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3888920626
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 787793734
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 187958325
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2283050787
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1360750670
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3873772309
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1591959554
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 983146850
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 530378826
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 4047190358
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 455772505
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1798631694
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 503955029
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2274567704
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1660096227
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3512393733
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3486170012
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1580470118
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3296499872
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3151331701
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3690350226
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 877984684
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2240143819
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 533157201
-      attribute: 3
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 878965064
-      attribute: 3305885265
-      script: {fileID: 0}
-      typeID: 25
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1050253642
-      attribute: 3305885265
-      script: {fileID: 0}
-      typeID: 25
-      customType: 0
-      isPPtrCurve: 0
+    genericBindings: []
     pptrCurveMapping: []
   m_AnimationClipSettings:
     serializedVersion: 2
