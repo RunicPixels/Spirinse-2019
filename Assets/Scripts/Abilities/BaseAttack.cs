@@ -2,31 +2,53 @@
 using System.Collections.Generic;
 using Cinemachine.Utility;
 using Spirinse.Interfaces;
+using Spirinse.System.Combat;
 using UnityEngine;
 
-public class BaseAttack : BaseAbility, IAttack
+namespace Spirinse.Abilities
 {
-    public int damage = 6;
-    public float energySteal = 0f;
-
-    public override void Play()
+    public class BaseAttack : BaseAbility, IAttack
     {
-        base.Play();
-    }
+        public int damage = 6;
+        public float energySteal = 0f;
 
-    public override bool Run()
-    {
-        return base.Run();
-    }
+        private DamageType damageType;
 
-    public override void Stop()
-    {
-        base.Stop();
-    }
+        public void Awake()
+        {
+            damageType = SetDamageType();
+        }
 
-    public int DoAttack()
-    {
-        Controls.chi += energySteal;
-        return damage;
+        public override void Play()
+        {
+            base.Play();
+        }
+
+        public override bool Run()
+        {
+            return base.Run();
+        }
+
+        public override void Stop()
+        {
+            base.Stop();
+        }
+
+        public int DoAttack()
+        {
+            Controls.chi += energySteal;
+            return damage;
+        }
+
+        private DamageType SetDamageType()
+        {
+            var dt = GetComponent<DamageType>();
+            if (dt == null)
+            {
+                dt = gameObject.AddComponent<DamageType>();
+                dt.damageType = System.Enums.DamageEnums.DamageType.BasicAttack;
+            }
+            return dt;
+        }
     }
 }
