@@ -664,6 +664,7 @@
           <e p="DontDestroyOnLoad.cs" t="Include" />
           <e p="Editor" t="Include">
             <e p="ClickableEditor.cs" t="Include" />
+            <e p="EnumFlagDrawer.cs" t="Include" />
           </e>
           <e p="Effects" t="Include">
             <e p="CameraShake.cs" t="Include" />
@@ -694,12 +695,16 @@
           <e p="Objects" t="Include">
             <e p="BaseBreakableObject.cs" t="Include" />
             <e p="BaseGrabObject.cs" t="Include" />
-            <e p="FakeLevelTransition.cs" t="Include" />
-            <e p="FakeLevelTransition1.cs" t="Include" />
+            <e p="CleanseCorruption.cs" t="Include" />
+            <e p="DamageBlock.cs" t="Include" />
+            <e p="RoomExitDoorActivation.cs" t="Include" />
           </e>
           <e p="PlaceholderRestart.cs" t="Include" />
           <e p="PlayerAnimator.cs" t="Include" />
           <e p="PlayerManager.cs" t="Include" />
+          <e p="Plugins" t="Include">
+            <e p="RewiredConsts.cs" t="Include" />
+          </e>
           <e p="PrototypeScripts" t="Include">
             <e p="Bullet.cs" t="Include" />
             <e p="Controls.cs" t="Include" />
@@ -727,10 +732,16 @@
               <e p="CameraManager.cs" t="Include" />
             </e>
             <e p="CleanseManager.cs" t="Include" />
+            <e p="Combat" t="Include">
+              <e p="DamageType.cs" t="Include" />
+            </e>
             <e p="Effects" t="Include">
               <e p="TimeManager.cs" t="Include" />
             </e>
             <e p="EffectsManager.cs" t="Include" />
+            <e p="Enums" t="Include">
+              <e p="DamageEnums.cs" t="Include" />
+            </e>
             <e p="GameManager.cs" t="Include" />
             <e p="GameStateManager.cs" t="Include" />
             <e p="Health" t="Include">
@@ -747,6 +758,7 @@
           </e>
           <e p="Tools" t="Include">
             <e p="ClickableFunctionAttribute.cs" t="Include" />
+            <e p="EnumFlagAttribute.cs" t="Include" />
           </e>
           <e p="WalkerMover.cs" t="Include" />
         </e>

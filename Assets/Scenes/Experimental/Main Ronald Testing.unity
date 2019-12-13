@@ -13387,6 +13387,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 2974170344513195432, guid: 70907cfb21be91547b27cb539dbe9c2d,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4872689992061381141, guid: 70907cfb21be91547b27cb539dbe9c2d,
         type: 3}
       propertyPath: m_Layer
@@ -13626,11 +13631,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2974170344513195432, guid: 70907cfb21be91547b27cb539dbe9c2d,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70907cfb21be91547b27cb539dbe9c2d, type: 3}
@@ -79895,7 +79895,7 @@ MonoBehaviour:
   <InputManager>k__BackingField: {fileID: 1966334460}
   <StateManager>k__BackingField: {fileID: 1966334461}
   <CleanseManager>k__BackingField: {fileID: 1966334466}
-  <EffectsManager>k__BackingField: {fileID: 0}
+  <EffectsManager>k__BackingField: {fileID: 657149367}
 --- !u!4 &1966334465
 Transform:
   m_ObjectHideFlags: 0
