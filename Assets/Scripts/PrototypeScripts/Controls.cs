@@ -200,7 +200,7 @@ public class Controls : MonoBehaviour
         }
         if (rb.velocity.magnitude > speedLimit)
         {
-            rb.velocity = rb.velocity.normalized * Mathf.Lerp(rb.velocity.magnitude, speedLimit, 0.33f);
+            rb.velocity = rb.velocity.normalized * Mathf.Lerp(rb.velocity.magnitude, speedLimit, 0.001f);
         }
     }
 

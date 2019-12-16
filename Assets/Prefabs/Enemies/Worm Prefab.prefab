@@ -5008,8 +5008,8 @@ MonoBehaviour:
   lr: {fileID: 423655413}
   state: 0
   visualContainer: {fileID: 5288520752964030062}
-  idleSpeed: 10
-  activeSpeed: 38
+  idleSpeed: 12
+  activeSpeed: 50
   health: 5
   animator: {fileID: 2877406928871842580}
   cured: 0
@@ -5017,7 +5017,7 @@ MonoBehaviour:
   meshRenderer: {fileID: 1583205136581808562}
   cleansedMaterial: {fileID: 2100000, guid: aeeda6b8b05ed3547aea657458ce920e, type: 2}
   preDashDuration: 0.4
-  dashDuration: 1
+  dashDuration: 1.1
   minDashCooldown: 0.75
   maxDashCooldown: 1.25
   hitParticles: {fileID: 1091770310132546953}
