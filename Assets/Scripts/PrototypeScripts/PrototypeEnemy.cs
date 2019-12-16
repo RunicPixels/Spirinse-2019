@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Spirinse.Interfaces;
@@ -7,10 +7,23 @@ using Spirinse.Player;
 using Spirinse.System;
 using Spirinse.System.Effects;
 using Spirinse.Objects;
+ using Random = UnityEngine.Random;
 
-public class PrototypeEnemy : MonoBehaviour, IDamagable
+ public class PrototypeEnemy : MonoBehaviour, IDamagable
 {
-    private const string StrB = "Player";
+    public enum EnemyState
+    {
+        Dashing,
+        Idle,
+        Moving,
+        PreDash
+    }
+
+
+    public LineRenderer lr;
+    
+    public EnemyState state;
+    
     private float speed;
 
     public Transform visualContainer;
@@ -21,7 +34,7 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
     public float health = 5;
     public Animator animator;
 
-    public bool cured = false;
+    public bool cured;
 
     private Vector3 direction;
 
@@ -39,17 +52,28 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
 
     private bool flipped;
 
-    private int damage = 1;
+    private readonly int damage = 1;
 
-    public float iFrames = 0f;
-    public float stunned = 0;
+    public float preDashDuration = 0.4f;
+    public float dashDuration = 2f;
+    public float minDashCooldown = 6f;
+    public float maxDashCooldown = 6f;
+
+    private float iFrames;
+    private float stunned;
+    private float dashTime;
+    private float currentDashCooldown;
 
     private float progression = 0f;
     public ParticleSystem hitParticles;
-
+    
+    private static readonly int Active = Animator.StringToHash("Active");
+    private const string StrB = "Player";
+    
     // Start is called before the first frame update
     void Start()
     {
+        state = EnemyState.Moving;
         oldMaterial = meshRenderer.material;
         speed = idleSpeed;
         originalTarget = target;
@@ -58,6 +82,7 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
 
     void FixedUpdate()
     {
+        CheckCanDoDash();
         // Ugly code, needs refactoring.
         if (!target) target = PlayerManager.Instance.player.defender.transform;
 
@@ -66,14 +91,52 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
             iFrames -= Time.fixedDeltaTime;
         }
 
+        if (currentDashCooldown > 0f)
+        {
+            currentDashCooldown -= Time.fixedDeltaTime;
+        }
+        
+        if (dashTime < 0f && state == EnemyState.Dashing)
+        {
+            StopDash();
+        }
+
+        if (dashTime > 0f)
+        {
+            dashTime -= Time.fixedDeltaTime;
+        }
+
         if (stunned > 0f)
         {
             stunned -= Time.fixedDeltaTime;
             goto StunJump;
         }
 
-        direction = (target.position - transform.position).normalized;
-        if (cured) direction = -direction * 0.01f;
+        switch (state)
+        {
+            case EnemyState.Dashing:
+                lr.gameObject.SetActive(false);
+                speed = activeSpeed;
+                break;
+            case EnemyState.Idle:
+                speed = idleSpeed;
+                // For now
+                state = EnemyState.Moving;
+                break;
+            case EnemyState.PreDash:
+                lr.gameObject.SetActive(true);
+                speed = 0.5f;
+                var position = transform.position;
+                lr.SetPosition(0,position);
+                lr.SetPosition(1,position + (dashDuration * activeSpeed * direction));
+                break;
+            case EnemyState.Moving:
+                speed = idleSpeed;
+                direction = (target.position - transform.position).normalized;
+                break;
+        }
+
+        if(cured) direction = -direction * 0.01f;
         if(animator.transform.localScale.x < 0.05f) { Destroy(); }
 
         rb.velocity = direction * speed;
@@ -81,12 +144,8 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
     StunJump:
 
         //flipped = rb.velocity.x < 0;
-
-
         //var xScale = flipped ? 2f : -2f;
-
         //transform.localScale = new Vector3(2f, xScale, 2f);
-
 
         var v = rb.velocity;
         var angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;
@@ -95,7 +154,6 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
 
     public void TakeDamage(int damage)
     {
-        Debug.Log("Yeet");
         if (iFrames > 0f || cured || damage < 1) return;
         health -= damage;
         TimeManager.Instance.Freeze(0.05f, 0, 3f, 3f);
@@ -109,15 +167,13 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
         }
 
         Stun();
-
     }
 
     private void Stun()
     {
-        rb.velocity = direction * -speed * 2f;
+        rb.velocity = -speed * 2f * direction;
         iFrames = 0.3f;
         stunned = 0.4f;
-
     }
 
     private void Cure()
@@ -155,21 +211,31 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
         }
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void CheckCanDoDash()
     {
-        if (other.CompareTag("Defender"))
+        if (currentDashCooldown <= 0f && state != EnemyState.Dashing && state != EnemyState.PreDash)
         {
-            speed = activeSpeed;
-            animator.SetBool("Active", true);
+            StartCoroutine(DoDash());
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    private IEnumerator DoDash()
     {
-        if (other.CompareTag("Defender"))
+        while (state != EnemyState.PreDash)
         {
-            speed = idleSpeed;
-            animator.SetBool("Active", false);
+            state = EnemyState.PreDash;
+            yield return new WaitForSeconds(preDashDuration);
         }
+        animator.SetBool(Active, true);
+        state = EnemyState.Dashing;
+        dashTime = dashDuration;
+    }
+
+    private void StopDash()
+    {
+        speed = idleSpeed;
+        animator.SetBool(Active, false);
+        currentDashCooldown = Random.Range(minDashCooldown, maxDashCooldown);
+        state = EnemyState.Moving;
     }
 }

@@ -61,6 +61,7 @@ public class Controls : MonoBehaviour
     private Vector2 direction;
     private float speedMultiplier = 1f;
     private Vector2 dashVelocity = new Vector2(0,0);
+    private bool shooting = false;
 
     private bool dashing = false;
     private bool goDoDash = false;
@@ -105,7 +106,7 @@ public class Controls : MonoBehaviour
             chi += chiRechargeRate * Time.deltaTime;
         }
 
-        if (InputManager.Attacking)
+        if (InputManager.Attacking && !shooting)
         {
             Time.timeScale = 1f;
             StartCoroutine(_Shooting());
@@ -260,6 +261,7 @@ public class Controls : MonoBehaviour
 
     private IEnumerator<float> _Shooting()
     {
+        shooting = true;
         float fov;
         Camera camera = Camera.main;
         fov = camera.fieldOfView;
@@ -326,7 +328,7 @@ public class Controls : MonoBehaviour
 
             // Melee Attack
             DoMelee();
-
+            
             if (chi < 0f) break;
 
             yield return Time.unscaledDeltaTime;
@@ -354,6 +356,7 @@ public class Controls : MonoBehaviour
         //Time.timeScale = 1f;
         camera.fieldOfView = fov;
         laserSystem.Stop();
+        shooting = false;
     }
 
     private void DoMelee()
