@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using Spirinse.Interfaces;
-using MEC;
 using UnityEngine;
-using UnityEngine.Assertions.Comparers;
+using Spirinse.Abilities;
+using Spirinse.System;
 
 public class Controls : MonoBehaviour
 {
@@ -97,9 +93,9 @@ public class Controls : MonoBehaviour
 
         // Put this stuff into Input Manager
 
-        direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
+        direction = InputManager.Movement.normalized;
 
-        if (Input.GetButtonDown("Fire3") && dashing == false && chiDashConsumption < chi)
+        if (InputManager.Dashing && dashing == false && chiDashConsumption < chi)
         {
             StartCoroutine(_Dashing(direction.normalized));
         }
@@ -109,7 +105,7 @@ public class Controls : MonoBehaviour
             chi += chiRechargeRate * Time.deltaTime;
         }
 
-        if (Input.GetButtonDown("Fire1"))
+        if (InputManager.Attacking)
         {
             Time.timeScale = 1f;
             StartCoroutine(_Shooting());
@@ -275,7 +271,7 @@ public class Controls : MonoBehaviour
 
         DoMelee();
 
-        while (Input.GetButton("Fire1"))
+        while (InputManager.Attacking)
         {
             var direction = rb.velocity.normalized;
             camera.fieldOfView += Time.unscaledDeltaTime * 1f;

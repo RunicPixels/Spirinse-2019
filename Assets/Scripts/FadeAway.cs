@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Spirinse.System;
 using UnityEngine;
 
 public class FadeAway : MonoBehaviour
@@ -14,7 +15,7 @@ public class FadeAway : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        if (Input.anyKey)
+        if (InputManager.Attacking)
         {
             Time.timeScale = 1f;
             gameObject.SetActive(false);

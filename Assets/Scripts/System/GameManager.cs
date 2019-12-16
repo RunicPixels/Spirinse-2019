@@ -47,7 +47,6 @@ namespace Spirinse.System
         private void SetupEvents()
         {
             // Manage Health Events
-
             UiManager.GetHealthUI.SetMaxHealthContainers(HealthManager.GetHealthCap);
 
             HealthManager.ChangeHealthEvent            += UiManager.GetHealthUI.ChangeCurrentHealth;
@@ -71,8 +70,7 @@ namespace Spirinse.System
 
             // Game Over Events
             StateManager.GameOverEvent                 += InitGame;
-
-
+            
             // ...
         }
 

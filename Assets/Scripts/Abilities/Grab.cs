@@ -4,6 +4,7 @@ using UnityEngine;
 using Spirinse.Objects;
 using Spirinse.Interfaces;
 using Rewired;
+using InputManager = Spirinse.System.InputManager;
 
 public class Grab : BaseAbility
 {
@@ -21,20 +22,7 @@ public class Grab : BaseAbility
 
     private void Update()
     {
-        if(Input.GetKey(KeyCode.Space) && Input.GetKey(KeyCode.Q) == false) {
-            grabbing = true;
-        }
-
-        else if(Input.GetKeyDown(KeyCode.Q) && grabbing)
-        {
-            grabbing = false;
-            Launch();
-        }
-
-        else if (grabbing)
-        {
-            grabbing = false;
-        }
+        grabbing = InputManager.Grabbing;
 
         if(grabbing)
         {

@@ -14,10 +14,12 @@ namespace Spirinse.System
         private Action OnAttack;
         private Action OnDodge;
         private Rewired.Player player;
+        
 
-        private const string Grab = "Grab";
-
-        public bool Grabbing { private set; get; }
+        public static bool Grabbing  { private set; get; }
+        public static bool Attacking { private set; get; }
+        public static bool Dashing   { private set; get; }
+        public static Vector2 Movement { private set; get; }
 
         public void Awake()
         {
@@ -26,7 +28,7 @@ namespace Spirinse.System
             else Destroy(gameObject);
         }
 
-        public void Update()
+        public void SpiritUpdate()
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
@@ -38,18 +40,11 @@ namespace Spirinse.System
                 Application.Quit();
             }
 
-        }
-
-        public void SpiritUpdate()
-        {
-            if (player.GetButton(Grab))
-            {
-                Grabbing = true;
-            }
-            else
-            {
-                Grabbing = false;
-            }
+            Grabbing = player.GetButton(RewiredConsts.Action.Grab);
+            Debug.Log(Grabbing);
+            Attacking = player.GetButton(RewiredConsts.Action.Attack);
+            Dashing = player.GetButton(RewiredConsts.Action.Dash);
+            Movement = player.GetAxis2D(RewiredConsts.Action.Horizontal, RewiredConsts.Action.Vertical);
         }
     }
 }

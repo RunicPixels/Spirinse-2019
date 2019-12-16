@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Spirinse.Interfaces;
+using Spirinse.System.Combat;
 
 namespace Spirinse.Objects
 {
@@ -11,10 +12,21 @@ namespace Spirinse.Objects
         private Collider2D[] colliders;
         public float damage = 1;
 
+        private DamageType damageType;
+
         private void Awake()
         {
+            damageType = SetDamageType();
+
             colliders = GetComponents<Collider2D>();
             rb = GetComponent<Rigidbody2D>();
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.CompareTag("Defender")) return;
+
+            MonoBehaviourCollisionCheck(collision.gameObject.GetComponents<MonoBehaviour>());
         }
 
         public void Hold(Transform newParent)
@@ -54,13 +66,6 @@ namespace Spirinse.Objects
             return Mathf.FloorToInt(damage * rb.velocity.magnitude * 0.1f);
         }
 
-        public void OnTriggerEnter2D(Collider2D collision)
-        {
-            if (collision.CompareTag("Defender")) return;
-
-            MonoBehaviourCollisionCheck(collision.gameObject.GetComponents<MonoBehaviour>());
-        }
-
         public void MonoBehaviourCollisionCheck(MonoBehaviour[] list)
         {
             foreach (var mb in list)
@@ -71,6 +76,17 @@ namespace Spirinse.Objects
                     damageable.TakeDamage(GetDamage());
                 }
             }
+        }
+
+        private DamageType SetDamageType()
+        {
+            var dt = GetComponent<DamageType>();
+            if(dt == null)
+            {
+                dt = gameObject.AddComponent<DamageType>();
+                dt.damageType = System.Enums.DamageEnums.DamageType.Grab;
+            }
+            return dt;
         }
     }
 }
