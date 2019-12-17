@@ -90738,12 +90738,12 @@ PrefabInstance:
     - target: {fileID: 690676637407668098, guid: b519af465b2882647b30815c3a47e1af,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.97343373
+      value: -0.23820218
       objectReference: {fileID: 0}
     - target: {fileID: 690676637407668098, guid: b519af465b2882647b30815c3a47e1af,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.22896898
+      value: 0.9712156
       objectReference: {fileID: 0}
     - target: {fileID: 690676637407668098, guid: b519af465b2882647b30815c3a47e1af,
         type: 3}
@@ -90763,7 +90763,47 @@ PrefabInstance:
     - target: {fileID: 690676637407668098, guid: b519af465b2882647b30815c3a47e1af,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 153.52701
+      value: -27.561
+      objectReference: {fileID: 0}
+    - target: {fileID: 690676637407668099, guid: b519af465b2882647b30815c3a47e1af,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.z
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 690676637407668099, guid: b519af465b2882647b30815c3a47e1af,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 62.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 690676637407668099, guid: b519af465b2882647b30815c3a47e1af,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 690676637407668097, guid: b519af465b2882647b30815c3a47e1af,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 690676637407668097, guid: b519af465b2882647b30815c3a47e1af,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 690676637407668096, guid: b519af465b2882647b30815c3a47e1af,
+        type: 3}
+      propertyPath: length
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 690676637407668096, guid: b519af465b2882647b30815c3a47e1af,
+        type: 3}
+      propertyPath: width
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 690676637407668096, guid: b519af465b2882647b30815c3a47e1af,
+        type: 3}
+      propertyPath: amountPerSquareMeter
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b519af465b2882647b30815c3a47e1af, type: 3}
