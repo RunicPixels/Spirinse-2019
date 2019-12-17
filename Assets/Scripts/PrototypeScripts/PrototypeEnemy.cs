@@ -6,6 +6,7 @@ using UnityEngine;
 using Spirinse.Player;
 using Spirinse.System;
 using Spirinse.System.Effects;
+using Spirinse.System.Player;
 using Spirinse.Objects;
  using Random = UnityEngine.Random;
 

@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using Spirinse.System;
+using Spirinse.System.Player;
 using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour {

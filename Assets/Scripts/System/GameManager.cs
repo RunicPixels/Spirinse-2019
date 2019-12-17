@@ -6,6 +6,7 @@ using Spirinse.System.Health;
 using Spirinse.Player;
 using Spirinse.System.UI;
 using Spirinse.System.Effects;
+using Spirinse.System.Player;
 using UnityEngine.SceneManagement;
 
 namespace Spirinse.System
@@ -80,6 +81,7 @@ namespace Spirinse.System
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             CameraManager.Instance.followPlayer.FindPlayer();
             InitGame();
+            PlayerManager.OnRestart();
         }
         
         private void InitGame()
