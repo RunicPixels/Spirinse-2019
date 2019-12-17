@@ -22,6 +22,9 @@ public class Wind : MonoBehaviour
     {
         Gizmos.color = new Color(0.5f, 1f, 1f, 0.5f);
         Gizmos.matrix = transform.localToWorldMatrix;
+        Gizmos.DrawLine(Vector3.right, Vector3.left * 2);
+        Gizmos.DrawLine(Vector3.up, Vector3.right);
+        Gizmos.DrawLine(Vector3.down, Vector3.right);
         Gizmos.DrawCube(Vector3.zero, new Vector3(length,width, 0f));
         Setup();
     }
