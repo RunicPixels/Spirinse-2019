@@ -6,6 +6,7 @@ using UnityEngine;
 using Spirinse.Player;
 using Spirinse.System;
 using Spirinse.System.Effects;
+using Spirinse.System.Player;
 using Spirinse.Objects;
  using Random = UnityEngine.Random;
 
@@ -58,11 +59,14 @@ using Spirinse.Objects;
     public float dashDuration = 2f;
     public float minDashCooldown = 6f;
     public float maxDashCooldown = 6f;
+    public float dashPlayerDistanceMultiplyer = 0.5f;
 
     private float iFrames;
     private float stunned;
     private float dashTime;
     private float currentDashCooldown;
+    private float currentPlayerDashDistanceDuration;
+    private float currentPlayerDistance;
 
     private float progression = 0f;
     public ParticleSystem hitParticles;
@@ -73,6 +77,7 @@ using Spirinse.Objects;
     // Start is called before the first frame update
     void Start()
     {
+        //currentDashCooldown = maxDashCooldown;
         state = EnemyState.Moving;
         oldMaterial = meshRenderer.material;
         speed = idleSpeed;
@@ -128,18 +133,18 @@ using Spirinse.Objects;
                 speed = 0.5f;
                 var position = transform.position;
                 lr.SetPosition(0,position);
-                lr.SetPosition(1,position + (dashDuration * activeSpeed * direction));
+                lr.SetPosition(1,GetDashEndPos());
                 break;
             case EnemyState.Moving:
                 speed = idleSpeed;
-                direction = (target.position - transform.position).normalized;
+                direction = (target.position + ((Vector3)target.GetComponent<Rigidbody2D>().velocity * 0.1f) - transform.position).normalized;
                 break;
         }
 
         if(cured) direction = -direction * 0.01f;
         if(animator.transform.localScale.x < 0.05f) { Destroy(); }
 
-        rb.velocity = direction * speed;
+        rb.velocity += (Vector2)(direction * speed);
 
     StunJump:
 
@@ -152,17 +157,23 @@ using Spirinse.Objects;
         visualContainer.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
+    public Vector3 GetDashEndPos()
+    {
+        var position = transform.position;
+        return position + (dashDuration + currentPlayerDashDistanceDuration) *activeSpeed * direction;
+    }
+
     public void TakeDamage(int damage)
     {
         if (iFrames > 0f || cured || damage < 1) return;
         health -= damage;
-        TimeManager.Instance.Freeze(0.05f, 0, 3f, 3f);
+        //EffectsManager.Instance.timeManager.Freeze(0.05f, 0, 3f, 3f);
         animator.SetTrigger(Hit);
         hitParticles.Play();
 
         if (health < 0 && !cured)
         {
-            SpawnEnemy.enemyAmount -= 1;
+            //SpawnEnemy.enemyAmount -= 1;
             Cure();
         }
 
@@ -171,14 +182,14 @@ using Spirinse.Objects;
 
     private void Stun()
     {
-        rb.velocity = -speed * 2f * direction;
+        rb.velocity = (-speed - 5) * 10f * direction;
         iFrames = 0.3f;
         stunned = 0.4f;
     }
 
     private void Cure()
     {
-        CleanseManager.Instance.cleanseEvent?.Invoke();
+        //CleanseManager.Instance.cleanseEvent?.Invoke();
         cured = true;
         animator.SetTrigger(Cured);
         meshRenderer.material = cleansedMaterial;
@@ -221,14 +232,28 @@ using Spirinse.Objects;
 
     private IEnumerator DoDash()
     {
+        float thisDashTime = dashDuration;
         while (state != EnemyState.PreDash)
         {
+            currentPlayerDashDistanceDuration = CalculatePlayerDashDuration();
+            thisDashTime = dashDuration + CalculatePlayerDashDuration();
             state = EnemyState.PreDash;
             yield return new WaitForSeconds(preDashDuration);
         }
+        dashTime = thisDashTime;
         animator.SetBool(Active, true);
         state = EnemyState.Dashing;
-        dashTime = dashDuration;
+    }
+
+    public float CalculatePlayerDashDuration()
+    {
+        if (!target) return 0f;
+        float distance = Vector3.Distance(target.position, transform.position);
+
+        float time = distance / activeSpeed;
+
+        return time;
+
     }
 
     private void StopDash()

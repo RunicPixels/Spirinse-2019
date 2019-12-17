@@ -10,6 +10,7 @@ public class Controls : MonoBehaviour
     [Header("Visuals")]
     public ParticleSystem trailSystem;
 
+    // PUT CHI IN THE CHI MANAGER DAMMIT
     [Range(0f, 1f)] public static float chi =1f;
     [Header("Chi")]
     // Chi
@@ -101,6 +102,11 @@ public class Controls : MonoBehaviour
         if (chi < 1f)
         {
             chi += chiRechargeRate * Time.deltaTime;
+        }
+
+        if(chi < 0f)
+        {
+            chi = 0f;
         }
 
         if (InputManager.Attacking && !shooting)
@@ -195,10 +201,10 @@ public class Controls : MonoBehaviour
         {
             speedLimit *= 1+dashAbility.GetDashVelocityMagnitude();
         }
-        if (rb.velocity.magnitude > speedLimit)
-        {
-            rb.velocity = rb.velocity.normalized * Mathf.Lerp(rb.velocity.magnitude, speedLimit, 0.001f);
-        }
+        //if (rb.velocity.magnitude > speedLimit)
+        //{
+        //    rb.velocity = rb.velocity.normalized * Mathf.Lerp(rb.velocity.magnitude, speedLimit, 0.9f);
+        //}
     }
 
     /*    private void SomeFunction(bool test, params int[] input)

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Spirinse.System.Player;
 
 namespace Spirinse.Player
 {
@@ -14,7 +15,8 @@ namespace Spirinse.Player
         public Meditator meditator;
         public Defender defender;
         
-        
+
+
         public void OnEnable()
         {
             if (Instance == null) Instance = this;
