@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ce2e14ff-e13a-4da1-95b5-be1e6d97996a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Art_Profiles/PaperCamera.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Art_Profiles/PaperCamera.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioCache.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Experimental/Main Ronald Testing.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Experimental/Main Ronald Testing.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/Grab.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Abilities/Grab.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interfaces/IGrabbable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interfaces/IGrabbable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/BaseGrabObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/BaseGrabObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +15,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Wind.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
@@ -26,6 +24,20 @@
                 <marker date="1576509724230" expanded="true" signature="6:92" ph="..." />
                 <marker date="1576509724230" expanded="true" signature="127:804" ph="{...}" />
                 <marker date="1576509724230" expanded="true" signature="315:802" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Objects/DestroySwap.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+              <folding>
+                <marker date="1576596087379" expanded="true" signature="6:92" ph="..." />
+                <marker date="1576596087379" expanded="true" signature="134:314" ph="{...}" />
+                <marker date="1576596087379" expanded="true" signature="201:312" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -67,41 +79,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/System/Health/HealthManager.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="105" selection-start-line="105" selection-end-line="111" selection-end-column="9" />
-              <folding>
-                <marker date="1576494125322" expanded="false" signature="6:167" ph="..." />
-                <marker date="1576494125322" expanded="true" signature="201:3093" ph="{...}" />
-                <marker date="1576494125322" expanded="true" signature="250:3091" ph="{...}" />
-                <marker date="1576494125322" expanded="true" signature="521:678" ph="{...}" />
-                <marker date="1576494125322" expanded="true" signature="539:640" ph="{...}" />
-                <marker date="1576494125322" expanded="true" signature="763:931" ph="{...}" />
-                <marker date="1576494125322" expanded="true" signature="781:890" ph="{...}" />
-                <marker date="1576494125322" expanded="true" signature="1156:1331" ph="{...}" />
-                <marker date="1576494125322" expanded="true" signature="1365:1478" ph="{...}" />
-                <marker date="1576494125322" expanded="true" signature="1509:1679" ph="{...}" />
-                <marker date="1576494125322" expanded="true" signature="1552:1669" ph="{...}" />
-                <marker date="1576494125322" expanded="true" signature="1741:1974" ph="{...}" />
-                <marker date="1576494125322" expanded="true" signature="2020:2149" ph="{...}" />
-                <marker date="1576494125322" expanded="true" signature="2194:2322" ph="{...}" />
-                <marker date="1576494125322" expanded="true" signature="2370:2424" ph="{...}" />
-                <marker date="1576494125322" expanded="true" signature="2471:2568" ph="{...}" />
-                <marker date="1576494125322" expanded="true" signature="2613:2732" ph="{...}" />
-                <marker date="1576494125322" expanded="true" signature="2652:2722" ph="{...}" />
-                <marker date="1576494125322" expanded="true" signature="2770:2920" ph="{...}" />
-                <marker date="1576494125322" expanded="true" signature="2846:2910" ph="{...}" />
-                <marker date="1576494125322" expanded="true" signature="2988:3083" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/System/GameStateManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-30">
+            <state relative-caret-position="-255">
               <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
               <folding>
                 <marker date="1576494149132" expanded="false" signature="6:114" ph="..." />
@@ -147,7 +127,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IBreakable.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
+            <state>
               <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
               <folding>
                 <marker date="1575032100892" expanded="true" signature="29:99" ph="{...}" />
@@ -210,7 +190,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
+            <state relative-caret-position="75">
               <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
               <folding>
                 <marker date="1573465781583" expanded="false" signature="6:101" ph="..." />
@@ -242,6 +222,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/System/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@2.1.7/PostProcessing/Runtime/Effects/AmbientOcclusion.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/System/InputManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Objects/DestroySwap.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PrototypeScripts/FollowPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CurrentMeleeManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PrototypeScripts/SpawnEnemy.cs" root0="FORCE_HIGHLIGHTING" />
@@ -292,6 +273,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IGrabbable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/BaseGrabObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/Grab.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/DestroySwap.cs" />
       </list>
     </option>
   </component>
@@ -391,12 +373,12 @@
       <workItem from="1575288682185" duration="3897000" />
       <workItem from="1576240645508" duration="7088000" />
       <workItem from="1576491750606" duration="11297000" />
-      <workItem from="1576584379966" duration="4560000" />
+      <workItem from="1576584379966" duration="5537000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102348000" />
+    <option name="totallyTimeSpent" value="103325000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -489,7 +471,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/LevelSpawn.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/CorgiEngine/Common/Scripts/Camera/Cinemachine/CinemachineCameraController.cs" />
     <entry file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@1.1.0/Rider/Editor/RiderInitializer.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -787,7 +768,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/System/Health/HealthManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
+        <state relative-caret-position="225">
           <caret line="105" selection-start-line="105" selection-end-line="111" selection-end-column="9" />
           <folding>
             <marker date="1576494125322" expanded="false" signature="6:167" ph="..." />
@@ -817,7 +798,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/System/GameStateManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-30">
+        <state relative-caret-position="-255">
           <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
           <folding>
             <marker date="1576494149132" expanded="false" signature="6:114" ph="..." />
@@ -833,7 +814,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IBreakable.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
+        <state>
           <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
           <folding>
             <marker date="1575032100892" expanded="true" signature="29:99" ph="{...}" />
@@ -890,7 +871,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="75">
           <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
           <folding>
             <marker date="1573465781583" expanded="false" signature="6:101" ph="..." />
@@ -966,6 +947,18 @@
             <marker date="1576509724230" expanded="true" signature="6:92" ph="..." />
             <marker date="1576509724230" expanded="true" signature="127:804" ph="{...}" />
             <marker date="1576509724230" expanded="true" signature="315:802" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Objects/DestroySwap.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+          <folding>
+            <marker date="1576596087379" expanded="true" signature="6:92" ph="..." />
+            <marker date="1576596087379" expanded="true" signature="134:314" ph="{...}" />
+            <marker date="1576596087379" expanded="true" signature="201:312" ph="{...}" />
           </folding>
         </state>
       </provider>

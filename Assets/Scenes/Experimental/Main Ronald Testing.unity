@@ -13074,6 +13074,7 @@ GameObject:
   - component: {fileID: 413103837}
   - component: {fileID: 413103836}
   - component: {fileID: 413103835}
+  - component: {fileID: 413103841}
   m_Layer: 0
   m_Name: Vine
   m_TagString: Untagged
@@ -13227,6 +13228,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 413103833}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &413103841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413103833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e0aa08496289634181980f3261f758e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swappedObject: {fileID: 1237026491}
 --- !u!1001 &487041432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47158,6 +47172,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 1b3da4ae672dc494ba6d71e2ef0d97e0,
     type: 3}
   m_PrefabInstance: {fileID: 1221097255}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1237026491 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: ebf2cd44bab83614f96227e6d5d1bafc,
+    type: 3}
+  m_PrefabInstance: {fileID: 743817928}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1238435423
 PrefabInstance:
