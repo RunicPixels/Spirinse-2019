@@ -34,7 +34,10 @@ namespace Spirinse.System.Player
 
             return player;
         }
-        
+        public void OnInit()
+        {
+            checkPointManager.SetNewCheckPoint(player.transform.position);
+        }
         public void OnRestart()
         {
             player.transform.position = checkPointManager.GetCurrentCheckPoint();

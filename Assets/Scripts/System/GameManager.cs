@@ -86,6 +86,7 @@ namespace Spirinse.System
         
         private void InitGame()
         {
+            PlayerManager.OnInit();
             HealthManager.InitHealth();
         }
 

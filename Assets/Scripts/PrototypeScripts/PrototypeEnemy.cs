@@ -182,7 +182,7 @@ using Spirinse.Objects;
 
     private void Stun()
     {
-        rb.velocity = -speed * 3f * direction;
+        rb.velocity = (-speed - 5) * 10f * direction;
         iFrames = 0.3f;
         stunned = 0.4f;
     }
