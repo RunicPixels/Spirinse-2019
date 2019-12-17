@@ -67980,40 +67980,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1091770310172960912, guid: f92a6c5fa21561949bb1a04da7192b89,
-        type: 3}
-      propertyPath: idleSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1091770310172960912, guid: f92a6c5fa21561949bb1a04da7192b89,
-        type: 3}
-      propertyPath: activeSpeed
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 1545285296, guid: f92a6c5fa21561949bb1a04da7192b89, type: 3}
-      propertyPath: m_LinearDrag
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 1545285296, guid: f92a6c5fa21561949bb1a04da7192b89, type: 3}
-      propertyPath: m_Mass
-      value: 0.001
-      objectReference: {fileID: 0}
-    - target: {fileID: 1545285296, guid: f92a6c5fa21561949bb1a04da7192b89, type: 3}
-      propertyPath: m_AngularDrag
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 260012585, guid: f92a6c5fa21561949bb1a04da7192b89, type: 3}
-      propertyPath: m_Points.Array.data[0].y
-      value: 1.4180851
-      objectReference: {fileID: 0}
-    - target: {fileID: 260012585, guid: f92a6c5fa21561949bb1a04da7192b89, type: 3}
-      propertyPath: m_Points.Array.data[1].y
-      value: 0.45183563
-      objectReference: {fileID: 0}
-    - target: {fileID: 260012585, guid: f92a6c5fa21561949bb1a04da7192b89, type: 3}
-      propertyPath: m_Points.Array.data[2].y
-      value: -0.005027771
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f92a6c5fa21561949bb1a04da7192b89, type: 3}
 --- !u!23 &1613070555 stripped
