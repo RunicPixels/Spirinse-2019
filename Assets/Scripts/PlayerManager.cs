@@ -14,7 +14,11 @@ namespace Spirinse.System
         {
             if (Instance == null) Instance = this;
             else Destroy(Instance);
-            if (player == null) Debug.LogWarning("No Player Assigned to Player Manager!!!!");
+            if (player == null)
+            {
+                Debug.LogWarning("No Player Assigned to Player Manager!!!!");
+                player = GetPlayer();
+            }
         }
 
         public Player.Player GetPlayer()
