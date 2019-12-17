@@ -5008,7 +5008,7 @@ MonoBehaviour:
   lr: {fileID: 423655413}
   state: 0
   visualContainer: {fileID: 5288520752964030062}
-  idleSpeed: 12
+  idleSpeed: 15
   activeSpeed: 50
   health: 5
   animator: {fileID: 2877406928871842580}
@@ -5017,9 +5017,10 @@ MonoBehaviour:
   meshRenderer: {fileID: 1583205136581808562}
   cleansedMaterial: {fileID: 2100000, guid: aeeda6b8b05ed3547aea657458ce920e, type: 2}
   preDashDuration: 0.4
-  dashDuration: 1.1
-  minDashCooldown: 0.75
-  maxDashCooldown: 1.25
+  dashDuration: 0.25
+  minDashCooldown: 2.25
+  maxDashCooldown: 3.25
+  dashPlayerDistanceMultiplyer: 1
   hitParticles: {fileID: 1091770310132546953}
 --- !u!50 &1545285296
 Rigidbody2D:
@@ -24277,6 +24278,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1091770310172960913}
     m_Modifications:
+    - target: {fileID: -8470697959465052179, guid: 113136df6984ab849b4438ba12567f2a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -9.596489
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 113136df6984ab849b4438ba12567f2a,
         type: 3}
       propertyPath: m_Name
@@ -24386,11 +24392,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: -8470697959465052179, guid: 113136df6984ab849b4438ba12567f2a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -9.596489
       objectReference: {fileID: 0}
     - target: {fileID: -7357050027859888954, guid: 113136df6984ab849b4438ba12567f2a,
         type: 3}
