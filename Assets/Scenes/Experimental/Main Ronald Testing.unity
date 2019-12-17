@@ -12622,7 +12622,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ed63b46975f8c4e848733a18bfb273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1665379721}
 --- !u!4 &357296374
 Transform:
   m_ObjectHideFlags: 0
@@ -13258,6 +13257,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 178582709, guid: 70907cfb21be91547b27cb539dbe9c2d, type: 3}
+      propertyPath: tracker
+      value: 
+      objectReference: {fileID: 1375838167}
     - target: {fileID: 3435031174896469565, guid: 70907cfb21be91547b27cb539dbe9c2d,
         type: 3}
       propertyPath: hAcceleration
@@ -13656,6 +13659,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 3435031174597603147, guid: 70907cfb21be91547b27cb539dbe9c2d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tracker
+      objectReference: {fileID: 0}
     - target: {fileID: 2974170344513195432, guid: 70907cfb21be91547b27cb539dbe9c2d,
         type: 3}
       propertyPath: m_IsTrigger
@@ -14041,6 +14049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraDistance: {fileID: 860330522}
+  followPlayer: {fileID: 1460352102}
 --- !u!1 &514939945
 GameObject:
   m_ObjectHideFlags: 0
@@ -57667,6 +57676,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 487041432}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1375838167 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3435031174597603150, guid: 70907cfb21be91547b27cb539dbe9c2d,
+    type: 3}
+  m_PrefabInstance: {fileID: 487041432}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375838164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4b2e8f4a74b77347a057f92e7142563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1385567831
 GameObject:
   m_ObjectHideFlags: 0
@@ -73884,7 +73905,7 @@ GameObject:
   - component: {fileID: 1811148378}
   - component: {fileID: 1811148379}
   m_Layer: 0
-  m_Name: Follow Player
+  m_Name: Follow Player Rain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

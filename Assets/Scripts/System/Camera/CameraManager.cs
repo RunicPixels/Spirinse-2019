@@ -10,6 +10,8 @@ namespace Spirinse.System
         public static CameraManager Instance => instance;
 
         public SetCameraDistance cameraDistance;
+        public FollowPlayer followPlayer;
+        
         private void Awake()
         {
             instance = this;

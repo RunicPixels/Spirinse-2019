@@ -11,7 +11,7 @@ namespace Spirinse.Player
         public Transform model;
         private Rigidbody2D rb;
         public Action<int> TakeDamageAction;
-
+        public TrackingBall tracker;
         public Controls tempControls;
 
         public DefenderParticles defenderParticles;

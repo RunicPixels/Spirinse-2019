@@ -41,7 +41,6 @@ namespace Spirinse.System
             }
 
             Grabbing = player.GetButton(RewiredConsts.Action.Grab);
-            Debug.Log(Grabbing);
             Attacking = player.GetButton(RewiredConsts.Action.Attack);
             Dashing = player.GetButton(RewiredConsts.Action.Dash);
             Movement = player.GetAxis2D(RewiredConsts.Action.Horizontal, RewiredConsts.Action.Vertical);
