@@ -13167,7 +13167,7 @@ PrefabInstance:
     - target: {fileID: 3435031174896469564, guid: 70907cfb21be91547b27cb539dbe9c2d,
         type: 3}
       propertyPath: m_LinearDrag
-      value: 8
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 3435031175023981241, guid: 70907cfb21be91547b27cb539dbe9c2d,
         type: 3}
@@ -90818,6 +90818,11 @@ PrefabInstance:
         type: 3}
       propertyPath: amountPerSquareMeter
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 690676637407668096, guid: b519af465b2882647b30815c3a47e1af,
+        type: 3}
+      propertyPath: wintensity
+      value: 600
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b519af465b2882647b30815c3a47e1af, type: 3}

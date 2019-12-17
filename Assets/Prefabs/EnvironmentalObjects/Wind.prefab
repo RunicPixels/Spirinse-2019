@@ -669,7 +669,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: -12, y: 0, z: 0}
     m_Rotation: {x: 0, y: 90, z: 0}
-    m_Scale: {x: 1, y: 28.37, z: 68.4}
+    m_Scale: {x: 1, y: 12.4, z: 28.8}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -867,7 +867,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 194.05081
+      scalar: 35.711998
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4896,7 +4896,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 68.4, y: 28.37}
+  m_Size: {x: 28.8, y: 12.4}
   m_EdgeRadius: 0
 --- !u!114 &690676637407668096
 MonoBehaviour:
@@ -4911,7 +4911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 1, y: 0, z: 0}
-  width: 28.37
-  length: 68.4
+  width: 12.4
+  length: 28.8
   amountPerSquareMeter: 0.1
-  wintensity: 400
+  wintensity: 600
