@@ -84,7 +84,7 @@ using Spirinse.Objects;
     {
         CheckCanDoDash();
         // Ugly code, needs refactoring.
-        if (!target) target = PlayerManager.Instance.player.defender.transform;
+        if (!target) target = PlayerManager.Instance.GetPlayer().defender.transform;
 
         if (iFrames > 0f)
         {

@@ -6,12 +6,13 @@ using Spirinse.System.Health;
 using Spirinse.Player;
 using Spirinse.System.UI;
 using Spirinse.System.Effects;
+using UnityEngine.SceneManagement;
 
 namespace Spirinse.System
 {
     public class GameManager : MonoBehaviour
     {
-        private static GameManager Instance;
+        public static GameManager Instance;
 
         [field: SerializeField] public HealthManager HealthManager { get; protected set; }
         [field: SerializeField] public PlayerManager PlayerManager { get; protected set; }
@@ -54,8 +55,8 @@ namespace Spirinse.System
             HealthManager.ChangeMaxHealthEvent         += UiManager.GetHealthUI.ChangeMaxHealth;
         
             // Manage Player Events
-            var meditator                               = PlayerManager.player.meditator;
-            var defender                                = PlayerManager.player.defender;
+            var meditator                               = PlayerManager.GetPlayer().meditator;
+            var defender                                = PlayerManager.GetPlayer().defender;
 
             meditator.TakeDamageAction                 += HealthManager.HitMeditator;
             meditator.TakeDamageAction                 += EffectsManager.timeManager.PlayerHitFreeze;
@@ -74,6 +75,13 @@ namespace Spirinse.System
             // ...
         }
 
+        public void Restart()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            CameraManager.Instance.followPlayer.FindPlayer();
+            InitGame();
+        }
+        
         private void InitGame()
         {
             HealthManager.InitHealth();

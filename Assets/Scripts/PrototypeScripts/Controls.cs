@@ -71,8 +71,6 @@ public class Controls : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-
-
         if (meleeAttack)
         {
             foreach (var melee in meleeAttackPrefab)
@@ -91,7 +89,6 @@ public class Controls : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-
         // Put this stuff into Input Manager
 
         direction = InputManager.Movement.normalized;
@@ -346,7 +343,8 @@ public class Controls : MonoBehaviour
         {
             if (melee.gameObject.activeSelf)
             {
-                if(melee.GetComponent<Animator>().GetBool("Active") == true) melee.GetComponent<Animator>().SetBool("Active", false);
+                if (melee.GetComponent<Animator>().GetBool("Active") == true)
+                    melee.GetComponent<Animator>().SetBool("Active", false);
                 //melee.gameObject.SetActive(false);
             }
         }
