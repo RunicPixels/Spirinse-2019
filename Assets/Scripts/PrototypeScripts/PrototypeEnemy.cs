@@ -77,6 +77,7 @@ using Spirinse.Objects;
     // Start is called before the first frame update
     void Start()
     {
+        //currentDashCooldown = maxDashCooldown;
         state = EnemyState.Moving;
         oldMaterial = meshRenderer.material;
         speed = idleSpeed;
@@ -132,7 +133,7 @@ using Spirinse.Objects;
                 speed = 0.5f;
                 var position = transform.position;
                 lr.SetPosition(0,position);
-                lr.SetPosition(1,position + (dashDuration + currentPlayerDashDistanceDuration) * activeSpeed * direction);
+                lr.SetPosition(1,GetDashEndPos());
                 break;
             case EnemyState.Moving:
                 speed = idleSpeed;
@@ -143,7 +144,7 @@ using Spirinse.Objects;
         if(cured) direction = -direction * 0.01f;
         if(animator.transform.localScale.x < 0.05f) { Destroy(); }
 
-        rb.velocity = direction * speed;
+        rb.velocity += (Vector2)(direction * speed);
 
     StunJump:
 
@@ -154,6 +155,12 @@ using Spirinse.Objects;
         var v = rb.velocity;
         var angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;
         visualContainer.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+    }
+
+    public Vector3 GetDashEndPos()
+    {
+        var position = transform.position;
+        return position + (dashDuration + currentPlayerDashDistanceDuration) *activeSpeed * direction;
     }
 
     public void TakeDamage(int damage)
@@ -225,19 +232,22 @@ using Spirinse.Objects;
 
     private IEnumerator DoDash()
     {
+        float thisDashTime = dashDuration;
         while (state != EnemyState.PreDash)
         {
             currentPlayerDashDistanceDuration = CalculatePlayerDashDuration();
+            thisDashTime = dashDuration + CalculatePlayerDashDuration();
             state = EnemyState.PreDash;
             yield return new WaitForSeconds(preDashDuration);
         }
+        dashTime = thisDashTime;
         animator.SetBool(Active, true);
         state = EnemyState.Dashing;
-        dashTime = dashDuration + CalculatePlayerDashDuration();
     }
 
     public float CalculatePlayerDashDuration()
     {
+        if (!target) return 0f;
         float distance = Vector3.Distance(target.position, transform.position);
 
         float time = distance / activeSpeed;

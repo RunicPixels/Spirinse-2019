@@ -67933,7 +67933,7 @@ PrefabInstance:
     - target: {fileID: 1091770310172960913, guid: f92a6c5fa21561949bb1a04da7192b89,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1091770310172960913, guid: f92a6c5fa21561949bb1a04da7192b89,
         type: 3}
@@ -67979,6 +67979,40 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1091770310172960912, guid: f92a6c5fa21561949bb1a04da7192b89,
+        type: 3}
+      propertyPath: idleSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1091770310172960912, guid: f92a6c5fa21561949bb1a04da7192b89,
+        type: 3}
+      propertyPath: activeSpeed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 1545285296, guid: f92a6c5fa21561949bb1a04da7192b89, type: 3}
+      propertyPath: m_LinearDrag
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 1545285296, guid: f92a6c5fa21561949bb1a04da7192b89, type: 3}
+      propertyPath: m_Mass
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1545285296, guid: f92a6c5fa21561949bb1a04da7192b89, type: 3}
+      propertyPath: m_AngularDrag
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 260012585, guid: f92a6c5fa21561949bb1a04da7192b89, type: 3}
+      propertyPath: m_Points.Array.data[0].y
+      value: 1.4180851
+      objectReference: {fileID: 0}
+    - target: {fileID: 260012585, guid: f92a6c5fa21561949bb1a04da7192b89, type: 3}
+      propertyPath: m_Points.Array.data[1].y
+      value: 0.45183563
+      objectReference: {fileID: 0}
+    - target: {fileID: 260012585, guid: f92a6c5fa21561949bb1a04da7192b89, type: 3}
+      propertyPath: m_Points.Array.data[2].y
+      value: -0.005027771
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f92a6c5fa21561949bb1a04da7192b89, type: 3}
@@ -90778,51 +90812,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -27.292002
-      objectReference: {fileID: 0}
-    - target: {fileID: 690676637407668099, guid: b519af465b2882647b30815c3a47e1af,
-        type: 3}
-      propertyPath: ShapeModule.m_Scale.z
-      value: 28.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 690676637407668099, guid: b519af465b2882647b30815c3a47e1af,
-        type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 35.711998
-      objectReference: {fileID: 0}
-    - target: {fileID: 690676637407668099, guid: b519af465b2882647b30815c3a47e1af,
-        type: 3}
-      propertyPath: ShapeModule.m_Scale.y
-      value: 12.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 690676637407668097, guid: b519af465b2882647b30815c3a47e1af,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 28.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 690676637407668097, guid: b519af465b2882647b30815c3a47e1af,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 12.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 690676637407668096, guid: b519af465b2882647b30815c3a47e1af,
-        type: 3}
-      propertyPath: length
-      value: 28.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 690676637407668096, guid: b519af465b2882647b30815c3a47e1af,
-        type: 3}
-      propertyPath: width
-      value: 12.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 690676637407668096, guid: b519af465b2882647b30815c3a47e1af,
-        type: 3}
-      propertyPath: amountPerSquareMeter
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 690676637407668096, guid: b519af465b2882647b30815c3a47e1af,
-        type: 3}
-      propertyPath: wintensity
-      value: 600
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b519af465b2882647b30815c3a47e1af, type: 3}
