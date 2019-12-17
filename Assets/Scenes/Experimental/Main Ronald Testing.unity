@@ -41092,7 +41092,7 @@ PrefabInstance:
     - target: {fileID: 966555479816181156, guid: 550557ab611fc354bae1e0b17a0d0259,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 47.47
+      value: 47.62
       objectReference: {fileID: 0}
     - target: {fileID: 966555479816181156, guid: 550557ab611fc354bae1e0b17a0d0259,
         type: 3}
@@ -67980,6 +67980,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1091770310172960912, guid: f92a6c5fa21561949bb1a04da7192b89,
+        type: 3}
+      propertyPath: dashDuration
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1091770310172960912, guid: f92a6c5fa21561949bb1a04da7192b89,
+        type: 3}
+      propertyPath: dashPlayerDistanceMultiplyer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f92a6c5fa21561949bb1a04da7192b89, type: 3}
 --- !u!23 &1613070555 stripped
@@ -90836,7 +90846,7 @@ PrefabInstance:
     - target: {fileID: 966555479816181156, guid: 550557ab611fc354bae1e0b17a0d0259,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 26
+      value: 26.25
       objectReference: {fileID: 0}
     - target: {fileID: 966555479816181156, guid: 550557ab611fc354bae1e0b17a0d0259,
         type: 3}

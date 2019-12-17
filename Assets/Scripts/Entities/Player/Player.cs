@@ -14,13 +14,11 @@ namespace Spirinse.Player
         public Controls controls; // Needs reorganizing.
         public Meditator meditator;
         public Defender defender;
-        public CheckPointManager checkPointManager;
+        
 
 
         public void OnEnable()
         {
-            if (checkPointManager == null) checkPointManager = new CheckPointManager();
-
             if (Instance == null) Instance = this;
             else Destroy(gameObject);
             controls.playerMovementAction += playerAnimator.ChangeAnimation;

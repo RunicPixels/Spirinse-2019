@@ -59,11 +59,13 @@ using Spirinse.Objects;
     public float dashDuration = 2f;
     public float minDashCooldown = 6f;
     public float maxDashCooldown = 6f;
+    public float dashPlayerDistanceMultiplyer = 0.5f;
 
     private float iFrames;
     private float stunned;
     private float dashTime;
     private float currentDashCooldown;
+    private float currentPlayerDashDistanceDuration; 
 
     private float progression = 0f;
     public ParticleSystem hitParticles;
@@ -129,7 +131,7 @@ using Spirinse.Objects;
                 speed = 0.5f;
                 var position = transform.position;
                 lr.SetPosition(0,position);
-                lr.SetPosition(1,position + (dashDuration * activeSpeed * direction));
+                lr.SetPosition(1,position + (dashDuration + currentPlayerDashDistanceDuration) * activeSpeed * direction);
                 break;
             case EnemyState.Moving:
                 speed = idleSpeed;
@@ -157,7 +159,7 @@ using Spirinse.Objects;
     {
         if (iFrames > 0f || cured || damage < 1) return;
         health -= damage;
-        TimeManager.Instance.Freeze(0.05f, 0, 3f, 3f);
+        EffectsManager.Instance.timeManager.Freeze(0.05f, 0, 3f, 3f);
         animator.SetTrigger(Hit);
         hitParticles.Play();
 
@@ -224,12 +226,23 @@ using Spirinse.Objects;
     {
         while (state != EnemyState.PreDash)
         {
+            currentPlayerDashDistanceDuration = CalculatePlayerDashDuration();
             state = EnemyState.PreDash;
             yield return new WaitForSeconds(preDashDuration);
         }
         animator.SetBool(Active, true);
         state = EnemyState.Dashing;
-        dashTime = dashDuration;
+        dashTime = dashDuration + CalculatePlayerDashDuration();
+    }
+
+    public float CalculatePlayerDashDuration()
+    {
+        float distance = Vector3.Distance(target.position, transform.position);
+
+        float time = distance / activeSpeed;
+
+        return time;
+
     }
 
     private void StopDash()
