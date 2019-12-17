@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690676637407668101}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -28, y: 45.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -667,9 +667,9 @@ ParticleSystem:
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
-    m_Position: {x: -5, y: 0, z: 0}
+    m_Position: {x: -12, y: 0, z: 0}
     m_Rotation: {x: 0, y: 90, z: 0}
-    m_Scale: {x: 1, y: 5, z: 6}
+    m_Scale: {x: 1, y: 28.37, z: 68.4}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -867,7 +867,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 12
+      scalar: 194.05081
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1495,7 +1495,7 @@ ParticleSystem:
     flipU: 0
     flipV: 0
   VelocityModule:
-    enabled: 1
+    enabled: 0
     x:
       serializedVersion: 2
       minMaxState: 2
@@ -2048,7 +2048,7 @@ ParticleSystem:
     radial:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 4
+      scalar: 2
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -2771,7 +2771,7 @@ ParticleSystem:
     strengthY:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -2824,7 +2824,7 @@ ParticleSystem:
     strengthZ:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4896,7 +4896,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 18, y: 5}
+  m_Size: {x: 68.4, y: 28.37}
   m_EdgeRadius: 0
 --- !u!114 &690676637407668096
 MonoBehaviour:
@@ -4911,4 +4911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 1, y: 0, z: 0}
-  wintensity: 200
+  width: 28.37
+  length: 68.4
+  amountPerSquareMeter: 0.1
+  wintensity: 400
