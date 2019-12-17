@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ShaderTest_NoTexture 3
-  m_Shader: {fileID: 4800000, guid: 80412fe88398cd147be3aacebe2c3fe3, type: 3}
-  m_ShaderKeywords: OUTLINES TCP2_COLORS_AS_NORMALS TCP2_OUTLINE_CONST_SIZE TCP2_SPEC_TOON
+  m_Name: ShaderTest_mOON
+  m_Shader: {fileID: 4800000, guid: f8d49205b3b0a644195633020367689d, type: 3}
+  m_ShaderKeywords: TCP2_COLORS_AS_NORMALS TCP2_OUTLINE_CONST_SIZE TCP2_SPEC_TOON
     _EMISSION _GLOSSYREFLECTIONS_OFF _SPECULARHIGHLIGHTS_OFF
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -100,8 +100,8 @@ Material:
     - _ZSmooth: 1.41
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 0.83267367, b: 0, a: 1}
-    - _EmissionColor: {r: 2, g: 1.4509804, b: 0, a: 1}
+    - _Color: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 1.4787692, g: 1.0901439, b: 0.84401447, a: 1}
     - _HColor: {r: 1, g: 1, b: 1, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _RimColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.6}
