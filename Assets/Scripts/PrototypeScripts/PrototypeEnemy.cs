@@ -136,7 +136,7 @@ using Spirinse.Objects;
                 break;
             case EnemyState.Moving:
                 speed = idleSpeed;
-                direction = (target.position + ((Vector3)target.GetComponent<Rigidbody2D>().velocity * 0.2f) - transform.position).normalized;
+                direction = (target.position + ((Vector3)target.GetComponent<Rigidbody2D>().velocity * 0.1f) - transform.position).normalized;
                 break;
         }
 
