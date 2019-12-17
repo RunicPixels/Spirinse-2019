@@ -41,6 +41,8 @@ public class Wind : MonoBehaviour
         emission.rateOverTime = amount;
     }
     
+    #if
+    
     public void OnTriggerStay2D(Collider2D other)
     {
         if (!other.GetComponent<Rigidbody2D>()) return;

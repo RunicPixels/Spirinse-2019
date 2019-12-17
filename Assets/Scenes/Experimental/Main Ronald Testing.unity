@@ -90738,12 +90738,12 @@ PrefabInstance:
     - target: {fileID: 690676637407668098, guid: b519af465b2882647b30815c3a47e1af,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.3787086
       objectReference: {fileID: 0}
     - target: {fileID: 690676637407668098, guid: b519af465b2882647b30815c3a47e1af,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.925516
       objectReference: {fileID: 0}
     - target: {fileID: 690676637407668098, guid: b519af465b2882647b30815c3a47e1af,
         type: 3}
@@ -90763,7 +90763,7 @@ PrefabInstance:
     - target: {fileID: 690676637407668098, guid: b519af465b2882647b30815c3a47e1af,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -44.507004
       objectReference: {fileID: 0}
     - target: {fileID: 690676637407668099, guid: b519af465b2882647b30815c3a47e1af,
         type: 3}
@@ -90783,12 +90783,17 @@ PrefabInstance:
     - target: {fileID: 690676637407668099, guid: b519af465b2882647b30815c3a47e1af,
         type: 3}
       propertyPath: NoiseModule.strengthY.scalar
-      value: 0.3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 690676637407668099, guid: b519af465b2882647b30815c3a47e1af,
         type: 3}
       propertyPath: NoiseModule.strengthZ.scalar
-      value: 0.3
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 690676637407668099, guid: b519af465b2882647b30815c3a47e1af,
+        type: 3}
+      propertyPath: NoiseModule.scrollSpeed.scalar
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 690676637407668096, guid: b519af465b2882647b30815c3a47e1af,
         type: 3}
@@ -90798,12 +90803,12 @@ PrefabInstance:
     - target: {fileID: 690676637407668096, guid: b519af465b2882647b30815c3a47e1af,
         type: 3}
       propertyPath: width
-      value: 25
+      value: 28.37
       objectReference: {fileID: 0}
     - target: {fileID: 690676637407668096, guid: b519af465b2882647b30815c3a47e1af,
         type: 3}
       propertyPath: length
-      value: 25
+      value: 68.4
       objectReference: {fileID: 0}
     - target: {fileID: 690676637407668096, guid: b519af465b2882647b30815c3a47e1af,
         type: 3}
