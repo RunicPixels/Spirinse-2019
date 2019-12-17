@@ -23,7 +23,7 @@ public class Cleansinator : MonoBehaviour
     public void CleanseNextObject()
     {
         if (currentNumber > objectsToCleanse.Count) SceneManager.LoadScene(0);
-        objectsToCleanse[currentNumber].material = cleansedMaterial;
+        //objectsToCleanse[currentNumber].material = cleansedMaterial;
         currentNumber += 1;
     }
     public void ResetCleansinator()

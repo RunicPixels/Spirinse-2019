@@ -167,13 +167,13 @@ using Spirinse.Objects;
     {
         if (iFrames > 0f || cured || damage < 1) return;
         health -= damage;
-        EffectsManager.Instance.timeManager.Freeze(0.05f, 0, 3f, 3f);
+        //EffectsManager.Instance.timeManager.Freeze(0.05f, 0, 3f, 3f);
         animator.SetTrigger(Hit);
         hitParticles.Play();
 
         if (health < 0 && !cured)
         {
-            SpawnEnemy.enemyAmount -= 1;
+            //SpawnEnemy.enemyAmount -= 1;
             Cure();
         }
 
@@ -182,14 +182,14 @@ using Spirinse.Objects;
 
     private void Stun()
     {
-        rb.velocity = -speed * 2f * direction;
+        rb.velocity = -speed * 3f * direction;
         iFrames = 0.3f;
         stunned = 0.4f;
     }
 
     private void Cure()
     {
-        CleanseManager.Instance.cleanseEvent?.Invoke();
+        //CleanseManager.Instance.cleanseEvent?.Invoke();
         cured = true;
         animator.SetTrigger(Cured);
         meshRenderer.material = cleansedMaterial;
