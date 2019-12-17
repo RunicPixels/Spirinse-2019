@@ -23,9 +23,16 @@ public class Wind : MonoBehaviour
         Gizmos.color = new Color(0.5f, 1f, 1f, 0.5f);
         Gizmos.matrix = transform.localToWorldMatrix;
         Gizmos.DrawCube(Vector3.zero, new Vector3(length,width, 0f));
+        Setup();
     }
 
     private void Awake()
+    {
+        Setup();
+    }
+
+
+    public void Setup()
     {
         col = GetComponent<BoxCollider2D>();
         system = GetComponent<ParticleSystem>();
@@ -40,8 +47,6 @@ public class Wind : MonoBehaviour
 
         emission.rateOverTime = amount;
     }
-    
-    #if
     
     public void OnTriggerStay2D(Collider2D other)
     {
