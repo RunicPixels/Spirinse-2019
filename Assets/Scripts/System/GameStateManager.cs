@@ -33,7 +33,7 @@ namespace Spirinse.System
 
         public void DebugGameOver()
         {
-            Debug.Log("Game Over");
+            //Debug.Log("Game Over");
         }
 
         public void DoGameOver()
