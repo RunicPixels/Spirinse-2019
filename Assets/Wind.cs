@@ -21,7 +21,8 @@ public class Wind : MonoBehaviour
     public void OnDrawGizmosSelected()
     {
         Gizmos.color = new Color(0.5f, 1f, 1f, 0.5f);
-        Gizmos.DrawCube(transform.position, new Vector3(length,width, 0f));
+        Gizmos.matrix = transform.localToWorldMatrix;
+        Gizmos.DrawCube(Vector3.zero, new Vector3(length,width, 0f));
     }
 
     private void Awake()

@@ -90775,6 +90775,21 @@ PrefabInstance:
       propertyPath: VelocityModule.radial.scalar
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 690676637407668099, guid: b519af465b2882647b30815c3a47e1af,
+        type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 690676637407668099, guid: b519af465b2882647b30815c3a47e1af,
+        type: 3}
+      propertyPath: NoiseModule.strengthY.scalar
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 690676637407668099, guid: b519af465b2882647b30815c3a47e1af,
+        type: 3}
+      propertyPath: NoiseModule.strengthZ.scalar
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 690676637407668096, guid: b519af465b2882647b30815c3a47e1af,
         type: 3}
       propertyPath: wintensity
