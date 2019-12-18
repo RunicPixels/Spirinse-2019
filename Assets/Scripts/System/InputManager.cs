@@ -32,7 +32,7 @@ namespace Spirinse.System
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
-                SceneManager.LoadScene(0);
+                GameManager.Instance.Restart();
             }
 
             if (Input.GetKeyDown(KeyCode.Escape))

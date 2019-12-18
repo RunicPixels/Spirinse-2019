@@ -80,13 +80,19 @@ namespace Spirinse.System
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             CameraManager.Instance.followPlayer.FindPlayer();
-            InitGame();
             PlayerManager.OnRestart();
+            OnSpawn();
         }
         
         private void InitGame()
         {
             PlayerManager.OnInit();
+            OnSpawn();
+            
+        }
+
+        private void OnSpawn()
+        {
             HealthManager.InitHealth();
         }
 
