@@ -7,15 +7,18 @@ using UnityEngine;
 public class SpawnEnemy : MonoBehaviour
 {
     public GameObject enemyPrefab;
-    public Cleansinator cleansinator;
+    //public Cleansinator cleansinator;
     public float delay = 2f;
 
     public static int enemyAmount;
     public int maxEnemies = 3;
+
+    private Vector2 spawnPosition;
     // Start is called before the first frame update
     void Start()
     {
-        cleansinator = CleanseManager.Instance.cleansinator;
+        spawnPosition = transform.position;
+        //cleansinator = CleanseManager.Instance.cleansinator;
     }
 
     private void OnEnable()
@@ -34,8 +37,8 @@ public class SpawnEnemy : MonoBehaviour
             else
             {
                 enemyAmount += 1;
-                var newPos = cleansinator.GetNextObjectTransform().position;
-                transform.position = (Random.insideUnitCircle).normalized * Random.Range(25f, 30f);
+                //var newPos = cleansinator.GetNextObjectTransform().position;
+                transform.position = spawnPosition + (Random.insideUnitCircle).normalized * Random.Range(25f, 30f);
                 transform.position = new Vector3(transform.position.x, Mathf.Abs(transform.position.y), transform.position.z);
                 GameObject enemy = Instantiate(enemyPrefab, transform);
                 enemy.transform.position = transform.position;
