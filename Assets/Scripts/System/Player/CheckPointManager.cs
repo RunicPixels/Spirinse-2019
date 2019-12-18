@@ -2,7 +2,7 @@
 
 namespace Spirinse.System.Player
 {
-    public class CheckPointManager
+    public class CheckPointManager : MonoBehaviour
     {
         private Vector2 currentCheckPoint;
 
@@ -15,6 +15,5 @@ namespace Spirinse.System.Player
         {
             return currentCheckPoint;
         }
-
     }
 }

@@ -17,7 +17,7 @@ namespace Spirinse.System.Player
 
         public void Awake()
         {
-            if (checkPointManager == null) checkPointManager = new CheckPointManager();
+            if (checkPointManager == null) Debug.LogWarning("Please asign a checkpoint manager");
             if (Instance == null) Instance = this;
             else Destroy(Instance);
             if (player == null)
@@ -36,11 +36,12 @@ namespace Spirinse.System.Player
         }
         public void OnInit()
         {
-            checkPointManager.SetNewCheckPoint(player.transform.position);
+            checkPointManager.SetNewCheckPoint(player.defender.transform.position);
         }
         public void OnRestart()
         {
-            player.transform.position = checkPointManager.GetCurrentCheckPoint();
+            Debug.Log("On Restart");
+            player.defender.transform.position = checkPointManager.GetCurrentCheckPoint();
         }
     }
 }
