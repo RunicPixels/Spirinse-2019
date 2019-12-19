@@ -702,13 +702,13 @@
           </e>
           <e p="PlaceholderRestart.cs" t="Include" />
           <e p="PlayerAnimator.cs" t="Include" />
-          <e p="PlayerManager.cs" t="Include" />
           <e p="Plugins" t="Include">
             <e p="RewiredConsts.cs" t="Include" />
           </e>
           <e p="PrototypeScripts" t="Include">
             <e p="Bullet.cs" t="Include" />
             <e p="Controls.cs" t="Include" />
+            <e p="EnableOnTrigger2D.cs" t="Include" />
             <e p="FollowPlayer.cs" t="Include" />
             <e p="Grow.cs" t="Include" />
             <e p="LineSmoother.cs" t="Include" />
@@ -750,6 +750,10 @@
               <e p="ShieldManager.cs" t="Include" />
             </e>
             <e p="InputManager.cs" t="Include" />
+            <e p="Player" t="Include">
+              <e p="CheckPointManager.cs" t="Include" />
+              <e p="PlayerManager.cs" t="Include" />
+            </e>
             <e p="PostProcessingManager.cs" t="Include" />
             <e p="UI" t="Include">
               <e p="SetHealthUI.cs" t="Include" />

@@ -1,114 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-4952205584409442432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Battle
-  m_EditorClassIdentifier: 
-  Path: event:/Battle
-  guid: 652326744c0f114291388d2f1348ba81
-  Banks:
-  - {fileID: 87974260655885901}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 6470754571177461514}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 85333
---- !u!114 &-2893189921939757531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Rain
-  m_EditorClassIdentifier: 
-  Path: event:/Rain
-  guid: 5234cff8a813bf48acb68729067ec066
-  Banks:
-  - {fileID: 87974260655885901}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 4939474595917604781}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 23750
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 8147461804926947734}
-  - {fileID: 87974260655885901}
-  EditorEvents:
-  - {fileID: -2893189921939757531}
-  - {fileID: -4952205584409442432}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: 87974260655885901}
-  StringsBanks:
-  - {fileID: 8147461804926947734}
-  stringsBankWriteTime: 637083846543399231
-  cacheVersion: 3
---- !u!114 &87974260655885901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/Spirinse FMOD Project/Build/Desktop/Master.bank
-  SubDir: Build/Desktop
-  lastModified: 637083846543369254
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &4939474595917604781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Rain/RainIntensity
-  m_EditorClassIdentifier: 
-  Name: RainIntensity
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &6470754571177461514
+--- !u!114 &-7999223030222703956
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,7 +17,31 @@ MonoBehaviour:
   Max: 4
   Default: 1
   Exists: 1
---- !u!114 &8147461804926947734
+--- !u!114 &-6617117251003696885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Battle
+  m_EditorClassIdentifier: 
+  Path: event:/Battle
+  guid: 652326744c0f114291388d2f1348ba81
+  Banks:
+  - {fileID: 4738173147304861399}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -7999223030222703956}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 85333
+--- !u!114 &-3542585013488693742
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,7 +55,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Audio/Spirinse FMOD Project/Build/Desktop/Master.strings.bank
   SubDir: Build/Desktop
-  lastModified: 637083846543399231
+  lastModified: 637079632883909567
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -150,4 +66,140 @@ MonoBehaviour:
     Value: 892
   - Name: Metadata
     Value: 892
+  Exists: 1
+--- !u!114 &-3504366438925548754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Battle/Intensity Battle
+  m_EditorClassIdentifier: 
+  Name: Intensity Battle
+  Min: 1
+  Max: 4
+  Default: 1
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -3542585013488693742}
+  - {fileID: 4738173147304861399}
+  EditorEvents:
+  - {fileID: 1116060894867825551}
+  - {fileID: -6617117251003696885}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 4738173147304861399}
+  StringsBanks:
+  - {fileID: -3542585013488693742}
+  stringsBankWriteTime: 637079632883909567
+  cacheVersion: 3
+--- !u!114 &1116060894867825551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Rain
+  m_EditorClassIdentifier: 
+  Path: event:/Rain
+  guid: 5234cff8a813bf48acb68729067ec066
+  Banks:
+  - {fileID: 4738173147304861399}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 6347897315498702095}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 23750
+--- !u!114 &4070213798041430220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/Spirinse FMOD Project/Build/Desktop/Master.bank
+  SubDir: Build/Desktop
+  lastModified: 637121200751458046
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &4738173147304861399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/Spirinse FMOD Project/Build/Desktop/Master.bank
+  SubDir: Build/Desktop
+  lastModified: 637079632884629145
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &6347897315498702095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Rain/RainIntensity
+  m_EditorClassIdentifier: 
+  Name: RainIntensity
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &6932959361562589987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Rain/RainIntensity
+  m_EditorClassIdentifier: 
+  Name: RainIntensity
+  Min: 0
+  Max: 1
+  Default: 0
   Exists: 1
