@@ -14,6 +14,7 @@ public class Wind : MonoBehaviour
     public float amountPerSquareMeter;
     
     public float wintensity;
+    [Range(0f, 1f)] public float drag = 0.3f;
 
     private BoxCollider2D col;
     private ParticleSystem system;
@@ -64,7 +65,7 @@ public class Wind : MonoBehaviour
             direction.x * cos - direction.y * sin,
             direction.x * sin + direction.y * cos
         );
-        rb.velocity *= 0.7f;
+        rb.velocity *= 1-drag;
 
         rb.velocity += wintensity * Time.deltaTime * forward;
     }
