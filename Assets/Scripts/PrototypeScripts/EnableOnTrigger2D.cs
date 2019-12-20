@@ -8,8 +8,8 @@ public class EnableOnTrigger2D : MonoBehaviour
     private bool spawned = false;
     // Start is called before the first frame update
 
-    void OnTriggerEnter2D(Collider2D col) {
-        if (col.CompareTag("Player") && spawned == false)
+    private void OnTriggerEnter2D(Collider2D col) {
+        if (col.CompareTag("Defender") && spawned == false)
         {
             objectToEnable.SetActive(true);
             spawned = true;
