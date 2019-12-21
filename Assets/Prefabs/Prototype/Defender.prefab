@@ -24098,6 +24098,7 @@ GameObject:
   - component: {fileID: 3865611153575311036}
   - component: {fileID: 8398344536270196601}
   - component: {fileID: 396034382167714848}
+  - component: {fileID: 847345138}
   m_Layer: 10
   m_Name: Grab
   m_TagString: Untagged
@@ -24153,6 +24154,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3
+--- !u!50 &847345138
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308309934671574409}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &702109058544555888
 GameObject:
   m_ObjectHideFlags: 0
@@ -29647,7 +29669,7 @@ GameObject:
   - component: {fileID: 3435031174597603145}
   m_Layer: 5
   m_Name: Tracker
-  m_TagString: Untagged
+  m_TagString: Tracker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29752,7 +29774,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3435031174677400423
 Transform:
   m_ObjectHideFlags: 0
@@ -34895,6 +34917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 3435031175023981246}
+  tracker: {fileID: 3435031174597603150}
   tempControls: {fileID: 3435031174896469565}
   defenderParticles: {fileID: 8855044757384007021}
   rotateSpeed: 1500
@@ -34916,8 +34939,8 @@ MonoBehaviour:
   chiDrainAttackMode: 0.45
   chiDashConsumption: 0.7
   chiGravity: 2
-  hAcceleration: 44
-  vAcceleration: 44
+  hAcceleration: 22
+  vAcceleration: 22
   speed: 17
   altitudeModifier: 1
   altitudeVelocity: 1
@@ -35084,7 +35107,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 0.3
-  m_LinearDrag: 11
+  m_LinearDrag: 6.5
   m_AngularDrag: 0.01
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: e67144db1498cd0438744ee505146fd8, type: 2}
@@ -35464,6 +35487,7 @@ GameObject:
   - component: {fileID: 1073623039850437055}
   - component: {fileID: 2974170344513195432}
   - component: {fileID: 288591505803422339}
+  - component: {fileID: 997585499}
   m_Layer: 8
   m_Name: DashSphere
   m_TagString: Untagged
@@ -35541,7 +35565,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -35562,6 +35586,19 @@ MonoBehaviour:
   duration: 0
   damage: 3
   energySteal: 0.1
+--- !u!114 &997585499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3688590840828404065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f8499b8f78243944a20c5b49e7b63c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageType: 2
 --- !u!1 &4872689992061381141
 GameObject:
   m_ObjectHideFlags: 0
