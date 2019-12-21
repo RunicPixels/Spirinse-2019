@@ -23,6 +23,7 @@ public class SpawnEnemy : MonoBehaviour
 
     private void OnEnable()
     {
+        spawnPosition = transform.position;
         Timing.RunCoroutine(_SpawnEnemies().CancelWith(gameObject));
     }
 
@@ -43,6 +44,7 @@ public class SpawnEnemy : MonoBehaviour
                 GameObject enemy = Instantiate(enemyPrefab, transform);
                 enemy.transform.position = transform.position;
                 enemy.transform.parent = null;
+                delay *= 0.995f;
             }
             yield return Timing.WaitForSeconds(delay);
         }
