@@ -24,6 +24,8 @@ public class DestroySwap : MonoBehaviour
         if (inheritScale)
         {
             obj.transform.localScale = transform.lossyScale;
+            
         }
+        obj.transform.localRotation = transform.localRotation;
     }
 }

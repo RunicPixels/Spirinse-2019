@@ -34,7 +34,7 @@ namespace Spirinse.Objects
             {
                 rb.isKinematic = false;
             }
-            Invoke("Destroy", 0.1f);
+            Destroy();
         }
         public void Destroy()
         {
