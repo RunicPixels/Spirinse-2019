@@ -44480,7 +44480,8 @@ MonoBehaviour:
   chiAttackCost: 0.1
   chiDrainAttackMode: 0.45
   chiDashConsumption: 0.7
-  chiGravity: 2
+  baseGravity: 0
+  chiGravity: 0
   hAcceleration: 15
   vAcceleration: 15
   speed: 44
@@ -44513,11 +44514,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3be585ecc08215e47aac0928b0b88495, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 0.52
+  duration: 0.4
   dashSpeed: 500
   dashSpeedMultiplier: 1
   stopBeforeDash: 1.5
-  dashVelocity: {x: 0, y: 0}
+  dashVelocity: {x: -0, y: 0}
   gravityCurve:
     serializedVersion: 2
     m_Curve:
@@ -44564,8 +44565,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.28687957
     - serializedVersion: 3
-      time: 0.009591699
-      value: 0.27881476
+      time: 0.10164034
+      value: 0.24579582
       inSlope: 3.2520792
       outSlope: 3.2520792
       tangentMode: 0
@@ -44573,8 +44574,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.09588394
-      value: 1.0000012
+      time: 0.27580032
+      value: 1.0023587
       inSlope: -0.2786173
       outSlope: -0.2786173
       tangentMode: 0
@@ -44651,7 +44652,7 @@ Rigidbody2D:
   m_Mass: 0.3
   m_LinearDrag: 3
   m_AngularDrag: 0.01
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: e67144db1498cd0438744ee505146fd8, type: 2}
   m_Interpolate: 2
   m_SleepingMode: 1
