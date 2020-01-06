@@ -18,6 +18,7 @@ public class Controls : MonoBehaviour
     public float chiAttackCost = 0.1f;
     public float chiDrainAttackMode = 0.5f;
     public float chiDashConsumption = 0.2f;
+    public float baseGravity = 1f;
     public float chiGravity = 5f;
 
     [Header("TimeScale")]
@@ -186,7 +187,7 @@ public class Controls : MonoBehaviour
 
     private float CalculateGravity()
     {
-        var gravity = Mathf.Max(0f, (1f - chi) * chiGravity) * 2;
+        var gravity = Mathf.Max(baseGravity, ((1f - chi) * chiGravity * 2) + baseGravity);
         if (dashing)
         {
             gravity = dashAbility.GetGravityScale();
