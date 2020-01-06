@@ -17,7 +17,8 @@ using Spirinse.Objects;
         Dashing,
         Idle,
         Moving,
-        PreDash
+        PreDash,
+        PostDash
     }
 
 
@@ -56,6 +57,7 @@ using Spirinse.Objects;
     private readonly int damage = 1;
 
     public float preDashDuration = 0.4f;
+    public float postDashDuration = 0.4f;
     public float dashDuration = 2f;
     public float minDashCooldown = 6f;
     public float maxDashCooldown = 6f;
@@ -65,6 +67,7 @@ using Spirinse.Objects;
     private float stunned;
     private float dashTime;
     private float currentDashCooldown;
+    private float currentPostDashTime;
     private float currentPlayerDashDistanceDuration;
     private float currentPlayerDistance;
 
@@ -139,6 +142,13 @@ using Spirinse.Objects;
                 speed = idleSpeed;
                 direction = (target.position + ((Vector3)target.GetComponent<Rigidbody2D>().velocity * 0.1f) - transform.position).normalized;
                 break;
+            case EnemyState.PostDash:
+                if(currentPostDashTime > 0) currentPostDashTime -= Time.fixedDeltaTime;
+                else state = EnemyState.Moving;
+
+                speed = 4 * currentPostDashTime;
+                break;
+
         }
 
         if(cured) direction = -direction * 0.01f;
@@ -224,7 +234,10 @@ using Spirinse.Objects;
 
     private void CheckCanDoDash()
     {
-        if (currentDashCooldown <= 0f && state != EnemyState.Dashing && state != EnemyState.PreDash)
+        if (currentDashCooldown <= 0f && 
+            state != EnemyState.Dashing && 
+            state != EnemyState.PreDash &&
+            state != EnemyState.PostDash)
         {
             StartCoroutine(DoDash());
         }
@@ -261,6 +274,7 @@ using Spirinse.Objects;
         speed = idleSpeed;
         animator.SetBool(Active, false);
         currentDashCooldown = Random.Range(minDashCooldown, maxDashCooldown);
-        state = EnemyState.Moving;
+        currentPostDashTime = postDashDuration;
+        state = EnemyState.PostDash;
     }
 }
