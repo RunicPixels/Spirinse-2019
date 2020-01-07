@@ -1772,10 +1772,15 @@
           <e p="Entities" t="Include">
             <e p="Enemies" t="Include">
               <e p="BaseEnemy.cs" t="Include" />
+              <e p="BaseEntityVisuals.cs" t="Include" />
               <e p="Behaviour" t="Include">
                 <e p="BaseBehaviourState.cs" t="Include" />
               </e>
+              <e p="DamagableEntity.cs" t="Include" />
               <e p="EntityHealth.cs" t="Include" />
+              <e p="Worm" t="Include">
+                <e p="WormVisuals.cs" t="Include" />
+              </e>
             </e>
             <e p="Player" t="Include">
               <e p="Defender.cs" t="Include" />
