@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using MEC;
 using Spirinse.System;
+using Spirinse.Player;
 using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour
@@ -17,6 +18,9 @@ public class SpawnEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        float velocity = Spirinse.Player.Player.Instance.GetPlayerVelocity();
+        
         spawnPosition = transform.position;
         //cleansinator = CleanseManager.Instance.cleansinator;
     }
