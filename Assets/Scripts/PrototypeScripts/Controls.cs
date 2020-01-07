@@ -110,7 +110,7 @@ public class Controls : MonoBehaviour
             chi = 0f;
         }
 
-        if (InputManager.Attacking && !shooting)
+        if(InputManager.Attacking && !shooting)
         {
             Time.timeScale = 1f;
             StartCoroutine(_BasicAttack());
@@ -386,5 +386,10 @@ public class Controls : MonoBehaviour
             var angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;
             melee.transform.transform.parent.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
+    }
+
+    public Rigidbody2D GetRB()
+    {
+        return rb;
     }
 }

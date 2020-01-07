@@ -5,6 +5,6 @@ namespace Spirinse.Interfaces
     public interface IDamagable
     {
         //event EventHandler<int> TakeDamage;
-        void TakeDamage(int damage);
+        bool TakeDamage(int damage);
     }
 }

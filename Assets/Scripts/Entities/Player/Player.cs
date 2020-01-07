@@ -23,5 +23,11 @@ namespace Spirinse.Player
             else Destroy(gameObject);
             controls.playerMovementAction += playerAnimator.ChangeAnimation;
         }
-    }
+
+
+        public float GetPlayerVelocity()
+             {
+                 return controls.GetRB().velocity.magnitude;
+             }
+         }
 }
