@@ -173,9 +173,9 @@ using Spirinse.Objects;
         return position + (dashDuration + currentPlayerDashDistanceDuration) *activeSpeed * direction;
     }
 
-    public void TakeDamage(int damage)
+    public bool TakeDamage(int damage)
     {
-        if (iFrames > 0f || cured || damage < 1) return;
+        if (iFrames > 0f || cured || damage < 1) return false;
         health -= damage;
         //EffectsManager.Instance.timeManager.Freeze(0.05f, 0, 3f, 3f);
         animator.SetTrigger(Hit);
@@ -188,6 +188,7 @@ using Spirinse.Objects;
         }
 
         Stun();
+        return true;
     }
 
     private void Stun()

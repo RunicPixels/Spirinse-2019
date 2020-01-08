@@ -11,6 +11,7 @@ public class Bullet : MonoBehaviour, IAttack
     public float velocity = 5f;
     public float timeLeft = 2f;
     public int damage = 6;
+    public DisappearAfterTime vfx;
     
     // Start is called before the first frame update
     private void Start()
@@ -29,7 +30,7 @@ public class Bullet : MonoBehaviour, IAttack
         timeLeft -= Time.deltaTime;
         if (timeLeft < 0f)
         {
-            Destroy(gameObject);
+            Destroy();
         }
         
         Vector2 v = rb.velocity;
@@ -40,8 +41,6 @@ public class Bullet : MonoBehaviour, IAttack
     private void FixedUpdate()
     {
         rb.velocity = direction * velocity;
-        
-        
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -52,6 +51,23 @@ public class Bullet : MonoBehaviour, IAttack
         {
             hit.TakeDamage(damage);
         }
+        Destroy();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        IDamagable hit = collision.gameObject.GetComponent<IDamagable>();
+
+        if (hit != null)
+        {
+            Destroy();
+        }
+        
+    }
+    public void Destroy()
+    {
+        vfx.transform.parent = null;
+        vfx.enabled = true;
         Destroy(gameObject);
     }
 

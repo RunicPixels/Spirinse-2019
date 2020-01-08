@@ -17,9 +17,11 @@ namespace Spirinse.Player
         public DefenderParticles defenderParticles;
 
         public int rotateSpeed = 50;
-        public void TakeDamage(int damage)
+        public bool TakeDamage(int damage)
         {
+            if (damage < 1) return false;
             TakeDamageAction?.Invoke(damage);
+            return true;
         }
 
         // Start is called before the first frame update
