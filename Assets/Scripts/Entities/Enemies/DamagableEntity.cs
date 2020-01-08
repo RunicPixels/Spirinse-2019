@@ -6,9 +6,10 @@ using UnityEngine;
 public class DamagableEntity : MonoBehaviour, IDamagable
 {
     private float iFrames;
-    
+    /*
     public bool TakeDamage(int damage)
     {
+        
         if (iFrames > 0f || cured || damage < 1) return false;
         health -= damage;
         //EffectsManager.Instance.timeManager.Freeze(0.05f, 0, 3f, 3f);
@@ -18,9 +19,14 @@ public class DamagableEntity : MonoBehaviour, IDamagable
         if (health < 0 && !cured)
         {
             //SpawnEnemy.enemyAmount -= 1;
-            Cure();
+            //Cure();
         }
 
-        Stun();
+        //Stun();
+    }
+    */
+    public bool TakeDamage(int damage)
+    {
+        return false;
     }
 }

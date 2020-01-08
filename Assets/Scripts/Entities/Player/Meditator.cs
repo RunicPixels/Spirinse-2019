@@ -34,10 +34,12 @@ namespace Spirinse.Player {
             if (iFramesCD > 0f) iFramesCD -= Time.deltaTime;
         }
 
-        public void TakeDamage(int damage)
+        public bool TakeDamage(int damage)
         {
+            if (damage < 1) return false;
             // Loop Abilities here for damage reduction
             TakeDamageAction?.Invoke(damage);
+            return true;
         }
     }
 }
