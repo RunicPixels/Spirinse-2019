@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ShaderTest
-  m_Shader: {fileID: 4800000, guid: 80412fe88398cd147be3aacebe2c3fe3, type: 3}
+  m_Shader: {fileID: 4800000, guid: 82ce58c5a6329924497da11e4472f204, type: 3}
   m_ShaderKeywords: OUTLINES TCP2_DISABLE_WRAPPED_LIGHT TCP2_NONE TCP2_OUTLINE_CONST_SIZE
     TCP2_SPEC_TOON _EMISSION
   m_LightmapFlags: 4
@@ -21,6 +21,10 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: d06b50a33bf330843a3b64d724e27f42, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Detail:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -33,6 +37,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DissolveMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -57,32 +65,67 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Ramp:
-        m_Texture: {fileID: 2800000, guid: abc83c21d57d4a74cabe12065fa1a8b2, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7fe85df733e76164b912c7ade9e31f71, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RampOtherLights:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SketchTex:
+        m_Texture: {fileID: 2800000, guid: b1b62855ddf91f140a6b405c3037c38d, type: 3}
+        m_Scale: {x: 0.3, y: 0.3}
+        m_Offset: {x: 0, y: 0}
+    - _ThresholdTex:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 4
+    - _DissolveValue: 1
     - _DstBlend: 0
     - _DstBlendOutline: 10
+    - _EnableConstSizeOutline: 1
+    - _EnableTexturedOutline: 0
+    - _EnableZSmooth: 0
+    - _Final_HSV_H: 0
+    - _Final_HSV_S: 0
+    - _Final_HSV_V: 0
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
+    - _HSV_H: 0
+    - _HSV_S: 0
+    - _HSV_V: 0
+    - _HighlightMultiplier: 1
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Offset1: 0
     - _Offset2: 0
-    - _Outline: 0.3
+    - _Outline: 10
     - _Parallax: 0.02
-    - _RampSmooth: 0.009
+    - _RampSmooth: 1
     - _RampSmoothAdd: 0.014
-    - _RampThreshold: 0
-    - _RimMax: 0
-    - _RimMin: 0
+    - _RampSmoothOtherLights: 1
+    - _RampThreshold: 0.5
+    - _RampThresholdOtherLights: 0.5
+    - _RimMax: 2
+    - _RimMin: 2
     - _RimStrength: 0
+    - _ShadowMultiplier: 1
+    - _Shadow_HSV_H: 0
+    - _Shadow_HSV_S: 0
+    - _Shadow_HSV_V: 0
+    - _SketchHalftoneMax: 0.681
+    - _SketchHalftoneMin: 0.925
+    - _SketchSpeed: 1.1
+    - _Smoothness: 0.2
     - _SmoothnessTextureChannel: 0
+    - _SnowThickness: 0.1
+    - _SnowThr: 0.382
     - _SpecBlend: 1
     - _SpecSmooth: 1
     - _SpecularHighlights: 1
@@ -97,12 +140,23 @@ Material:
     - _TCP2_ZSMOOTH_ON: 0
     - _TexLod: 10
     - _UVSec: 0
+    - _WrapFactor: 1
     - _ZSmooth: 1.41
     - _ZWrite: 1
+    - __dummy__: 0
+    - __outline_gui_dummy__: 0
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 0.9307594, b: 0.8066038, a: 1}
+    - _DiffTint: {r: 1, g: 0.96815497, b: 0.8915094, a: 1}
     - _EmissionColor: {r: 3.9999995, g: 0, b: 0.3350785, a: 1}
     - _HColor: {r: 1, g: 1, b: 1, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RimColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.6}
-    - _SColor: {r: 0.3962264, g: 0.29594776, b: 0.2224101, a: 1}
+    - _OutlineOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _RimColor: {r: 0.764151, g: 0.764151, b: 0.764151, a: 0.6}
+    - _SColor: {r: 0.44339615, g: 0.18138933, b: 0, a: 1}
+    - _SketchColor: {r: 0.9339623, g: 0.9339623, b: 0.9339623, a: 1}
+    - _SnowAngle: {r: 0, g: 1, b: 0, a: 0}
+    - _SnowColor: {r: 0.94, g: 0.96, b: 1, a: 1}
+    - _SnowRimColor: {r: 1, g: 1, b: 1, a: 0.7}
+    - _SnowShadowColor: {r: 0.19999996, g: 0.19999996, b: 0.29999998, a: 1}
+    - _SpecColor: {r: 0, g: 0, b: 0, a: 1}
