@@ -1206,7 +1206,7 @@ VisualEffectResource:
         - m_ExpressionIndex: 3
           m_Value: {x: 0.333, y: 3, z: 0.333}
         - m_ExpressionIndex: 5
-          m_Value: {x: 0, y: 3, z: 0}
+          m_Value: {x: 0, y: 0, z: 0}
         - m_ExpressionIndex: 14
           m_Value: {x: 2, y: 3, z: 2}
         - m_ExpressionIndex: 15
@@ -2212,7 +2212,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Vector, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"vector":{"x":0.0,"y":3.0,"z":0.0}}'
+      m_SerializableObject: '{"vector":{"x":0.0,"y":0.0,"z":0.0}}'
     m_Space: 0
   m_Property:
     name: Force
