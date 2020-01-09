@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class EntityHealth : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int healthMax;
+    public int health;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

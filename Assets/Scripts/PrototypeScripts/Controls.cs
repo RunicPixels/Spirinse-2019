@@ -113,7 +113,11 @@ public class Controls : MonoBehaviour
         if(InputManager.Attacking && !shooting)
         {
             Time.timeScale = 1f;
-            StartCoroutine(_Shooting());
+            StartCoroutine(_BasicAttack());
+        }
+        if(Input.GetButtonDown("Fire1")) { // Placeholder for shooting
+            chi -= 0.5f;
+            ShootBullet();
         }
     }
 
@@ -263,7 +267,7 @@ public class Controls : MonoBehaviour
         dashing = false;
     }
 
-    private IEnumerator<float> _Shooting()
+    private IEnumerator<float> _BasicAttack()
     {
         shooting = true;
         float fov;
@@ -316,9 +320,7 @@ public class Controls : MonoBehaviour
 
             if (bullets && bulletCD < 0f)
             {
-                Bullet bullet = Instantiate(bulletPrefab, transform);
-                bullet.Init(direction);
-                bullet.transform.SetParent(null);
+                ShootBullet();
                 bulletCD = fireRate;
             }
             else
@@ -363,7 +365,12 @@ public class Controls : MonoBehaviour
         laserSystem.Stop();
         shooting = false;
     }
-
+    private void ShootBullet()
+    {
+        Bullet bullet = Instantiate(bulletPrefab, transform);
+        bullet.Init(direction);
+        bullet.transform.SetParent(null);
+    }
     private void DoMelee()
     {
         if (!meleeAttack) return;
