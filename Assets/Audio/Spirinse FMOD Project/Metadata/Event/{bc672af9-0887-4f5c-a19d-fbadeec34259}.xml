@@ -5,7 +5,7 @@
 			<value>Dash</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{2f949b93-63a3-4fe1-a98d-eac6527c99a7}</destination>
@@ -308,7 +308,11 @@
 			<destination>{48579347-1ef0-4250-be56-002762022c48}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{8adb0852-2e97-4051-b389-d33cde03a2a3}" />
+	<object class="MixerBusPanner" id="{8adb0852-2e97-4051-b389-d33cde03a2a3}">
+		<property name="outputFormatOverridden">
+			<value>true</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{a18018b3-c577-478e-a0f0-4493d16bea41}" />
 	<object class="SingleSound" id="{5757ee93-c901-48da-b8e0-da062904a7b0}">
 		<relationship name="audioFile">
