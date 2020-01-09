@@ -49,12 +49,12 @@ MonoBehaviour:
   Path: event:/Battle
   guid: 652326744c0f114291388d2f1348ba81
   Banks:
-  - {fileID: -5578480275174059434}
+  - {fileID: 8996855448032816308}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -6601112526274147321}
+  - {fileID: 6621705108357846885}
   MinDistance: 0
   MaxDistance: 0
   Length: 85333
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Audio/Spirinse FMOD Project/Build/Desktop/Master.strings.bank
   SubDir: Build/Desktop
-  lastModified: 637098431706857414
+  lastModified: 637121200751478025
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -220,16 +220,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -3542585013488693742}
-  - {fileID: -5578480275174059434}
+  - {fileID: 8996855448032816308}
   EditorEvents:
   - {fileID: 1116060894867825551}
   - {fileID: -6617117251003696885}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -5578480275174059434}
+  - {fileID: 8996855448032816308}
   StringsBanks:
   - {fileID: -3542585013488693742}
-  stringsBankWriteTime: 637098431706857414
+  stringsBankWriteTime: 637121200751478025
   cacheVersion: 3
 --- !u!114 &1116060894867825551
 MonoBehaviour:
@@ -246,12 +246,12 @@ MonoBehaviour:
   Path: event:/Rain
   guid: 5234cff8a813bf48acb68729067ec066
   Banks:
-  - {fileID: -5578480275174059434}
+  - {fileID: 8996855448032816308}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -2341849139663469293}
+  - {fileID: 5831963463968573193}
   MinDistance: 0
   MaxDistance: 0
   Length: 23750
@@ -325,6 +325,23 @@ MonoBehaviour:
   Max: 4
   Default: 1
   Exists: 1
+--- !u!114 &5831963463968573193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Rain/RainIntensity
+  m_EditorClassIdentifier: 
+  Name: RainIntensity
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &6347897315498702095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,6 +359,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &6621705108357846885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Battle/Intensity Battle
+  m_EditorClassIdentifier: 
+  Name: Intensity Battle
+  Min: 1
+  Max: 4
+  Default: 1
+  Exists: 1
 --- !u!114 &6932959361562589987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,4 +392,22 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+  Exists: 1
+--- !u!114 &8996855448032816308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/Spirinse FMOD Project/Build/Desktop/Master.bank
+  SubDir: Build/Desktop
+  lastModified: 637121200751458046
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
