@@ -70,6 +70,9 @@ public class Controls : MonoBehaviour
 
     public Action<bool> playerMovementAction; // Move this to input manager.
     public Action<float> useDashAction;
+
+    private static readonly int Active = Animator.StringToHash("Active");
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -352,8 +355,8 @@ public class Controls : MonoBehaviour
         {
             if (melee.gameObject.activeSelf)
             {
-                if (melee.GetComponent<Animator>().GetBool("Active") == true)
-                    melee.GetComponent<Animator>().SetBool("Active", false);
+                if (melee.GetComponent<Animator>().GetBool(Active) == true)
+                    melee.GetComponent<Animator>().SetBool(Active, false);
                 //melee.gameObject.SetActive(false);
             }
         }
@@ -379,7 +382,7 @@ public class Controls : MonoBehaviour
             var animator = melee.GetComponent<Animator>();
             if (!melee.CompareTag("Selected")) continue;
             melee.gameObject.SetActive(true);
-            if (animator.GetBool("Active") == false) animator.SetBool("Active", true);
+            if (animator.GetBool(Active) == false) animator.SetBool(Active, true);
 
 
             Vector2 v = rb.velocity;

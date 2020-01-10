@@ -1524,6 +1524,11 @@
                   <e p="toon_alas.shader" t="Include" />
                 </e>
               </e>
+              <e p="Shaders Generated" t="Include">
+                <e p="User" t="Include">
+                  <e p="TestDissolve.shader" t="Include" />
+                </e>
+              </e>
               <e p="Shaders PBS" t="Include">
                 <e p="TCP2_PBS_BRDF.cginc" t="Include" />
                 <e p="TCP2_PBS_Core.cginc" t="Include" />
