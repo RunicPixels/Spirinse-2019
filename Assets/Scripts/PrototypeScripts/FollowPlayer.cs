@@ -6,11 +6,10 @@ using UnityEngine;
 public class FollowPlayer : MonoBehaviour {
     public GameObject player;
     public GameObject meditator;
-
-    [Range(0f,1f)]
-    public float lerpPosition = 0.9f;
+    
     public float speedDelay = 0.4f;
     public bool followPlayer = true;
+    public float maxVelocityPerFrame = 3;
     
     private GameObject _gameObject;
     private Vector3 velocity = Vector3.zero;
@@ -24,10 +23,19 @@ public class FollowPlayer : MonoBehaviour {
         if (!player) {
             FindPlayer();
         }
-        if (followPlayer) {
-            transform.localPosition = Vector3.SmoothDamp(transform.localPosition, Vector3.Lerp(player.transform.position,meditator.transform.position,lerpPosition), ref velocity, speedDelay);
+        if (followPlayer)
+        {
+            SetPosition();
         }
 	}
+
+    private void SetPosition()
+    {
+        Vector3 nextTarget = player.transform.position - transform.localPosition;
+        var distance = Mathf.Min(Vector3.Distance(Vector3.zero, nextTarget), maxVelocityPerFrame);
+            
+        transform.localPosition = Vector3.SmoothDamp(transform.localPosition, transform.localPosition + nextTarget.normalized * distance, ref velocity, speedDelay);
+    }
     
     public void FindPlayer()
     {
