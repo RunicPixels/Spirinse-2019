@@ -106,11 +106,6 @@ Shader "Spirinse_Test_Shader"
 
 		//This property will be ignored and will draw the custom normals GUI instead
 		[TCP2OutlineNormalsGUI] __outline_gui_dummy__ ("_unused_", Float) = 0
-		//Blending
-		[TCP2Header(OUTLINE BLENDING)]
-		[Enum(UnityEngine.Rendering.BlendMode)] _SrcBlendOutline ("Blending Source", Float) = 5
-		[Enum(UnityEngine.Rendering.BlendMode)] _DstBlendOutline ("Blending Dest", Float) = 10
-			_OutlineOffset ("Outline Rim Offset", Vector) = (0,0,0,0)
 	[TCP2Separator]
 
 
@@ -160,7 +155,6 @@ Shader "Spirinse_Test_Shader"
 		float _Outline;
 		float _ZSmooth;
 		fixed4 _OutlineColor;
-		half4 _OutlineOffset;
 
 	#if TCP2_OUTLINE_TEXTURED
 		sampler2D _MainTex;
@@ -181,7 +175,6 @@ Shader "Spirinse_Test_Shader"
 			UNITY_SETUP_INSTANCE_ID(v);
 	#endif
 
-			v.vertex += _OutlineOffset;
 
 	#if TCP2_ZSMOOTH_ON
 			float4 pos = float4(UnityObjectToViewPos(v.vertex), 1.0);
@@ -573,8 +566,7 @@ Shader "Spirinse_Test_Shader"
 			Cull Front
 			Offset [_Offset1],[_Offset2]
 
-			Tags { "LightMode"="ForwardBase" "Queue"="Transparent" "IgnoreProjectors"="True" "RenderType"="Transparent" }
-			Blend [_SrcBlendOutline] [_DstBlendOutline]
+			Tags { "LightMode"="ForwardBase" "IgnoreProjectors"="True" }
 
 			CGPROGRAM
 

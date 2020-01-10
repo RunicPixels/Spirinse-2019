@@ -1,0 +1,218 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Material_Environment_Demo
+  m_Shader: {fileID: 4800000, guid: 82ce58c5a6329924497da11e4472f204, type: 3}
+  m_ShaderKeywords: OUTLINES TCP2_DISABLE_WRAPPED_LIGHT TCP2_NONE TCP2_OUTLINE_CONST_SIZE
+    TCP2_SPEC_TOON _EMISSION
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BlendTex1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BlendTex2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BlendingSource:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: d06b50a33bf330843a3b64d724e27f42, type: 3}
+        m_Scale: {x: 2, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Detail:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DiffuseTintMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DissolveGradientTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DissolveMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 2800000, guid: c98a97312415ce147b0d1a45f07ef7ec, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 7188d82eb40ce3e429cb11c39b394811, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MatCapTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Ramp:
+        m_Texture: {fileID: 2800000, guid: a2daa9b606711a643808bebed4c59a0c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RampOtherLights:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SketchTex:
+        m_Texture: {fileID: 2800000, guid: b1b62855ddf91f140a6b405c3037c38d, type: 3}
+        m_Scale: {x: 0.5, y: 0.5}
+        m_Offset: {x: 0, y: 0}
+    - _SketchTexture:
+        m_Texture: {fileID: 2800000, guid: e2b38417f28f3714bbef266604e1611e, type: 3}
+        m_Scale: {x: 5, y: 5}
+        m_Offset: {x: 0, y: 0}
+    - _StylizedThreshold:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ThresholdTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 4
+    - _DissolveGradientWidth: 0.2
+    - _DissolveValue: 1
+    - _DstBlend: 0
+    - _DstBlendOutline: 10
+    - _EnableConstSizeOutline: 1
+    - _EnableTexturedOutline: 0
+    - _EnableZSmooth: 0
+    - _Final_HSV_H: 0
+    - _Final_HSV_S: 0
+    - _Final_HSV_V: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0
+    - _GlossyReflections: 1
+    - _HSV_H: 0
+    - _HSV_S: 0
+    - _HSV_V: 0
+    - _HighlightMultiplier: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Offset1: 0
+    - _Offset2: 0
+    - _Outline: 5
+    - _OutlineWidth: 1
+    - _Parallax: 0.02
+    - _RampSmooth: 0.001
+    - _RampSmoothAdd: 0.006
+    - _RampSmoothOtherLights: 0.001
+    - _RampSmoothing: 0.1
+    - _RampThreshold: 0.5
+    - _RampThresholdOtherLights: 0.5
+    - _RimMax: 1.23
+    - _RimMaxVert: 1.138
+    - _RimMin: 0.97
+    - _RimMinVert: 0.904
+    - _RimStrength: 0
+    - _ShadowMultiplier: 1
+    - _Shadow_HSV_H: 0
+    - _Shadow_HSV_S: -1
+    - _Shadow_HSV_V: 0
+    - _SketchHalftoneMax: 0.681
+    - _SketchHalftoneMin: 0.925
+    - _SketchSpeed: 1.1
+    - _SketchTexture_OffsetSpeed: 120
+    - _Smoothness: 0.2
+    - _SmoothnessTextureChannel: 0
+    - _SpecBlend: 1
+    - _SpecSmooth: 0.364
+    - _SpecularHighlights: 1
+    - _SpecularToonSize: 0.25
+    - _SpecularToonSmoothness: 0.05
+    - _SrcBlend: 1
+    - _SrcBlendOutline: 5
+    - _TCP2_DISABLE_WRAPPED_LIGHT: 1
+    - _TCP2_OUTLINE_CONST_SIZE: 1
+    - _TCP2_OUTLINE_TEXTURED: 0
+    - _TCP2_RAMPTEXT: 0
+    - _TCP2_SPEC_TOON: 1
+    - _TCP2_STYLIZED_FRESNEL: 0
+    - _TCP2_ZSMOOTH_ON: 0
+    - _TexLod: 10
+    - _UVSec: 0
+    - _UseAmbient: 1
+    - _UseDissolve: 0
+    - _UseMatCap: 0
+    - _UseRim: 0
+    - _UseSketch: 1
+    - _UseSpecular: 0
+    - _UseTexturedThreshold: 0
+    - _WrapFactor: 1
+    - _ZSmooth: 1.41
+    - _ZWrite: 1
+    - __BeginGroup_ShadowHSV: 1
+    - __EndGroup: 0
+    - __dummy__: 0
+    - __outline_gui_dummy__: 0
+    m_Colors:
+    - _BlendingContrast: {r: 1, g: 1, b: 1, a: 0}
+    - _Color: {r: 1, g: 0.9307594, b: 0.8066038, a: 1}
+    - _DiffTint: {r: 1, g: 0.96815497, b: 0.8915094, a: 1}
+    - _DiffuseTint: {r: 1, g: 0.5, b: 0, a: 1}
+    - _Emission: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 3.9999995, g: 0, b: 0.3350785, a: 1}
+    - _HColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MatCapColor: {r: 1, g: 1, b: 1, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColorVertex: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _RimColor: {r: 0.764151, g: 0.764151, b: 0.764151, a: 0.6}
+    - _RimDirVert: {r: 0, g: 0, b: 1, a: 1}
+    - _SColor: {r: 0.4433962, g: 0.18138939, b: 0, a: 1}
+    - _SketchColor: {r: 0.9339623, g: 0.9339623, b: 0.9339623, a: 1}
+    - _SpecColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecularColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _TCP2_AMBIENT_BACK: {r: 0, g: 0, b: 0, a: 1}
+    - _TCP2_AMBIENT_BOTTOM: {r: 0, g: 0, b: 0, a: 1}
+    - _TCP2_AMBIENT_FRONT: {r: 0, g: 0, b: 0, a: 1}
+    - _TCP2_AMBIENT_LEFT: {r: 0, g: 0, b: 0, a: 1}
+    - _TCP2_AMBIENT_RIGHT: {r: 0, g: 0, b: 0, a: 1}
+    - _TCP2_AMBIENT_TOP: {r: 0, g: 0, b: 0, a: 1}
