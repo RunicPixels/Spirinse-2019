@@ -25,8 +25,6 @@ public class Dash : BaseAbility
     public float GetDashSpeedMultiplier => dashSpeedMultiplier;
     public float GetStopBeforeDash => stopBeforeDash;
     public Vector2 GetDashVelocity => dashVelocity;
-    
-
 
     public override void Play()
     {

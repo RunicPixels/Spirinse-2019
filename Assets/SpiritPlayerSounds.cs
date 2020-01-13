@@ -14,7 +14,6 @@ namespace Spirinse.Audio
         [FMODUnity.EventRef]
         public string dashSound;
 
-        // Start is called before the first frame update
         private void Start()
         {
             player.controls.dashAbility.OnAbilityUse += DoDashSound;
