@@ -13,13 +13,8 @@ namespace Spirinse.Audio
 
         [FMODUnity.EventRef]
         public string dashSound;
-
-        private void Start()
-        {
-            player.controls.dashAbility.OnAbilityUse += DoDashSound;
-        }
-
-        void DoDashSound()
+        
+        public void DoDashSound()
         {
             RuntimeManager.PlayOneShot(dashSound);
         }
