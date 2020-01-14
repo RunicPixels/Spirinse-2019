@@ -75,6 +75,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 7842
+--- !u!114 &-5111731782225426613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dash
+  m_EditorClassIdentifier: 
+  Path: event:/Dash
+  guid: f92a67bc87085c4fa19dfbadeec34259
+  Banks:
+  - {fileID: 217370625768851738}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1882
 --- !u!114 &-4915907921330891977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,29 +122,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 23750
---- !u!114 &-5111731782225426613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Dash
-  m_EditorClassIdentifier: 
-  Path: event:/Dash
-  guid: f92a67bc87085c4fa19dfbadeec34259
-  Banks:
-  - {fileID: 217370625768851738}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1882
 --- !u!114 &-4329691784965350803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,19 +208,19 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -671986300598331383}
+  - {fileID: 217370625768851738}
   - {fileID: 217370625768851738}
   EditorEvents:
   - {fileID: -4915907921330891977}
-  - {fileID: -3063168226597753263}
-  - {fileID: -4284055134230692104}
+  - {fileID: -5111731782225426613}
+  - {fileID: -5111731782225426613}
   - {fileID: -7929101942311410249}
   EditorParameters: []
   MasterBanks:
   - {fileID: 217370625768851738}
   StringsBanks:
-  - {fileID: -671986300598331383}
-  stringsBankWriteTime: 637142675003524585
+  - {fileID: 0}
+  stringsBankWriteTime: 637146136720129927
   cacheVersion: 3
 --- !u!114 &217370625768851738
 MonoBehaviour:
@@ -239,7 +239,7 @@ MonoBehaviour:
   lastModified: 637142675003424498
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &716558804679268559
 MonoBehaviour:
   m_ObjectHideFlags: 0
