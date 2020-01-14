@@ -99,7 +99,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 23750
---- !u!114 &-4284055134230692104
+--- !u!114 &-5111731782225426613
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,7 +122,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1882
---- !u!114 &-3906234994631101598
+--- !u!114 &-4329691784965350803
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,14 +132,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Battle/Intensity Battle
+  m_Name: parameter:/Wind/InWind
   m_EditorClassIdentifier: 
-  Name: Intensity Battle
-  Min: 1
-  Max: 4
-  Default: 1
+  Name: InWind
+  Min: 0
+  Max: 1
+  Default: 0
   Exists: 1
---- !u!114 &-3063168226597753263
+--- !u!114 &-1757307363209953432
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,10 +149,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Battle
+  m_Name: event:/Wind
   m_EditorClassIdentifier: 
-  Path: event:/Battle
-  guid: 652326744c0f114291388d2f1348ba81
+  Path: event:/Wind
+  guid: b2c78a605985ad41baf3e08e538af57c
   Banks:
   - {fileID: 217370625768851738}
   IsStream: 1
@@ -162,26 +162,8 @@ MonoBehaviour:
   - {fileID: 716558804679268559}
   MinDistance: 0
   MaxDistance: 0
-  Length: 85333
---- !u!114 &-854593188989042137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Audio/Spirinse FMOD Project/Build/Desktop/Master.bank
-  SubDir: Build/Desktop
-  lastModified: 637141967393205319
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-671986300598331383
+  Length: 7842
+--- !u!114 &-581972536818546999
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
