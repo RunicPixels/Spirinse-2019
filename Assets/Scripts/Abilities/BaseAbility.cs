@@ -14,7 +14,7 @@ public abstract class BaseAbility : MonoBehaviour, IAbility
     public Action OnAbilityUse;
     public Action OnAbilityStay;
     public Action OnAbilityExit;
-    
+
     public virtual void Play()
     {
         currentDuration = duration;
