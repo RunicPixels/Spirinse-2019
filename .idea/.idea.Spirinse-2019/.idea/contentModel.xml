@@ -117,7 +117,28 @@
         <e p="ChiManager.cs" t="Include" />
         <e p="DestroyableVFX.cs" t="Include" />
         <e p="DisappearAfterTime.cs" t="Include" />
+        <e p="Example" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="FreeCam.cs" t="Include" />
+            <e p="RaymarchExample.cs" t="Include" />
+            <e p="VFXSDFSetup.cs" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="RaymarchExample.shader" t="Include" />
+          </e>
+        </e>
+        <e p="Experiments" t="Include">
+          <e p="SDFGenerator.cs" t="Include" />
+          <e p="Types" t="Include">
+            <e p="Half.cs" t="Include" />
+            <e p="HalfHelper.cs" t="Include" />
+            <e p="HalfTest.cs" t="Include" />
+          </e>
+          <e p="VolumeComputeMethods.compute" t="Include" />
+          <e p="VolumeComputeMethods.cs" t="Include" />
+        </e>
         <e p="ExplodeOnDeath.cs" t="Include" />
+        <e p="FadeOnTrigger.cs" t="Include" />
         <e p="Placer" t="Include">
           <e p="Tools" t="Include">
             <e p="Editor" t="Include">
@@ -1912,6 +1933,30 @@
           <e p="WalkerMover.cs" t="Include" />
           <e p="Wind.cs" t="Include" />
         </e>
+        <e p="SDFr" t="Include">
+          <e p="AVolume.cs" t="Include" />
+          <e p="AVolumeData.cs" t="Include" />
+          <e p="AVolumePreview.cs" t="Include" />
+          <e p="AVolumeUtils.cs" t="Include" />
+          <e p="Components" t="Include">
+            <e p="AVolumeBaker.cs" t="Include" />
+            <e p="SDFBaker.cs" t="Include" />
+          </e>
+          <e p="Editor" t="Include">
+            <e p="AVolumeBakerInspector.cs" t="Include" />
+            <e p="SDFBakerInspector.cs" t="Include" />
+          </e>
+          <e p="SDFData.cs" t="Include" />
+          <e p="SDFPreview.cs" t="Include" />
+          <e p="SDFVolume.cs" t="Include" />
+          <e p="Shaders" t="Include">
+            <e p="SDFDebug.shader" t="Include" />
+            <e p="SDFrProcedural.hlsl" t="Include" />
+            <e p="SDFrUtilities.hlsl" t="Include" />
+            <e p="SDFrVolumeTex.hlsl" t="Include" />
+          </e>
+        </e>
+        <e p="Shader Stuff.txt" t="Include" />
         <e p="Shaders" t="Include">
           <e p="HiddenNormalsTexture.shader" t="Include" />
           <e p="Outline.shader" t="Include" />

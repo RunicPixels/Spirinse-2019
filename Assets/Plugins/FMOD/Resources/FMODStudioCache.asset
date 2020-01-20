@@ -17,6 +17,58 @@ MonoBehaviour:
   Max: 4
   Default: 1
   Exists: 1
+--- !u!114 &-4608607525173398515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Rain/RainIntensity
+  m_EditorClassIdentifier: 
+  Name: RainIntensity
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-3848113820120919369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/Spirinse FMOD Project/Build/Desktop/Master.bank
+  SubDir: Build/Desktop
+  lastModified: 637142565494617257
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-2273515129283243986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Battle/Intensity Battle
+  m_EditorClassIdentifier: 
+  Name: Intensity Battle
+  Min: 1
+  Max: 4
+  Default: 1
+  Exists: 1
 --- !u!114 &-1386583273044534564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32,12 +84,12 @@ MonoBehaviour:
   Path: event:/Rain
   guid: 5234cff8a813bf48acb68729067ec066
   Banks:
-  - {fileID: 8546633954103736221}
+  - {fileID: -3848113820120919369}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 2425479636591059273}
+  - {fileID: -4608607525173398515}
   MinDistance: 0
   MaxDistance: 0
   Length: 23750
@@ -56,7 +108,7 @@ MonoBehaviour:
   Path: event:/Dash
   guid: f92a67bc87085c4fa19dfbadeec34259
   Banks:
-  - {fileID: 8546633954103736221}
+  - {fileID: -3848113820120919369}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -78,17 +130,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 6681857356255476012}
-  - {fileID: 8546633954103736221}
+  - {fileID: -3848113820120919369}
   EditorEvents:
   - {fileID: -1386583273044534564}
   - {fileID: 96991870243968815}
   - {fileID: -131505639545479369}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 8546633954103736221}
+  - {fileID: -3848113820120919369}
   StringsBanks:
   - {fileID: 6681857356255476012}
-  stringsBankWriteTime: 637142497166126648
+  stringsBankWriteTime: 637142565494627240
   cacheVersion: 3
 --- !u!114 &96991870243968815
 MonoBehaviour:
@@ -105,12 +157,12 @@ MonoBehaviour:
   Path: event:/Battle
   guid: 652326744c0f114291388d2f1348ba81
   Banks:
-  - {fileID: 8546633954103736221}
+  - {fileID: -3848113820120919369}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -4777458671875904918}
+  - {fileID: -2273515129283243986}
   MinDistance: 0
   MaxDistance: 0
   Length: 85333
@@ -145,7 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Audio/Spirinse FMOD Project/Build/Desktop/Master.strings.bank
   SubDir: Build/Desktop
-  lastModified: 637142497166126648
+  lastModified: 637142565494627240
   LoadResult: 0
   FileSizes:
   - Name: 
