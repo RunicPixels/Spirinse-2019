@@ -8,9 +8,10 @@ using Spirinse.System;
 using Spirinse.System.Effects;
 using Spirinse.System.Player;
 using Spirinse.Objects;
+using FMODUnity;
  using Random = UnityEngine.Random;
 
- public class PrototypeEnemy : MonoBehaviour, IDamagable
+public class PrototypeEnemy : MonoBehaviour, IDamagable
 {
     public enum EnemyState
     {
@@ -23,9 +24,9 @@ using Spirinse.Objects;
 
 
     public LineRenderer lr;
-    
+
     public EnemyState state;
-    
+
     private float speed;
 
     public Transform visualContainer;
@@ -73,10 +74,15 @@ using Spirinse.Objects;
 
     private float progression = 0f;
     public ParticleSystem hitParticles;
-    
+
     private static readonly int Active = Animator.StringToHash("Active");
     private const string StrB = "Player";
-    
+
+    [EventRef]
+    public string Event = "event:/3DEvent";
+    FMOD.Studio.EventInstance enemyAttack;
+    FMOD.Studio.EventDescription enemyAttackEventDescription;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -86,6 +92,9 @@ using Spirinse.Objects;
         speed = idleSpeed;
         originalTarget = target;
         rb = GetComponent<Rigidbody2D>();
+
+        enemyAttack = FMODUnity.RuntimeManager.CreateInstance(Event);
+        enemyAttack.start();
     }
 
     void FixedUpdate()
@@ -103,7 +112,7 @@ using Spirinse.Objects;
         {
             currentDashCooldown -= Time.fixedDeltaTime;
         }
-        
+
         if (dashTime < 0f && state == EnemyState.Dashing)
         {
             StopDash();
@@ -125,6 +134,7 @@ using Spirinse.Objects;
             case EnemyState.Dashing:
                 lr.gameObject.SetActive(false);
                 speed = activeSpeed;
+                enemyAttack.start();
                 break;
             case EnemyState.Idle:
                 speed = idleSpeed;
@@ -135,15 +145,15 @@ using Spirinse.Objects;
                 lr.gameObject.SetActive(true);
                 speed = 0.5f;
                 var position = transform.position;
-                lr.SetPosition(0,position);
-                lr.SetPosition(1,GetDashEndPos());
+                lr.SetPosition(0, position);
+                lr.SetPosition(1, GetDashEndPos());
                 break;
             case EnemyState.Moving:
                 speed = idleSpeed;
                 direction = (target.position + ((Vector3)target.GetComponent<Rigidbody2D>().velocity * 0.1f) - transform.position).normalized;
                 break;
             case EnemyState.PostDash:
-                if(currentPostDashTime > 0) currentPostDashTime -= Time.fixedDeltaTime;
+                if (currentPostDashTime > 0) currentPostDashTime -= Time.fixedDeltaTime;
                 else state = EnemyState.Moving;
 
                 speed = 4 * currentPostDashTime;
@@ -151,12 +161,12 @@ using Spirinse.Objects;
 
         }
 
-        if(cured) direction = -direction * 0.01f;
-        if(animator.transform.localScale.x < 0.05f) { Destroy(); }
+        if (cured) direction = -direction * 0.01f;
+        if (animator.transform.localScale.x < 0.05f) { Destroy(); }
 
         rb.velocity += (Vector2)(direction * speed);
 
-    StunJump:
+        StunJump:
 
         //flipped = rb.velocity.x < 0;
         //var xScale = flipped ? 2f : -2f;
@@ -165,12 +175,14 @@ using Spirinse.Objects;
         var v = rb.velocity;
         var angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;
         visualContainer.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+        enemyAttack.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
     }
 
     public Vector3 GetDashEndPos()
     {
         var position = transform.position;
-        return position + (dashDuration + currentPlayerDashDistanceDuration) *activeSpeed * direction;
+        return position + (dashDuration + currentPlayerDashDistanceDuration) * activeSpeed * direction;
     }
 
     public bool TakeDamage(int damage)
@@ -235,8 +247,8 @@ using Spirinse.Objects;
 
     private void CheckCanDoDash()
     {
-        if (currentDashCooldown <= 0f && 
-            state != EnemyState.Dashing && 
+        if (currentDashCooldown <= 0f &&
+            state != EnemyState.Dashing &&
             state != EnemyState.PreDash &&
             state != EnemyState.PostDash)
         {
@@ -257,7 +269,13 @@ using Spirinse.Objects;
         dashTime = thisDashTime;
         animator.SetBool(Active, true);
         state = EnemyState.Dashing;
+
+        if (state == EnemyState.Dashing)
+        {
+            enemyAttack.start();
+        }
     }
+
 
     public float CalculatePlayerDashDuration()
     {
