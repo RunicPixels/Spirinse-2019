@@ -3,13 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="ce2e14ff-e13a-4da1-95b5-be1e6d97996a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayMaker/Editor/Resources/EditorStartupPrefs.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayMaker/Editor/Resources/EditorStartupPrefs.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioCache.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Experimental/Ronald Playground.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Experimental/Ronald Playground.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/BaseAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Abilities/BaseAbility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Player/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SpiritPlayerSounds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SpiritPlayerSounds.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Build/Desktop/Master.bank" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Build/Desktop/Master.bank" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/VFX/Projectile.vfx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VFX/Projectile.vfx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,16 +79,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/SpiritPlayerSounds.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="160">
-              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
-                <marker date="1579001282195" expanded="false" signature="6:141" ph="..." />
-                <marker date="1579001282195" expanded="true" signature="167:442" ph="{...}" />
-                <marker date="1579001282195" expanded="true" signature="221:440" ph="{...}" />
-                <marker date="1579001282195" expanded="true" signature="363:434" ph="{...}" />
+                <marker date="1579023179472" expanded="false" signature="6:141" ph="..." />
+                <marker date="1579023179472" expanded="true" signature="167:434" ph="{...}" />
+                <marker date="1579023179472" expanded="true" signature="221:432" ph="{...}" />
+                <marker date="1579023179472" expanded="true" signature="355:426" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -143,11 +143,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Entities/Player/Player.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="42" column="55" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="55" />
+            <state relative-caret-position="633">
+              <caret line="47" column="60" selection-start-line="47" selection-start-column="60" selection-end-line="47" selection-end-column="60" />
               <folding>
                 <marker date="1579007343636" expanded="false" signature="6:144" ph="..." />
                 <marker date="1579007343636" expanded="true" signature="171:1312" ph="{...}" />
@@ -338,9 +338,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Entities/Enemies/DamagableEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PrototypeScripts/Bullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Wind.cs" />
-        <option value="$PROJECT_DIR$/Assets/SpiritPlayerSounds.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/BaseAbility.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Entities/Player/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/SpiritPlayerSounds.cs" />
       </list>
     </option>
   </component>
@@ -446,12 +446,12 @@
       <workItem from="1578476197323" duration="475000" />
       <workItem from="1578574632397" duration="3063000" />
       <workItem from="1578658794203" duration="591000" />
-      <workItem from="1579001139969" duration="2676000" />
+      <workItem from="1579001139969" duration="4563000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129542000" />
+    <option name="totallyTimeSpent" value="131429000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -464,7 +464,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29834843" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1121,19 +1120,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/SpiritPlayerSounds.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-          <folding>
-            <marker date="1579001282195" expanded="false" signature="6:141" ph="..." />
-            <marker date="1579001282195" expanded="true" signature="167:442" ph="{...}" />
-            <marker date="1579001282195" expanded="true" signature="221:440" ph="{...}" />
-            <marker date="1579001282195" expanded="true" signature="363:434" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Abilities/Dash.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
@@ -1252,8 +1238,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Entities/Player/Player.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="42" column="55" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="55" />
+        <state relative-caret-position="633">
+          <caret line="47" column="60" selection-start-line="47" selection-start-column="60" selection-end-line="47" selection-end-column="60" />
           <folding>
             <marker date="1579007343636" expanded="false" signature="6:144" ph="..." />
             <marker date="1579007343636" expanded="true" signature="171:1312" ph="{...}" />
@@ -1264,6 +1250,19 @@
             <marker date="1579007343636" expanded="true" signature="944:1020" ph="{...}" />
             <marker date="1579007343636" expanded="true" signature="1060:1161" ph="{...}" />
             <marker date="1579007343636" expanded="true" signature="1203:1304" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/SpiritPlayerSounds.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <marker date="1579023179472" expanded="false" signature="6:141" ph="..." />
+            <marker date="1579023179472" expanded="true" signature="167:434" ph="{...}" />
+            <marker date="1579023179472" expanded="true" signature="221:432" ph="{...}" />
+            <marker date="1579023179472" expanded="true" signature="355:426" ph="{...}" />
           </folding>
         </state>
       </provider>
