@@ -5,7 +5,7 @@
 			<value>Enemy_Spike</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{2f949b93-63a3-4fe1-a98d-eac6527c99a7}</destination>
@@ -33,9 +33,6 @@
 		</relationship>
 		<relationship name="timeline">
 			<destination>{572b36a2-fed5-4066-a3e2-7e0c973c5b93}</destination>
-		</relationship>
-		<relationship name="banks">
-			<destination>{0dec734a-f644-4bd5-9abc-351aebc11b32}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{6b23541c-06a6-4f3d-8eda-8c664cba3974}">
@@ -221,7 +218,11 @@
 			<destination>{55530787-cdcd-4355-bd9f-3bb69a8d4e98}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{2cc773fa-a147-4b22-9b3e-5cff525d1b35}" />
+	<object class="MixerBusPanner" id="{2cc773fa-a147-4b22-9b3e-5cff525d1b35}">
+		<property name="outputFormatOverridden">
+			<value>true</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{a5d3342e-4688-4a2b-908b-8542620d7899}" />
 	<object class="MixerBusEffectChain" id="{9a067c34-6f32-4cf2-bb82-883faddb052a}">
 		<relationship name="effects">

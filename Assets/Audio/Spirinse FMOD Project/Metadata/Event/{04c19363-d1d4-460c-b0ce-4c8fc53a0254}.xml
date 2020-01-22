@@ -5,7 +5,7 @@
 			<value>Enemy_Attack</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{2f949b93-63a3-4fe1-a98d-eac6527c99a7}</destination>
@@ -133,7 +133,11 @@
 			<destination>{f8bd6ff8-5b74-4a31-9309-a283f3fd270d}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{306ee0da-935b-40df-a8eb-429f0be167d8}" />
+	<object class="MixerBusPanner" id="{306ee0da-935b-40df-a8eb-429f0be167d8}">
+		<property name="outputFormatOverridden">
+			<value>true</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{373e99fc-8a38-4c85-b550-e79e98e4eba0}" />
 	<object class="SingleSound" id="{b498286a-75b1-435e-9daf-334aa954d6ed}">
 		<relationship name="audioFile">
