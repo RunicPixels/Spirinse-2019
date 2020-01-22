@@ -343,7 +343,8 @@ PrefabInstance:
       propertyPath: maxVelocityPerFrame
       value: 4.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7082151912213425874, guid: f82bcbf6e5b966149805a35364f9cbc9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f82bcbf6e5b966149805a35364f9cbc9, type: 3}
 --- !u!114 &7692335871380855970 stripped
 MonoBehaviour:
@@ -877,11 +878,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7692335870809885381}
     m_Modifications:
-    - target: {fileID: 459630349346882779, guid: 9961f1f87e7f91d4c9471ef25f46b759,
-        type: 3}
-      propertyPath: m_Name
-      value: Rewired
-      objectReference: {fileID: 0}
     - target: {fileID: 459630349346882778, guid: 9961f1f87e7f91d4c9471ef25f46b759,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -936,6 +932,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 459630349346882779, guid: 9961f1f87e7f91d4c9471ef25f46b759,
+        type: 3}
+      propertyPath: m_Name
+      value: Rewired
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9961f1f87e7f91d4c9471ef25f46b759, type: 3}
