@@ -22,6 +22,8 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
         PostDash
     }
 
+    public BaseEnemy enemy;
+    
 
     public LineRenderer lr;
 
@@ -77,24 +79,18 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
 
     private static readonly int Active = Animator.StringToHash("Active");
     private const string StrB = "Player";
-
-    [EventRef]
-    public string Event = "event:/3DEvent";
-    FMOD.Studio.EventInstance enemyAttack;
-    FMOD.Studio.EventDescription enemyAttackEventDescription;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         //currentDashCooldown = maxDashCooldown;
+        enemy = GetComponent<BaseEnemy>();
         state = EnemyState.Moving;
         oldMaterial = meshRenderer.material;
         speed = idleSpeed;
         originalTarget = target;
         rb = GetComponent<Rigidbody2D>();
-
-        enemyAttack = FMODUnity.RuntimeManager.CreateInstance(Event);
-        enemyAttack.start();
     }
 
     void FixedUpdate()
@@ -134,7 +130,6 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
             case EnemyState.Dashing:
                 lr.gameObject.SetActive(false);
                 speed = activeSpeed;
-                enemyAttack.start();
                 break;
             case EnemyState.Idle:
                 speed = idleSpeed;
@@ -175,8 +170,6 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
         var v = rb.velocity;
         var angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;
         visualContainer.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
-        enemyAttack.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
     }
 
     public Vector3 GetDashEndPos()
@@ -189,12 +182,14 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
     {
         if (iFrames > 0f || cured || damage < 1) return false;
         health -= damage;
+        enemy.TakeDamageAction?.Invoke();
         //EffectsManager.Instance.timeManager.Freeze(0.05f, 0, 3f, 3f);
         animator.SetTrigger(Hit);
         hitParticles.Play();
 
         if (health < 0 && !cured)
         {
+            enemy.DieAction?.Invoke();
             //SpawnEnemy.enemyAmount -= 1;
             Cure();
         }
@@ -259,6 +254,9 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
     private IEnumerator DoDash()
     {
         float thisDashTime = dashDuration;
+        enemy.AttackAction.Invoke();
+        
+        
         while (state != EnemyState.PreDash)
         {
             currentPlayerDashDistanceDuration = CalculatePlayerDashDuration();
@@ -269,11 +267,6 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
         dashTime = thisDashTime;
         animator.SetBool(Active, true);
         state = EnemyState.Dashing;
-
-        if (state == EnemyState.Dashing)
-        {
-            enemyAttack.start();
-        }
     }
 
 
