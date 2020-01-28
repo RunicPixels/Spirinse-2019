@@ -98,9 +98,6 @@
 		<property name="looping">
 			<value>true</value>
 		</property>
-		<relationship name="triggerConditions">
-			<destination>{68b6e8f2-b364-4157-9353-ff1fa4a2fb80}</destination>
-		</relationship>
 		<relationship name="sounds">
 			<destination>{46467e9d-954b-4cd5-89da-6f027e00ab67}</destination>
 			<destination>{d122eecd-e3a4-4011-9433-54b854dcd5cb}</destination>
@@ -117,7 +114,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{49b375f2-f3a5-40c7-9ffd-329d7267e342}">
 		<property name="volume">
-			<value>-10</value>
+			<value>-7.5</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -155,17 +152,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{455cb49f-c5af-40a3-8a28-f670fd889cf1}" />
 	<object class="MixerBusFader" id="{b88d5cef-ed84-44b8-ad28-1c665daf9039}" />
-	<object class="ParameterCondition" id="{68b6e8f2-b364-4157-9353-ff1fa4a2fb80}">
-		<property name="minimum">
-			<value>1</value>
-		</property>
-		<property name="maximum">
-			<value>1</value>
-		</property>
-		<relationship name="parameter">
-			<destination>{700b6e6c-85f4-41ce-bcc2-51b0ef652d98}</destination>
-		</relationship>
-	</object>
 	<object class="SingleSound" id="{46467e9d-954b-4cd5-89da-6f027e00ab67}">
 		<relationship name="audioFile">
 			<destination>{99d6390d-c29d-4c00-85db-9e0d77610ef5}</destination>
