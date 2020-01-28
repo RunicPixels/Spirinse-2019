@@ -14497,6 +14497,7 @@ GameObject:
   m_Component:
   - component: {fileID: 982916382}
   - component: {fileID: 982916383}
+  - component: {fileID: 1763257245}
   m_Layer: 8
   m_Name: Sounds
   m_TagString: Untagged
@@ -14530,7 +14531,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7e4d9350185bee44aa1635dcdf31669, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashSound: event:/Dash
+  AbilitySounds:
+  - ability: {fileID: 8724849549467373818}
+    AbilityUseEvent: event:/Dash
+  - ability: {fileID: 1437806053}
+    AbilityUseEvent: event:/Slash
+--- !u!114 &1763257245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982916381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: -1
 --- !u!1 &1034593190
 GameObject:
   m_ObjectHideFlags: 0
@@ -50748,9 +50766,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d6ff9e401da77f44b8f630ee72c0050, type: 3}
---- !u!1 &5494819344068349334 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 675532729935667691, guid: 7d6ff9e401da77f44b8f630ee72c0050,
+--- !u!95 &1481929528185049855 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5876814235408105090, guid: 7d6ff9e401da77f44b8f630ee72c0050,
     type: 3}
   m_PrefabInstance: {fileID: 4980555010981276797}
   m_PrefabAsset: {fileID: 0}
@@ -50760,9 +50778,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4980555010981276797}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1481929528185049855 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5876814235408105090, guid: 7d6ff9e401da77f44b8f630ee72c0050,
+--- !u!1 &5494819344068349334 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 675532729935667691, guid: 7d6ff9e401da77f44b8f630ee72c0050,
     type: 3}
   m_PrefabInstance: {fileID: 4980555010981276797}
   m_PrefabAsset: {fileID: 0}
@@ -50773,6 +50791,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1789061496389049526}
     m_Modifications:
+    - target: {fileID: 9159956823212384833, guid: 4b431bab3901d8c4e84d80ab37fd1282,
+        type: 3}
+      propertyPath: m_Name
+      value: HammerContainer
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159956823212384833, guid: 4b431bab3901d8c4e84d80ab37fd1282,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159956823212384833, guid: 4b431bab3901d8c4e84d80ab37fd1282,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9159956823212384832, guid: 4b431bab3901d8c4e84d80ab37fd1282,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -50826,21 +50859,6 @@ PrefabInstance:
     - target: {fileID: 9159956823212384832, guid: 4b431bab3901d8c4e84d80ab37fd1282,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9159956823212384833, guid: 4b431bab3901d8c4e84d80ab37fd1282,
-        type: 3}
-      propertyPath: m_Name
-      value: HammerContainer
-      objectReference: {fileID: 0}
-    - target: {fileID: 9159956823212384833, guid: 4b431bab3901d8c4e84d80ab37fd1282,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 9159956823212384833, guid: 4b431bab3901d8c4e84d80ab37fd1282,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9159956823194164676, guid: 4b431bab3901d8c4e84d80ab37fd1282,
