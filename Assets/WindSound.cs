@@ -60,7 +60,7 @@ public class WindSound : MonoBehaviour
 
     private void SetParams()
     {
-        var windValue = Mathf.Max(1f, objectsInWind);
-        windEventInstance.setParameterByID(windParameterId, windValue);
+        int windValue = Mathf.RoundToInt(Mathf.Min(1f, objectsInWind));
+        windEventInstance.setParameterByName("InWind", windValue);
     }
 }
