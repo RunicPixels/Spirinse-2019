@@ -36,11 +36,18 @@ public class EnemySounds : MonoBehaviour
     public void OnEnable()
     {
         if(!enemy) enemy = GetComponent<BaseEnemy>();
-        CallIdleSound();
-
         enemy.AttackAction += CallAttackSound;
         enemy.TakeDamageAction += CallDamageSound;
         enemy.DieAction += CallDieSound;
+
+        Init();
+    }
+
+    public void OnDisable()
+    {
+        if (enemy.AttackAction != null) enemy.AttackAction -= CallAttackSound;
+        if (enemy.TakeDamageAction != null)enemy.TakeDamageAction -= CallDamageSound;
+        if (enemy.DieAction != null)enemy.DieAction -= CallDieSound;
     }
     
     // Update is called once per frame
@@ -58,6 +65,8 @@ public class EnemySounds : MonoBehaviour
         _dieInstance = FMODUnity.RuntimeManager.CreateInstance(dieSoundEvent);
         _attackInstance = FMODUnity.RuntimeManager.CreateInstance(attackSoundEvent);
         _idleInstance = FMODUnity.RuntimeManager.CreateInstance(idleSoundEvent);
+        
+        CallIdleSound();
         
         
     }
@@ -98,7 +107,7 @@ public class EnemySounds : MonoBehaviour
     public void OnDestroy()
     {
         StopSound(_damageInstance);
-        StopSound(_dieInstance);
+        //StopSound(_dieInstance);
         StopSound(_attackInstance);
         StopSound(_idleInstance);
     }
