@@ -24,7 +24,7 @@ MonoBehaviour:
     value: {fileID: 0}
     defaultState: 1
   tonemapper:
-    overrideState: 1
+    overrideState: 0
     value: 2
   toneCurveToeStrength:
     overrideState: 0
@@ -65,7 +65,7 @@ MonoBehaviour:
     value: 0
   saturation:
     overrideState: 1
-    value: 0
+    value: -20
   brightness:
     overrideState: 1
     value: 0
@@ -74,7 +74,7 @@ MonoBehaviour:
     value: 0
   contrast:
     overrideState: 1
-    value: -30
+    value: 0
   mixerRedOutRedIn:
     overrideState: 1
     value: 100
@@ -104,7 +104,7 @@ MonoBehaviour:
     value: 100
   lift:
     overrideState: 0
-    value: {x: 1, y: 0.85361105, z: 0.81082493, w: 0}
+    value: {x: 0.9249627, y: 0.9351759, z: 1, w: 0}
   gamma:
     overrideState: 0
     value: {x: 1, y: 0.9694215, z: 0.7533546, w: 0}
@@ -1354,13 +1354,13 @@ MonoBehaviour:
     value: {r: 0, g: 0, b: 0, a: 1}
   depthThreshold:
     overrideState: 1
-    value: 5
+    value: 1
   depthNormalThreshold:
     overrideState: 1
     value: 0
   depthNormalThresholdScale:
     overrideState: 1
-    value: 0.1
+    value: 1.5
   normalThreshold:
     overrideState: 1
     value: 1
@@ -1376,7 +1376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a79b01ea5641d4aa6daa2e23605641, type: 3}
   m_Name: Bloom
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
@@ -1460,7 +1460,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.1
+    value: 1
   color:
     overrideState: 1
     value: {r: 0, g: 0, b: 0, a: 1}

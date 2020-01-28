@@ -17,6 +17,7 @@ public class FollowPlayer : MonoBehaviour {
 	private void Start ()
     {
         FindPlayer();
+        transform.position = player.transform.position;
     }
     
 	private void Update () {
