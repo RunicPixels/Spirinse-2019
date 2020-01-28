@@ -401,7 +401,14 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{931f850e-904a-493c-acf8-f48c70452f02}" />
-	<object class="SpatialiserEffect" id="{d164c49b-c3d3-4686-8b2e-7bdeda2737b2}" />
+	<object class="SpatialiserEffect" id="{d164c49b-c3d3-4686-8b2e-7bdeda2737b2}">
+		<property name="minimumDistance">
+			<value>20</value>
+		</property>
+		<property name="maximumDistance">
+			<value>150</value>
+		</property>
+	</object>
 	<object class="LoudnessMeter" id="{41261b8a-bed6-4258-8622-719c4a4ee20b}">
 		<property name="loudnessTarget">
 			<value>-12</value>

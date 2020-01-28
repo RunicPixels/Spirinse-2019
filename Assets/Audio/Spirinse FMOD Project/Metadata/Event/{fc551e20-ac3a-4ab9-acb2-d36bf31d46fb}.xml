@@ -5,7 +5,7 @@
 			<value>Firework_Explosion</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{2f949b93-63a3-4fe1-a98d-eac6527c99a7}</destination>
@@ -147,7 +147,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{b1889b26-c823-46b8-aac2-6d4229db07af}">
 		<property name="volume">
-			<value>-2.5</value>
+			<value>-3</value>
 		</property>
 		<property name="name">
 			<value>Audio 2</value>
@@ -197,7 +197,11 @@
 			<destination>{b51e1262-685b-4f8f-a672-bfcc0c6801bd}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{c0eb681d-2f94-4320-9ebc-2ec84f80f316}" />
+	<object class="MixerBusPanner" id="{c0eb681d-2f94-4320-9ebc-2ec84f80f316}">
+		<property name="outputFormatOverridden">
+			<value>true</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{92a5d3ef-e2ef-4629-8b1b-4e893419c524}" />
 	<object class="MixerBusEffectChain" id="{353c12e9-ba32-4850-8d42-ce7ef0c16b11}">
 		<relationship name="effects">
@@ -250,7 +254,14 @@
 	</object>
 	<object class="MixerBusPanner" id="{19a9e4ac-dfa0-4717-a169-bc8bd504b1dd}" />
 	<object class="MixerBusFader" id="{6b314907-dc4b-450b-bb50-1cfe9a2b1598}" />
-	<object class="SpatialiserEffect" id="{b51e1262-685b-4f8f-a672-bfcc0c6801bd}" />
+	<object class="SpatialiserEffect" id="{b51e1262-685b-4f8f-a672-bfcc0c6801bd}">
+		<property name="minimumDistance">
+			<value>25</value>
+		</property>
+		<property name="maximumDistance">
+			<value>150</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{9b6f118c-492f-468e-a52c-af7f7ba82d9e}" />
 	<object class="MixerBusFader" id="{416e9f36-8638-4861-b2a8-150dc1c0ec19}" />
 	<object class="MixerBusFader" id="{c5e1a7e6-60be-43d3-898f-40f25b0118fa}" />

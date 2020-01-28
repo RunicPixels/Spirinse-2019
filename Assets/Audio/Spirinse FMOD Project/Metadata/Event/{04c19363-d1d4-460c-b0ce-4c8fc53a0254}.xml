@@ -110,6 +110,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{658adfb6-61a4-4486-9800-11bbc86875f7}">
+		<property name="volume">
+			<value>2.5</value>
+		</property>
 		<property name="color">
 			<value>Red</value>
 		</property>
@@ -191,6 +194,13 @@
 			<value>-18</value>
 		</property>
 	</object>
-	<object class="SpatialiserEffect" id="{f8bd6ff8-5b74-4a31-9309-a283f3fd270d}" />
+	<object class="SpatialiserEffect" id="{f8bd6ff8-5b74-4a31-9309-a283f3fd270d}">
+		<property name="minimumDistance">
+			<value>20</value>
+		</property>
+		<property name="maximumDistance">
+			<value>150</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{7efa7749-e88e-4e87-a308-154805a492c3}" />
 </objects>
