@@ -62933,6 +62933,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsInWind: 0
   windEventRef: event:/Wind
+--- !u!114 &1590730119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590730112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: -1
 --- !u!1 &1601676237
 GameObject:
   m_ObjectHideFlags: 0
@@ -68000,6 +68013,26 @@ Transform:
   m_Father: {fileID: 1497956533}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1632454337 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7692335870890993927, guid: 710ea1d18e4cfcd45ac3293f1cfe437e,
+    type: 3}
+  m_PrefabInstance: {fileID: 7692335872773826756}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1632454341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632454337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ee2fed63bfd880479a6f56942e64634, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageSound: event:/Damage
+  lowHealthSound: event:/Low_Health
 --- !u!1 &1637565459
 GameObject:
   m_ObjectHideFlags: 0
