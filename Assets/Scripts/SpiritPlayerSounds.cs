@@ -40,8 +40,6 @@ namespace Spirinse.Audio
             
             public void PlaySound()
             {
-
-                
                 _eventInstance.start();
                 //FMODUnity.RuntimeManager.PlayOneShot(AbilityUseEvent,Player.Player.Instance.defender.transform.position);
             }
