@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using Spirinse.Interfaces;
 using UnityEngine;
 
@@ -19,6 +20,7 @@ public abstract class BaseAbility : MonoBehaviour, IAbility
     {
         currentDuration = duration;
         OnAbilityUse?.Invoke();
+        Debug.Log("Invoking Event");
     }
 
     public virtual bool Run()
