@@ -14497,7 +14497,6 @@ GameObject:
   m_Component:
   - component: {fileID: 982916382}
   - component: {fileID: 982916383}
-  - component: {fileID: 1763257245}
   m_Layer: 8
   m_Name: Sounds
   m_TagString: Untagged
@@ -14536,19 +14535,6 @@ MonoBehaviour:
     AbilityUseEvent: event:/Dash
   - ability: {fileID: 1437806053}
     AbilityUseEvent: event:/Slash
---- !u!114 &1763257245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 982916381}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ListenerNumber: -1
 --- !u!1 &1034593190
 GameObject:
   m_ObjectHideFlags: 0
@@ -44478,7 +44464,6 @@ GameObject:
   - component: {fileID: 3435031174896469565}
   - component: {fileID: 8724849549467373818}
   - component: {fileID: 3435031174896469564}
-  - component: {fileID: 3435031174896469538}
   - component: {fileID: 3435031174896469539}
   - component: {fileID: 3435031174896469536}
   - component: {fileID: 539900546}
@@ -44721,21 +44706,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &3435031174896469538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3435031174896469561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5c6513552f360e41905066572300e18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trailPosition: {fileID: 0}
-  trailRenderer: {fileID: 3435031174896469539}
-  index: 0
 --- !u!96 &3435031174896469539
 TrailRenderer:
   serializedVersion: 2
@@ -50766,15 +50736,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d6ff9e401da77f44b8f630ee72c0050, type: 3}
---- !u!95 &1481929528185049855 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5876814235408105090, guid: 7d6ff9e401da77f44b8f630ee72c0050,
-    type: 3}
-  m_PrefabInstance: {fileID: 4980555010981276797}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8798587592023310213 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4540930970905334776, guid: 7d6ff9e401da77f44b8f630ee72c0050,
+    type: 3}
+  m_PrefabInstance: {fileID: 4980555010981276797}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1481929528185049855 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5876814235408105090, guid: 7d6ff9e401da77f44b8f630ee72c0050,
     type: 3}
   m_PrefabInstance: {fileID: 4980555010981276797}
   m_PrefabAsset: {fileID: 0}
