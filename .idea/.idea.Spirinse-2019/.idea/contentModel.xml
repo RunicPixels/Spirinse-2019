@@ -201,6 +201,16 @@
         <e p="DisappearAfterTime.cs" t="Include" />
         <e p="ExplodeOnDeath.cs" t="Include" />
         <e p="FadeOnTrigger.cs" t="Include" />
+        <e p="HolyShift" t="Include">
+          <e p="ReadMe.txt" t="Include" />
+          <e p="Scripts" t="Include">
+            <e p="CheckForStandardAssets.cs" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="FXWaterLowpoly.shader" t="Include" />
+            <e p="WaterInclude.cginc" t="Include" />
+          </e>
+        </e>
         <e p="Placer" t="Include">
           <e p="Tools" t="Include">
             <e p="Editor" t="Include">
@@ -2008,6 +2018,7 @@
           <e p="Spirinse_Test_Shader.shader" t="Include" />
           <e p="UVScroller.shader" t="Include" />
         </e>
+        <e p="WindSound.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
