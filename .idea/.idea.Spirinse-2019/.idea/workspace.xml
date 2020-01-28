@@ -2,20 +2,318 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce2e14ff-e13a-4da1-95b5-be1e6d97996a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/HolyShift/Materials/LowPolyBase.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HolyShift/Materials/LowPolyDark.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HolyShift/Materials/LowPolyWater.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HolyShift/Meshes/GroundRollingStone.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HolyShift/Meshes/Materials/Rock.018.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HolyShift/Meshes/Materials/snow.003.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HolyShift/Meshes/Mountain1.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HolyShift/Prefabs/Water.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HolyShift/Scenes/WaterSampleScene.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HolyShift/Scripts/CheckForStandardAssets.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HolyShift/Shaders/FXWaterLowpoly.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HolyShift/Shaders/WaterInclude.cginc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HolyShift/Textures/Distortion.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HolyShift/Textures/LowPolyBase.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HolyShift/readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Materials/Material_Terrain_01.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Bush_01.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Bush_02.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Bush_03.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Environment_StoneL_01.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Environment_StoneL_02.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Environment_StoneL_03.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Environment_StoneL_04.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Environment_StoneL_05.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Environment_StoneL_06.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Environment_StoneM_01.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Environment_StoneM_02.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Environment_StoneM_03.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Environment_StoneM_04.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Environment_StoneM_05.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Environment_StoneSS_01.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Environment_StoneSS_02.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Environment_StoneSS_03.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Environment_StoneSS_04.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Environment_StoneSS_05.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Environment_StoneS_01.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Environment_StoneS_02.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Environment_StoneS_03.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Environment_StoneS_04.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Environment_StoneS_05.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Flower_01.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Interactable_Obstacle_DashClosed_01.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Interactable_Obstacle_DashOpen_01.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Obstacle_CorruptedVinesL_01.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Obstacle_CorruptedVinesL_02.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Obstacle_CorruptedVinesL_03.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Obstacle_CorruptedVinesL_04.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Obstacle_CorruptedVinesS_01.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Obstacle_CorruptedVinesS_02.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Obstacle_CorruptedVinesS_03.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Obstacle_CorruptedVinesS_04.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Branch01.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Branch02.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Branch03.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Branch04.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_PalmTree01.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_PalmTree02.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_RoundTree_01.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_SingleVines_Leaves_05.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Stump01.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Stump02.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Stump03.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Stump04.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_TallTree.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Tree01.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Tree02.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Tree03.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Tree04.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Twig01.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Twig02.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Twig03.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Twig04.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Twig05.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Twig06.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Twig07.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Vines_01.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Vines_02.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Vines_03.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Vines_04.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Vines_05.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Vines_06.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Vines_07.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Vines_08.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Vines_09.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Vines_10.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Root_Vines_11.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Roots_Tree_02.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_TreeLeafBud_01.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_TreeLeafPalm_01.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_TreeLeafPalm_02.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_TreeLeaf_01.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_TreeLeaf_07.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_TreeLeaf_08.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_TreeLeaves_01.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_TreeLeaves_02.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Tree_01.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Tree_04.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/27-01Models/M_Tree_05.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Moss_01.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/New Terrain Material.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Environment_StoneL_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Environment_StoneL_02.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Environment_StoneL_03.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Environment_StoneL_04.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Environment_StoneL_05.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Environment_StoneL_06.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Environment_StoneM_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Environment_StoneM_02.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Environment_StoneM_03.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Environment_StoneM_04.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Environment_StoneM_05.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Environment_StoneSS_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Environment_StoneSS_02.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Environment_StoneSS_03.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Environment_StoneSS_04.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Environment_StoneSS_05.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Environment_StoneS_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Environment_StoneS_02.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Environment_StoneS_03.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Environment_StoneS_04.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Environment_StoneS_05.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Flower_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Interactable_Obstacle_DashClosed_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Interactable_Obstacle_DashOpen_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/M_Bush_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/M_Bush_02.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/M_Bush_03.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Obstacle_CorruptedVinesL_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Obstacle_CorruptedVinesL_02.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Obstacle_CorruptedVinesL_03.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Obstacle_CorruptedVinesL_04.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Obstacle_CorruptedVinesS_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Obstacle_CorruptedVinesS_02.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Obstacle_CorruptedVinesS_03.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Obstacle_CorruptedVinesS_04.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Branch01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Branch02.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Branch03.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Branch04.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_PalmTree01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_PalmTree02.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_RoundTree_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_SingleVines_Leaves_05.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Stump01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Stump02.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Stump03.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Stump04.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_TallTree.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Tree01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Tree02.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Tree03.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Tree04.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Twig01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Twig02.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Twig03.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Twig04.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Twig05.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Twig06.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Twig07.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Vines_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Vines_02.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Vines_03.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Vines_04.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Vines_05.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Vines_06.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Vines_07.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Vines_08.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Vines_09.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Vines_10.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Root_Vines_11.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Roots_Tree_02.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/TreeLeafBud_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/TreeLeafPalm_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/TreeLeafPalm_02.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/TreeLeaf_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/TreeLeaf_07.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/TreeLeaf_08.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/TreeLeaves_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Tree_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Tree_04.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/27-01Prefabs/Tree_05.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Barrel_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Basin_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Basin_02.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Basket_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/BrickWIndow_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Brick_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/BridgeBroken_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Bridge_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Carpet_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/DoorArch_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/DoorCircular_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/FenceFancy_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/FloorBase_02.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/FloorTile_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/FloorTile_02.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/FloorTile_03.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/FountainWall_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Gazeebo_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/HangingCloth_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/HangingCloth_02.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Lantern_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Moss_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/OnionRoof_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/OnionWindows_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Pillar_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Pillar_02.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Pillar_03.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Pillar_04.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Plank_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Plank_02.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Plank_03.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Roof_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Rope_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Stairs_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Steppingstones_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Steppingstones_02.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Steppingstones_03.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Steppingstones_04.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/TreeLeaves_02.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/WallLedge_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/WallLedge_02.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/WallRidge_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Wall_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Wall_02.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Wall_03.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Wall_04.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Wall_05.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/WoodenDoor_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/WoodenSchaffoldPlanks_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/WoodenSchaffold_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/WoodenSupportCorner_01.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/New Terrain.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/NewLayer 1.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/NewLayer 2.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/NewLayer 3.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/NewLayer 4.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/NewLayer 5.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/NewLayer 6.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/NewLayer 7.terrainlayer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Terrain/NewLayer.terrainlayer" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Spirinse-2019/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Material_Environment_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Material_Environment_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Material_Environment_Demo (1).mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Material_Environment_Demo (1).mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Material_Environment_Demo.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Material_Environment_Demo.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Barrel_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Barrel_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Basin_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Basin_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Basin_02.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Basin_02.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Basket_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Basket_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_BrickWIndow_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_BrickWIndow_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Brick_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Brick_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_BridgeBroken_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_BridgeBroken_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Bridge_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Bridge_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Carpet_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Carpet_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_DoorArch_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_DoorArch_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_DoorCircular_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_DoorCircular_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_FenceFancy_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_FenceFancy_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_FloorBase_02.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_FloorBase_02.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_FloorTile_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_FloorTile_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_FloorTile_02.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_FloorTile_02.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_FloorTile_03.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_FloorTile_03.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_FountainWall_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_FountainWall_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Gazeebo_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Gazeebo_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_HangingCloth_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_HangingCloth_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_HangingCloth_02.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_HangingCloth_02.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Lantern_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Lantern_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_OnionRoof_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_OnionRoof_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_OnionWindows_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_OnionWindows_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Pillar_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Pillar_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Pillar_02.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Pillar_02.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Pillar_03.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Pillar_03.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Pillar_04.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Pillar_04.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Plank_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Plank_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Plank_02.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Plank_02.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Plank_03.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Plank_03.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Roof_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Roof_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Rope_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Rope_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Stairs_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Stairs_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Steppingstones_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Steppingstones_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Steppingstones_02.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Steppingstones_02.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Steppingstones_03.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Steppingstones_03.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Steppingstones_04.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Steppingstones_04.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_StoneSlab_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_StoneSlab_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_StoneSlab_02.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_StoneSlab_02.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_StoneSlab_03.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_StoneSlab_03.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Vase_05.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Vase_05.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_WallLedge_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_WallLedge_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_WallLedge_02.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_WallLedge_02.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_WallRidge_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_WallRidge_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Wall_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Wall_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Wall_02.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Wall_02.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Wall_03.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Wall_03.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Wall_04.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Wall_04.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_Wall_05.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_Wall_05.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_WoodenDoor_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_WoodenDoor_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_WoodenSchaffoldPlanks_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_WoodenSchaffoldPlanks_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_WoodenSchaffold_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_WoodenSchaffold_01.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Environment/Structures/M_WoodenSupportCorner_01.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Environment/Structures/Showcase/M_WoodenSupportCorner_01.fbx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PlayMaker/Editor/Resources/EditorStartupPrefs.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayMaker/Editor/Resources/EditorStartupPrefs.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioCache.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GameManagers/GameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GameManagers/GameManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Prototype/Explosion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Prototype/Explosion.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Experimental/Ronald Playground.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Experimental/Ronald Playground.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Abilities/BaseAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Abilities/BaseAbility.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpiritPlayerSounds.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SpiritPlayerSounds.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/VFX/Explosion.vfx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VFX/Explosion.vfx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioCache.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioCache.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Structures/Temple/M_Arch_06.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Arch_06.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Structures/Temple/M_Arch_07.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Arch_07.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Structures/Temple/M_Arch_08.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Arch_08.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Structures/Temple/M_StoneSlab_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/StoneSlab_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Structures/Temple/M_StoneSlab_02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/StoneSlab_02.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Structures/Temple/M_StoneSlab_03.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/StoneSlab_03.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Structures/Temple/M_Vase_05.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Structures/Showcase/Vase_05.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Art_Profiles/PaperCamera.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Art_Profiles/PaperCamera.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Experimental/Main Kian Testing.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Experimental/Main Kian Testing.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpiritPlayerSounds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpiritPlayerSounds.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,18 +365,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PrototypeScripts/FollowPlayer.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+            <state relative-caret-position="240">
+              <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
               <folding>
-                <marker date="1578493319479" expanded="false" signature="6:108" ph="..." />
-                <marker date="1578493319479" expanded="true" signature="152:1350" ph="{...}" />
-                <marker date="1578493319479" expanded="true" signature="450:484" ph="{...}" />
-                <marker date="1578493319479" expanded="true" signature="514:650" ph="{...}" />
-                <marker date="1578493319479" expanded="true" signature="537:574" ph="{...}" />
-                <marker date="1578493319479" expanded="true" signature="600:647" ph="{...}" />
-                <marker date="1578493319479" expanded="true" signature="682:1053" ph="{...}" />
-                <marker date="1578493319479" expanded="true" signature="1087:1257" ph="{...}" />
-                <marker date="1578493319479" expanded="true" signature="1308:1348" ph="{...}" />
+                <marker date="1580211549467" expanded="false" signature="6:108" ph="..." />
+                <marker date="1580211549467" expanded="true" signature="152:1406" ph="{...}" />
+                <marker date="1580211549467" expanded="true" signature="450:540" ph="{...}" />
+                <marker date="1580211549467" expanded="true" signature="570:706" ph="{...}" />
+                <marker date="1580211549467" expanded="true" signature="593:630" ph="{...}" />
+                <marker date="1580211549467" expanded="true" signature="656:703" ph="{...}" />
+                <marker date="1580211549467" expanded="true" signature="738:1109" ph="{...}" />
+                <marker date="1580211549467" expanded="true" signature="1143:1313" ph="{...}" />
+                <marker date="1580211549467" expanded="true" signature="1364:1404" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -136,20 +434,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/SpiritPlayerSounds.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="450">
+              <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="86" />
               <folding>
-                <marker date="1580211003871" expanded="false" signature="6:185" ph="..." />
-                <marker date="1580211003871" expanded="true" signature="211:1891" ph="{...}" />
-                <marker date="1580211003871" expanded="true" signature="265:1889" ph="{...}" />
-                <marker date="1580211003871" expanded="true" signature="385:1515" ph="{...}" />
-                <marker date="1580211003871" expanded="true" signature="680:913" ph="{...}" />
-                <marker date="1580211003871" expanded="true" signature="958:1246" ph="{...}" />
-                <marker date="1580211003871" expanded="true" signature="1295:1505" ph="{...}" />
-                <marker date="1580211003871" expanded="true" signature="1553:1702" ph="{...}" />
-                <marker date="1580211003871" expanded="true" signature="1622:1692" ph="{...}" />
-                <marker date="1580211003871" expanded="true" signature="1733:1883" ph="{...}" />
-                <marker date="1580211003871" expanded="true" signature="1802:1873" ph="{...}" />
+                <marker date="1580218348915" expanded="false" signature="6:185" ph="..." />
+                <marker date="1580218348915" expanded="true" signature="211:1784" ph="{...}" />
+                <marker date="1580218348915" expanded="true" signature="265:719" ph="{...}" />
+                <marker date="1580218348915" expanded="true" signature="383:532" ph="{...}" />
+                <marker date="1580218348915" expanded="true" signature="452:522" ph="{...}" />
+                <marker date="1580218348915" expanded="true" signature="563:713" ph="{...}" />
+                <marker date="1580218348915" expanded="true" signature="632:703" ph="{...}" />
+                <marker date="1580218348915" expanded="true" signature="769:1777" ph="{...}" />
+                <marker date="1580218348915" expanded="true" signature="1036:1245" ph="{...}" />
+                <marker date="1580218348915" expanded="true" signature="1286:1550" ph="{...}" />
+                <marker date="1580218348915" expanded="true" signature="1595:1771" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/WindSound.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="82" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="82" />
+              <folding>
+                <marker date="1580221561418" expanded="true" signature="6:128" ph="..." />
+                <marker date="1580221561418" expanded="true" signature="168:1621" ph="{...}" />
+                <marker date="1580221561418" expanded="true" signature="563:925" ph="{...}" />
+                <marker date="1580221561418" expanded="true" signature="955:1002" ph="{...}" />
+                <marker date="1580221561418" expanded="true" signature="1032:1053" ph="{...}" />
+                <marker date="1580221561418" expanded="true" signature="1106:1242" ph="{...}" />
+                <marker date="1580221561418" expanded="true" signature="1159:1236" ph="{...}" />
+                <marker date="1580221561418" expanded="true" signature="1294:1451" ph="{...}" />
+                <marker date="1580221561418" expanded="true" signature="1368:1445" ph="{...}" />
+                <marker date="1580221561418" expanded="true" signature="1481:1619" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -158,7 +477,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Abilities/BaseAttack.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="-180">
               <folding>
                 <marker date="1578389513727" expanded="false" signature="6:162" ph="..." />
                 <marker date="1578389513727" expanded="true" signature="192:1163" ph="{...}" />
@@ -385,11 +704,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PrototypeScripts/Controls.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="276">
-              <caret line="392" lean-forward="true" selection-start-line="392" selection-end-line="392" />
+              <caret line="392" selection-start-line="392" selection-end-line="392" />
               <folding>
                 <marker date="1580211350440" expanded="false" signature="6:115" ph="..." />
                 <marker date="1580211350440" expanded="true" signature="154:10920" ph="{...}" />
@@ -443,25 +762,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/PrototypeScripts/SpawnEnemy.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-              <folding>
-                <marker date="1578403495018" expanded="false" signature="6:135" ph="..." />
-                <marker date="1578403495018" expanded="true" signature="176:1737" ph="{...}" />
-                <marker date="1578403495018" expanded="true" signature="455:662" ph="{...}" />
-                <marker date="1578403495018" expanded="true" signature="691:816" ph="{...}" />
-                <marker date="1578403495018" expanded="true" signature="864:1735" ph="{...}" />
-                <marker date="1578403495018" expanded="true" signature="908:1729" ph="{...}" />
-                <marker date="1578403495018" expanded="true" signature="961:1048" ph="{...}" />
-                <marker date="1578403495018" expanded="true" signature="1065:1664" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -469,7 +769,11 @@
       <find>rigid</find>
       <find>DoDash</find>
       <find>_dash</find>
+      <find>health</find>
     </findStrings>
+    <replaceStrings>
+      <replace>wind</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -509,6 +813,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IGrabbable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/System/Audio/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IDamagable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/WindSound.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/System/Camera/CameraManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PrototypeScripts/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PrototypeScripts/FollowPlayer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -521,8 +826,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/IPlayerProjectile.cs" />
-        <option value="$PROJECT_DIR$/Assets/Bullet.cs" />
         <option value="$PROJECT_DIR$/Assets/PrototypeEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UpdateLinePosition.cs" />
         <option value="$PROJECT_DIR$/Assets/Shaders/RimShader.shader" />
@@ -570,16 +873,18 @@
         <option value="$PROJECT_DIR$/Assets/SpiritAbilitySounds.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpiritAbilitySounds.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Abilities/BaseAbility.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SpiritPlayerSounds.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PrototypeScripts/Controls.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PrototypeScripts/FollowPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SpiritPlayerSounds.cs" />
+        <option value="$PROJECT_DIR$/Assets/WindSound.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="77" />
-    <option name="y" value="159" />
-    <option name="width" value="1758" />
-    <option name="height" value="1065" />
+    <option name="x" value="2009" />
+    <option name="y" value="-180" />
+    <option name="width" value="1940" />
+    <option name="height" value="1052" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -717,12 +1022,12 @@
       <workItem from="1578574632397" duration="3063000" />
       <workItem from="1578658794203" duration="591000" />
       <workItem from="1579001139969" duration="4563000" />
-      <workItem from="1580205913139" duration="5471000" />
+      <workItem from="1580205913139" duration="9888000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136900000" />
+    <option name="totallyTimeSpent" value="141317000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -734,16 +1039,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1618" height="877" extended-state="6" />
+    <frame x="1912" y="-371" width="2152" height="1177" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30231065" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2251434" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32938075" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.23512748" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -815,21 +1120,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/System/PostProcessingManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-          <folding>
-            <marker date="1574697410766" expanded="true" signature="6:78" ph="..." />
-            <marker date="1574697410766" expanded="true" signature="130:431" ph="{...}" />
-            <marker date="1574697410766" expanded="true" signature="212:363" ph="{...}" />
-            <marker date="1574697410766" expanded="true" signature="248:297" ph="{...}" />
-            <marker date="1574697410766" expanded="true" signature="310:357" ph="{...}" />
-            <marker date="1574697410766" expanded="true" signature="392:429" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/CurrentMeleeManager.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Effects/SetCameraDistance.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -1332,7 +1622,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PrototypeScripts/SpawnEnemy.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="75">
           <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
           <folding>
             <marker date="1578403495018" expanded="false" signature="6:135" ph="..." />
@@ -1368,71 +1658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PrototypeScripts/FollowPlayer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-          <folding>
-            <marker date="1578493319479" expanded="false" signature="6:108" ph="..." />
-            <marker date="1578493319479" expanded="true" signature="152:1350" ph="{...}" />
-            <marker date="1578493319479" expanded="true" signature="450:484" ph="{...}" />
-            <marker date="1578493319479" expanded="true" signature="514:650" ph="{...}" />
-            <marker date="1578493319479" expanded="true" signature="537:574" ph="{...}" />
-            <marker date="1578493319479" expanded="true" signature="600:647" ph="{...}" />
-            <marker date="1578493319479" expanded="true" signature="682:1053" ph="{...}" />
-            <marker date="1578493319479" expanded="true" signature="1087:1257" ph="{...}" />
-            <marker date="1578493319479" expanded="true" signature="1308:1348" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Plugins/FMOD/src/Runtime/StudioEventEmitter.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <marker date="1578389508992" expanded="false" signature="6:32" ph="..." />
-            <marker date="1578389508992" expanded="true" signature="53:7087" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="170:7085" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="1195:2031" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="1278:1962" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="1626:1948" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="2065:2116" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="2142:2759" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="2181:2749" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="2300:2612" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="2458:2594" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="2642:2735" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="2836:3040" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="2886:2938" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="2978:3030" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="3063:3523" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="3192:3513" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="3262:3499" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="3551:5924" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="3606:3658" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="3704:3756" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="3802:3856" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="3951:4038" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="4144:4212" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="4317:4421" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="4459:5431" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="4634:5417" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="4880:5125" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="5150:5399" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="5473:5567" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="5613:5849" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="5952:6228" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="5998:6218" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="6318:6477" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="6364:6467" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="6583:6738" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="6629:6728" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="6771:7079" ph="{...}" />
-            <marker date="1578389508992" expanded="true" signature="6817:7043" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Abilities/Dash.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -1464,42 +1689,6 @@
             <marker date="1580207488333" expanded="true" signature="567:778" ph="{...}" />
             <marker date="1580207488333" expanded="true" signature="607:699" ph="{...}" />
             <marker date="1580207488333" expanded="true" signature="810:855" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Entities/Player/Player.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding>
-            <marker date="1580206399049" expanded="true" signature="6:144" ph="..." />
-            <marker date="1580206399049" expanded="true" signature="171:1318" ph="{...}" />
-            <marker date="1580206399049" expanded="true" signature="203:251" ph="{...}" />
-            <marker date="1580206399049" expanded="true" signature="292:1316" ph="{...}" />
-            <marker date="1580206399049" expanded="true" signature="598:817" ph="{...}" />
-            <marker date="1580206399049" expanded="true" signature="850:903" ph="{...}" />
-            <marker date="1580206399049" expanded="true" signature="946:1022" ph="{...}" />
-            <marker date="1580206399049" expanded="true" signature="1062:1165" ph="{...}" />
-            <marker date="1580206399049" expanded="true" signature="1207:1310" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Abilities/BaseAttack.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <marker date="1578389513727" expanded="false" signature="6:162" ph="..." />
-            <marker date="1578389513727" expanded="true" signature="192:1163" ph="{...}" />
-            <marker date="1578389513727" expanded="true" signature="245:1161" ph="{...}" />
-            <marker date="1578389513727" expanded="true" signature="390:452" ph="{...}" />
-            <marker date="1578389513727" expanded="true" signature="489:534" ph="{...}" />
-            <marker date="1578389513727" expanded="true" signature="570:621" ph="{...}" />
-            <marker date="1578389513727" expanded="true" signature="658:703" ph="{...}" />
-            <marker date="1578389513727" expanded="true" signature="734:822" ph="{...}" />
-            <marker date="1578389513727" expanded="true" signature="866:1155" ph="{...}" />
-            <marker date="1578389513727" expanded="true" signature="953:1122" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1692,30 +1881,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/SpiritPlayerSounds.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-          <folding>
-            <marker date="1580211003871" expanded="false" signature="6:185" ph="..." />
-            <marker date="1580211003871" expanded="true" signature="211:1891" ph="{...}" />
-            <marker date="1580211003871" expanded="true" signature="265:1889" ph="{...}" />
-            <marker date="1580211003871" expanded="true" signature="385:1515" ph="{...}" />
-            <marker date="1580211003871" expanded="true" signature="680:913" ph="{...}" />
-            <marker date="1580211003871" expanded="true" signature="958:1246" ph="{...}" />
-            <marker date="1580211003871" expanded="true" signature="1295:1505" ph="{...}" />
-            <marker date="1580211003871" expanded="true" signature="1553:1702" ph="{...}" />
-            <marker date="1580211003871" expanded="true" signature="1622:1692" ph="{...}" />
-            <marker date="1580211003871" expanded="true" signature="1733:1883" ph="{...}" />
-            <marker date="1580211003871" expanded="true" signature="1802:1873" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PrototypeScripts/Controls.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
-          <caret line="392" lean-forward="true" selection-start-line="392" selection-end-line="392" />
+          <caret line="392" selection-start-line="392" selection-end-line="392" />
           <folding>
             <marker date="1580211350440" expanded="false" signature="6:115" ph="..." />
             <marker date="1580211350440" expanded="true" signature="154:10920" ph="{...}" />
@@ -1764,6 +1933,146 @@
             <marker date="1580211350440" expanded="true" signature="10291:10855" ph="{...}" />
             <marker date="1580211350440" expanded="true" signature="10380:10849" ph="{...}" />
             <marker date="1580211350440" expanded="true" signature="10887:10918" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Abilities/BaseAttack.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-180">
+          <folding>
+            <marker date="1578389513727" expanded="false" signature="6:162" ph="..." />
+            <marker date="1578389513727" expanded="true" signature="192:1163" ph="{...}" />
+            <marker date="1578389513727" expanded="true" signature="245:1161" ph="{...}" />
+            <marker date="1578389513727" expanded="true" signature="390:452" ph="{...}" />
+            <marker date="1578389513727" expanded="true" signature="489:534" ph="{...}" />
+            <marker date="1578389513727" expanded="true" signature="570:621" ph="{...}" />
+            <marker date="1578389513727" expanded="true" signature="658:703" ph="{...}" />
+            <marker date="1578389513727" expanded="true" signature="734:822" ph="{...}" />
+            <marker date="1578389513727" expanded="true" signature="866:1155" ph="{...}" />
+            <marker date="1578389513727" expanded="true" signature="953:1122" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PrototypeScripts/FollowPlayer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
+          <folding>
+            <marker date="1580211549467" expanded="false" signature="6:108" ph="..." />
+            <marker date="1580211549467" expanded="true" signature="152:1406" ph="{...}" />
+            <marker date="1580211549467" expanded="true" signature="450:540" ph="{...}" />
+            <marker date="1580211549467" expanded="true" signature="570:706" ph="{...}" />
+            <marker date="1580211549467" expanded="true" signature="593:630" ph="{...}" />
+            <marker date="1580211549467" expanded="true" signature="656:703" ph="{...}" />
+            <marker date="1580211549467" expanded="true" signature="738:1109" ph="{...}" />
+            <marker date="1580211549467" expanded="true" signature="1143:1313" ph="{...}" />
+            <marker date="1580211549467" expanded="true" signature="1364:1404" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Entities/Player/Player.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+          <folding>
+            <marker date="1580206399049" expanded="true" signature="6:144" ph="..." />
+            <marker date="1580206399049" expanded="true" signature="171:1318" ph="{...}" />
+            <marker date="1580206399049" expanded="true" signature="203:251" ph="{...}" />
+            <marker date="1580206399049" expanded="true" signature="292:1316" ph="{...}" />
+            <marker date="1580206399049" expanded="true" signature="598:817" ph="{...}" />
+            <marker date="1580206399049" expanded="true" signature="850:903" ph="{...}" />
+            <marker date="1580206399049" expanded="true" signature="946:1022" ph="{...}" />
+            <marker date="1580206399049" expanded="true" signature="1062:1165" ph="{...}" />
+            <marker date="1580206399049" expanded="true" signature="1207:1310" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Plugins/FMOD/src/Runtime/StudioEventEmitter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1578389508992" expanded="false" signature="6:32" ph="..." />
+            <marker date="1578389508992" expanded="true" signature="53:7087" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="170:7085" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="1195:2031" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="1278:1962" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="1626:1948" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="2065:2116" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="2142:2759" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="2181:2749" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="2300:2612" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="2458:2594" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="2642:2735" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="2836:3040" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="2886:2938" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="2978:3030" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="3063:3523" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="3192:3513" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="3262:3499" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="3551:5924" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="3606:3658" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="3704:3756" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="3802:3856" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="3951:4038" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="4144:4212" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="4317:4421" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="4459:5431" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="4634:5417" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="4880:5125" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="5150:5399" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="5473:5567" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="5613:5849" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="5952:6228" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="5998:6218" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="6318:6477" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="6364:6467" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="6583:6738" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="6629:6728" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="6771:7079" ph="{...}" />
+            <marker date="1578389508992" expanded="true" signature="6817:7043" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/SpiritPlayerSounds.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="86" />
+          <folding>
+            <marker date="1580218348915" expanded="false" signature="6:185" ph="..." />
+            <marker date="1580218348915" expanded="true" signature="211:1784" ph="{...}" />
+            <marker date="1580218348915" expanded="true" signature="265:719" ph="{...}" />
+            <marker date="1580218348915" expanded="true" signature="383:532" ph="{...}" />
+            <marker date="1580218348915" expanded="true" signature="452:522" ph="{...}" />
+            <marker date="1580218348915" expanded="true" signature="563:713" ph="{...}" />
+            <marker date="1580218348915" expanded="true" signature="632:703" ph="{...}" />
+            <marker date="1580218348915" expanded="true" signature="769:1777" ph="{...}" />
+            <marker date="1580218348915" expanded="true" signature="1036:1245" ph="{...}" />
+            <marker date="1580218348915" expanded="true" signature="1286:1550" ph="{...}" />
+            <marker date="1580218348915" expanded="true" signature="1595:1771" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/WindSound.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="82" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="82" />
+          <folding>
+            <marker date="1580221561418" expanded="true" signature="6:128" ph="..." />
+            <marker date="1580221561418" expanded="true" signature="168:1621" ph="{...}" />
+            <marker date="1580221561418" expanded="true" signature="563:925" ph="{...}" />
+            <marker date="1580221561418" expanded="true" signature="955:1002" ph="{...}" />
+            <marker date="1580221561418" expanded="true" signature="1032:1053" ph="{...}" />
+            <marker date="1580221561418" expanded="true" signature="1106:1242" ph="{...}" />
+            <marker date="1580221561418" expanded="true" signature="1159:1236" ph="{...}" />
+            <marker date="1580221561418" expanded="true" signature="1294:1451" ph="{...}" />
+            <marker date="1580221561418" expanded="true" signature="1368:1445" ph="{...}" />
+            <marker date="1580221561418" expanded="true" signature="1481:1619" ph="{...}" />
           </folding>
         </state>
       </provider>
