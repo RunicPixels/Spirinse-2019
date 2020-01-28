@@ -39,6 +39,7 @@ namespace Spirinse.System.Health
 
         public Action<int> ChangeHealthEvent;
         public Action<int> ChangeMaxHealthEvent;
+        public Action<int> DamageEvent;
 
         private void OnEnable()
         {
@@ -100,6 +101,7 @@ namespace Spirinse.System.Health
         private void DoDamage(int damage = 1)
         {
             Health -= damage;
+            DamageEvent?.Invoke(damage);
             ChangeHealthEvent?.Invoke(Health);
         }
 

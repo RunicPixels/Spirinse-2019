@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 690676637407668100}
   - component: {fileID: 690676637407668097}
   - component: {fileID: 690676637407668096}
+  - component: {fileID: 1590730118}
+  - component: {fileID: 1590730119}
   m_Layer: 0
   m_Name: Wind
   m_TagString: Untagged
@@ -2771,7 +2773,7 @@ ParticleSystem:
     strengthY:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 4
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -2880,11 +2882,11 @@ ParticleSystem:
     octaves: 1
     octaveMultiplier: 0.5
     octaveScale: 2
-    quality: 1
+    quality: 2
     scrollSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 5
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -4916,3 +4918,30 @@ MonoBehaviour:
   amountPerSquareMeter: 0.1
   wintensity: 600
   drag: 0.3
+--- !u!114 &1590730118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690676637407668101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecab22656051b00408f442d3811a92ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsInWind: 0
+  windEventRef: event:/Wind
+--- !u!114 &1590730119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690676637407668101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: -1
