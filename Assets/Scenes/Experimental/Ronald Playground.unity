@@ -13310,7 +13310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 982916383, guid: 70907cfb21be91547b27cb539dbe9c2d, type: 3}
       propertyPath: AbilitySounds.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 982916383, guid: 70907cfb21be91547b27cb539dbe9c2d, type: 3}
       propertyPath: AbilitySounds.Array.data[0].ability
@@ -62913,6 +62913,26 @@ Transform:
   m_Father: {fileID: 1629108110}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1590730112 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 690676637407668101, guid: b519af465b2882647b30815c3a47e1af,
+    type: 3}
+  m_PrefabInstance: {fileID: 690676638283193151}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1590730118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590730112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecab22656051b00408f442d3811a92ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsInWind: 0
+  windEventRef: event:/Wind
 --- !u!1 &1601676237
 GameObject:
   m_ObjectHideFlags: 0
@@ -73667,6 +73687,25 @@ Transform:
   m_Father: {fileID: 950521431}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1763257242 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 982916381, guid: 70907cfb21be91547b27cb539dbe9c2d,
+    type: 3}
+  m_PrefabInstance: {fileID: 487041432}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1763257245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763257242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: -1
 --- !u!1001 &1772038484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -91123,5 +91162,10 @@ PrefabInstance:
       propertyPath: meditator
       value: 
       objectReference: {fileID: 1882390380}
+    - target: {fileID: 4816005915491310456, guid: 710ea1d18e4cfcd45ac3293f1cfe437e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 710ea1d18e4cfcd45ac3293f1cfe437e, type: 3}
