@@ -17,6 +17,23 @@ MonoBehaviour:
   Max: 4
   Default: 1
   Exists: 1
+--- !u!114 &-8303296991080833151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Wind/InWind
+  m_EditorClassIdentifier: 
+  Name: InWind
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
 --- !u!114 &-8039796143625450721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -501,6 +518,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 7842
+--- !u!114 &4985884890653196418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/Spirinse FMOD Project/Build/Desktop/Master.bank
+  SubDir: Build/Desktop
+  lastModified: 637158939450992302
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &5790412160168383257
 MonoBehaviour:
   m_ObjectHideFlags: 0
