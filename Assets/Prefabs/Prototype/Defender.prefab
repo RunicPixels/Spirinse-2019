@@ -14496,7 +14496,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 982916382}
-  - component: {fileID: 982916383}
+  - component: {fileID: 462185058632966620}
   m_Layer: 8
   m_Name: Sounds
   m_TagString: Untagged
@@ -14518,7 +14518,7 @@ Transform:
   m_Father: {fileID: 3435031174896469566}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &982916383
+--- !u!114 &462185058632966620
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14527,14 +14527,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 982916381}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7e4d9350185bee44aa1635dcdf31669, type: 3}
+  m_Script: {fileID: 11500000, guid: bf67444b8be9cf64b8518d37a83dfc34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AbilitySounds:
-  - ability: {fileID: 8724849549467373818}
-    AbilityUseEvent: event:/Dash
   - ability: {fileID: 1437806053}
     AbilityUseEvent: event:/Slash
+  - ability: {fileID: 8724849549467373818}
+    AbilityUseEvent: event:/Dash
 --- !u!1 &1034593190
 GameObject:
   m_ObjectHideFlags: 0

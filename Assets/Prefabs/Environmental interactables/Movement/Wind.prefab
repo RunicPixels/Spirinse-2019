@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 690676637407668100}
   - component: {fileID: 690676637407668097}
   - component: {fileID: 690676637407668096}
-  - component: {fileID: 1590730118}
   - component: {fileID: 1590730119}
+  - component: {fileID: 6070282611134596578}
   m_Layer: 0
   m_Name: Wind
   m_TagString: Untagged
@@ -4918,20 +4918,6 @@ MonoBehaviour:
   amountPerSquareMeter: 0.1
   wintensity: 600
   drag: 0.3
---- !u!114 &1590730118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 690676637407668101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecab22656051b00408f442d3811a92ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectsInWind: 0
-  windEventRef: event:/Wind
 --- !u!114 &1590730119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4945,3 +4931,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ListenerNumber: -1
+--- !u!114 &6070282611134596578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690676637407668101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8314a7f11c212f4aa5e7095140fae67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsInWind: 0
+  windEventRef: event:/Wind
