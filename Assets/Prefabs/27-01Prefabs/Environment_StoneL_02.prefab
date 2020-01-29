@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8101871676170453547}
   - component: {fileID: 2545422428486221522}
   m_Layer: 0
-  m_Name: M_Environment_StoneL_02
+  m_Name: Environment_StoneL_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,7 +39,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4282921299214961166}
-  m_Mesh: {fileID: 1462497712645144241, guid: 73c32a05744d3d747b4c773f8521e244, type: 3}
+  m_Mesh: {fileID: 1462497712645144241, guid: 4455fda1a7ba5f645b5b798712a273fc, type: 3}
 --- !u!23 &2545422428486221522
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -57,7 +57,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e83a38d377a36954b97cd871e5614173, type: 2}
+  - {fileID: 2100000, guid: c328d5d008e890d42b6bebdf58e84cfe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
