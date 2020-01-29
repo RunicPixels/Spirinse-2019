@@ -118,7 +118,7 @@ public class Controls : MonoBehaviour
             Time.timeScale = 1f;
             StartCoroutine(_BasicAttack());
         }
-        if(Input.GetButtonDown("Fire1")) { // Placeholder for shooting
+        if(Input.GetButtonDown("Fire1") && chi > 0.5f) { // Placeholder for shooting
             chi -= 0.5f;
             ShootBullet();
         }
