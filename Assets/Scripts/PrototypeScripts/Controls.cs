@@ -395,4 +395,9 @@ public class Controls : MonoBehaviour
     {
         return rb;
     }
+
+    public void SetSpeedMultiplier(float newSpeed)
+    {
+        speedMultiplier = newSpeed;
+    }
 }
