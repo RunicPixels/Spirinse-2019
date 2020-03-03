@@ -71,10 +71,10 @@ MonoBehaviour:
     value: 0
   postExposure:
     overrideState: 1
-    value: 0
+    value: 1
   contrast:
-    overrideState: 1
-    value: 0
+    overrideState: 0
+    value: 25
   mixerRedOutRedIn:
     overrideState: 1
     value: 100
@@ -103,7 +103,7 @@ MonoBehaviour:
     overrideState: 0
     value: 100
   lift:
-    overrideState: 0
+    overrideState: 1
     value: {x: 1, y: 0.97224426, z: 0.98108405, w: 0}
   gamma:
     overrideState: 1

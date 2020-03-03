@@ -51,5 +51,15 @@ namespace AmplifyShaderEditor
 		{
 			AmplifyShaderEditorWindow.CreateNewTemplateShader( "003dfa9c16768d048b74f75c088119d8" );
 		}
+		[MenuItem( "Assets/Create/Amplify Shader/LW/PBR", false, 85 )]
+		public static void ApplyTemplate9()
+		{
+			AmplifyShaderEditorWindow.CreateNewTemplateShader( "1976390536c6c564abb90fe41f6ee334" );
+		}
+		[MenuItem( "Assets/Create/Amplify Shader/LW/Unlit", false, 85 )]
+		public static void ApplyTemplate10()
+		{
+			AmplifyShaderEditorWindow.CreateNewTemplateShader( "e2514bdcf5e5399499a9eb24d175b9db" );
+		}
 	}
 }
