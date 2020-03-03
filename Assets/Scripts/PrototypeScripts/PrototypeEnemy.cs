@@ -151,7 +151,7 @@ public class PrototypeEnemy : MonoBehaviour, IDamagable
                 if (currentPostDashTime > 0) currentPostDashTime -= Time.fixedDeltaTime;
                 else state = EnemyState.Moving;
 
-                speed = 4 * currentPostDashTime;
+                speed = 5 * Mathf.Max(currentPostDashTime - 1.1f, 0f);
                 break;
 
         }
