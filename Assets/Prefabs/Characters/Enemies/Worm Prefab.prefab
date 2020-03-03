@@ -5022,8 +5022,8 @@ MonoBehaviour:
   preDashDuration: 0.4
   postDashDuration: 4
   dashDuration: 0.25
-  minDashCooldown: 3.25
-  maxDashCooldown: 4.25
+  minDashCooldown: 5.25
+  maxDashCooldown: 6.25
   dashPlayerDistanceMultiplyer: 1
   hitParticles: {fileID: 1091770310132546953}
 --- !u!50 &1545285296
@@ -5063,11 +5063,11 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0.6
   m_Points:
-  - {x: -1.7498374, y: 1.9402313}
-  - {x: -0.8819598, y: 1.0225248}
-  - {x: -0.007519211, y: 0.61441135}
-  - {x: 0.6048151, y: 0.6534796}
-  - {x: 1.6299108, y: 1.1900911}
+  - {x: -1.7498474, y: 1.9402466}
+  - {x: -0.881958, y: 1.022522}
+  - {x: -0.007507324, y: 0.6144104}
+  - {x: 0.6048279, y: 0.6534729}
+  - {x: 1.6299133, y: 1.190094}
 --- !u!114 &260012584
 MonoBehaviour:
   m_ObjectHideFlags: 0
