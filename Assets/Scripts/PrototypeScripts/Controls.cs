@@ -36,6 +36,9 @@ public class Controls : MonoBehaviour
     public Dash dashAbility;
 
     [Header("Attacks")]
+    // Generic
+    public bool canAttack = false;
+    
     // Laser
     public bool laser;
     public float laserLength = 15f;
@@ -113,12 +116,12 @@ public class Controls : MonoBehaviour
             chi = 0f;
         }
 
-        if(InputManager.Attacking && !shooting)
+        if(InputManager.Attacking && !shooting && canAttack)
         {
             Time.timeScale = 1f;
             StartCoroutine(_BasicAttack());
         }
-        if(Input.GetButtonDown("Fire1") && chi > 0.5f) { // Placeholder for shooting
+        if(Input.GetButtonDown("Fire1") && chi > 0.5f && canAttack) { // Placeholder for shooting
             chi -= 0.5f;
             ShootBullet();
         }
