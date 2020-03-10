@@ -2,29 +2,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using Spirinse.System;
+using UnityEditor;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class OverrideCamera : MonoBehaviour
 {
     public enum CameraMode { FollowPlayer, StaticTarget, StaticLookAtPlayer, Inbetween }
 
-    private CameraMode _mode;
-    public CameraMode Mode
-    {
-        get => _mode;
-        set
-        {
-            _mode = value;
-            SwapEnemMode();
-        }
-        
 
-    }
+    public CameraMode ModePreset;
+    
     private CameraManager _cameraManager;
 
     public float distance = 50;
     private float oldDistance;
 
+    #if UNITY_EDITOR
+    private void OnEnable()
+    {
+        EditorApplication.update += SwapEnemMode;
+    }
+
+    private void OnDisable()
+    {
+        EditorApplication.update -= SwapEnemMode;
+    }
+    #endif
+    
     private void Start()
     {
         _cameraManager = CameraManager.Instance;
@@ -48,11 +53,12 @@ public class OverrideCamera : MonoBehaviour
         }
     }
 
+    
     public void SwapEnemMode()
     {
-        switch (_mode)
+        switch (ModePreset)
         {
-            case CameraMode.FollowPlayer :
+            case CameraMode.StaticTarget :
                 distance = 30;
                 break;
             default :
