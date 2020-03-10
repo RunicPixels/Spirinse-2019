@@ -1,18 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Spirinse.System;
 using UnityEngine;
 
 public class OverrideCamera : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private CameraManager _cameraManager;
+
+    public float distance = 50;
+    private float oldDistance;
+
+    private void Start()
+    {
+        _cameraManager = CameraManager.Instance;
+        oldDistance = _cameraManager.cameraDistance.GetBaseDistance();
+    }
+    
+    private void OnTriggerEnter2D(Collider2D other)
     {
         
+        if (other.CompareTag("Defender"))
+        {
+            _cameraManager.cameraDistance.SetNewCameraDistance(distance);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit2D(Collider2D other)
     {
-        
+        if (other.CompareTag("Defender"))
+        {
+            _cameraManager.cameraDistance.SetNewCameraDistance(oldDistance);
+        }
     }
 }
