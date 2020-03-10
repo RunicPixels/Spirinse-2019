@@ -5,12 +5,11 @@ using UnityEngine;
 public class SetCameraDistance : MonoBehaviour
 {
     public float cameraDistance = 25f;
-
-    private float baseDistance;
     public float velocityModifier = 0.3f;
+    
+    private float baseDistance;
     private float velocityDistance = 0;
     private float newDistance = 0;
-
     private float swapTime;
 
     private void Awake()
@@ -22,8 +21,8 @@ public class SetCameraDistance : MonoBehaviour
     private void Update()
     {
         var position = transform.position;
-        var distance = cameraDistance + velocityDistance;
-        distance = Mathf.Lerp(distance, newDistance, swapTime);
+        var distance = cameraDistance;
+        distance = Mathf.Lerp(distance, newDistance, swapTime) + velocityDistance;
         if (swapTime < 1f)
         {
             swapTime += Time.deltaTime;
@@ -35,11 +34,15 @@ public class SetCameraDistance : MonoBehaviour
 
     public void SetVelocityDistance(float velocity)
     {
-        velocityDistance = velocity * velocityModifier;
+        var oldDistance = velocityDistance;
+        var newDistance = velocity * velocityModifier;
+        var clampAmount = 1f * Time.deltaTime;
+        velocityDistance = Mathf.Clamp(newDistance, oldDistance - clampAmount, oldDistance + clampAmount);
     }
 
     public void SetNewCameraDistance(float distance)
     {
+        cameraDistance = newDistance;
         swapTime = 0;
         newDistance = distance;
     }

@@ -125,6 +125,11 @@ public class Controls : MonoBehaviour
             chi -= 0.5f;
             ShootBullet();
         }
+                
+        // Temporary Stuff
+
+        Spirinse.System.CameraManager.Instance.cameraDistance.SetVelocityDistance(rb.velocity.magnitude);
+        
     }
 
     private void FixedUpdate()
@@ -136,12 +141,7 @@ public class Controls : MonoBehaviour
         rb.AddForce(CalculateVelocity());
 
         rb.gravityScale = CalculateGravity();
-
-        // Temporary Stuff
-
-        Spirinse.System.CameraManager.Instance.cameraDistance.SetVelocityDistance(rb.velocity.magnitude);
-
-
+        
     }
     private void CalculateAltitudeVelocity()
     {
