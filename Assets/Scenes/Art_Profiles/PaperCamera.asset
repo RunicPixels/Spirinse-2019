@@ -104,7 +104,7 @@ MonoBehaviour:
     value: 100
   lift:
     overrideState: 1
-    value: {x: 1, y: 0.97224426, z: 0.98108405, w: 0}
+    value: {x: 1, y: 0.9044474, z: 0.90039897, w: 0}
   gamma:
     overrideState: 1
     value: {x: 0.9326583, y: 0.94063026, z: 1, w: 0}
@@ -1348,7 +1348,7 @@ MonoBehaviour:
     value: 1
   scale:
     overrideState: 1
-    value: 1
+    value: 2
   color:
     overrideState: 1
     value: {r: 0, g: 0, b: 0, a: 1}
@@ -1360,7 +1360,7 @@ MonoBehaviour:
     value: 0
   depthNormalThresholdScale:
     overrideState: 1
-    value: 1.5
+    value: 2
   normalThreshold:
     overrideState: 1
     value: 1
@@ -1382,7 +1382,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 1
+    value: 2
   threshold:
     overrideState: 1
     value: 3
@@ -1451,7 +1451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1cb7e9e120078f43bce4f0b1be547a7, type: 3}
   m_Name: AmbientOcclusion
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
@@ -1506,13 +1506,13 @@ MonoBehaviour:
     value: 1
   focusDistance:
     overrideState: 1
-    value: 15
+    value: 12
   aperture:
     overrideState: 1
-    value: 15.4
+    value: 12
   focalLength:
     overrideState: 1
-    value: 180
+    value: 146
   kernelSize:
     overrideState: 1
     value: 1
