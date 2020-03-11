@@ -11,8 +11,10 @@ GameObject:
   - component: {fileID: 2681115547144698685}
   - component: {fileID: 6372095246248509707}
   - component: {fileID: 815912080385441266}
+  - component: {fileID: 3884678378147181331}
+  - component: {fileID: 4077730858655761936}
   m_Layer: 0
-  m_Name: M_Thorns_05
+  m_Name: Thorns_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400168385353926958}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -89.67, y: 451.85, z: -5.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -79,6 +81,44 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!61 &3884678378147181331
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400168385353926958}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000500679, y: 0.00000011920929}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 12.281158, y: 6.0175066}
+  m_EdgeRadius: 0
+--- !u!114 &4077730858655761936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400168385353926958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a09f1bd7e6d27e489a615d1040b4bb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6939915825251968409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86,11 +126,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2681115547144698685}
     m_Modifications:
-    - target: {fileID: 1886673998685293395, guid: 7fdb497019618a44c937927b89548737,
-        type: 3}
-      propertyPath: m_Name
-      value: CorruptionSmoke_Particles
-      objectReference: {fileID: 0}
     - target: {fileID: 1228431095144863511, guid: 7fdb497019618a44c937927b89548737,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -145,6 +180,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1886673998685293395, guid: 7fdb497019618a44c937927b89548737,
+        type: 3}
+      propertyPath: m_Name
+      value: CorruptionSmoke_Particles
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fdb497019618a44c937927b89548737, type: 3}

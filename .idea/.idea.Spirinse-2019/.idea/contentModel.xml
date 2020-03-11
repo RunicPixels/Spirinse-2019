@@ -1226,6 +1226,7 @@
             <e p="WaterInclude.cginc" t="Include" />
           </e>
         </e>
+        <e p="OverrideCamera.cs" t="Include" />
         <e p="Pickup.cs" t="Include" />
         <e p="Placer" t="Include">
           <e p="Tools" t="Include">
@@ -2909,6 +2910,7 @@
           </e>
           <e p="Effects" t="Include">
             <e p="CameraShake.cs" t="Include" />
+            <e p="PostProcessingSwitch.cs" t="Include" />
             <e p="SetCameraDistance.cs" t="Include" />
           </e>
           <e p="Entities" t="Include">
@@ -3018,6 +3020,7 @@
           <e p="WalkerMover.cs" t="Include" />
           <e p="Wind.cs" t="Include" />
         </e>
+        <e p="SetCameraRotation.cs" t="Include" />
         <e p="Shaders" t="Include">
           <e p="HiddenNormalsTexture.shader" t="Include" />
           <e p="Outline.shader" t="Include" />
