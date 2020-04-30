@@ -1,0 +1,92 @@
+\hypertarget{class_dash}{}\doxysection{Dash Class Reference}
+\label{class_dash}\index{Dash@{Dash}}
+Inheritance diagram for Dash\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_dash}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_dash_a59cfe5d9ef20a39bd45e3aaab5920b8e}\label{class_dash_a59cfe5d9ef20a39bd45e3aaab5920b8e}} 
+enum {\bfseries Curve\+Type} \{ , {\bfseries Camera}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_dash_ac3c6981832108f111e49e2958bc0b2b2}\label{class_dash_ac3c6981832108f111e49e2958bc0b2b2}} 
+override void {\bfseries Play} ()
+\item 
+\mbox{\Hypertarget{class_dash_a47e8f1f112edd020d16c9356d35815a9}\label{class_dash_a47e8f1f112edd020d16c9356d35815a9}} 
+override bool {\bfseries Run} ()
+\item 
+\mbox{\Hypertarget{class_dash_a273ab26bfb61ba65dbf86597ad31fa16}\label{class_dash_a273ab26bfb61ba65dbf86597ad31fa16}} 
+float {\bfseries Get\+Dash\+Velocity\+Magnitude} ()
+\item 
+\mbox{\Hypertarget{class_dash_a5899062c29c0d24913cc8f5acf13a63e}\label{class_dash_a5899062c29c0d24913cc8f5acf13a63e}} 
+override void {\bfseries Stop} ()
+\item 
+\mbox{\Hypertarget{class_dash_a92bb977e6637dd72cd9527654bc79071}\label{class_dash_a92bb977e6637dd72cd9527654bc79071}} 
+virtual void {\bfseries Set\+Direction} (Vector2 dir)
+\item 
+\mbox{\Hypertarget{class_dash_ae136debefc8a9f9927a98393235db4b6}\label{class_dash_ae136debefc8a9f9927a98393235db4b6}} 
+virtual float {\bfseries Get\+Duration} ()
+\item 
+\mbox{\Hypertarget{class_dash_a78699113474aab47e51039ce2128fa06}\label{class_dash_a78699113474aab47e51039ce2128fa06}} 
+virtual float {\bfseries Get\+Progression} ()
+\item 
+\mbox{\Hypertarget{class_dash_ac5d36c2038bac3698f2a3f8055837a6c}\label{class_dash_ac5d36c2038bac3698f2a3f8055837a6c}} 
+virtual float {\bfseries Get\+Gravity\+Scale} ()
+\item 
+\mbox{\Hypertarget{class_dash_a752a9bebed40d312d786d1e781de35b1}\label{class_dash_a752a9bebed40d312d786d1e781de35b1}} 
+float {\bfseries Get\+Curve\+Progression} (Curve\+Type type)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_dash_a7f8714db66cbbb8044e288ada4438477}\label{class_dash_a7f8714db66cbbb8044e288ada4438477}} 
+float {\bfseries Get\+Dash\+Speed} =$>$ dash\+Speed
+\item 
+\mbox{\Hypertarget{class_dash_aac762dbc81588e15a315968c7b8151a0}\label{class_dash_aac762dbc81588e15a315968c7b8151a0}} 
+float {\bfseries Get\+Dash\+Speed\+Multiplier} =$>$ dash\+Speed\+Multiplier
+\item 
+\mbox{\Hypertarget{class_dash_aa049c6f26764892cf93fb52a382879ff}\label{class_dash_aa049c6f26764892cf93fb52a382879ff}} 
+float {\bfseries Get\+Stop\+Before\+Dash} =$>$ stop\+Before\+Dash
+\item 
+\mbox{\Hypertarget{class_dash_a72e8ed737227288a0ceaf56332d668cd}\label{class_dash_a72e8ed737227288a0ceaf56332d668cd}} 
+Vector2 {\bfseries Get\+Dash\+Velocity} =$>$ dash\+Velocity
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_dash_ad55759d281195ca804bcd600175e3938}\label{class_dash_ad55759d281195ca804bcd600175e3938}} 
+float {\bfseries dash\+Speed}
+\item 
+\mbox{\Hypertarget{class_dash_a4b407191531d20b17134a763840b359e}\label{class_dash_a4b407191531d20b17134a763840b359e}} 
+float {\bfseries dash\+Speed\+Multiplier}
+\item 
+\mbox{\Hypertarget{class_dash_aef311b96db52b1f308786f421dfffb42}\label{class_dash_aef311b96db52b1f308786f421dfffb42}} 
+float {\bfseries stop\+Before\+Dash} = 0.\+2f
+\item 
+\mbox{\Hypertarget{class_dash_a4b0f3174cc18583a89965132ec2a5249}\label{class_dash_a4b0f3174cc18583a89965132ec2a5249}} 
+Vector2 {\bfseries dash\+Velocity} = new Vector2(0, 0)
+\item 
+\mbox{\Hypertarget{class_dash_a9d2ddedca9359ac0e83fcbcd5d159012}\label{class_dash_a9d2ddedca9359ac0e83fcbcd5d159012}} 
+Animation\+Curve {\bfseries gravity\+Curve}
+\item 
+\mbox{\Hypertarget{class_dash_ab50ce1e32cf858d13ddfa1d0360bd618}\label{class_dash_ab50ce1e32cf858d13ddfa1d0360bd618}} 
+Animation\+Curve {\bfseries dash\+Curve}
+\item 
+\mbox{\Hypertarget{class_dash_a27efc990fd69232716b98fdb8741826d}\label{class_dash_a27efc990fd69232716b98fdb8741826d}} 
+Animation\+Curve {\bfseries dash\+Camera\+Curve}
+\item 
+\mbox{\Hypertarget{class_dash_aa7010ef07852a3b4652b89d6b3587801}\label{class_dash_aa7010ef07852a3b4652b89d6b3587801}} 
+Game\+Object {\bfseries dash\+Sphere}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Abilities/Dash.\+cs\end{DoxyCompactItemize}
