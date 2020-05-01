@@ -1,0 +1,101 @@
+\hypertarget{class_prototype_enemy}{}\doxysection{Prototype\+Enemy Class Reference}
+\label{class_prototype_enemy}\index{PrototypeEnemy@{PrototypeEnemy}}
+Inheritance diagram for Prototype\+Enemy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_prototype_enemy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_prototype_enemy_a9595159f932e246e230a99eb1a7c3acb}\label{class_prototype_enemy_a9595159f932e246e230a99eb1a7c3acb}} 
+enum {\bfseries Enemy\+State} \{ \newline
+{\bfseries Dashing}, 
+{\bfseries Idle}, 
+{\bfseries Moving}, 
+{\bfseries Pre\+Dash}, 
+\newline
+{\bfseries Post\+Dash}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_prototype_enemy_a7e0b44c25a3473345c21b6c1f9a70bf4}\label{class_prototype_enemy_a7e0b44c25a3473345c21b6c1f9a70bf4}} 
+Vector3 {\bfseries Get\+Dash\+End\+Pos} ()
+\item 
+\mbox{\Hypertarget{class_prototype_enemy_a0c76b74ce67c4c7261b854cd2461cedc}\label{class_prototype_enemy_a0c76b74ce67c4c7261b854cd2461cedc}} 
+bool {\bfseries Take\+Damage} (int damage)
+\item 
+\mbox{\Hypertarget{class_prototype_enemy_abc1db7526158ae754b030ad69a52a9c8}\label{class_prototype_enemy_abc1db7526158ae754b030ad69a52a9c8}} 
+void {\bfseries Destroy} ()
+\item 
+\mbox{\Hypertarget{class_prototype_enemy_adb6d17673d23675a2cd144149707cce6}\label{class_prototype_enemy_adb6d17673d23675a2cd144149707cce6}} 
+float {\bfseries Calculate\+Player\+Dash\+Duration} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_prototype_enemy_af697d6fc1d4f85f514cd7b0202eeead7}\label{class_prototype_enemy_af697d6fc1d4f85f514cd7b0202eeead7}} 
+Line\+Renderer {\bfseries lr}
+\item 
+\mbox{\Hypertarget{class_prototype_enemy_ab6a22a955bbf793a05cb45bb956663d0}\label{class_prototype_enemy_ab6a22a955bbf793a05cb45bb956663d0}} 
+Enemy\+State {\bfseries state}
+\item 
+\mbox{\Hypertarget{class_prototype_enemy_a90841c64a1a1f4605f3f975af140cdae}\label{class_prototype_enemy_a90841c64a1a1f4605f3f975af140cdae}} 
+Transform {\bfseries visual\+Container}
+\item 
+\mbox{\Hypertarget{class_prototype_enemy_acd0499a8e6876d213e471193e11772a4}\label{class_prototype_enemy_acd0499a8e6876d213e471193e11772a4}} 
+float {\bfseries idle\+Speed}
+\item 
+\mbox{\Hypertarget{class_prototype_enemy_a0984ed74a7911d83b434b472c627882c}\label{class_prototype_enemy_a0984ed74a7911d83b434b472c627882c}} 
+float {\bfseries active\+Speed}
+\item 
+\mbox{\Hypertarget{class_prototype_enemy_a1bab17dc4e2c06d691f49a267adf1703}\label{class_prototype_enemy_a1bab17dc4e2c06d691f49a267adf1703}} 
+float {\bfseries health} = 5
+\item 
+\mbox{\Hypertarget{class_prototype_enemy_a10e4f9e0a7fd7357469c344b57ee3299}\label{class_prototype_enemy_a10e4f9e0a7fd7357469c344b57ee3299}} 
+Animator {\bfseries animator}
+\item 
+\mbox{\Hypertarget{class_prototype_enemy_a340c42924a18cda2d863c913ef78ce55}\label{class_prototype_enemy_a340c42924a18cda2d863c913ef78ce55}} 
+bool {\bfseries cured}
+\item 
+\mbox{\Hypertarget{class_prototype_enemy_afccaf9194c0779fc4c48e34ab0fd1ade}\label{class_prototype_enemy_afccaf9194c0779fc4c48e34ab0fd1ade}} 
+Transform {\bfseries target}
+\item 
+\mbox{\Hypertarget{class_prototype_enemy_a515b7425779566644768e84c5cd85262}\label{class_prototype_enemy_a515b7425779566644768e84c5cd85262}} 
+Skinned\+Mesh\+Renderer {\bfseries mesh\+Renderer}
+\item 
+\mbox{\Hypertarget{class_prototype_enemy_a8152a4cb6ee6a527c4d98e8af0277360}\label{class_prototype_enemy_a8152a4cb6ee6a527c4d98e8af0277360}} 
+Material {\bfseries cleansed\+Material}
+\item 
+\mbox{\Hypertarget{class_prototype_enemy_a229396b1c86e6238e9464f14a1179de0}\label{class_prototype_enemy_a229396b1c86e6238e9464f14a1179de0}} 
+float {\bfseries pre\+Dash\+Duration} = 0.\+4f
+\item 
+\mbox{\Hypertarget{class_prototype_enemy_a4ee18444cd54fe7590b28613c6f73074}\label{class_prototype_enemy_a4ee18444cd54fe7590b28613c6f73074}} 
+float {\bfseries post\+Dash\+Duration} = 0.\+4f
+\item 
+\mbox{\Hypertarget{class_prototype_enemy_a55bb49397e3eb31cba90041c9a718376}\label{class_prototype_enemy_a55bb49397e3eb31cba90041c9a718376}} 
+float {\bfseries dash\+Duration} = 2f
+\item 
+\mbox{\Hypertarget{class_prototype_enemy_a8b6c49570c41a07b7aa86e7c5faf7510}\label{class_prototype_enemy_a8b6c49570c41a07b7aa86e7c5faf7510}} 
+float {\bfseries min\+Dash\+Cooldown} = 6f
+\item 
+\mbox{\Hypertarget{class_prototype_enemy_ac19dd2f7958cf10398f49adfd5057554}\label{class_prototype_enemy_ac19dd2f7958cf10398f49adfd5057554}} 
+float {\bfseries max\+Dash\+Cooldown} = 6f
+\item 
+\mbox{\Hypertarget{class_prototype_enemy_a1a1b8d169d16dcf03bab4c0077b15a4e}\label{class_prototype_enemy_a1a1b8d169d16dcf03bab4c0077b15a4e}} 
+float {\bfseries dash\+Player\+Distance\+Multiplyer} = 0.\+5f
+\item 
+\mbox{\Hypertarget{class_prototype_enemy_a2059cba864f682fce29b8d4e467b558d}\label{class_prototype_enemy_a2059cba864f682fce29b8d4e467b558d}} 
+Particle\+System {\bfseries hit\+Particles}
+\item 
+\mbox{\Hypertarget{class_prototype_enemy_a69f20da7b1eb043739fef9cc89786180}\label{class_prototype_enemy_a69f20da7b1eb043739fef9cc89786180}} 
+string {\bfseries Event} = \char`\"{}event\+:/3D\+Event\char`\"{}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\+Scripts/\+Prototype\+Scripts/Prototype\+Enemy.\+cs\end{DoxyCompactItemize}
