@@ -17,6 +17,11 @@ Shader "FX/Aura Outline" {
 		_Brightness("Brightness", Range(0.5, 3)) = 2
 		_Edge("Rim Edge", Range(0.0, 1)) = 0.1
 		_RimPower("Rim Power", Range(0.01, 10.0)) = 1
+        _EmissionColor("Color", Color) = (0,0,0)
+		_EmissionMap("Emission", 2D) = "white" {}
+		
+	
+        		
 
 	}
 
@@ -58,21 +63,26 @@ Shader "FX/Aura Outline" {
 
 		SubShader{
 		Tags{ "RenderType" = "Opaque" }
+		
 		UsePass "Toony Colors Pro 2/Standard PBS/FORWARD" // Base shader pass, using the standard ToonLit shader
 		UsePass "Toony Colors Pro 2/Standard PBS/FORWARD_DELTA" // Base shader pass, using the standard ToonLit shader
 		UsePass "Toony Colors Pro 2/Standard PBS/ShadowCaster" // Base shader pass, using the standard ToonLit shader
+		UsePass "Toony Colors Pro 2/Standard PBS/META" // Base shader pass, using the standard ToonLit shader
 		Pass{
 		Name "OUTLINE"
 		Tags{ "LightMode" = "Always" }
 		Cull Back
 		ZWrite Off
-		ColorMask RGB
-		Blend SrcAlpha One // Transparency Blending
+		ColorMask RGBA
+		Blend One One// Transparency Blending
 
 		CGPROGRAM
 #pragma vertex vert
 #pragma fragment frag
 #pragma multi_compile_fog
+				#pragma shader_feature _NORMALMAP
+				#pragma shader_feature _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
+				#pragma shader_feature _EMISSION
 
 	sampler2D _NoiseTex;
 	float _Scale, _Opacity, _Edge;
