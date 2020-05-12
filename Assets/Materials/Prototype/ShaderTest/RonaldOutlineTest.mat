@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CorruptShader
+  m_Name: RonaldOutlineTest
   m_Shader: {fileID: 4800000, guid: 0851392686d7413409b09d793bff6c4a, type: 3}
   m_ShaderKeywords: TCP2_DISABLE_WRAPPED_LIGHT _EMISSION _GLOSSYREFLECTIONS_OFF _SPECULARHIGHLIGHTS_OFF
   m_LightmapFlags: 2
@@ -106,7 +106,7 @@ Material:
     - __dummy__: 0
     m_Colors:
     - _Color: {r: 1, g: 0, b: 0, a: 1}
-    - _Color2: {r: 1, g: 0, b: 0.68490505, a: 0.3372549}
+    - _Color2: {r: 0.0009765625, g: 0, b: 0.00067018997, a: 0.3372549}
     - _ColorR: {r: 5.3403134, g: 0.09145772, b: 0, a: 1}
     - _EmissionColor: {r: 27.857622, g: 27.857622, b: 27.857622, a: 1}
     - _HColor: {r: 0, g: 0, b: 0, a: 1}

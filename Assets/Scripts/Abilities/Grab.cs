@@ -17,6 +17,7 @@ public class Grab : BaseAbility
     public float launchVelocity;
 
     public CircleCollider2D col;
+    public Joint2D joint;
 
     public float chiDrain;
 
@@ -38,8 +39,6 @@ public class Grab : BaseAbility
             transform.localPosition = Vector3.zero;
             col.enabled = true;
             if (col.radius < 3f) col.radius += 24 * Time.fixedDeltaTime;
-
-
         }
         else
         {
@@ -59,12 +58,14 @@ public class Grab : BaseAbility
     private void Attach(IGrabbable grab)
     {
         heldObject = grab;
+        joint.connectedBody = heldObject.GetRigidbody2D();
         heldObject.Hold(transform);
     }
 
     private void Launch(float velocity = 0f)
     {
         heldObject.Release(parentRB.velocity + parentRB.velocity.normalized * velocity);
+        joint.connectedBody = null;
         heldObject = null;
     }
 }

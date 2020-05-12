@@ -296,18 +296,6 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
---- !u!114 &71685957 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 982916383, guid: 70907cfb21be91547b27cb539dbe9c2d,
-    type: 3}
-  m_PrefabInstance: {fileID: 487041432}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7e4d9350185bee44aa1635dcdf31669, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &84787847 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4912903076253594375, guid: 57a2e677bb35da545825824945f9fbdd,
@@ -961,6 +949,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Defender
       objectReference: {fileID: 0}
+    - target: {fileID: 3435031174896469565, guid: 70907cfb21be91547b27cb539dbe9c2d,
+        type: 3}
+      propertyPath: hAcceleration
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435031174896469565, guid: 70907cfb21be91547b27cb539dbe9c2d,
+        type: 3}
+      propertyPath: vAcceleration
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435031174896469565, guid: 70907cfb21be91547b27cb539dbe9c2d,
+        type: 3}
+      propertyPath: speed
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 3435031174896469566, guid: 70907cfb21be91547b27cb539dbe9c2d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1015,21 +1018,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3435031174896469565, guid: 70907cfb21be91547b27cb539dbe9c2d,
-        type: 3}
-      propertyPath: hAcceleration
-      value: 55
-      objectReference: {fileID: 0}
-    - target: {fileID: 3435031174896469565, guid: 70907cfb21be91547b27cb539dbe9c2d,
-        type: 3}
-      propertyPath: vAcceleration
-      value: 55
-      objectReference: {fileID: 0}
-    - target: {fileID: 3435031174896469565, guid: 70907cfb21be91547b27cb539dbe9c2d,
-        type: 3}
-      propertyPath: speed
-      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3435031174896469564, guid: 70907cfb21be91547b27cb539dbe9c2d,
         type: 3}
@@ -1180,7 +1168,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 733583e1d91e6ba49b7225a20ecb3fec, type: 2}
+  - {fileID: 2100000, guid: a0b8b3aa9a918064d87d06dd34a36ada, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2217,7 +2205,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 733583e1d91e6ba49b7225a20ecb3fec, type: 2}
+  - {fileID: 2100000, guid: a0b8b3aa9a918064d87d06dd34a36ada, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7833,7 +7821,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 733583e1d91e6ba49b7225a20ecb3fec, type: 2}
+  - {fileID: 2100000, guid: a0b8b3aa9a918064d87d06dd34a36ada, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8821,7 +8809,7 @@ MonoBehaviour:
   controls: {fileID: 178582715}
   meditator: {fileID: 1882390385}
   defender: {fileID: 178582709}
-  spiritPlayerSounds: {fileID: 71685957}
+  spiritPlayerSounds: {fileID: 0}
 --- !u!4 &1665379722
 Transform:
   m_ObjectHideFlags: 0
@@ -8901,7 +8889,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c6088e59bcbacb749b5814ddc1bd3c1d, type: 2}
+  - {fileID: 2100000, guid: de1e572f0f53cc4479f08036133651dc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8993,7 +8981,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 733583e1d91e6ba49b7225a20ecb3fec, type: 2}
+  - {fileID: 2100000, guid: a0b8b3aa9a918064d87d06dd34a36ada, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

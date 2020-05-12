@@ -1,28 +1,41 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using Spirinse.Interfaces;
 using Spirinse.System.Combat;
+using MEC;
 
 namespace Spirinse.Objects
 {
-    [RequireComponent(typeof(Rigidbody2D))][RequireComponent(typeof(DistanceJoint2D))]
+    [RequireComponent(typeof(Rigidbody2D))]
     public class BaseGrabObject : MonoBehaviour, IGrabbable
     {
         private Rigidbody2D rb;
-        private DistanceJoint2D dj;
         private Collider2D[] colliders;
         public float damage = 1;
 
         private DamageType damageType;
-
+        private int oldLayer = 0;
+        private float oldDrag = 0;
+        private float oldGrav = 0;
+        private float oldAngDrag = 0;
+        private const float ReleaseTime = 4f;
+        private bool held = false;
+        
         private void Awake()
         {
             damageType = SetDamageType();
 
+            oldLayer = gameObject.layer;
+            
+            
             colliders = GetComponents<Collider2D>();
             rb = GetComponent<Rigidbody2D>();
-            dj = GetComponent<DistanceJoint2D>();
-            dj.enabled = false;
+            
+            oldDrag = rb.drag;
+            oldGrav = rb.gravityScale;
+            oldAngDrag = rb.angularDrag;
+
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -39,12 +52,16 @@ namespace Spirinse.Objects
             foreach (Collider2D col in colliders)
             {
                 if (!col.isTrigger) offset = col.bounds.size.y + 1;
-                col.enabled = false;
+                gameObject.layer = Layers.PlayerProjectie;
             }
+            held = true;
             transform.localRotation = newParent.localRotation;
-            rb.isKinematic = true;
-            dj.enabled = true;
-            dj.connectedBody = newParent.GetComponentInParent<Rigidbody2D>();
+            rb.drag = 0.05f;
+            rb.angularDrag = 0;
+            rb.gravityScale = 0.2f;
+            //rb.isKinematic = true;
+            //dj.enabled = true;
+            //dj.connectedBody = newParent.GetComponentInParent<Rigidbody2D>();
             transform.parent = newParent;
             transform.localPosition = new Vector3(0, -offset, 0);
 
@@ -52,19 +69,43 @@ namespace Spirinse.Objects
 
         public void Release(Vector3 velocity)
         {
-            rb.isKinematic = false;
+  
+            held = false;
+            //rb.isKinematic = false;
             // Slight Delay until collisions return;
-            Invoke(nameof(ReturnCollision), 0.1f);
-            dj.connectedBody = null;
-            dj.enabled = false;
+            Timing.RunCoroutine(_ReleaseReturn());
+            //dj.connectedBody = null;
+            //dj.enabled = false;
             transform.parent = null;
-            rb.velocity = velocity;
+            rb.velocity += (Vector2)velocity;
         }
+
+        private IEnumerator<float> _ReleaseReturn()
+        {
+            var drag = rb.drag;
+            var angDrag = rb.angularDrag;
+            var grav = rb.gravityScale;
+            var t = 0f;
+
+            while (t < 1f)
+            {
+                if (held) break;
+                rb.drag = Mathf.Lerp(drag, oldDrag, t);
+                rb.angularDrag = Mathf.Lerp(angDrag, oldAngDrag, t);
+                rb.gravityScale = Mathf.Lerp(grav, oldGrav, t);
+                
+                t += Time.deltaTime;
+                yield return 0;
+            }
+            
+            ReturnCollision();
+        }
+        
         public void ReturnCollision()
         {
             foreach (Collider2D col in colliders)
             {
-                col.enabled = true;
+                gameObject.layer = oldLayer;
             }
         }
 
