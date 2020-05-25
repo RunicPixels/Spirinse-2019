@@ -1,9 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Spirinse.Objects;
 using Spirinse.Interfaces;
 using Rewired;
+using UnityEngine.Events;
 using InputManager = Spirinse.System.InputManager;
 
 public class Grab : BaseAbility
@@ -15,11 +17,14 @@ public class Grab : BaseAbility
     public Rigidbody2D parentRB;
 
     public float launchVelocity;
-
+    public float grabRadius = 3f;
     public CircleCollider2D col;
     public Joint2D joint;
 
     public float chiDrain;
+
+    public Action<Transform, IGrabbable> OnGrab;
+    public Action<Transform, IGrabbable> OnRelease;
 
     private void Update()
     {
@@ -38,7 +43,7 @@ public class Grab : BaseAbility
         {
             transform.localPosition = Vector3.zero;
             col.enabled = true;
-            if (col.radius < 3f) col.radius += 24 * Time.fixedDeltaTime;
+            if (col.radius < grabRadius) col.radius += 24 * Time.fixedDeltaTime;
         }
         else
         {
@@ -60,10 +65,12 @@ public class Grab : BaseAbility
         heldObject = grab;
         joint.connectedBody = heldObject.GetRigidbody2D();
         heldObject.Hold(transform);
+        OnGrab?.Invoke(transform,heldObject);
     }
 
     private void Launch(float velocity = 0f)
     {
+        OnRelease?.Invoke(transform,heldObject);
         heldObject.Release(parentRB.velocity + parentRB.velocity.normalized * velocity);
         joint.connectedBody = null;
         heldObject = null;

@@ -3,15 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(LineRenderer))]
 public class UpdateLinePosition : MonoBehaviour
 {
     // Throwaway test
     private LineRenderer lineRenderer;
-    private Transform thisTransform;
+    public Transform originTransform;
 
     public Transform otherTransform;
 
-    public Transform midPosition;
+    public Transform midTransform;
     
     public float curvePosition;
     
@@ -24,11 +25,8 @@ public class UpdateLinePosition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        thisTransform = transform;
         lineRenderer = GetComponent<LineRenderer>();
     }
-
-    // Update is called once per frame
 
 
     public Vector3 QuadraticCurve(Vector3 a, Vector3 b, Vector3 c, float t)
@@ -47,9 +45,8 @@ public class UpdateLinePosition : MonoBehaviour
     
     void Update()
     {
-
         Vector3 point1 = transform.position;
-        Vector3 point2 = Vector3.Lerp(midPosition.position, transform.position, curvePosition);
+        Vector3 point2 = Vector3.Lerp(midTransform.position, transform.position, curvePosition);
         Vector3 point3 = (otherTransform.position + point2) * 0.5f + ((otherTransform.position - transform.position).normalized * (Vector3.Distance(point2, otherTransform.position)) * 0.25f);
         Vector3 point4 = otherTransform.position;
 
@@ -83,6 +80,17 @@ public class UpdateLinePosition : MonoBehaviour
 
         lineRenderer.material.SetTextureOffset("_MainTex", offset);
         //lineRenderer.material.SetTextureScale("_MainTex", size);
+    }
+
+    void OnDisable()
+    {
+        lineRenderer.enabled = false;
+    }
+
+    void OnEnable()
+    {
+        if (!lineRenderer) lineRenderer = GetComponent<LineRenderer>();
+        lineRenderer.enabled = true;
     }
 
 }

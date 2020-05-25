@@ -141,5 +141,10 @@ namespace Spirinse.Objects
         {
             return rb;
         }
+
+        public Transform GetTransform()
+        {
+            return transform;
+        }
     }
 }

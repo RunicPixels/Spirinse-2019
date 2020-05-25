@@ -20,7 +20,7 @@ public abstract class BaseAbility : MonoBehaviour, IAbility
     {
         currentDuration = duration;
         OnAbilityUse?.Invoke();
-        Debug.Log("Invoking Event");
+        //Debug.Log("Invoking Event");
     }
 
     public virtual bool Run()
