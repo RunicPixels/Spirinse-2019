@@ -7,5 +7,5 @@ public class Layers : MonoBehaviour
 {
     public static int Default = 0;
     public static int GrabbableObject = 10;
-    public static int PlayerProjectie = 11;
+    public static int PlayerProjectile = 11;
 }

@@ -52,13 +52,13 @@ namespace Spirinse.Objects
             foreach (Collider2D col in colliders)
             {
                 if (!col.isTrigger) offset = col.bounds.size.y + 1;
-                gameObject.layer = Layers.PlayerProjectie;
+                gameObject.layer = Layers.PlayerProjectile;
             }
             held = true;
             transform.localRotation = newParent.localRotation;
-            rb.drag = 0.7f;
-            rb.angularDrag = 0;
-            rb.gravityScale = 0.2f;
+            rb.drag = 1.95f;
+            rb.angularDrag = 0.025f;
+            rb.gravityScale = 0.4f;
             //rb.isKinematic = true;
             transform.parent = newParent;
             transform.localPosition = new Vector3(0, -offset, 0);

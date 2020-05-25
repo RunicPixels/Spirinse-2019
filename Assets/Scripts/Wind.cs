@@ -65,6 +65,7 @@ public class Wind : MonoBehaviour
             direction.x * cos - direction.y * sin,
             direction.x * sin + direction.y * cos
         );
+
         rb.velocity *= 1-drag;
 
         rb.velocity += wintensity * Time.deltaTime * forward;

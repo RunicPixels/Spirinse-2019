@@ -28,6 +28,7 @@ public class Grab : BaseAbility
 
     private void Update()
     {
+        transform.localPosition = Vector3.zero;
         grabbing = InputManager.Grabbing;
 
         if(grabbing)
