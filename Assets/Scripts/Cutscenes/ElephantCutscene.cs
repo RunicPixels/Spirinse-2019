@@ -5,6 +5,7 @@ using UnityEngine;
 public class ElephantCutscene : MonoBehaviour
 {
     [SerializeField] private Animator myAnimationController;
+
     public Canvas TextCanvas;
 
 
