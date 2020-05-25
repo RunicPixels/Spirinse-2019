@@ -24,7 +24,7 @@ MonoBehaviour:
     value: {fileID: 0}
     defaultState: 1
   tonemapper:
-    overrideState: 1
+    overrideState: 0
     value: 2
   toneCurveToeStrength:
     overrideState: 0
@@ -65,16 +65,16 @@ MonoBehaviour:
     value: 0
   saturation:
     overrideState: 1
-    value: 0
+    value: -20
   brightness:
     overrideState: 1
     value: 0
   postExposure:
     overrideState: 1
-    value: 0
+    value: 1
   contrast:
-    overrideState: 1
-    value: -30
+    overrideState: 0
+    value: 25
   mixerRedOutRedIn:
     overrideState: 1
     value: 100
@@ -103,14 +103,14 @@ MonoBehaviour:
     overrideState: 0
     value: 100
   lift:
-    overrideState: 0
-    value: {x: 1, y: 0.85361105, z: 0.81082493, w: 0}
+    overrideState: 1
+    value: {x: 1, y: 0.9044474, z: 0.90039897, w: 0}
   gamma:
-    overrideState: 0
-    value: {x: 1, y: 0.9694215, z: 0.7533546, w: 0}
+    overrideState: 1
+    value: {x: 0.9326583, y: 0.94063026, z: 1, w: 0}
   gain:
-    overrideState: 0
-    value: {x: 1, y: 0.79726404, z: 0.846809, w: 0}
+    overrideState: 1
+    value: {x: 1, y: 0.49771065, z: 0.6625952, w: 0}
   masterCurve:
     overrideState: 0
     value:
@@ -1348,19 +1348,19 @@ MonoBehaviour:
     value: 1
   scale:
     overrideState: 1
-    value: 1
+    value: 2
   color:
     overrideState: 1
     value: {r: 0, g: 0, b: 0, a: 1}
   depthThreshold:
     overrideState: 1
-    value: 5
+    value: 1
   depthNormalThreshold:
     overrideState: 1
     value: 0
   depthNormalThresholdScale:
     overrideState: 1
-    value: 0.1
+    value: 2
   normalThreshold:
     overrideState: 1
     value: 1
@@ -1382,10 +1382,10 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 1
+    value: 2
   threshold:
     overrideState: 1
-    value: 1
+    value: 3
   softKnee:
     overrideState: 1
     value: 0.5
@@ -1397,7 +1397,7 @@ MonoBehaviour:
     value: 7
   anamorphicRatio:
     overrideState: 1
-    value: 0
+    value: 1
   color:
     overrideState: 1
     value: {r: 1, g: 1, b: 1, a: 1}
@@ -1460,7 +1460,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.1
+    value: 1
   color:
     overrideState: 1
     value: {r: 0, g: 0, b: 0, a: 1}
@@ -1500,19 +1500,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 556797029e73b2347956b6579e77e05b, type: 3}
   m_Name: DepthOfField
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
   focusDistance:
     overrideState: 1
-    value: 25
+    value: 12
   aperture:
     overrideState: 1
-    value: 15
+    value: 12
   focalLength:
     overrideState: 1
-    value: 300
+    value: 146
   kernelSize:
     overrideState: 1
     value: 1

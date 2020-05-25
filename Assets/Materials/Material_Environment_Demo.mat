@@ -8,9 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Material_Environment_Demo
-  m_Shader: {fileID: 4800000, guid: 82ce58c5a6329924497da11e4472f204, type: 3}
-  m_ShaderKeywords: OUTLINES TCP2_DISABLE_WRAPPED_LIGHT TCP2_NONE TCP2_OUTLINE_CONST_SIZE
-    TCP2_SPEC_TOON _EMISSION
+  m_Shader: {fileID: 4800000, guid: f8d49205b3b0a644195633020367689d, type: 3}
+  m_ShaderKeywords: TCP2_DISABLE_WRAPPED_LIGHT _EMISSION
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -33,7 +32,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: d06b50a33bf330843a3b64d724e27f42, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 2, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Detail:
@@ -89,7 +88,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Ramp:
-        m_Texture: {fileID: 2800000, guid: a2daa9b606711a643808bebed4c59a0c, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RampOtherLights:
@@ -115,7 +114,7 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
-    - _DetailNormalMapScale: 4
+    - _DetailNormalMapScale: 1
     - _DissolveGradientWidth: 0.2
     - _DissolveValue: 1
     - _DstBlend: 0
@@ -141,17 +140,17 @@ Material:
     - _Outline: 1
     - _OutlineWidth: 1
     - _Parallax: 0.02
-    - _RampSmooth: 0.001
-    - _RampSmoothAdd: 0.006
+    - _RampSmooth: 0
+    - _RampSmoothAdd: 0
     - _RampSmoothOtherLights: 0.001
     - _RampSmoothing: 0.1
     - _RampThreshold: 0.5
     - _RampThresholdOtherLights: 0.5
-    - _RimMax: 1.35
+    - _RimMax: 0.85
     - _RimMaxVert: 1.138
-    - _RimMin: 0.97
+    - _RimMin: 0.6
     - _RimMinVert: 0.904
-    - _RimStrength: 0
+    - _RimStrength: 0.5
     - _ShadowMultiplier: 1
     - _Shadow_HSV_H: 0
     - _Shadow_HSV_S: -1
@@ -163,7 +162,7 @@ Material:
     - _Smoothness: 0.2
     - _SmoothnessTextureChannel: 0
     - _SpecBlend: 1
-    - _SpecSmooth: 0.364
+    - _SpecSmooth: 1
     - _SpecularHighlights: 1
     - _SpecularToonSize: 0.25
     - _SpecularToonSmoothness: 0.05
@@ -173,7 +172,7 @@ Material:
     - _TCP2_OUTLINE_CONST_SIZE: 1
     - _TCP2_OUTLINE_TEXTURED: 0
     - _TCP2_RAMPTEXT: 0
-    - _TCP2_SPEC_TOON: 1
+    - _TCP2_SPEC_TOON: 0
     - _TCP2_STYLIZED_FRESNEL: 0
     - _TCP2_ZSMOOTH_ON: 0
     - _TexLod: 10
@@ -194,19 +193,19 @@ Material:
     - __outline_gui_dummy__: 0
     m_Colors:
     - _BlendingContrast: {r: 1, g: 1, b: 1, a: 0}
-    - _Color: {r: 1, g: 0.9307594, b: 0.8066038, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DiffTint: {r: 1, g: 0.96815497, b: 0.8915094, a: 1}
     - _DiffuseTint: {r: 1, g: 0.5, b: 0, a: 1}
     - _Emission: {r: 0, g: 0, b: 0, a: 1}
-    - _EmissionColor: {r: 3.9999995, g: 0, b: 0.3350785, a: 1}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _HColor: {r: 1, g: 1, b: 1, a: 1}
     - _MatCapColor: {r: 1, g: 1, b: 1, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineColorVertex: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineOffset: {r: 0, g: 0, b: 0, a: 0}
-    - _RimColor: {r: 0.764151, g: 0.764151, b: 0.764151, a: 0.6}
+    - _RimColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.6}
     - _RimDirVert: {r: 0, g: 0, b: 1, a: 1}
-    - _SColor: {r: 0.4433962, g: 0.18138939, b: 0, a: 1}
+    - _SColor: {r: 0.24999994, g: 0.24999994, b: 0.24999994, a: 1}
     - _SketchColor: {r: 0.9339623, g: 0.9339623, b: 0.9339623, a: 1}
     - _SpecColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

@@ -8,9 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Material_Environment_Demo (1)
-  m_Shader: {fileID: 4800000, guid: 82ce58c5a6329924497da11e4472f204, type: 3}
-  m_ShaderKeywords: OUTLINES TCP2_DISABLE_WRAPPED_LIGHT TCP2_NONE TCP2_OUTLINE_CONST_SIZE
-    TCP2_SPEC_TOON _EMISSION
+  m_Shader: {fileID: 4800000, guid: f8d49205b3b0a644195633020367689d, type: 3}
+  m_ShaderKeywords: TCP2_DISABLE_WRAPPED_LIGHT TCP2_NONE TCP2_OUTLINE_CONST_SIZE _EMISSION
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -21,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: d06b50a33bf330843a3b64d724e27f42, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Detail:
@@ -107,8 +106,8 @@ Material:
     - _Offset2: 0
     - _Outline: 1
     - _Parallax: 0.02
-    - _RampSmooth: 1
-    - _RampSmoothAdd: 0.014
+    - _RampSmooth: 0
+    - _RampSmoothAdd: 0
     - _RampSmoothOtherLights: 1
     - _RampThreshold: 0.5
     - _RampThresholdOtherLights: 0.5
@@ -135,7 +134,7 @@ Material:
     - _TCP2_OUTLINE_CONST_SIZE: 1
     - _TCP2_OUTLINE_TEXTURED: 0
     - _TCP2_RAMPTEXT: 0
-    - _TCP2_SPEC_TOON: 1
+    - _TCP2_SPEC_TOON: 0
     - _TCP2_STYLIZED_FRESNEL: 0
     - _TCP2_ZSMOOTH_ON: 0
     - _TexLod: 10
@@ -146,14 +145,14 @@ Material:
     - __dummy__: 0
     - __outline_gui_dummy__: 0
     m_Colors:
-    - _Color: {r: 1, g: 0.9307594, b: 0.8066038, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DiffTint: {r: 1, g: 0.96815497, b: 0.8915094, a: 1}
     - _EmissionColor: {r: 3.9999995, g: 0, b: 0.3350785, a: 1}
     - _HColor: {r: 1, g: 1, b: 1, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineOffset: {r: 0, g: 0, b: 0, a: 0}
     - _RimColor: {r: 0.764151, g: 0.764151, b: 0.764151, a: 0.6}
-    - _SColor: {r: 0.44339615, g: 0.18138933, b: 0, a: 1}
+    - _SColor: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 1}
     - _SketchColor: {r: 0.9339623, g: 0.9339623, b: 0.9339623, a: 1}
     - _SnowAngle: {r: 0, g: 1, b: 0, a: 0}
     - _SnowColor: {r: 0.94, g: 0.96, b: 1, a: 1}

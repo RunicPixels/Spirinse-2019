@@ -29,7 +29,7 @@ namespace Spirinse.Player
             if (Instance == null) Instance = this;
             else Destroy(gameObject);
             controls.playerMovementAction += playerAnimator.ChangeAnimation;
-            SubscribeEvents();
+            //SubscribeEvents();
         }
 
         public void OnDisable()
@@ -45,12 +45,12 @@ namespace Spirinse.Player
 
         private void SubscribeEvents()
         {
-            controls.dashAbility.OnAbilityUse += spiritPlayerSounds.DoDashSound;
+            //controls.dashAbility.OnAbilityUse += spiritPlayerSounds.DoDashSound;
         }
 
         private void UnsubscribeEvents()
         {
-            controls.dashAbility.OnAbilityUse -= spiritPlayerSounds.DoDashSound;
+            //controls.dashAbility.OnAbilityUse -= spiritPlayerSounds.DoDashSound;
         }
     }
 }

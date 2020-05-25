@@ -11,14 +11,14 @@ public class SpawnEnemy : MonoBehaviour
     //public Cleansinator cleansinator;
     public float delay = 2f;
 
-    public static int enemyAmount;
+    public int enemyAmount;
     public int maxEnemies = 3;
 
     private Vector2 spawnPosition;
     // Start is called before the first frame update
     void Start()
     {
-
+        enemyAmount = 0;
         float velocity = Spirinse.Player.Player.Instance.GetPlayerVelocity();
         
         spawnPosition = transform.position;
