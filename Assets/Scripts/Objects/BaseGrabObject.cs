@@ -56,12 +56,10 @@ namespace Spirinse.Objects
             }
             held = true;
             transform.localRotation = newParent.localRotation;
-            rb.drag = 0.05f;
+            rb.drag = 0.7f;
             rb.angularDrag = 0;
             rb.gravityScale = 0.2f;
             //rb.isKinematic = true;
-            //dj.enabled = true;
-            //dj.connectedBody = newParent.GetComponentInParent<Rigidbody2D>();
             transform.parent = newParent;
             transform.localPosition = new Vector3(0, -offset, 0);
 
