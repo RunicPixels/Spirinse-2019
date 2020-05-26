@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Spirinse.Player;
 using Spirinse.System.Player;
 using UnityEngine;
 
@@ -12,9 +13,11 @@ public class FollowPlayer : MonoBehaviour {
     
     private GameObject _gameObject;
     private Vector3 velocity = Vector3.zero;
-    
-	private void Start ()
+    private Player _player;
+
+    private void Start ()
     {
+        _player = PlayerManager.Instance.GetPlayer();
         FindPlayer();
         transform.position = player.transform.position;
     }
@@ -41,7 +44,9 @@ public class FollowPlayer : MonoBehaviour {
     
     public void FindPlayer()
     {
-        player = PlayerManager.Instance.GetPlayer().defender.tracker.gameObject;
+        if(!_player) _player = PlayerManager.Instance.GetPlayer();
+        player = _player?.defender.tracker.gameObject;
+        
     }
     
     public void SetCameraTrue(bool doFollow) {

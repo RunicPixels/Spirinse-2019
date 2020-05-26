@@ -52,5 +52,11 @@ namespace Spirinse.Player
         {
             //controls.dashAbility.OnAbilityUse -= spiritPlayerSounds.DoDashSound;
         }
+
+        public void GotoSpawnPosition(Vector3 spawnPosition)
+        {
+            transform.position = spawnPosition;
+            defender.transform.position = transform.position + new Vector3(0, 5, 0);
+        }
     }
 }

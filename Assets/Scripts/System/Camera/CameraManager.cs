@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Spirinse.System
 {
@@ -15,6 +16,14 @@ namespace Spirinse.System
         private void Awake()
         {
             instance = this;
+            Setup();
+
+        }
+
+        public void Setup()
+        {
+            if (!cameraDistance) cameraDistance = FindObjectOfType<SetCameraDistance>();
+            if (!followPlayer) followPlayer = FindObjectOfType<FollowPlayer>();
         }
     }
 }

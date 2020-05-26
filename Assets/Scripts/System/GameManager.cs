@@ -14,7 +14,10 @@ namespace Spirinse.System
     public class GameManager : MonoBehaviour
     {
         public static GameManager Instance;
+        public enum GameState { Playing, Menu }
 
+        public GameState gameState;
+        
         [field: SerializeField] public HealthManager HealthManager { get; protected set; }
         [field: SerializeField] public PlayerManager PlayerManager { get; protected set; }
         [field: SerializeField] public UIManager UiManager { get; protected set; }
@@ -22,6 +25,8 @@ namespace Spirinse.System
         [field: SerializeField] public GameStateManager StateManager { get; protected set; }
         [field: SerializeField] public CleanseManager CleanseManager { get; protected set; }
         [field: SerializeField] public EffectsManager EffectsManager { get; protected set; }
+
+        public Action GameStartEvent;
 
         // Start is called before the first frame update
         private void Start()
@@ -78,17 +83,35 @@ namespace Spirinse.System
 
         public void Restart()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            gameState = GameState.Menu;
+            SceneManager.LoadScene(0);
             CameraManager.Instance.followPlayer.FindPlayer();
             PlayerManager.OnRestart();
             OnSpawn();
+        }
+
+        public void GameStart()
+        {
+            gameState = GameState.Playing;
+            SceneManager.LoadScene(1);
+            CameraManager.Instance.Setup();
+            CameraManager.Instance.followPlayer.FindPlayer();
+            PlayerManager.OnRestart();
+            PlayerManager.Instance.GetPlayer().GotoSpawnPosition(new Vector3(-310.23f, 409.35f, -1.8f)); // Hardcoded for now.
+            GameStartEvent?.Invoke();
+            InitGame();
+            
+        }
+
+        void OnGameLoaded()
+        {
+            
         }
         
         private void InitGame()
         {
             PlayerManager.OnInit();
             OnSpawn();
-            
         }
 
         private void OnSpawn()

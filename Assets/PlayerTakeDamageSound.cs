@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using FMODUnity;
 using Spirinse.Player;
+using Spirinse.System;
 using Spirinse.System.Health;
 using UnityEngine;
 
@@ -22,17 +23,27 @@ public class PlayerTakeDamageSound : MonoBehaviour
     
     private void Start()
     {
+        Setup();
+        //GameManager.Instance.GameStartEvent += Setup;
         HealthManager.Instance.DamageEvent += DoDamage;
         HealthManager.Instance.ChangeHealthEvent += ChangeHealth;
+    }
 
+    private void Setup()
+    {
         _damageEventInstance = FMODUnity.RuntimeManager.CreateInstance(damageSound);
         _lowHealthEventInstance = FMODUnity.RuntimeManager.CreateInstance(lowHealthSound);
         cachedRB = Spirinse.Player.Player.Instance.controls.GetRB();
         player = Spirinse.Player.Player.Instance;
+        
     }
-
-    public void DoDamage(int damage)
-    {
+    
+    public void DoDamage(int damage) {
+        _damageEventInstance.set3DAttributes(
+            RuntimeUtils.To3DAttributes(
+                player.defender.transform.gameObject,
+                cachedRB));
+        
         if (damage > 0)
         {
             _damageEventInstance.start();
@@ -41,17 +52,14 @@ public class PlayerTakeDamageSound : MonoBehaviour
 
     public void ChangeHealth(int newHealth)
     {
+        _damageEventInstance.set3DAttributes(
+            RuntimeUtils.To3DAttributes(
+                player.defender.transform.gameObject,
+                cachedRB));
+        
         if (newHealth <= 2)
         {
             _lowHealthEventInstance.start();
         }
-    }
-    
-    public void Update()
-    {
-        _damageEventInstance.set3DAttributes(
-            FMODUnity.RuntimeUtils.To3DAttributes(
-            player.defender.transform.gameObject,
-            cachedRB));
     }
 }

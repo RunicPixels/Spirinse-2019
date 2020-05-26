@@ -22,7 +22,7 @@ namespace Spirinse.System.Player
             else Destroy(Instance);
             if (player == null)
             {
-                Debug.LogWarning("No Player Assigned to Player Manager!!!!");
+                //Debug.LogWarning("No Player Assigned to Player Manager!");
                 player = GetPlayer();
             }
         }

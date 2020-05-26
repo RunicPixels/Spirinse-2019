@@ -97,6 +97,7 @@ public class Controls : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if(GameManager.Instance.gameState == GameManager.GameState.Menu) return;
         // Put this stuff into Input Manager
 
         direction = InputManager.Movement.normalized;
@@ -147,7 +148,7 @@ public class Controls : MonoBehaviour
     {
         if (rb.velocity.y < -0.1f)
         {
-            altitudeVelocity -= rb.velocity.y * 0.1f * Time.fixedDeltaTime;
+            altitudeVelocity += rb.velocity.y * 0.1f * Time.fixedDeltaTime;
         }
         else if (altitudeVelocity > 1f)
         {
@@ -163,9 +164,9 @@ public class Controls : MonoBehaviour
             altitudeVelocity -= (0.5f + altitudeVelocity * 0.45f) * Time.fixedDeltaTime;
 
         }
-        if(rb.velocity.magnitude < speed)
+        if(rb.velocity.magnitude > speed)
         {
-            altitudeVelocity *= 0.8f;
+            altitudeVelocity *= 0.9f;
         }
         if (altitudeVelocity < 1f) altitudeVelocity = 1f;
 
