@@ -19,7 +19,7 @@ namespace Spirinse.System.Player
         {
             if (checkPointManager == null) Debug.LogWarning("Please asign a checkpoint manager");
             if (Instance == null) Instance = this;
-            else Destroy(Instance);
+            else Destroy(gameObject);
             if (player == null)
             {
                 //Debug.LogWarning("No Player Assigned to Player Manager!");

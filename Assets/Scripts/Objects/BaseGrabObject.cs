@@ -56,9 +56,9 @@ namespace Spirinse.Objects
             }
             held = true;
             transform.localRotation = newParent.localRotation;
-            rb.drag = 1.95f;
-            rb.angularDrag = 0.025f;
-            rb.gravityScale = 0.4f;
+            rb.drag = 1.5f;
+            rb.angularDrag = 0.05f;
+            rb.gravityScale = 0.6f;
             //rb.isKinematic = true;
             transform.parent = newParent;
             transform.localPosition = new Vector3(0, -offset, 0);

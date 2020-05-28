@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using HutongGames.PlayMaker.Actions;
 using Spirinse.System.Health;
 using Spirinse.Player;
 using Spirinse.System.UI;
@@ -14,9 +15,19 @@ namespace Spirinse.System
     public class GameManager : MonoBehaviour
     {
         public static GameManager Instance;
-        public enum GameState { Playing, Menu }
+        public enum GameState { Menu, Playing }
 
-        public GameState gameState;
+        private GameState _gameState;
+        
+        public GameState gameState
+        {
+            get => _gameState;
+            private set
+            {
+                _gameState = value;
+                
+            }
+        } 
         
         [field: SerializeField] public HealthManager HealthManager { get; protected set; }
         [field: SerializeField] public PlayerManager PlayerManager { get; protected set; }
@@ -28,9 +39,18 @@ namespace Spirinse.System
 
         public Action GameStartEvent;
 
+        public Action<GameState> GameStateChangeEvent;
+
+        public void Awake()
+        {
+            if (Instance == null)       Instance        = this;
+            else                        Destroy(gameObject);
+        }
+        
         // Start is called before the first frame update
         private void Start()
         {
+            SetGameState((GameState)SceneManager.GetActiveScene().buildIndex); // horrible hardcoded mess
             SetupConnections();
             SetupEvents();
             InitGame();
@@ -39,8 +59,6 @@ namespace Spirinse.System
         private void SetupConnections()
         {
             // Assign Managers & Variables
-            if (Instance == null)       Instance        = this;
-            else                        Destroy(gameObject);
 
             if (HealthManager == null)  HealthManager   = HealthManager.Instance;
             if (InputManager == null)   InputManager    = InputManager.Instance;
@@ -83,23 +101,25 @@ namespace Spirinse.System
 
         public void Restart()
         {
-            gameState = GameState.Menu;
             SceneManager.LoadScene(0);
+            SetGameState(GameState.Menu);
             CameraManager.Instance.followPlayer.FindPlayer();
             PlayerManager.OnRestart();
             OnSpawn();
+            
         }
 
         public void GameStart()
         {
-            gameState = GameState.Playing;
+            
             SceneManager.LoadScene(1);
+            SetGameState(GameState.Playing);
             CameraManager.Instance.Setup();
             CameraManager.Instance.followPlayer.FindPlayer();
             PlayerManager.OnRestart();
             PlayerManager.Instance.GetPlayer().GotoSpawnPosition(new Vector3(-310.23f, 409.35f, -1.8f)); // Hardcoded for now.
-            GameStartEvent?.Invoke();
             InitGame();
+            GameStartEvent?.Invoke();
             
         }
 
@@ -122,6 +142,12 @@ namespace Spirinse.System
         public void Update()
         {
             InputManager.SpiritUpdate();
+        }
+
+        public void SetGameState(GameState state)
+        {
+            gameState = state;
+            GameStateChangeEvent?.Invoke(_gameState);
         }
     }
 }

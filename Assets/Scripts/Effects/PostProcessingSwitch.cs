@@ -5,16 +5,18 @@ using UnityEngine;
 
 public class PostProcessingSwitch : MonoBehaviour
 {
-    public GameObject ppManager;
+    private GameObject ppManager;
     public PostProcessProfile otherProfile;
     private PostProcessProfile oldProfile;
 
     private void Start()
     {
+        ppManager = PostProcessingManager.Instance.gameObject;
         oldProfile = ppManager.GetComponent<PostProcessVolume>().profile;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         if (collision.CompareTag("Defender"))
         {
             ppManager.GetComponent<PostProcessVolume>().profile = otherProfile;

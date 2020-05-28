@@ -15,7 +15,7 @@ public class PlaceholderRestart : MonoBehaviour
 
     
     public void Update() {
-        if (InputManager.Attacking)
+        if (InputManager.Grabbing)
         {
             Restart();
         }
