@@ -31,7 +31,6 @@ namespace Spirinse.System.Effects
         private void OnDestroy()
         {
             Debug.LogWarning("Destroying" + Instance);
-            Instance = null;
         }
 
 

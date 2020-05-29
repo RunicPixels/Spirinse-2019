@@ -17,7 +17,6 @@ namespace Spirinse.System.Audio
         private void OnDestroy()
         {
             Debug.LogWarning("Destroying" + Instance);
-            instance = null;
         }
     }
 }

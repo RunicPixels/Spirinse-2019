@@ -21,10 +21,5 @@ namespace Spirinse.System.Effects
                 Destroy(this);
             }
         }
-        private void OnDestroy()
-        {
-            Debug.LogWarning("Destroying" + Instance);
-            Instance = null;
-        }
     }
 }
