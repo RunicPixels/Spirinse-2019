@@ -55,13 +55,13 @@ namespace Spirinse.Objects
                 gameObject.layer = Layers.PlayerProjectile;
             }
             held = true;
-            transform.localRotation = newParent.localRotation;
+            //transform.localRotation = newParent.localRotation;
             rb.drag = 1.5f;
             rb.angularDrag = 0.05f;
             rb.gravityScale = 0.6f;
             //rb.isKinematic = true;
-            transform.parent = newParent;
-            transform.localPosition = new Vector3(0, -offset, 0);
+            //transform.parent = newParent;
+            //transform.localPosition = newParent.position + new Vector3(0, -offset, 0);
 
         }
 
@@ -74,7 +74,7 @@ namespace Spirinse.Objects
             Timing.RunCoroutine(_ReleaseReturn());
             //dj.connectedBody = null;
             //dj.enabled = false;
-            transform.parent = null;
+            //transform.parent = null;
             rb.velocity += (Vector2)velocity;
         }
 
