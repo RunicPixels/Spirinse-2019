@@ -10,13 +10,13 @@ namespace Spirinse.Objects
         System.Enums.DamageEnums.DamageType damageTypes = System.Enums.DamageEnums.DamageType.Everything;
 
         private Rigidbody2D rb;
-        private void Awake()
-        {
-            foreach (Rigidbody2D rb in GetComponentsInChildren<Rigidbody2D>())
-            {
-                rb.isKinematic = true;
-            }
-        }
+//        private void Awake()
+//        {
+//            foreach (Rigidbody2D rb in GetComponentsInChildren<Rigidbody2D>())
+//            {
+//                rb.isKinematic = true;
+//            }
+//        }
 
         private void OnTriggerEnter2D(Collider2D col)
         {
