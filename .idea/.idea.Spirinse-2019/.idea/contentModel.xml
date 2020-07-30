@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\Ronald\.Rider2019.1\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Ronald\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_Spirinse-2019.1434079632.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Ronald\Documents\GitHub\Spirinse-2019" t="IncludeRecursive">
+    <e p="C:\Users\Ronald\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_Spirinse-2019.-464758792.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Ronald\Documents\UnityProjects\Spirinse-2019" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
@@ -1210,12 +1210,19 @@
             </e>
           </e>
         </e>
+        <e p="CameraZZero.cs" t="Include" />
+        <e p="ChangeScene.cs" t="Include" />
         <e p="ChiManager.cs" t="Include" />
+        <e p="CinemachineCameras.cs" t="Include" />
+        <e p="CopyPosition.cs" t="Include" />
         <e p="DestroyableVFX.cs" t="Include" />
+        <e p="DisableOnMainMenu.cs" t="Include" />
         <e p="DisappearAfterTime.cs" t="Include" />
         <e p="EnemySounds.cs" t="Include" />
         <e p="ExplodeOnDeath.cs" t="Include" />
         <e p="FadeOnTrigger.cs" t="Include" />
+        <e p="GrabLine.cs" t="Include" />
+        <e p="GrabLineMidPos.cs" t="Include" />
         <e p="HolyShift" t="Include">
           <e p="ReadMe.txt" t="Include" />
           <e p="Scripts" t="Include">
@@ -1226,6 +1233,7 @@
             <e p="WaterInclude.cginc" t="Include" />
           </e>
         </e>
+        <e p="OpenLinks.cs" t="Include" />
         <e p="OverrideCamera.cs" t="Include" />
         <e p="Pickup.cs" t="Include" />
         <e p="Placer" t="Include">
@@ -2902,6 +2910,15 @@
           </e>
           <e p="Cleansinator.cs" t="Include" />
           <e p="CurrentMeleeManager.cs" t="Include" />
+          <e p="Cutscenes" t="Include">
+            <e p="Dialog.cs" t="Include" />
+            <e p="ElephantCutscene.cs" t="Include" />
+            <e p="ElephantFase1.cs" t="Include" />
+            <e p="ElephantFase2.cs" t="Include" />
+            <e p="Ibis.cs" t="Include" />
+            <e p="KeyContinue.cs" t="Include" />
+            <e p="Wolf.cs" t="Include" />
+          </e>
           <e p="DefenderParticles.cs" t="Include" />
           <e p="DontDestroyOnLoad.cs" t="Include" />
           <e p="Editor" t="Include">
@@ -2942,6 +2959,7 @@
             <e p="IDamagable.cs" t="Include" />
             <e p="IGrabbable.cs" t="Include" />
           </e>
+          <e p="Layers.cs" t="Include" />
           <e p="Objects" t="Include">
             <e p="BaseBreakableObject.cs" t="Include" />
             <e p="BaseGrabObject.cs" t="Include" />
@@ -3020,7 +3038,9 @@
           <e p="WalkerMover.cs" t="Include" />
           <e p="Wind.cs" t="Include" />
         </e>
+        <e p="SetAnimationTrue.cs" t="Include" />
         <e p="SetCameraRotation.cs" t="Include" />
+        <e p="SetCinemachinePropertiesOnEnable.cs" t="Include" />
         <e p="Shaders" t="Include">
           <e p="HiddenNormalsTexture.shader" t="Include" />
           <e p="Outline.shader" t="Include" />
@@ -3030,14 +3050,22 @@
           <e p="Ronald" t="Include">
             <e p="CorruptPBS.shader" t="Include" />
             <e p="CorruptShader.shader" t="Include" />
+            <e p="fxaura.shader" t="Include" />
+            <e p="fxaura.shader.txt" t="Include" />
+            <e p="OutlineGlow.shader" t="Include" />
             <e p="TCP2_PBS_BRDF.cginc" t="Include" />
             <e p="TCP2_PBS_Core.cginc" t="Include" />
             <e p="TCP2_PBS_Main.cginc" t="Include" />
+            <e p="TestShader.shader" t="Include" />
+            <e p="toonlit.shader" t="Include" />
+            <e p="toonlit.shader.txt" t="Include" />
           </e>
           <e p="Spirinse_BlendTest_Shader.shader" t="Include" />
           <e p="Spirinse_Test_Shader.shader" t="Include" />
+          <e p="toonlit.shader.txt" t="Include" />
           <e p="UVScroller.shader" t="Include" />
         </e>
+        <e p="Singleton.cs" t="Include" />
         <e p="WindSound.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />

@@ -111,7 +111,6 @@ namespace Spirinse.System
 
         public void GameStart()
         {
-            
             SceneManager.LoadScene(1);
             SetGameState(GameState.Playing);
             CameraManager.Instance.Setup();
@@ -123,11 +122,6 @@ namespace Spirinse.System
             
         }
 
-        void OnGameLoaded()
-        {
-            
-        }
-        
         private void InitGame()
         {
             PlayerManager.OnInit();
