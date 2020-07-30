@@ -4,16 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - LevelBounds
-  - Music
-  - Background
-  - Meditation
-  - Spirit
   - Selected
+  - Tracker
   - Defender
   - Throwable
-  - Tracker
-  - CameraBoundaries
   layers:
   - Default
   - TransparentFX
@@ -23,19 +17,19 @@ TagManager:
   - UI
   - 
   - 
-  - PlayerSpirit
-  - PlayerPhysical
-  - GrabbableObject
-  - PlayerProjectile
-  - 
-  - 
-  - EnemySpirit
-  - EnemySpiritProjectile
   - 
   - 
   - 
-  - Invulnerable
-  - IgnorePP
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -48,27 +42,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
-    uniqueID: 2674791413
-    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Between
-    uniqueID: 606350985
-    locked: 0
-  - name: Player
-    uniqueID: 2666359821
-    locked: 0
-  - name: Platforms
-    uniqueID: 600026165
-    locked: 0
-  - name: Foreground
-    uniqueID: 1795597123
-    locked: 0
-  - name: VisibleParticles
-    uniqueID: 940224915
-    locked: 0
-  - name: UI
-    uniqueID: 3241408355
     locked: 0
