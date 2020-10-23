@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7152737935152237434}
   - component: {fileID: 14945129477489872}
   - component: {fileID: 3744231187312369970}
-  - component: {fileID: 5950100636178530348}
-  - component: {fileID: 6619478472355167563}
+  - component: {fileID: 4231542566303134388}
+  - component: {fileID: 1406141081159139144}
   m_Layer: 0
   m_Name: ThrowableRock
   m_TagString: Throwable
@@ -48,9 +48,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 23.504997
-  m_LinearDrag: 2
-  m_AngularDrag: 0.05
+  m_Mass: 7.3726025
+  m_LinearDrag: 1
+  m_AngularDrag: 0.02
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 1
@@ -70,8 +70,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
---- !u!61 &5950100636178530348
-BoxCollider2D:
+--- !u!70 &4231542566303134388
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -83,45 +83,22 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0000019073486, y: 1.517559}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 5.0255165, y: 4.1948586}
-  m_EdgeRadius: 0
---- !u!61 &6619478472355167563
-BoxCollider2D:
+  m_Offset: {x: 0, y: 1.47}
+  m_Size: {x: 4.63, y: 4.22}
+  m_Direction: 1
+--- !u!114 &1406141081159139144
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014970313163733415}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0000019073486, y: 1.5335331}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 5.8881264, y: 4.9296722}
-  m_EdgeRadius: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f69a4d32ccd20e4dac2437e1f5884fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reducedGravityValue: -0.05
 --- !u!1 &4292704915204555290
 GameObject:
   m_ObjectHideFlags: 0

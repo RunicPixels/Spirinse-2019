@@ -40,7 +40,7 @@ namespace Spirinse.Objects
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.CompareTag("Defender")) return;
+            if (collision.CompareTag(Statics.TagPlayer)) return;
 
             MonoBehaviourCollisionCheck(collision.gameObject.GetComponents<MonoBehaviour>());
         }

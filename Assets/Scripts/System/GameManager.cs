@@ -109,9 +109,9 @@ namespace Spirinse.System
             
         }
 
-        public void GameStart()
+        public void GameStart(int level = 1)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(level);
             SetGameState(GameState.Playing);
             CameraManager.Instance.Setup();
             CameraManager.Instance.followPlayer.FindPlayer();
@@ -120,6 +120,11 @@ namespace Spirinse.System
             InitGame();
             GameStartEvent?.Invoke();
             
+        }
+
+        public void LoadLevel(int levelId)
+        {
+            SceneManager.LoadScene(levelId);
         }
 
         private void InitGame()

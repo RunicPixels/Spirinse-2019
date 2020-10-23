@@ -19,6 +19,7 @@ public class Grab : BaseAbility
     public float launchVelocity;
     public float grabRadius = 3f;
     public CircleCollider2D col;
+    public GameObject sphere;
     public Joint2D joint;
 
     public float chiDrain;
@@ -43,14 +44,25 @@ public class Grab : BaseAbility
         if (grabbing)
         {
             transform.localPosition = Vector3.zero;
+            sphere.SetActive(true);
             col.enabled = true;
-            if (col.radius < grabRadius) col.radius += 24 * Time.fixedDeltaTime;
+            if (col.radius < grabRadius) col.radius += 12 * Time.fixedDeltaTime;
+            var radius = col.radius;
+            sphere.transform.localScale = new Vector3(radius * 2f, radius *2f, radius);
         }
         else
         {
             col.enabled = false;
             col.radius = 0f;
+            sphere.SetActive(false);
             if (heldObject != null) Launch(launchVelocity);
+            
+            
+        }
+
+        if (heldObject != null)
+        {
+            sphere.SetActive(false);
         }
     }
 

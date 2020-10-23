@@ -1223,6 +1223,7 @@
         <e p="FadeOnTrigger.cs" t="Include" />
         <e p="GrabLine.cs" t="Include" />
         <e p="GrabLineMidPos.cs" t="Include" />
+        <e p="HealthTest.cs" t="Include" />
         <e p="HolyShift" t="Include">
           <e p="ReadMe.txt" t="Include" />
           <e p="Scripts" t="Include">
@@ -1233,9 +1234,10 @@
             <e p="WaterInclude.cginc" t="Include" />
           </e>
         </e>
+        <e p="LevelChanger.cs" t="Include" />
         <e p="OpenLinks.cs" t="Include" />
         <e p="OverrideCamera.cs" t="Include" />
-        <e p="Pickup.cs" t="Include" />
+        <e p="PhysicsInfluencedObject.cs" t="Include" />
         <e p="Placer" t="Include">
           <e p="Tools" t="Include">
             <e p="Editor" t="Include">
@@ -3025,6 +3027,7 @@
               <e p="PlayerManager.cs" t="Include" />
             </e>
             <e p="PostProcessingManager.cs" t="Include" />
+            <e p="Statics.cs" t="Include" />
             <e p="UI" t="Include">
               <e p="SetHealthUI.cs" t="Include" />
               <e p="SetShieldUI.cs" t="Include" />
@@ -3066,6 +3069,7 @@
           <e p="UVScroller.shader" t="Include" />
         </e>
         <e p="Singleton.cs" t="Include" />
+        <e p="TEMPORARYPickup.cs" t="Include" />
         <e p="WindSound.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />

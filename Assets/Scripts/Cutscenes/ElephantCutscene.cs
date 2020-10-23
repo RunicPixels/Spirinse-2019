@@ -16,7 +16,7 @@ public class ElephantCutscene : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Defender"))
+        if (collision.CompareTag(Statics.TagPlayer))
         { 
             myAnimationController.SetBool("EnterCutscene", true);
             TextCanvas.enabled = true;

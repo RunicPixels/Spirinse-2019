@@ -17,7 +17,7 @@ public class PostProcessingSwitch : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
-        if (collision.CompareTag("Defender"))
+        if (collision.CompareTag(Statics.TagPlayer))
         {
             ppManager.GetComponent<PostProcessVolume>().profile = otherProfile;
         }
@@ -25,7 +25,7 @@ public class PostProcessingSwitch : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Defender"))
+        if (collision.CompareTag(Statics.TagPlayer))
         {
             ppManager.GetComponent<PostProcessVolume>().profile = oldProfile;
         }

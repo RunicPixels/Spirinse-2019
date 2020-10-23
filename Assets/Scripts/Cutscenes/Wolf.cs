@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Spirinse.Interfaces;
 
 public class Wolf : MonoBehaviour
 {
@@ -15,8 +16,7 @@ public class Wolf : MonoBehaviour
     public Animator wolfAnimator;
 
     public int Health = 30;
-    public int Damage = 5;
-
+    private readonly int damage = 1;
 
     void Start()
     {
@@ -53,7 +53,7 @@ public class Wolf : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D trig)
     {
         //Turning around Controll//
-        if (trig.gameObject.CompareTag("Turn") || trig.gameObject.CompareTag("Enemy"))
+        if (trig.gameObject.CompareTag(Statics.TagTurn) || trig.gameObject.CompareTag(Statics.TagEnemy))
         {
             if (moveRight)
             { moveRight = false; }
@@ -62,42 +62,56 @@ public class Wolf : MonoBehaviour
             { moveRight = true; }
         }
 
+        MonoBehaviour[] list = trig.gameObject.GetComponents<MonoBehaviour>();
 
-        //Check if the wolf is BEING attacked BY the player//
-        if (trig.gameObject.CompareTag("Selected"))
+        foreach (var mb in list)
         {
-            wolfAnimator.SetBool("Hit", true);
-            Health -= Damage;
-            Particle.SetActive(true);
-            StartCoroutine(NoMoreLeaves());
-
-            if (Health <= 0)
+            if (mb is IDamagable) //Check if the wolf is ATTACKING the player//
             {
-                Health = 0;
-                wolf.SetActive(false);
+                IDamagable damageable = (IDamagable)mb;
+                damageable.TakeDamage(damage);
+                noMovement = true;
             }
-        }         
+            if (mb is IAttack) //Check if the wolf is BEING attacked BY the player//
+            {
+                IAttack attack = (IAttack)mb;
 
+                TakeDamage(attack.DoAttack());
+            }
+        }
+        
         if (!trig.gameObject.CompareTag("Selected"))
         {
             wolfAnimator.SetBool("Hit", false);
             Particle.SetActive(false);
         }
-
-
-        //Check if the wolf is ATTACKING the player//
-        if (trig.CompareTag("Defender"))
-        {
-            noMovement = true;
-        }
+        
        
     }
 
+    private void TakeDamage(int takenDamage)
+    {
+        Health -= takenDamage;
+        Particle.SetActive(true);
+        StartCoroutine(NoMoreLeaves());
+
+        if (Health <= 0)
+        {
+            Health = 0;
+            wolf.SetActive(false);
+        }
+    }
+    
     private void OnTriggerExit2D(Collider2D trig)
     {
-        if (trig.CompareTag("Defender"))
+        MonoBehaviour[] list = trig.gameObject.GetComponents<MonoBehaviour>();
+
+        foreach (var mb in list) // START MOVING AGAIN
         {
-            noMovement = false;
+            if (mb is IDamagable) 
+            {
+                noMovement = false;
+            }
         }
     }
 

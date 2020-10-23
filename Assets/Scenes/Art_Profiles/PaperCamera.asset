@@ -1327,9 +1327,9 @@ MonoBehaviour:
   - {fileID: 1862422907345085015}
   - {fileID: -4277967129954114802}
   - {fileID: 3769810414140773364}
-  - {fileID: 47674316250896788}
   - {fileID: 7552540151267790063}
   - {fileID: 8212546064712010064}
+  - {fileID: 4428783628752520355}
 --- !u!114 &47674316250896788
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1439,6 +1439,40 @@ MonoBehaviour:
   lumContrib:
     overrideState: 1
     value: 0.776
+--- !u!114 &4428783628752520355
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25d52d83a671e55439b178696279b1b9, type: 3}
+  m_Name: PostProcessOutline
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  scale:
+    overrideState: 1
+    value: 2
+  color:
+    overrideState: 1
+    value: {r: 0, g: 0, b: 0, a: 1}
+  depthThreshold:
+    overrideState: 1
+    value: 0.4
+  depthNormalThreshold:
+    overrideState: 1
+    value: 0
+  depthNormalThresholdScale:
+    overrideState: 1
+    value: 40
+  normalThreshold:
+    overrideState: 1
+    value: 0.718
 --- !u!114 &7552540151267790063
 MonoBehaviour:
   m_ObjectHideFlags: 3

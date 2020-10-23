@@ -141,7 +141,7 @@ public class ElephantFase2 : MonoBehaviour
             }
         }
 
-        if (trig.CompareTag("Defender"))
+        if (trig.CompareTag(Statics.TagPlayer))
         {
             elephantController.SetBool("GetUp", true);
             sceneActive = true;

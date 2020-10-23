@@ -9,7 +9,7 @@ public class EnableOnTrigger2D : MonoBehaviour
     // Start is called before the first frame update
 
     private void OnTriggerEnter2D(Collider2D col) {
-        if (col.CompareTag("Defender") && spawned == false)
+        if (col.CompareTag(Statics.TagPlayer) && spawned == false)
         {
             objectToEnable.SetActive(true);
             spawned = true;

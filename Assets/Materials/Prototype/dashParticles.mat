@@ -9,14 +9,12 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: dashParticles
   m_Shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: TCP2_DISABLE_WRAPPED_LIGHT _ALPHABLEND_ON _COLOROVERLAY_ON _EMISSION
-    _FADING_ON _OCCLUSIONMAP
+  m_ShaderKeywords: TCP2_DISABLE_WRAPPED_LIGHT _OCCLUSIONMAP
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
-  stringTagMap:
-    RenderType: Transparent
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses:
   - ALWAYS
   m_SavedProperties:
@@ -83,7 +81,7 @@ Material:
     - _CameraFadingEnabled: 0
     - _CameraFarFadeDistance: 2
     - _CameraNearFadeDistance: 1
-    - _ColorMode: 3
+    - _ColorMode: 0
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -91,8 +89,8 @@ Material:
     - _DistortionEnabled: 0
     - _DistortionStrength: 77
     - _DistortionStrengthScaled: 7.7000003
-    - _DstBlend: 1
-    - _EmissionEnabled: 1
+    - _DstBlend: 0
+    - _EmissionEnabled: 0
     - _EnableExternalAlpha: 0
     - _EnvironmentReflections: 1
     - _FlipbookMode: 0
@@ -102,7 +100,7 @@ Material:
     - _InvFade: 0.01
     - _LightingEnabled: 0
     - _Metallic: 1
-    - _Mode: 4
+    - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _QueueOffset: 0
@@ -122,7 +120,7 @@ Material:
     - _SpecBlend: 1
     - _SpecSmooth: 1
     - _SpecularHighlights: 1
-    - _SrcBlend: 5
+    - _SrcBlend: 1
     - _Surface: 0
     - _TCP2_DISABLE_WRAPPED_LIGHT: 1
     - _TCP2_RAMPTEXT: 0
@@ -130,13 +128,13 @@ Material:
     - _TCP2_STYLIZED_FRESNEL: 0
     - _UVSec: 0
     - _WorkflowMode: 1
-    - _ZWrite: 0
+    - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
-    - _Color: {r: 1, g: 0.6526397, b: 0, a: 0.63529414}
+    - _Color: {r: 1, g: 1, b: 1, a: 0.63529414}
     - _ColorAddSubDiff: {r: 1, g: 0, b: 0, a: 0}
-    - _EmissionColor: {r: 2.1185477, g: 1.5195867, b: 0.47695056, a: 1}
+    - _EmissionColor: {r: 1, g: 0.9712531, b: 0.9198113, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _HColor: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
