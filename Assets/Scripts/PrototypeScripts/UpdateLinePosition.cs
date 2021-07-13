@@ -13,6 +13,8 @@ public class UpdateLinePosition : MonoBehaviour
     public Transform otherTransform;
 
     public Transform midTransform;
+
+    
     
     public float curvePosition;
     
@@ -80,6 +82,7 @@ public class UpdateLinePosition : MonoBehaviour
 
         lineRenderer.material.SetTextureOffset("_MainTex", offset);
         //lineRenderer.material.SetTextureScale("_MainTex", size);
+
     }
 
     void OnDisable()

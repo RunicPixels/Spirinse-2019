@@ -40,8 +40,8 @@ namespace Placer.PlacerTools
         [SuppressMessage("Code Quality", "IDE0051:Remove unused private members", Justification = "Called on initialization")]
         private static void RestorePreviousIfSelectedOnInitialize()
         {
-            if(EditorTools.activeToolType == typeof(DuplicateTool))
-                EditorTools.RestorePreviousPersistentTool();
+            if(ToolManager.activeToolType == typeof(DuplicateTool))
+                ToolManager.RestorePreviousPersistentTool();
         }
 
         [Shortcut("Tools/Duplicate", KeyCode.D)]
@@ -49,23 +49,23 @@ namespace Placer.PlacerTools
         private static void SelectToolShortcut()
         {
             // Deselect the tool if it is selected, Select the tool if it can be selected.
-            if(EditorTools.activeToolType == typeof(DuplicateTool))
-                EditorTools.RestorePreviousPersistentTool();
+            if(ToolManager.activeToolType == typeof(DuplicateTool))
+                ToolManager.RestorePreviousPersistentTool();
             else if (Selection.gameObjects.Length > 0)
-                EditorTools.SetActiveTool<DuplicateTool>();
+                ToolManager.SetActiveTool<DuplicateTool>();
         }
 
         private void OnEnable()
         {
             boxBoundsHandle.wireframeColor = Handles.zAxisColor;
-            EditorTools.activeToolChanged += ResetBoundsIfSelected;
-            EditorTools.activeToolChanging += DuplicateIfDeselected;
+            ToolManager.activeToolChanged += ResetBoundsIfSelected;
+            ToolManager.activeToolChanging += DuplicateIfDeselected;
         }
 
         private void OnDisable()
         {
-            EditorTools.activeToolChanged -= ResetBoundsIfSelected;
-            EditorTools.activeToolChanging -= DuplicateIfDeselected;
+            ToolManager.activeToolChanged -= ResetBoundsIfSelected;
+            ToolManager.activeToolChanging -= DuplicateIfDeselected;
         }
 
         // Whenever the active Editor Tool has changed, this method is called to check if this tool was selected.
@@ -73,7 +73,7 @@ namespace Placer.PlacerTools
         // This way, these methods are called even when the Editor Tool is changed from script.
         private void ResetBoundsIfSelected()
         {
-            if(EditorTools.IsActiveTool(this))
+            if(ToolManager.IsActiveTool(this))
             {
                 ResetBounds();
                 Selection.selectionChanged += ResetBounds;
@@ -84,7 +84,7 @@ namespace Placer.PlacerTools
         // Same as above, but for deselection.
         private void DuplicateIfDeselected()
         {
-            if(EditorTools.IsActiveTool(this))
+            if(ToolManager.IsActiveTool(this))
             {
                 Selection.selectionChanged -= ResetBounds;
                 Undo.undoRedoPerformed -= ResetHandleBounds;

@@ -8,7 +8,6 @@ namespace Spirinse.Player {
     public class Meditator : MonoBehaviour, IDamagable
     {
         public static Meditator Instance;
-        public ShieldVisuals shieldVisuals;
         public Action<int> TakeDamageAction;
 
         public LayerMask hitLayers;
