@@ -6,6 +6,7 @@ using Spirinse.Objects;
 using Spirinse.Interfaces;
 using Rewired;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 using InputManager = Spirinse.System.InputManager;
 
 public class Grab : BaseAbility
@@ -21,20 +22,20 @@ public class Grab : BaseAbility
     public CircleCollider2D col;
     public GameObject sphere;
     public Joint2D joint;
-    public ParticleSystem particles;
+    public GameObject holdParticlesContainer;
+    public GameObject throwParticlesContainer;
+    private List<ParticleSystem> _holdParticles;
+    private List<ParticleSystem> _throwParticles;
 
     public float chiDrain;
 
     public Action<Transform, IGrabbable> OnGrab;
     public Action<Transform, IGrabbable> OnRelease;
 
-    private float particleTimeRate;
-    private float particleDistanceRate;
-
-    private void Start()
+    private void Awake()
     {
-        particleTimeRate = particles.emission.rateOverTime.constant;
-        particleDistanceRate = particles.emission.rateOverDistance.constant;
+        _holdParticles = new List<ParticleSystem>(holdParticlesContainer.GetComponentsInChildren<ParticleSystem>());
+        _throwParticles = new List<ParticleSystem>(throwParticlesContainer.GetComponentsInChildren<ParticleSystem>());
     }
     
     private void Update()
@@ -67,8 +68,6 @@ public class Grab : BaseAbility
             col.enabled = false;
             if(col.radius > 0) col.radius -= 80 * Time.fixedDeltaTime;
             sphere.transform.localScale = new Vector3(radius * 2f, radius *2f, radius);
-            var em = particles.emission.rateOverTime;
-            em.constant -= 1;
             if (heldObject != null && !grabbing) Launch(launchVelocity);
         }
     }
@@ -86,14 +85,13 @@ public class Grab : BaseAbility
         joint.connectedBody = heldObject.GetRigidbody2D();
         heldObject.Hold(transform);
         OnGrab?.Invoke(transform,heldObject);
-        particles.transform.parent = heldObject.GetTransform();
-        particles.transform.localPosition = Vector3.zero;
-        particles.Play();
-        var em = particles.emission;
-        var emRateOverTime = em.rateOverTime;
-        emRateOverTime.constant = particleTimeRate;
-        var emRateOverDistance = em.rateOverDistance;
-        emRateOverDistance.constant = particleDistanceRate;
+        
+        UpdateParticleParent(holdParticlesContainer.transform.parent);
+
+        foreach (var particles in _holdParticles)
+        {
+            particles.Play();
+        }
     }
 
     private void Launch(float velocity = 0f)
@@ -102,10 +100,26 @@ public class Grab : BaseAbility
         heldObject.Release(parentRB.velocity + parentRB.velocity.normalized * velocity);
         joint.connectedBody = null;
         heldObject = null;
-        var em = particles.emission.rateOverTime;
-        em.constant += 50;
 
-        particles.Play();
-        
+        foreach (var particles in _holdParticles)
+        {
+            particles.Stop();
+        }
+
+        foreach (var particles in _throwParticles)
+        {
+            particles.Play();
+        }
+    }
+
+    private void UpdateParticleParent(Transform particleParent)
+    {
+        if (!particleParent.name.Equals("GrabParticles"))
+        {
+            Debug.LogWarning("Moved Grab Particles! Make sure to contain them within the right GameObject.");
+            return;
+        }
+        particleParent.parent = heldObject.GetTransform(); // Double Parent to get the global container.
+        particleParent.localPosition = Vector3.zero;
     }
 }
