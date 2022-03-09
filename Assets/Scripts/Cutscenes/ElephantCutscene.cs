@@ -7,6 +7,7 @@ public class ElephantCutscene : MonoBehaviour
     [SerializeField] private Animator myAnimationController;
 
     public Canvas TextCanvas;
+    public Transform Dialogue;
 
 
     private void Start()
@@ -19,6 +20,7 @@ public class ElephantCutscene : MonoBehaviour
         if (collision.CompareTag(Statics.TagPlayer))
         { 
             myAnimationController.SetBool("EnterCutscene", true);
+            Dialogue.gameObject.SetActive(true);
             TextCanvas.enabled = true;
         }
     }

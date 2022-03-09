@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using Rewired;
+using Spirinse.System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,13 +19,7 @@ public class KeyContinue : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(ContinueKeyKeyboard))
-        {
-            ContinueButton.onClick.Invoke();
-        }
-
-        if (Input.GetKeyDown(ContinueKeyXbox))
-        {
+        if (ReInput.players.GetPlayer(0).GetButton(RewiredConsts.Action.Grab)) {
             ContinueButton.onClick.Invoke();
         }
     }

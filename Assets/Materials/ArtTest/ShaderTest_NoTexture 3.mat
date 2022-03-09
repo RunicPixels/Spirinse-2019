@@ -9,9 +9,9 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: ShaderTest_NoTexture 3
   m_Shader: {fileID: 4800000, guid: 80412fe88398cd147be3aacebe2c3fe3, type: 3}
-  m_ShaderKeywords: OUTLINES TCP2_COLORS_AS_NORMALS TCP2_OUTLINE_CONST_SIZE TCP2_SPEC_TOON
-    _EMISSION _GLOSSYREFLECTIONS_OFF _SPECULARHIGHLIGHTS_OFF
-  m_LightmapFlags: 4
+  m_ShaderKeywords: OUTLINES TCP2_COLORS_AS_NORMALS TCP2_SPEC_TOON _EMISSION _GLOSSYREFLECTIONS_OFF
+    _SPECULARHIGHLIGHTS_OFF
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -74,7 +74,7 @@ Material:
     - _OcclusionStrength: 1
     - _Offset1: 0
     - _Offset2: 0
-    - _Outline: 0.3
+    - _Outline: 5
     - _Parallax: 0.02
     - _RampSmooth: 0
     - _RampSmoothAdd: 0
@@ -89,7 +89,7 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendOutline: 7
     - _TCP2_DISABLE_WRAPPED_LIGHT: 0
-    - _TCP2_OUTLINE_CONST_SIZE: 1
+    - _TCP2_OUTLINE_CONST_SIZE: 0
     - _TCP2_OUTLINE_TEXTURED: 0
     - _TCP2_RAMPTEXT: 0
     - _TCP2_SPEC_TOON: 1
@@ -100,9 +100,10 @@ Material:
     - _ZSmooth: 1.41
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 0.83267367, b: 0, a: 1}
-    - _EmissionColor: {r: 2, g: 1.4509804, b: 0, a: 1}
+    - _Color: {r: 0.9716981, g: 0.7129384, b: 0.55460125, a: 1}
+    - _EmissionColor: {r: 0.95769036, g: 0.9882353, b: 0.2784314, a: 1}
     - _HColor: {r: 1, g: 1, b: 1, a: 1}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 1, g: 0, b: 0, a: 1}
     - _RimColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.6}
     - _SColor: {r: 0.39622638, g: 0.29594773, b: 0.22241005, a: 1}
+  m_BuildTextureStacks: []

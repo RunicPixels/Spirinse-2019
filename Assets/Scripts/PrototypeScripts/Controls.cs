@@ -74,6 +74,9 @@ public class Controls : MonoBehaviour
     public Action<bool> playerMovementAction; // Move this to input manager.
     public Action<float> useDashAction;
 
+    public bool DEVSUPERBOOST = false;
+    public float DEVSUPERBOOSTAMOUNT = 2f;
+
     private static readonly int Active = Animator.StringToHash("Active");
 
     // Start is called before the first frame update
@@ -191,6 +194,10 @@ public class Controls : MonoBehaviour
         {
             velocity *= dashAbility.GetDashSpeedMultiplier;
             velocity += dashAbility.GetDashVelocity;
+        }
+        if(DEVSUPERBOOST)
+        {
+            velocity *= DEVSUPERBOOSTAMOUNT;
         }
 
         return velocity;

@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using Spirinse.Interfaces;
+using Spirinse.System.Effects;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,6 +21,8 @@ public class ElephantFase2 : MonoBehaviour
     
     public GameObject CutsceneText;
 
+    public BaseEnemy enemy;
+
     public GameObject Wall;
 
     public float moveSpeed;
@@ -34,8 +38,12 @@ public class ElephantFase2 : MonoBehaviour
     public bool sceneActive;
 
     public Animator elephantController;
-    
+    public ParticleSystem hitParticles;
+
+    public float hitCooldown;
     public Canvas TextCanvas;
+
+    private bool hasEnded = false;
 
 
     private void Start()
@@ -63,6 +71,7 @@ public class ElephantFase2 : MonoBehaviour
 
         TextCanvas.enabled = false;
         CutsceneText.SetActive(false);
+
     }
 
 
@@ -74,8 +83,13 @@ public class ElephantFase2 : MonoBehaviour
         {
             StartCoroutine(GetUpToFight());
         }
-            
-                
+
+        if (Health <= 0 && !hasEnded)
+        {
+            EndCombat();
+        }
+
+        if (hasEnded) return;
         if (noMovement)
         {
             transform.Translate(0 * Time.deltaTime * moveSpeed, 0, 0);
@@ -92,19 +106,14 @@ public class ElephantFase2 : MonoBehaviour
             GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 0);
         }
 
-        if (Health <= 0)
-            {
-                Health = 0;
-                StartCoroutine(EndOfCombat());
-                moveSpeed = 0;
-                CutsceneText.SetActive(true);
-            }
+
     }
 
     
     private void OnTriggerEnter2D(Collider2D trig)
     {
 
+        if (hasEnded) return;
         if (trig.gameObject.CompareTag("Turn") || trig.gameObject.CompareTag("Enemy"))
         {
             if (moveRight)
@@ -115,7 +124,7 @@ public class ElephantFase2 : MonoBehaviour
         }
 
 
-        if (trig.gameObject.CompareTag("Selected"))
+        if (trig.gameObject.CompareTag("Selected") || trig is IDamagable)
         {
             NoTurning = true;
             elephantController.SetBool("Hit", true);
@@ -126,7 +135,7 @@ public class ElephantFase2 : MonoBehaviour
 
             Particle.SetActive(true);
 
-            Health -= Damage;
+            TakeDamage(Damage);
 
             if (Health <= 50)
             {
@@ -134,10 +143,9 @@ public class ElephantFase2 : MonoBehaviour
                 moveSpeed = 10;
             }
 
-            if (Health <= 0)
+            if (Health <= 0 && !hasEnded)
             {
-                Health = 0;
-                StartCoroutine(EndOfCombat());
+                EndCombat();
             }
         }
 
@@ -148,10 +156,20 @@ public class ElephantFase2 : MonoBehaviour
         }        
     }
 
+    void EndCombat()
+    {
+        hasEnded = true;
+        Health = 0;
+        StartCoroutine(EndOfCombat());
+        moveSpeed = 0;
+        CutsceneText.SetActive(true);
+    }
     private IEnumerator GetUpToFight()
     {
         {
             yield return new WaitForSeconds(5);
+
+            if (hasEnded) yield break;
 
             noMovement = false;
             elephantController.SetBool("StartWalking", true);
@@ -159,11 +177,21 @@ public class ElephantFase2 : MonoBehaviour
             yield return null;            
         }
     }
+    public bool TakeDamage(int damage)
+    {
+        Health -= damage;
+        EffectsManager.Instance.timeManager.Freeze(0.05f, 0, 3f, 3f);
+        enemy.TakeDamageAction.Invoke();
+        hitParticles.Play();
 
+        return true;
+    }
     private IEnumerator HitReaction()
     {
         {
             yield return new WaitForSeconds(2);
+
+            if (hasEnded) yield break;
 
             Particle.SetActive(false);
             Ibises.SetActive(true);
@@ -172,6 +200,8 @@ public class ElephantFase2 : MonoBehaviour
             moveSpeed = 0;
 
             yield return new WaitForSeconds(7);
+
+            if (hasEnded) yield break;
 
             yield return null;
             elephantController.SetBool("Walking", true);
@@ -183,7 +213,12 @@ public class ElephantFase2 : MonoBehaviour
     private IEnumerator EndOfCombat()
     {
         {
-            yield return new WaitForSeconds(1);
+            enemy.DieAction.Invoke();
+
+            foreach(DamageBlock db in transform.GetComponentsInChildren<DamageBlock>())
+            {
+                db.activated = false;
+            }
 
             noMovement = true;
             moveRight = true;
@@ -208,3 +243,4 @@ public class ElephantFase2 : MonoBehaviour
         }
     }
 }
+

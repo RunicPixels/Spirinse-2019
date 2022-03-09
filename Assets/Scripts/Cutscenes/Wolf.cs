@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Spirinse.Interfaces;
+using Spirinse.System.Effects;
 
 public class Wolf : MonoBehaviour
 {
     public float moveSpeed;
-
+    public BaseEnemy enemy;
     public GameObject wolf;
     public GameObject Particle;
 
@@ -17,9 +18,15 @@ public class Wolf : MonoBehaviour
 
     public int Health = 30;
     private readonly int damage = 1;
+    public float hitCooldown = 0.5f;
+    public float beingHitCooldown = 0.3f;
+    private float currentHitCooldown;
+    private float currentBeingHitCooldown;
+    public ParticleSystem hitParticles;
 
     void Start()
     {
+        enemy = GetComponent<BaseEnemy>();
         wolfAnimator.SetBool("Attack", false);
         wolfAnimator.SetBool("hit", false);
         noMovement = false;
@@ -48,6 +55,8 @@ public class Wolf : MonoBehaviour
             GetComponent<Transform>().eulerAngles = new Vector3(0, 0, 0);
             wolfAnimator.SetBool("Moving", true);
         }
+        if (currentHitCooldown > 0f) currentHitCooldown -= Time.deltaTime;
+        if (currentBeingHitCooldown > 0f) currentBeingHitCooldown -= Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D trig)
@@ -55,25 +64,23 @@ public class Wolf : MonoBehaviour
         //Turning around Controll//
         if (trig.gameObject.CompareTag(Statics.TagTurn) || trig.gameObject.CompareTag(Statics.TagEnemy))
         {
-            if (moveRight)
-            { moveRight = false; }
-
-            else
-            { moveRight = true; }
+            TurnAround();
         }
 
         MonoBehaviour[] list = trig.gameObject.GetComponents<MonoBehaviour>();
 
         foreach (var mb in list)
         {
-            if (mb is IDamagable) //Check if the wolf is ATTACKING the player//
+            if (mb is IDamagable && currentHitCooldown <= 0.01f) //Check if the wolf is ATTACKING the player//
             {
+                currentHitCooldown = hitCooldown;
                 IDamagable damageable = (IDamagable)mb;
                 damageable.TakeDamage(damage);
                 noMovement = true;
             }
-            if (mb is IAttack) //Check if the wolf is BEING attacked BY the player//
+            if (mb is IAttack && currentBeingHitCooldown <= 0.01f) //Check if the wolf is BEING attacked BY the player//
             {
+                currentBeingHitCooldown = beingHitCooldown;
                 IAttack attack = (IAttack)mb;
 
                 TakeDamage(attack.DoAttack());
@@ -89,15 +96,31 @@ public class Wolf : MonoBehaviour
        
     }
 
+    private void TurnAround ()
+    {
+        if (moveRight)
+        { moveRight = false; }
+
+        else
+        { moveRight = true; }
+    }
+
+
     private void TakeDamage(int takenDamage)
     {
         Health -= takenDamage;
         Particle.SetActive(true);
+        TurnAround();
         StartCoroutine(NoMoreLeaves());
+        enemy.TakeDamageAction?.Invoke();
+        EffectsManager.Instance.timeManager.Freeze(0.05f, 0, 3f, 3f);
+        hitParticles.Play();
+
 
         if (Health <= 0)
         {
             Health = 0;
+            enemy.DieAction?.Invoke();
             wolf.SetActive(false);
         }
     }

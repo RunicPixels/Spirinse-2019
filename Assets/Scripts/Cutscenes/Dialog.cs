@@ -21,6 +21,8 @@ public class Dialog : MonoBehaviour{
     void Start()
     {
         source = GetComponent<AudioSource>();
+        textDisplay.enabled = true;
+        backgroundImage.enabled = true;
         StartCoroutine(Type());
     }
 
@@ -59,6 +61,7 @@ public class Dialog : MonoBehaviour{
 
             myAnimationController.SetBool("Prance", true);
             myAnimationControllerTree.SetBool("PullBack", true);
+            enabled = false;
 
         }
 

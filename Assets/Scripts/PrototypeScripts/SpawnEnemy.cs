@@ -26,6 +26,7 @@ public class SpawnEnemy : MonoBehaviour, IDamagable
     CoroutineHandle enume;
     private Vector2 spawnPosition;
     public GameObject winObject;
+    public bool stateToSetWinObjectTo = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -95,15 +96,14 @@ public class SpawnEnemy : MonoBehaviour, IDamagable
         hitParticles.Play();
         ChangePosition();
         emitter.Play();
-        if (health < 0)
+        if (health <= 0)
         {
             foreach (var enemy in enemies)
             {
                 enemy.TakeDamage(999);
-                
-                Destroy(gameObject);
-                winObject.SetActive(true);
             }
+            winObject.SetActive(stateToSetWinObjectTo);
+            Destroy(gameObject);
         }
         
         return true;

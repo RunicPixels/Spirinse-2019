@@ -14,12 +14,17 @@ namespace Spirinse.Player
         public TrackingBall tracker;
         public Controls tempControls;
 
+        public float iFrames = 0.3f;
+        private float currentIFrames = 0f;
+
         public DefenderParticles defenderParticles;
 
         public int rotateSpeed = 50;
         public bool TakeDamage(int damage)
         {
-            if (damage < 1) return false;
+
+            if (damage < 1 || currentIFrames >= 0.01f) return false;
+            currentIFrames = iFrames;
             TakeDamageAction?.Invoke(damage);
             return true;
         }
@@ -33,6 +38,7 @@ namespace Spirinse.Player
 
         private void Update()
         {
+            if (currentIFrames > 0f) currentIFrames -= Time.deltaTime;
             // TEMPORARY
             var dir = rb.velocity;
 

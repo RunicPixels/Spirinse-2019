@@ -1311,6 +1311,40 @@ MonoBehaviour:
       - 0.5
       - 0.5
       - 0.5
+--- !u!114 &-167276119485650539
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25d52d83a671e55439b178696279b1b9, type: 3}
+  m_Name: PostProcessOutline
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  scale:
+    overrideState: 1
+    value: 2
+  color:
+    overrideState: 1
+    value: {r: 0, g: 0, b: 0, a: 1}
+  depthThreshold:
+    overrideState: 1
+    value: 0.9
+  depthNormalThreshold:
+    overrideState: 1
+    value: 0
+  depthNormalThresholdScale:
+    overrideState: 0
+    value: 2
+  normalThreshold:
+    overrideState: 1
+    value: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1329,7 +1363,7 @@ MonoBehaviour:
   - {fileID: 3769810414140773364}
   - {fileID: 7552540151267790063}
   - {fileID: 8212546064712010064}
-  - {fileID: 4428783628752520355}
+  - {fileID: -167276119485650539}
 --- !u!114 &47674316250896788
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1382,25 +1416,25 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 2
+    value: 1.2
   threshold:
     overrideState: 1
-    value: 3
+    value: 0.6
   softKnee:
     overrideState: 1
     value: 0.5
   clamp:
     overrideState: 1
-    value: 65472
+    value: 1.25
   diffusion:
     overrideState: 1
-    value: 7
+    value: 9
   anamorphicRatio:
     overrideState: 1
-    value: 1
+    value: 0
   color:
     overrideState: 1
-    value: {r: 1, g: 1, b: 1, a: 1}
+    value: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 1}
   fastMode:
     overrideState: 1
     value: 1
